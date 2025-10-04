@@ -5,7 +5,9 @@
 
 #endregion
 
+using System;
 using System.Collections.Generic;
+using EggFramework;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -15,6 +17,19 @@ namespace LD58.UI
     {
         [SerializeField] private GameObject _blackBoardItemPrefab;
         [SerializeField] private Transform  _content;
+
+        [SerializeField] private bool _debug;
+        private void Awake()
+        {
+            _content.DestroyChild();
+#if UNITY_EDITOR
+            if (_debug)
+            {
+                SetItem("who i am", "Egg");
+                SetItem("who u r", "Cat D");
+            }
+#endif
+        }
 
         private readonly Dictionary<string, BlackBoardItem> _boardItems = new();
 

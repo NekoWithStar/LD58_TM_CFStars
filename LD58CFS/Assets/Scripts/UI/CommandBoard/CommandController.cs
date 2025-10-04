@@ -5,7 +5,10 @@
 
 #endregion
 
+using System;
 using EggFramework;
+using LD58.Constant;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace LD58.UI.CommandBoard
@@ -16,6 +19,22 @@ namespace LD58.UI.CommandBoard
         [SerializeField] private Transform        _content;
         [SerializeField] private CommandData      _commandData;
 
+#if UNITY_EDITOR
+        [SerializeField] private bool _debug;
+#endif
+        private void Awake()
+        {
+            _content.DestroyChild();
+#if UNITY_EDITOR
+            if (_debug)
+            {
+                AddCommand(CommandConstant.WEB_SCAN);
+                AddCommand(CommandConstant.SEND_EMAIL);
+            }
+#endif
+        }
+
+        [Button]
         public CommandBoardItem AddCommand(string command)
         {
             foreach (var cmd in _commandData.Commands)

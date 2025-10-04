@@ -23,7 +23,7 @@ namespace LD58.UI.CommandBoard
 
         public void OnPointerClick(PointerEventData eventData)
         {
-            
+            FindFirstObjectByType<ConsoleController>().StartListeningForCommand(Command);
         }
     }
 }

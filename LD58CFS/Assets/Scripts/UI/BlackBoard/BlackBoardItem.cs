@@ -5,13 +5,14 @@
 
 #endregion
 
+using QFramework;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace LD58.UI
 {
-    public sealed class BlackBoardItem : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
+    public sealed class BlackBoardItem : AbstractController, IBeginDragHandler, IEndDragHandler, IDragHandler
     {
         [SerializeField] private Text _dragText;
         [SerializeField] private Text _text;
@@ -40,14 +41,20 @@ namespace LD58.UI
             _offset   = Vector2.zero;
             _startPos = _dragText.GetComponent<RectTransform>().anchoredPosition;
             _dragText.transform.SetParent(_canvas.transform, true);
-            _dragText.enabled = true;
+            _dragText.enabled                = true;
+            Selection.SelectedBlackBoardItem = this;
         }
 
         void IEndDragHandler.OnEndDrag(PointerEventData eventData)
         {
             _dragText.transform.SetParent(transform, true);
             _dragText.GetComponent<RectTransform>().anchoredPosition = _startPos;
-            _dragText.enabled = false;
+            _dragText.enabled                                        = false;
+            this.SendEvent(new ReleaseBlackBoardItemEvent
+            {
+                Item = this
+            });
+            Selection.SelectedBlackBoardItem                         = null;
         }
 
         void IDragHandler.OnDrag(PointerEventData eventData)

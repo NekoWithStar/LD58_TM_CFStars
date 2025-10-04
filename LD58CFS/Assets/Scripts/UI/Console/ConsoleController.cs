@@ -6,8 +6,11 @@
 #endregion
 
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
+using LD58.Constant;
+using LD58.Extension;
 using LD58.UI.CommandBoard;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -15,7 +18,7 @@ using UnityEngine.UI;
 
 namespace LD58.UI
 {
-    public sealed class ConsoleController : MonoBehaviour
+    public sealed partial class ConsoleController : MonoBehaviour
     {
         [SerializeField] private GameObject _consoleItemPrefab;
 
@@ -28,10 +31,25 @@ namespace LD58.UI
         [SerializeField] private ScrollRect _scrollRect;
 
         public bool        IsPowerShell { get; private set; } = true;
-        public ConsoleItem LastItem     { get; private set; }
 
-        public  bool    ListenForCommand { get; private set; }
-        private Command _command;
+        public ConsoleItem LastItem
+        {
+            get=> IsPowerShell ? _powerShellLastItem : _browserConsoleLastItem;
+            private set
+            {
+                if (IsPowerShell) _powerShellLastItem = value;
+                else _browserConsoleLastItem          = value;
+            }
+        }
+
+        private          ConsoleItem                _powerShellLastItem;
+        private          ConsoleItem                _browserConsoleLastItem;
+        public           bool                       ListenForCommand { get; private set; }
+        private          Command                    _command;
+        private          int                        _pendingListenCommandParameterIndex = 0;
+        private          bool                       _isPendingInput                     = false;
+        private          ConsoleItem                _pendingInputItem;
+        private readonly Dictionary<string, string> _inputValues = new();
 
         public bool DisplayCursor
         {
@@ -76,7 +94,50 @@ namespace LD58.UI
             if (LastItem)
                 LastItem.DisplayCursor = false;
             _command = command;
-            AddItemWithoutNewLine(command.CommandName);
+            AddItemWithoutNewLine(command.Parameters.Count == 0 ? command.CommandName : $"{command.CommandName} `");
+            _pendingListenCommandParameterIndex = 0;
+            _isPendingInput                     = true;
+            _inputValues.Clear();
+            if (command.Parameters.Count == 0)
+            {
+                DoCommand();
+                _isPendingInput  = false;
+            }
+            else
+            {
+                PendingNextParameter();
+            }
+        }
+
+        private void PendingNextParameter()
+        {
+            if (_pendingListenCommandParameterIndex >= _command.Parameters.Count)
+            {
+                _isPendingInput  = false;
+                DoCommand();
+                return;
+            }
+
+            _pendingInputItem =
+                AddItem($"  -{_command.Parameters[_pendingListenCommandParameterIndex].Parameter.Name}: _____");
+            _pendingInputItem.PendingInput = true;
+            _pendingInputItem.SetColor(Color.yellow);
+            _pendingInputItem.AcceptedBlackBoardKey =
+                _command.Parameters[_pendingListenCommandParameterIndex].Parameter.AcceptedBlackBoardKey;
+        }
+
+        private void Update()
+        {
+            if (_isPendingInput)
+            {
+                if (!_pendingInputItem.PendingInput)
+                {
+                    _inputValues[_command.Parameters[_pendingListenCommandParameterIndex].Parameter.Name] =
+                        _pendingInputItem.Value;
+                    _pendingListenCommandParameterIndex++;
+                    PendingNextParameter();
+                }
+            }
         }
 
         public void SetUp()

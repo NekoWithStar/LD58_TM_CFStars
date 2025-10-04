@@ -207,7 +207,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 100, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1675758417478189057
 MonoBehaviour:
@@ -223,6 +223,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dragText: {fileID: 8965540744765336564}
   _text: {fileID: 6921209225875667464}
+  Key: 
+  Value: 
 --- !u!1 &6565025814302578489
 GameObject:
   m_ObjectHideFlags: 0

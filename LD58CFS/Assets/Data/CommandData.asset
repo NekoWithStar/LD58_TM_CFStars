@@ -12,7 +12,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81e523f5a7944b969387d48819e01ab7, type: 3}
   m_Name: CommandData
   m_EditorClassIdentifier: 
-  Commands: []
+  Commands:
+  - CommandName: WebScan
+    Parameters:
+    - Parameter:
+        rid: 5403938115127607348
+  - CommandName: Send-Email
+    Parameters:
+    - Parameter:
+        rid: 5403938115127607349
+    - Parameter:
+        rid: 5403938115127607350
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 5403938115127607348
+      type: {class: CommandParameter, ns: LD58.UI.CommandBoard, asm: Assembly-CSharp}
+      data:
+        Name: TargetAddress
+        AcceptedBlackBoardKey: []
+    - rid: 5403938115127607349
+      type: {class: CommandParameter, ns: LD58.UI.CommandBoard, asm: Assembly-CSharp}
+      data:
+        Name: Sender
+        AcceptedBlackBoardKey: []
+    - rid: 5403938115127607350
+      type: {class: CommandParameter, ns: LD58.UI.CommandBoard, asm: Assembly-CSharp}
+      data:
+        Name: Receiver
+        AcceptedBlackBoardKey: []
