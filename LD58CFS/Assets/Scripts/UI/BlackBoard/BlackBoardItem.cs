@@ -1,0 +1,59 @@
+#region
+
+//文件创建者：Egg
+//创建时间：10-04 04:31
+
+#endregion
+
+using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
+
+namespace LD58.UI
+{
+    public sealed class BlackBoardItem : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
+    {
+        [SerializeField] private Text _dragText;
+        [SerializeField] private Text _text;
+
+        public string Key;
+        public string Value;
+        
+        private Vector2 _offset;
+        private Vector2 _startPos;
+        private Canvas  _canvas;
+
+        private void Awake()
+        {
+            _canvas           = FindFirstObjectByType<Canvas>();
+            _dragText.enabled = false;
+        }
+        
+        public void SetText(string text)
+        {
+            _text.text     = text;
+            _dragText.text = text;
+        }
+
+        void IBeginDragHandler.OnBeginDrag(PointerEventData eventData)
+        {
+            _offset   = Vector2.zero;
+            _startPos = _dragText.GetComponent<RectTransform>().anchoredPosition;
+            _dragText.transform.SetParent(_canvas.transform, true);
+            _dragText.enabled = true;
+        }
+
+        void IEndDragHandler.OnEndDrag(PointerEventData eventData)
+        {
+            _dragText.transform.SetParent(transform, true);
+            _dragText.GetComponent<RectTransform>().anchoredPosition = _startPos;
+            _dragText.enabled = false;
+        }
+
+        void IDragHandler.OnDrag(PointerEventData eventData)
+        {
+            _offset                                                  += eventData.delta;
+            _dragText.GetComponent<RectTransform>().anchoredPosition += eventData.delta;
+        }
+    }
+}
