@@ -1,3 +1,6 @@
 [submodule "LD58CFS/Assets/Plugins/EggFramework"]
 	path = LD58CFS/Assets/Plugins/EggFramework
 	url = https://github.com/Eggnisi/EggFramework.git
+[submodule "LD58CFS/Assets/Plugins/UnityEasyPack"]
+	path = LD58CFS/Assets/Plugins/UnityEasyPack
+	url = https://github.com/CutrelyAlex/UnityEasyPack.git
