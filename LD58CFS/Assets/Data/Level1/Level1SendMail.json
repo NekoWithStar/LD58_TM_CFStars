@@ -1,5 +1,5 @@
 {
-  "commandName": "Send-Mail",
+  "commandName": "Send-Email",
   "parameters": [
     {
       "name": "EmailSubject",
