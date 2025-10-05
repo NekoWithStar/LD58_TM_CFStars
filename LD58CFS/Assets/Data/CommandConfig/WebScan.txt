@@ -1,4 +1,3 @@
-//Global Variables: time, ip
 commandName:
     WebScan
 params:

@@ -1,1 +1,1 @@
-{}
+{"AudioSetting":{"AudioCodePath":"Assets/Scripts/Generator/Audio","AudioDataPath":"Assets/Data/AudioData","AudioNameSpace":"EggFramework.SimpleAudioSystem.Constant","AudioFXFolderPath":"Assets/sounds/sfx","AudioBGMFolderPath":"Assets/sounds/music"},"AudioConstant.BGMIds":[],"AudioConstant.SFXIds":["CHORD","exclamation","opensystem_95","sign","TADA","message_fast","opensystem_xp","shutdownsystem","hardwareerror","systemerror","connected","NOTIFY","disconnected","balloon","message","hardwareerror_dead","DING","RECYCLE","chimes","hardwareerror_loop4"]}
