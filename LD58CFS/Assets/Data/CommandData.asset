@@ -16,9 +16,9 @@ MonoBehaviour:
   - CommandName: WebScan
     Parameters:
     - Parameter:
-        rid: 5403938137836618285
+        rid: 5843204037934841960
     - Parameter:
-        rid: 5403938137836618286
+        rid: 5843204037934841961
     Cases:
     - Name: case1
       ParameterValues:
@@ -28,131 +28,147 @@ MonoBehaviour:
         - bmail.com
       - Name: Receiver
         Accept: []
+      VariablesList: []
     - Name: case2
       ParameterValues:
       - Name: Target
         Accept:
         - www.Nmail.com
+      VariablesList: []
     Output:
       LanguageBlocks:
       - Language: 
         LineBlocks:
         - LineBlock:
-            rid: 5403938137836618287
+            rid: 5843204037934841962
         - LineBlock:
-            rid: 5403938137836618288
+            rid: 5843204037934841963
         - LineBlock:
-            rid: 5403938137836618289
+            rid: 5843204037934841964
         - LineBlock:
-            rid: 5403938137836618290
+            rid: 5843204037934841965
         - LineBlock:
-            rid: 5403938137836618291
+            rid: 5843204037934841966
         - LineBlock:
-            rid: 5403938137836618292
+            rid: 5843204037934841967
         - LineBlock:
-            rid: 5403938137836618293
+            rid: 5843204037934841968
         - LineBlock:
-            rid: 5403938137836618294
+            rid: 5843204037934841969
         - LineBlock:
-            rid: 5403938137836618295
+            rid: 5843204037934841970
         - LineBlock:
-            rid: 5403938137836618296
+            rid: 5843204037934841971
         - LineBlock:
-            rid: 5403938137836618297
+            rid: 5843204037934841972
         - LineBlock:
-            rid: 5403938137836618298
+            rid: 5843204037934841973
         - LineBlock:
-            rid: 5403938137836618299
+            rid: 5843204037934841974
         - LineBlock:
-            rid: 5403938137836618300
+            rid: 5843204037934841975
         - LineBlock:
-            rid: 5403938137836618301
+            rid: 5843204037934841976
         - LineBlock:
-            rid: 5403938137836618302
+            rid: 5843204037934841977
         - LineBlock:
-            rid: 5403938137836618303
+            rid: 5843204037934841978
         - LineBlock:
-            rid: 5403938137836618304
+            rid: 5843204037934841979
         - LineBlock:
-            rid: 5403938137836618305
+            rid: 5843204037934841980
         - LineBlock:
-            rid: 5403938137836618306
+            rid: 5843204037934841981
         - LineBlock:
-            rid: 5403938137836618307
+            rid: 5843204037934841982
         - LineBlock:
-            rid: 5403938137836618308
+            rid: 5843204037934841983
         - LineBlock:
-            rid: 5403938137836618309
+            rid: 5843204037934841984
         - LineBlock:
-            rid: 5403938137836618310
+            rid: 5843204037934841985
         - LineBlock:
-            rid: 5403938137836618311
+            rid: 5843204037934841986
         - LineBlock:
-            rid: 5403938137836618312
+            rid: 5843204037934841987
         - LineBlock:
-            rid: 5403938137836618313
+            rid: 5843204037934841988
         - LineBlock:
-            rid: 5403938137836618314
+            rid: 5843204037934841989
         - LineBlock:
-            rid: 5403938137836618315
+            rid: 5843204037934841990
         - LineBlock:
-            rid: 5403938137836618316
+            rid: 5843204037934841991
         - LineBlock:
-            rid: 5403938137836618317
+            rid: 5843204037934841992
         - LineBlock:
-            rid: 5403938137836618318
+            rid: 5843204037934841993
         - LineBlock:
-            rid: 5403938137836618319
+            rid: 5843204037934841994
         - LineBlock:
-            rid: 5403938137836618320
+            rid: 5843204037934841995
         - LineBlock:
-            rid: 5403938137836618321
+            rid: 5843204037934841996
         - LineBlock:
-            rid: 5403938137836618322
+            rid: 5843204037934841997
         - LineBlock:
-            rid: 5403938137836618323
+            rid: 5843204037934841998
         - LineBlock:
-            rid: 5403938137836618324
+            rid: 5843204037934841999
         - LineBlock:
-            rid: 5403938137836618325
+            rid: 5843204037934842000
         - LineBlock:
-            rid: 5403938137836618326
+            rid: 5843204037934842001
         - LineBlock:
-            rid: 5403938137836618327
+            rid: 5843204037934842002
         - LineBlock:
-            rid: 5403938137836618328
+            rid: 5843204037934842003
         - LineBlock:
-            rid: 5403938137836618329
+            rid: 5843204037934842004
         - LineBlock:
-            rid: 5403938137836618330
+            rid: 5843204037934842005
         - LineBlock:
-            rid: 5403938137836618331
+            rid: 5843204037934842006
         - LineBlock:
-            rid: 5403938137836618332
+            rid: 5843204037934842007
         - LineBlock:
-            rid: 5403938137836618333
+            rid: 5843204037934842008
         - LineBlock:
-            rid: 5403938137836618334
+            rid: 5843204037934842009
         - LineBlock:
-            rid: 5403938137836618335
+            rid: 5843204037934842010
       - Language: chinese
         LineBlocks:
         - LineBlock:
-            rid: 5403938137836618336
+            rid: 5843204037934842011
         - LineBlock:
-            rid: 5403938137836618337
+            rid: 5843204037934842012
         - LineBlock:
-            rid: 5403938137836618338
+            rid: 5843204037934842013
       - Language: english
         LineBlocks:
         - LineBlock:
-            rid: 5403938137836618339
-  TextAssets:
-  - {fileID: 4900000, guid: e5dc323bc7da42f6a8c9860535a5b9ab, type: 3}
+            rid: 5843204037934842014
+    Stages: []
+    VariableMappingsList: []
+  - CommandName: 
+    Parameters: []
+    Cases: []
+    Output:
+      LanguageBlocks: []
+    Stages: []
+    VariableMappingsList: []
+  - CommandName: 
+    Parameters: []
+    Cases: []
+    Output:
+      LanguageBlocks: []
+    Stages: []
+    VariableMappingsList: []
   references:
     version: 2
     RefIds:
-    - rid: 5403938137836618285
+    - rid: 5843204037934841960
       type: {class: EmailParameter, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Name: Target
@@ -160,291 +176,344 @@ MonoBehaviour:
         Accept:
         - MOONCAKE
         - ADDRESS
-    - rid: 5403938137836618286
+    - rid: 5843204037934841961
       type: {class: Parameter, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Name: Receiver
         Type: 
         Accept: []
-    - rid: 5403938137836618287
+    - rid: 5843204037934841962
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: 'output:'
         Type: normal
-    - rid: 5403938137836618288
+        Delay: 0
+    - rid: 5843204037934841963
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: ----------------------------------------
         Type: normal
-    - rid: 5403938137836618289
+        Delay: 0
+    - rid: 5843204037934841964
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: 'BuBugBomb WebScan v2.3.5 - Target: www.bmail.com'
         Type: normal
-    - rid: 5403938137836618290
+        Delay: 0
+    - rid: 5843204037934841965
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: 'Scan ID: BSID-230518-007 | Initiated: $time'
         Type: normal
-    - rid: 5403938137836618291
+        Delay: 0
+    - rid: 5843204037934841966
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: ----------------------------------------
         Type: normal
-    - rid: 5403938137836618292
+        Delay: 0
+    - rid: 5843204037934841967
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: '[SCAN SUMMARY]'
         Type: normal
-    - rid: 5403938137836618293
+        Delay: 0
+    - rid: 5843204037934841968
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "\u25B8 Target: www.bmail.com ($ip)"
         Type: normal
-    - rid: 5403938137836618294
+        Delay: 0
+    - rid: 5843204037934841969
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "\u25B8 Protocol: HTTPS/1.1"
         Type: normal
-    - rid: 5403938137836618295
+        Delay: 0
+    - rid: 5843204037934841970
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "\u25B8 Methods: GET, HEAD, OPTIONS"
         Type: normal
-    - rid: 5403938137836618296
+        Delay: 0
+    - rid: 5843204037934841971
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "\u25B8 Scanned paths: 12 | Time elapsed: 8.2s"
         Type: normal
-    - rid: 5403938137836618297
+        Delay: 0
+    - rid: 5843204037934841972
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: $$wait(1)
         Type: normal
-    - rid: 5403938137836618298
+        Delay: 0
+    - rid: 5843204037934841973
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: '[PATH ENUMERATION PROGRESS]'
         Type: normal
-    - rid: 5403938137836618299
+        Delay: 0
+    - rid: 5843204037934841974
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "case1:[\u2593\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591
           8%] /adminpanel      \xBB 404 Not Found (134ms)"
         Type: normal
-    - rid: 5403938137836618300
+        Delay: 0
+    - rid: 5843204037934841975
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "case2:[\u2593\u2593\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591
           16%] /admin-login"
         Type: normal
-    - rid: 5403938137836618301
+        Delay: 0
+    - rid: 5843204037934841976
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "$$progress(0.128,20,\" /manager\",\" /manager         \xBB 404 Not
           Found (128ms)\",\"white\",\"red\")"
         Type: normal
-    - rid: 5403938137836618302
+        Delay: 0
+    - rid: 5843204037934841977
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "[\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2591\u2591 50%]
           /administrator   \xBB 404 Not Found (142ms)"
         Type: normal
-    - rid: 5403938137836618303
+        Delay: 0
+    - rid: 5843204037934841978
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "[\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2591 66%]
           /wp-admin        \xBB 404 Not Found (151ms)"
         Type: normal
-    - rid: 5403938137836618304
+        Delay: 0
+    - rid: 5843204037934841979
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "[\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2591 75%]
           /backend         \xBB 404 Not Found (138ms)"
         Type: normal
-    - rid: 5403938137836618305
+        Delay: 0
+    - rid: 5843204037934841980
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "[\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593 83%]
           /console         \xBB 302 Found \u2192 Location: /login (212ms)"
         Type: normal
-    - rid: 5403938137836618306
+        Delay: 0
+    - rid: 5843204037934841981
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "[\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593 91%]
           /control-panel   \xBB 404 Not Found (125ms)"
         Type: normal
-    - rid: 5403938137836618307
+        Delay: 0
+    - rid: 5843204037934841982
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "[\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593 100%]
           /admin           \xBB 200 OK (184ms) \u25C0\u2500\u2500[CRITICAL]"
         Type: normal
-    - rid: 5403938137836618308
+        Delay: 0
+    - rid: 5843204037934841983
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "\u251C\u2500\u2500 Server: nginx/1.18.0"
         Type: normal
-    - rid: 5403938137836618309
+        Delay: 0
+    - rid: 5843204037934841984
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "\u251C\u2500\u2500 Content-Type: text/html"
         Type: normal
-    - rid: 5403938137836618310
+        Delay: 0
+    - rid: 5843204037934841985
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "\u2514\u2500\u2500 X-Powered-By: PHP/7.4.33"
         Type: normal
-    - rid: 5403938137836618311
+        Delay: 0
+    - rid: 5843204037934841986
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: '[ADDITIONAL PATHS SCANNED]'
         Type: normal
-    - rid: 5403938137836618312
+        Delay: 0
+    - rid: 5843204037934841987
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "/dashboard     \xBB 200 OK (201ms)"
         Type: normal
-    - rid: 5403938137836618313
+        Delay: 0
+    - rid: 5843204037934841988
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "/system        \xBB 403 Forbidden (225ms)"
         Type: normal
-    - rid: 5403938137836618314
+        Delay: 0
+    - rid: 5843204037934841989
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "/bmail-admin   \xBB 404 Not Found (132ms)"
         Type: normal
-    - rid: 5403938137836618315
+        Delay: 0
+    - rid: 5843204037934841990
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "/mail-manager  \xBB 404 Not Found (129ms)"
         Type: normal
-    - rid: 5403938137836618316
+        Delay: 0
+    - rid: 5843204037934841991
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "/kesi-console  \xBB 404 Not Found (131ms)"
         Type: normal
-    - rid: 5403938137836618317
+        Delay: 0
+    - rid: 5843204037934841992
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: ----------------------------------------
         Type: normal
-    - rid: 5403938137836618318
+        Delay: 0
+    - rid: 5843204037934841993
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: $$wait(0.3)
         Type: normal
-    - rid: 5403938137836618319
+        Delay: 0
+    - rid: 5843204037934841994
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: '[SCAN CONCLUSIONS]'
         Type: normal
-    - rid: 5403938137836618320
+        Delay: 0
+    - rid: 5843204037934841995
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "\u25B8 Valid admin paths: 3"
         Type: normal
-    - rid: 5403938137836618321
+        Delay: 0
+    - rid: 5843204037934841996
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "\u25B8 Security rating: Critical (Vulnerable admin portal)"
         Type: normal
-    - rid: 5403938137836618322
+        Delay: 0
+    - rid: 5843204037934841997
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "\u25B8 Recommended action: Inspect /admin endpoint"
         Type: normal
-    - rid: 5403938137836618323
+        Delay: 0
+    - rid: 5843204037934841998
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: '[DETECTED ADMIN PORTALS]'
         Type: normal
-    - rid: 5403938137836618324
+        Delay: 0
+    - rid: 5843204037934841999
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: 1. https://www.bmail.com/admin
         Type: normal
-    - rid: 5403938137836618325
+        Delay: 0
+    - rid: 5843204037934842000
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "\u251C\u2500\u2500 Status: Unauthenticated access allowed"
         Type: normal
-    - rid: 5403938137836618326
+        Delay: 0
+    - rid: 5843204037934842001
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "\u251C\u2500\u2500 Framework: Custom PHP application"
         Type: normal
-    - rid: 5403938137836618327
+        Delay: 0
+    - rid: 5843204037934842002
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: 2. https://www.bmail.com/console
         Type: normal
-    - rid: 5403938137836618328
+        Delay: 0
+    - rid: 5843204037934842003
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "\u251C\u2500\u2500 Status: Redirects to authentication"
         Type: normal
-    - rid: 5403938137836618329
+        Delay: 0
+    - rid: 5843204037934842004
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "\u251C\u2500\u2500 Framework: Spring Boot 2.7.3"
         Type: normal
-    - rid: 5403938137836618330
+        Delay: 0
+    - rid: 5843204037934842005
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: 3. https://www.bmail.com/dashboard
         Type: normal
-    - rid: 5403938137836618331
+        Delay: 0
+    - rid: 5843204037934842006
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "\u251C\u2500\u2500 Status: Requires authentication"
         Type: normal
-    - rid: 5403938137836618332
+        Delay: 0
+    - rid: 5843204037934842007
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "\u251C\u2500\u2500 Framework: React.js 18.2.0"
         Type: normal
-    - rid: 5403938137836618333
+        Delay: 0
+    - rid: 5843204037934842008
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: $$wait(1)
         Type: normal
-    - rid: 5403938137836618334
+        Delay: 0
+    - rid: 5843204037934842009
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: ----------------------------------------
         Type: normal
-    - rid: 5403938137836618335
+        Delay: 0
+    - rid: 5843204037934842010
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: '[INFO] Recommended action: www.bmail.com/admin'
         Type: normal
-    - rid: 5403938137836618336
+        Delay: 0
+    - rid: 5843204037934842011
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "\u6211\u662F\u4E2D\u6587111"
         Type: normal
-    - rid: 5403938137836618337
+        Delay: 0
+    - rid: 5843204037934842012
       type: {class: ClickableLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "[INFO]\u70B9\u6211\u83B7\u53D6\u5B57\u6BB5: www.bmail.com/admin"
         Type: clickable
+        Delay: 0
         Gain:
         - Key: PWD
           Value: 123456
         - Key: MOON_CAKE
           Value: MoonCake
-    - rid: 5403938137836618338
+    - rid: 5843204037934842013
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "\u6211\u662F\u4E2D\u6587222"
         Type: normal
-    - rid: 5403938137836618339
+        Delay: 0
+    - rid: 5843204037934842014
       type: {class: ClickableLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "\u6211\u662F\u82F1\u6587"
         Type: clickable
+        Delay: 0
         Gain:
         - Key: PWD
           Value: 123456

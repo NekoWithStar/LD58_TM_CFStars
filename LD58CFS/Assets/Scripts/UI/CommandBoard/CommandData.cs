@@ -44,6 +44,33 @@ namespace LD58.UI.CommandBoard
         }
 
         [Button]
+        [InfoBox("从JSON文件读取命令定义")]
+        public void ReadFromJsonFile(TextAsset jsonAsset)
+        {
+            // 创建临时文件路径
+            var tempPath = "Temp/" + jsonAsset.name + ".json";
+            System.IO.File.WriteAllText(tempPath, jsonAsset.text);
+            
+            try
+            {
+                var command = JsonCommandParser.ParseFile(tempPath);
+                var find    = Commands.Find(cmd => cmd.CommandName == command.CommandName);
+                if (find != null)
+                    Commands.Remove(find);
+                Commands.Add(command);
+                EditorUtility.SetDirty(this);
+                AssetDatabase.SaveAssets();
+                AssetDatabase.Refresh();
+                Debug.Log($"成功从JSON加载命令: {command.CommandName}");
+            }
+            finally
+            {
+                if (System.IO.File.Exists(tempPath))
+                    System.IO.File.Delete(tempPath);
+            }
+        }
+
+        [Button]
         public void Test()
         {
             CommandFileParser.Test();

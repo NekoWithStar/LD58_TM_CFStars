@@ -18,10 +18,162 @@ namespace LD58.Util
     [Serializable]
     public class CommandDefinition
     {
-        public string                 CommandName;
+        public string CommandName;
         public List<ParameterWrapper> Parameters = new();
-        public List<Case>             Cases      = new();
-        public Output                 Output;
+        public List<Case> Cases = new();
+        public Output Output;
+
+        [NonSerialized] public Dictionary<string, string> Variables = new();
+        public List<OutputStage> Stages = new List<OutputStage>();
+        
+        // 变量映射表（用于序列化显示）
+        public List<VariableMapping> VariableMappingsList = new();
+        
+        // 变量映射字典（运行时使用）
+        [NonSerialized] 
+        private Dictionary<string, VariableMapping> _variableMappingsDict;
+        
+        public Dictionary<string, VariableMapping> VariableMappings
+        {
+            get
+            {
+                if (_variableMappingsDict == null || _variableMappingsDict.Count == 0)
+                {
+                    _variableMappingsDict = new Dictionary<string, VariableMapping>();
+                    foreach (var mapping in VariableMappingsList)
+                    {
+                        if (!string.IsNullOrEmpty(mapping.VariableName))
+                        {
+                            _variableMappingsDict[mapping.VariableName] = mapping;
+                        }
+                    }
+                }
+                return _variableMappingsDict;
+            }
+        }
+        
+        // 缓存随机生成的值
+        [NonSerialized] private Dictionary<string, string> _cachedRandomValues = new();
+        
+        /// <summary>
+        /// 重置缓存的随机值
+        /// </summary>
+        public void ResetRandomCache()
+        {
+            _cachedRandomValues = new Dictionary<string, string>();
+        }
+        
+        /// <summary>
+        /// 解析文本中的变量，替换为实际值
+        /// </summary>
+        public string ParseVariables(string text, string hitCase)
+        {
+            if (string.IsNullOrEmpty(text)) return text;
+            
+            var result = text;
+            
+
+            if (!_cachedRandomValues.ContainsKey("time"))
+                _cachedRandomValues["time"] = DateTime.UtcNow.ToString("yyyy-MM-dd HH:mm:ss") + " UTC";
+            if (!_cachedRandomValues.ContainsKey("random6"))
+                _cachedRandomValues["random6"] = GenerateRandomString(6, true);
+            if (!_cachedRandomValues.ContainsKey("random10"))
+                _cachedRandomValues["random10"] = GenerateRandomString(10, true);
+            if (!_cachedRandomValues.ContainsKey("random12"))
+                _cachedRandomValues["random12"] = GenerateRandomString(12, false);
+            if (!_cachedRandomValues.ContainsKey("random3"))
+                _cachedRandomValues["random3"] = GenerateRandomString(3, true);
+            
+            result = result.Replace("$time", _cachedRandomValues["time"]);
+            result = result.Replace("$random6", _cachedRandomValues["random6"]);
+            result = result.Replace("$random10", _cachedRandomValues["random10"]);
+            result = result.Replace("$random12", _cachedRandomValues["random12"]);
+            result = result.Replace("$random3", _cachedRandomValues["random3"]);
+            
+            // 替换参数变量
+            foreach (var param in Parameters)
+            {
+                var paramName = param.Parameter.Name;
+                var paramValue = param.Parameter.GetValue();
+                result = result.Replace($"${paramName}", paramValue);
+            }
+            
+            // 替换case中的变量
+            if (!string.IsNullOrEmpty(hitCase))
+            {
+                var matchedCase = Cases.FirstOrDefault(c => c.Name == hitCase);
+                if (matchedCase != null && matchedCase.Variables != null)
+                {
+                    foreach (var kvp in matchedCase.Variables)
+                    {
+                        result = result.Replace($"${kvp.Key}", kvp.Value);
+                    }
+                }
+            }
+            
+            // 替换旧的VariableMappings
+            foreach (var mapping in VariableMappings.Values)
+            {
+                string value = mapping.DefaultValue;
+                if (!string.IsNullOrEmpty(hitCase) && mapping.CaseValues.ContainsKey(hitCase))
+                {
+                    value = mapping.CaseValues[hitCase];
+                }
+                if (!string.IsNullOrEmpty(value))
+                {
+                    result = result.Replace($"${mapping.VariableName}", value);
+                }
+            }
+            
+            return result;
+        }
+        
+        /// <summary>
+        /// 生成随机字符串
+        /// </summary>
+        private string GenerateRandomString(int length, bool numbersOnly)
+        {
+            const string numbers = "0123456789";
+            const string alphanumeric = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+            
+            var chars = numbersOnly ? numbers : alphanumeric;
+            var result = new System.Text.StringBuilder(length);
+            var random = new System.Random();
+            
+            for (int i = 0; i < length; i++)
+            {
+                result.Append(chars[random.Next(chars.Length)]);
+            }
+            
+            return result.ToString();
+        }
+    
+    }
+
+    // 变量映射类
+    [Serializable]
+    public class VariableMapping
+    {
+        public string VariableName;
+        public Dictionary<string, string> CaseValues = new(); // case名称 -> 变量值
+        public string DefaultValue; // 默认值
+    }
+
+    // 变量映射包装器（用于Unity序列化）
+    [Serializable]
+    public class VariableMappingWrapper
+    {
+        public string Key;
+        public VariableMapping Value;
+    }
+
+
+    [Serializable]
+    public class OutputStage
+    {
+        public string StageName; // "initial", "waiting", "success"
+        public float DelaySeconds; // 阶段延迟
+        public Output Output; // 该阶段的输出
     }
 
     [Serializable]
@@ -65,12 +217,46 @@ namespace LD58.Util
         }
     }
 
+    // 键值对（可序列化）
+    [Serializable]
+    public class SerializableKeyValuePair
+    {
+        public string Key;
+        public string Value;
+    }
+
     // 测试用例
     [Serializable]
     public class Case
     {
         public string               Name;
         public List<ParameterValue> ParameterValues = new List<ParameterValue>();
+        
+        // 用于序列化显示的变量列表
+        public List<SerializableKeyValuePair> VariablesList = new List<SerializableKeyValuePair>();
+        
+        // 运行时使用的变量字典（不序列化）
+        [NonSerialized]
+        private Dictionary<string, string> _variablesDict;
+        
+        public Dictionary<string, string> Variables
+        {
+            get
+            {
+                if (_variablesDict == null || _variablesDict.Count == 0)
+                {
+                    _variablesDict = new Dictionary<string, string>();
+                    foreach (var kvp in VariablesList)
+                    {
+                        if (!string.IsNullOrEmpty(kvp.Key))
+                        {
+                            _variablesDict[kvp.Key] = kvp.Value;
+                        }
+                    }
+                }
+                return _variablesDict;
+            }
+        }
     }
 
     // 参数值
@@ -93,6 +279,7 @@ namespace LD58.Util
     public class LanguageBlock
     {
         public string                 Language; // 可以为空（无语言标识），"chinese" 或 "english"
+        public string                 Case;     // 可选，指定此语言块只在特定case下显示
         public List<LineBlockWrapper> LineBlocks = new();
     }
 
@@ -109,6 +296,7 @@ namespace LD58.Util
     {
         public string Text;
         public string Type; // "normal" 或 "clickable"
+        public float Delay; // 延时（秒），0表示无延时
     }
 
     // 普通行块
@@ -165,6 +353,9 @@ namespace LD58.Util
                             break;
                         case "params":
                             ParseParameters(command, lines, ref i);
+                            break;
+                        case "variables":
+                            ParseVariables(command, lines, ref i);
                             break;
                         case "output":
                             ParseOutput(command, lines, ref i);
@@ -292,6 +483,58 @@ namespace LD58.Util
             }
 
             command.Cases.Add(testCase);
+        }
+
+        private void ParseVariables(CommandDefinition command, string[] lines, ref int index)
+        {
+            while (++index < lines.Length)
+            {
+                var line = lines[index].Trim();
+                if (string.IsNullOrWhiteSpace(line)) continue;
+
+                if (line.StartsWith("- name :"))
+                {
+                    var mapping = new VariableMapping();
+                    mapping.VariableName = line.Replace("- name :", "").Trim();
+                    mapping.CaseValues = new Dictionary<string, string>();
+
+                    // 读取case相关的值和默认值
+                    while (++index < lines.Length)
+                    {
+                        var nextLine = lines[index].Trim();
+                        if (string.IsNullOrWhiteSpace(nextLine)) break;
+
+                        if (nextLine.StartsWith("case") && nextLine.Contains(":"))
+                        {
+                            var parts = nextLine.Split(new[] { ':' }, 2);
+                            if (parts.Length == 2)
+                            {
+                                var caseName = parts[0].Trim();
+                                var value = parts[1].Trim();
+                                mapping.CaseValues[caseName] = value;
+                            }
+                        }
+                        else if (nextLine.StartsWith("default :"))
+                        {
+                            mapping.DefaultValue = nextLine.Replace("default :", "").Trim();
+                        }
+                        else if (nextLine.StartsWith("- name :") || 
+                                 (nextLine.StartsWith("case") && nextLine.EndsWith(":")) ||
+                                 nextLine.StartsWith("output") || nextLine.StartsWith("params"))
+                        {
+                            index--; // 回退，让外层处理下一个变量或下一个section
+                            break;
+                        }
+                    }
+
+                    command.VariableMappingsList.Add(mapping);
+                }
+                else if (!line.StartsWith("-") && !string.IsNullOrWhiteSpace(line))
+                {
+                    index--; // 回退到当前节
+                    break;
+                }
+            }
         }
 
         private void ParseOutput(CommandDefinition command, string[] lines, ref int index)
@@ -438,6 +681,17 @@ namespace LD58.Util
             {
                 var pa = param.Parameter;
                 Debug.Log($"  {pa.Name} ({pa.Type}): {string.Join(", ", pa.Accept)}");
+            }
+            
+            Debug.Log("\n变量映射:");
+            foreach (var mapping in command.VariableMappings.Values)
+            {
+                Debug.Log($"  {mapping.VariableName}:");
+                Debug.Log($"    Default: {mapping.DefaultValue}");
+                foreach (var caseValue in mapping.CaseValues)
+                {
+                    Debug.Log($"    {caseValue.Key}: {caseValue.Value}");
+                }
             }
 
             Debug.Log("\n测试用例:");
