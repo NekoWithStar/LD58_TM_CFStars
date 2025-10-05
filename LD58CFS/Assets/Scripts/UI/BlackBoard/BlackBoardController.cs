@@ -27,6 +27,8 @@ namespace LD58.UI
             {
                 SetItem("who i am", "Egg");
                 SetItem("who u r", "Cat D");
+                SetItem("MOONCAKE","MoonCake");
+                SetItem("ADDRESS","www");
             }
 #endif
         }

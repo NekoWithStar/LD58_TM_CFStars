@@ -5,20 +5,17 @@
 
 #endregion
 
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
-using LD58.Constant;
-using LD58.Extension;
-using LD58.UI.CommandBoard;
+using LD58.Model;
+using LD58.Util;
+using QFramework;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace LD58.UI
 {
-    public sealed partial class ConsoleController : MonoBehaviour
+    public sealed partial class ConsoleController : AbstractController
     {
         [SerializeField] private GameObject _consoleItemPrefab;
 
@@ -32,6 +29,8 @@ namespace LD58.UI
         [SerializeField] private Button _enterButton;
 
         [SerializeField] private ScrollRect _scrollRect;
+        
+        private ISettingModel _settingModel;
 
         public bool IsPowerShell { get; private set; } = true;
 
@@ -45,16 +44,15 @@ namespace LD58.UI
             }
         }
 
-        private          ConsoleItem                _powerShellLastItem;
-        private          ConsoleItem                _browserConsoleLastItem;
-        public           bool                       ListenForCommand { get; private set; }
-        private          Command                    _command;
-        private          int                        _pendingListenCommandParameterIndex = 0;
-        private          bool                       _isPendingInput                     = false;
-        private          ConsoleItem                _pendingInputItem;
-        private readonly Dictionary<string, string> _inputValues       = new();
-        private          bool                       _isExectingCommand = false;
-        public           Command                    Command => _command;
+        private ConsoleItem       _powerShellLastItem;
+        private ConsoleItem       _browserConsoleLastItem;
+        public  bool              ListenForCommand { get; private set; }
+        private CommandDefinition _command;
+        private int               _pendingListenCommandParameterIndex = 0;
+        private bool              _isPendingInput                     = false;
+        private ConsoleItem       _pendingInputItem;
+        private bool              _isExecutingCommand = false;
+        public  CommandDefinition Command => _command;
 
         public bool DisplayCursor
         {
@@ -80,18 +78,18 @@ namespace LD58.UI
 
             _enterButton?.onClick.AddListener(() =>
             {
-                if (!_isExectingCommand && !_isPendingInput)
+                if (!_isExecutingCommand && !_isPendingInput)
                     AddFinishLine();
             });
 
-            _recallButton?.onClick.AddListener(() => { Recall(); });
-
+            _recallButton?.onClick.AddListener(Recall);
+            _settingModel = this.GetModel<ISettingModel>();
             SetUp();
         }
 
         private void Recall()
         {
-            if (!_isExectingCommand)
+            if (!_isExecutingCommand)
             {
                 ListenForCommand               = false;
                 _isPendingInput                = false;
@@ -114,7 +112,7 @@ namespace LD58.UI
             _browserConsoleItemParent.gameObject.SetActive(!IsPowerShell);
         }
 
-        public void StartListeningForCommand(Command command)
+        public void StartListeningForCommand(CommandDefinition command)
         {
             if (ListenForCommand)
             {
@@ -127,7 +125,6 @@ namespace LD58.UI
             AddItemWithoutNewLine(command.Parameters.Count == 0 ? command.CommandName : $"{command.CommandName} `");
             _pendingListenCommandParameterIndex = 0;
             _isPendingInput                     = true;
-            _inputValues.Clear();
             if (command.Parameters.Count == 0)
             {
                 DoCommand();
@@ -152,8 +149,7 @@ namespace LD58.UI
                 AddItem($"  -{_command.Parameters[_pendingListenCommandParameterIndex].Parameter.Name}: _____");
             _pendingInputItem.PendingInput = true;
             _pendingInputItem.SetColor(Color.yellow);
-            _pendingInputItem.AcceptedBlackBoardKey =
-                _command.Parameters[_pendingListenCommandParameterIndex].Parameter.AcceptedBlackBoardKey;
+            _pendingInputItem.Parameter = _command.Parameters[_pendingListenCommandParameterIndex];
         }
 
         private void Update()
@@ -162,8 +158,6 @@ namespace LD58.UI
             {
                 if (!_pendingInputItem.PendingInput)
                 {
-                    _inputValues[_command.Parameters[_pendingListenCommandParameterIndex].Parameter.Name] =
-                        _pendingInputItem.Value;
                     _pendingListenCommandParameterIndex++;
                     PendingNextParameter();
                 }
