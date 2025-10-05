@@ -5,6 +5,7 @@
 
 #endregion
 
+using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -13,17 +14,32 @@ namespace LD58.UI.CommandBoard
 {
     public sealed class CommandBoardItem : MonoBehaviour, IPointerClickHandler
     {
-        [SerializeField] private Text _text;
+        [SerializeField] private Text  _text;
+        [SerializeField] private Image _bk;
 
+        private ConsoleController _consoleController;
         public Command Command { get; set; }
         public void SetText(string text)
         {
             _text.text = text;
         }
 
+        private void Awake()
+        {
+            _consoleController = FindFirstObjectByType<ConsoleController>();
+        }
+
+        private void Update()
+        {
+            if(_consoleController.ListenForCommand && _consoleController.Command.CommandName == Command.CommandName)
+                _bk.color = Color.gray;
+            else
+                _bk.color = Color.white;
+        }
+
         public void OnPointerClick(PointerEventData eventData)
         {
-            FindFirstObjectByType<ConsoleController>().StartListeningForCommand(Command);
+            _consoleController.StartListeningForCommand(Command);
         }
     }
 }
