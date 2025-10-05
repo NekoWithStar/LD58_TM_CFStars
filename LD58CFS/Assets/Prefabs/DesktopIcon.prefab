@@ -61,14 +61,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8415094, g: 0.1190814, b: 0.1190814, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: -1503343158, guid: 3c0d669939525154ba96bb6b265aaa4e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ffbe2b8a2fd46fa8e4f7e83e27aaa5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _windowName: 
+  _windowName: Browser
   _button: {fileID: 710008628301127228}
 --- !u!114 &710008628301127228
 MonoBehaviour:
