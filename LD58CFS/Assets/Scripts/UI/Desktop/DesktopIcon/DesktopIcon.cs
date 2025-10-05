@@ -21,9 +21,10 @@ namespace LD58.UI.Desktop
         {
             _button.onClick.AddListener(() =>
             {
-                this.SendEvent(new WindowOpenEvent
+                this.SendEvent(new WindowOperationEvent
                 {
-                    WindowName = _windowName
+                    WindowName = _windowName,
+                    Operation = EWindowOperation.Open
                 });
             });
         }

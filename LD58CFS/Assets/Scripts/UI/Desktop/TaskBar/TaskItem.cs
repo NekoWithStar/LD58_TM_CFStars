@@ -22,9 +22,10 @@ namespace LD58.UI
         {
             _button.onClick.AddListener(() =>
             {
-                this.SendEvent(new WindowToggleActiveEvent
+                this.SendEvent(new WindowOperationEvent
                 {
-                    WindowName = _text.text
+                    WindowName = _text.text,
+                    Operation = EWindowOperation.ToggleActive
                 });
             });
         }

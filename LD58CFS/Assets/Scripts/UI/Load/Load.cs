@@ -22,12 +22,12 @@ namespace LD58.UI
 
         public static void ShowLoading()
         {
-            FindFirstObjectByType<Load>().gameObject.SetActive(true);
+            FindFirstObjectByType<Load>(FindObjectsInactive.Include).gameObject.SetActive(true);
         }
         
         public static void HideLoading()
         {
-            FindFirstObjectByType<Load>().gameObject.SetActive(true);
+            FindFirstObjectByType<Load>(FindObjectsInactive.Include).gameObject.SetActive(false);
         }
         private void Awake()
         {

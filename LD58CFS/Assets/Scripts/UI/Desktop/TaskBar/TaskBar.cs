@@ -27,6 +27,11 @@ namespace LD58.UI
             _taskItems.Clear();
         }
         
+        public TaskItem GetTaskItem(string taskName)
+        {
+            return _taskItems.GetValueOrDefault(taskName);
+        }
+        
         [Button]
         public TaskItem AddTaskItem(string taskName, Sprite icon)
         {
