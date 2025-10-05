@@ -26,6 +26,10 @@ namespace LD58.UI
             var blankChar  = '░';
             var filledChar = '▓';
             Debug.Log("DoCommand: " + _command.CommandName);
+            
+            // 重置随机值缓存
+            _command.ResetRandomCache();
+            
             var paramDic = new Dictionary<string, string>();
             foreach (var commandParameter in _command.Parameters)
             {
@@ -42,6 +46,7 @@ namespace LD58.UI
                     if (!paramDic.ContainsKey(param.Name) ||
                         param.Accept.Count != 0 && !param.Accept.Contains(paramDic[param.Name]))
                     {
+                        Debug.Log($"❌ Case '{commandCase.Name}' 不匹配: 参数 '{param.Name}' 期望 [{string.Join(", ", param.Accept)}], 实际 '{(paramDic.ContainsKey(param.Name) ? paramDic[param.Name] : "不存在")}'");
                         hit = false;
                         break;
                     }
@@ -53,6 +58,11 @@ namespace LD58.UI
                     break;
                 }
             }
+            
+            if (string.IsNullOrEmpty(hitCase))
+            {
+                Debug.LogWarning("没有匹配到任何case，变量将使用默认值");
+            }
 
             foreach (var lb in _command.Output.LanguageBlocks)
             {
@@ -63,12 +73,18 @@ namespace LD58.UI
                     foreach (var line in lb.LineBlocks)
                     {
                         var text = line.LineBlock.Text.Trim();
+                        
+                        // 先替换变量
+                        text = _command.ParseVariables(text, hitCase);
+                        
                         if (text.StartsWith("case"))
                         {
                             var caseParts = text.Split(":", StringSplitOptions.RemoveEmptyEntries);
                             if (caseParts[0] == hitCase)
                             {
                                 text = caseParts[1];
+                                // 再次替换变量（因为case后面的内容也可能包含变量）
+                                text = _command.ParseVariables(text, hitCase);
                             }
                             else
                             {
@@ -83,7 +99,15 @@ namespace LD58.UI
                                 var item = AddItem(text);
                                 foreach (var keyValuePair in clickableLineBlock.Gain)
                                 {
-                                    item.BlackBoardItems[keyValuePair.Key] = keyValuePair.Value;
+                                    // 对gain的值也进行变量替换
+                                    var gainValue = _command.ParseVariables(keyValuePair.Value, hitCase);
+                                    item.BlackBoardItems[keyValuePair.Key] = gainValue;
+                                }
+                                
+                                // 处理延时
+                                if (clickableLineBlock.Delay > 0)
+                                {
+                                    await UniTask.WaitForSeconds(clickableLineBlock.Delay);
                                 }
                             }
                                 break;
@@ -128,6 +152,12 @@ namespace LD58.UI
                                 else
                                 {
                                     AddItem(text);
+                                }
+                                
+                                // 处理延时
+                                if (normalLineBlock.Delay > 0)
+                                {
+                                    await UniTask.WaitForSeconds(normalLineBlock.Delay);
                                 }
                             }
                                 break;

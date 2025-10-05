@@ -1,0 +1,346 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81e523f5a7944b969387d48819e01ab7, type: 3}
+  m_Name: Level1SendMail
+  m_EditorClassIdentifier: 
+  Commands:
+  - CommandName: Send-Mail
+    Parameters:
+    - Parameter:
+        rid: 5843204037934842481
+    - Parameter:
+        rid: 5843204037934842482
+    - Parameter:
+        rid: 5843204037934842483
+    - Parameter:
+        rid: 5843204037934842484
+    Cases:
+    - Name: case1
+      ParameterValues:
+      - Name: EmailSubject
+        Accept:
+        - "\u732B\u54AA\u9009\u7F8E"
+      - Name: OriginalLink
+        Accept:
+        - www.meow-awards.com/login
+      - Name: TargetEmail
+        Accept:
+        - Kesi@Bmail.com
+      - Name: SenderDomain
+        Accept:
+        - MeowPlanetClub@Bmail.com
+      VariablesList:
+      - Key: PhishingLink
+        Value: https://me0w-awards.xyz/login
+      - Key: AssetCount
+        Value: 37
+      - Key: SenderName
+        Value: Bmail
+      - Key: Subject
+        Value: 'Urgent: Claim Your Feline Excellence Award'
+      - Key: SubjectChinese
+        Value: "\u7D27\u6025\uFF1A\u6765\u83B7\u53D6\u4F60\u7684\u53EF\u7231\u732B\u54AA\u5353\u8D8A\u5956\uFF01"
+      - Key: ContentTemplate
+        Value: awards_notification
+      - Key: DisplayDomain
+        Value: www.bmail.com
+      - Key: Username
+        Value: Kesi
+      - Key: Password
+        Value: qwertyuiop1234567890
+    Output:
+      LanguageBlocks:
+      - Language: 
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204037934842485
+        - LineBlock:
+            rid: 5843204037934842486
+        - LineBlock:
+            rid: 5843204037934842487
+        - LineBlock:
+            rid: 5843204037934842488
+        - LineBlock:
+            rid: 5843204037934842489
+        - LineBlock:
+            rid: 5843204037934842490
+        - LineBlock:
+            rid: 5843204037934842491
+        - LineBlock:
+            rid: 5843204037934842492
+        - LineBlock:
+            rid: 5843204037934842493
+        - LineBlock:
+            rid: 5843204037934842494
+        - LineBlock:
+            rid: 5843204037934842495
+        - LineBlock:
+            rid: 5843204037934842496
+        - LineBlock:
+            rid: 5843204037934842497
+        - LineBlock:
+            rid: 5843204037934842498
+        - LineBlock:
+            rid: 5843204037934842499
+        - LineBlock:
+            rid: 5843204037934842500
+        - LineBlock:
+            rid: 5843204037934842501
+        - LineBlock:
+            rid: 5843204037934842502
+        - LineBlock:
+            rid: 5843204037934842503
+        - LineBlock:
+            rid: 5843204037934842504
+        - LineBlock:
+            rid: 5843204037934842505
+        - LineBlock:
+            rid: 5843204037934842506
+        - LineBlock:
+            rid: 5843204037934842507
+        - LineBlock:
+            rid: 5843204037934842508
+      - Language: english
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204037934842509
+      - Language: chinese
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204037934842510
+        - LineBlock:
+            rid: 5843204037934842511
+        - LineBlock:
+            rid: 5843204037934842512
+        - LineBlock:
+            rid: 5843204037934842513
+        - LineBlock:
+            rid: 5843204037934842514
+    Stages: []
+    VariableMappingsList: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 5843204037934842481
+      type: {class: Parameter, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Name: EmailSubject
+        Type: string
+        Accept:
+        - "\u732B\u54AA\u9009\u7F8E"
+        - "\u6708\u997C"
+    - rid: 5843204037934842482
+      type: {class: Parameter, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Name: OriginalLink
+        Type: string
+        Accept:
+        - www.meow-awards.com/login
+        - www.bmail.com
+    - rid: 5843204037934842483
+      type: {class: Parameter, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Name: TargetEmail
+        Type: string
+        Accept:
+        - Kesi@Bmail.com
+    - rid: 5843204037934842484
+      type: {class: Parameter, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Name: SenderDomain
+        Type: string
+        Accept:
+        - MeowPlanetClub@Bmail.com
+        - www.bmail.com
+    - rid: 5843204037934842485
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550"
+        Type: normal
+        Delay: 0
+    - rid: 5843204037934842486
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: BuBugBomb Phishing Suite v3.1.4
+        Type: normal
+        Delay: 0
+    - rid: 5843204037934842487
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 'Session ID: PHISH-$random6-KESI | Target: $TargetEmail'
+        Type: normal
+        Delay: 0
+    - rid: 5843204037934842488
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550"
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204037934842489
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> clone --source $OriginalLink'
+        Type: normal
+        Delay: 0
+    - rid: 5843204037934842490
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '        --destination $PhishingLink'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204037934842491
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "  \u251C\u2500\u2500 Cloning source page... [\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588
+          100%]"
+        Type: normal
+        Delay: 0.4
+    - rid: 5843204037934842492
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "  \u251C\u2500\u2500 Mirroring $AssetCount assets (CSS/JS/images)"
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204037934842493
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "  \u251C\u2500\u2500 Injecting credential capture script"
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204037934842494
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "  \u251C\u2500\u2500 Generating SSL certificate (Let's Encrypt)"
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204037934842495
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "  \u2514\u2500\u2500 Deployed at: $PhishingLink"
+        Type: normal
+        Delay: 0.5
+    - rid: 5843204037934842496
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0
+    - rid: 5843204037934842497
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> set sender "$SenderName" --domain $DisplayDomain'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204037934842498
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> set recipient $TargetEmail'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204037934842499
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> set subject "$Subject"'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204037934842500
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> set body --template "$ContentTemplate"'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204037934842501
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> set link --display "Claim Your Award" --url $PhishingLink'
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204037934842502
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0
+    - rid: 5843204037934842503
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> send --threads 3 --encryption tls1.3'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204037934842504
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "  \u251C\u2500\u2500 Connecting to SMTP relay: smtp.gateway.provider"
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204037934842505
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "  \u251C\u2500\u2500 Establishing secure channel... [ECDHE-RSA-AES256-GCM-SHA384]"
+        Type: normal
+        Delay: 0.4
+    - rid: 5843204037934842506
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "  \u251C\u2500\u2500 Transmitting payload... [\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588
+          100%]"
+        Type: normal
+        Delay: 0.6
+    - rid: 5843204037934842507
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "  \u2514\u2500\u2500 Delivery confirmation: 250 2.0.0 OK $random10
+          $random12.12"
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204037934842508
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550"
+        Type: normal
+        Delay: 0.5
+    - rid: 5843204037934842509
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '[SUCCESS] Phishing email delivered to $TargetEmail'
+        Type: normal
+        Delay: 0
+    - rid: 5843204037934842510
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[SUCCESS] \u9493\u9C7C\u90AE\u4EF6\u5DF2\u53D1\u9001\u81F3 $TargetEmail"
+        Type: normal
+        Delay: 1
+    - rid: 5843204037934842511
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0
+    - rid: 5843204037934842512
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '[$time] CREDENTIAL CAPTURED'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204037934842513
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "  \u251C\u2500\u2500 Username: $Username"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204037934842514
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "  \u2514\u2500\u2500 Password: $Password"
+        Type: normal
+        Delay: 0
