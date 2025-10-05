@@ -7,6 +7,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using EggFramework.Util;
 using QFramework;
 using Sirenix.OdinInspector;
@@ -43,8 +44,23 @@ namespace LD58.UI
         {
             _text.text = text;
             GetComponent<RectTransform>().sizeDelta = new Vector2(GetComponent<RectTransform>().sizeDelta.x,
-                ((int)(text.Length / 46) + 1) * 30);
+                ((int)(StripRichTextTags(text).Length / 46) + 1) * 30);
         }
+        
+        public static string StripRichTextTags(string input)
+        {
+            if (string.IsNullOrEmpty(input))
+                return input;
+
+            // 正则表达式模式，用于匹配常见的富文本标签
+            string pattern = @"<[^>]+>|&\w+;";
+        
+            // 移除所有匹配到的标签
+            string result = Regex.Replace(input, pattern, string.Empty);
+        
+            return result;
+        }
+        
 
         public void SetColor(Color color)
         {

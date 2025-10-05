@@ -104,6 +104,7 @@ namespace LD58.UI
             windowConfig.Window.SetActive(true);
             windowConfig.Window.transform.SetAsLastSibling();
             windowConfig.Window.GetComponent<AbstractWindowController>().Focus = true;
+            windowConfig.Window.GetComponent<AbstractWindowController>().OnFocus();
             _windowStates[windowName]                                          = EWindowState.Focused;
             foreach (var eWindowState in _windowStates.ToDictionary(kv => kv.Key, kv => kv.Value))
             {

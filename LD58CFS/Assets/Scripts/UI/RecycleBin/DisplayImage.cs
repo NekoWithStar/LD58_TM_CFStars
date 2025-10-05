@@ -1,7 +1,7 @@
 #region
 
 //文件创建者：Egg
-//创建时间：10-05 10:50
+//创建时间：10-05 01:13
 
 #endregion
 
@@ -10,29 +10,24 @@ using QFramework;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace LD58.UI.Desktop
+namespace LD58.UI.RecycleBin
 {
-    public class DesktopIcon : AbstractController
+    public sealed class DisplayImage : AbstractController
     {
-        [SerializeField] private string _windowName;
         [SerializeField] private Button _button;
+        [SerializeField] private Sprite _sprite;
 
         private void Awake()
         {
             _button.onClick.AddListener(() =>
             {
-                BeforeOpen();
+                Selection.DisplayImage = _sprite;
                 this.SendEvent(new WindowOperationEvent
                 {
-                    WindowName = _windowName,
-                    Operation = EWindowOperation.Open
+                    Operation  = EWindowOperation.Open,
+                    WindowName = "ImageViewer"
                 });
             });
-        }
-        
-        protected virtual void BeforeOpen()
-        {
-            
         }
 
         private void OnDestroy()

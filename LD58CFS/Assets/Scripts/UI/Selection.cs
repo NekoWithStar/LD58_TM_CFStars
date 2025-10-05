@@ -5,10 +5,13 @@
 
 #endregion
 
+using UnityEngine;
+
 namespace LD58.UI
 {
     public static class Selection
     {
         public static BlackBoardItem SelectedBlackBoardItem;
+        public static Sprite DisplayImage;
     }
 }

@@ -45,6 +45,11 @@ namespace LD58.UI
             });
             TitleText.text = WindowName;
         }
+        
+        public virtual void OnFocus()
+        {
+            
+        }
 
         private void Update()
         {
