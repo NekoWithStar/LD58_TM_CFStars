@@ -6665,41 +6665,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Browser
       objectReference: {fileID: 0}
-    - target: {fileID: 4043896749521612887, guid: f471ffde24e36a6419d20bc531572370, type: 3}
-      propertyPath: m_IsActive
+    - target: {fileID: 4311653658133360221, guid: f471ffde24e36a6419d20bc531572370, type: 3}
+      propertyPath: m_Interactable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5098713571403965080, guid: f471ffde24e36a6419d20bc531572370, type: 3}
+      propertyPath: m_RaycastTarget
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6316522113576899580, guid: f471ffde24e36a6419d20bc531572370, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6316522113576899580, guid: f471ffde24e36a6419d20bc531572370, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6316522113576899580, guid: f471ffde24e36a6419d20bc531572370, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 42.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6316522113576899580, guid: f471ffde24e36a6419d20bc531572370, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -12.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7533145768641753303, guid: f471ffde24e36a6419d20bc531572370, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7533145768641753303, guid: f471ffde24e36a6419d20bc531572370, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7533145768641753303, guid: f471ffde24e36a6419d20bc531572370, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 12.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7533145768641753303, guid: f471ffde24e36a6419d20bc531572370, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -12.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

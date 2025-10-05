@@ -25,10 +25,10 @@ namespace LD58.UI
 #if UNITY_EDITOR
             if (_debug)
             {
-                SetItem("who i am", "Egg");
+                SetItem("猫咪选美", "GoodCatContest");
                 SetItem("who u r", "Cat D");
-                SetItem("MOONCAKE","MoonCake");
-                SetItem("ADDRESS","www");
+                SetItem("MOON_CAKE","MoonCake");
+                SetItem("ADDRESS","www.bmail.com");
             }
 #endif
         }
@@ -40,13 +40,13 @@ namespace LD58.UI
         {
             if (_boardItems.TryGetValue(key, out var bbi))
             {
-                bbi.SetText($"{key}:{value}");
+                bbi.SetText($"{value}");
                 bbi.Value = value;
                 return;
             }
             var item = Instantiate(_blackBoardItemPrefab, _content);
             bbi  = item.GetComponent<BlackBoardItem>();
-            bbi.SetText($"{key}:{value}");
+            bbi.SetText($"{value}");
             bbi.Key   = key;
             bbi.Value = value;
             _boardItems[key] = bbi;
