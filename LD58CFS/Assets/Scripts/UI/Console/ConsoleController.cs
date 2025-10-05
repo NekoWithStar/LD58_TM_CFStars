@@ -25,16 +25,19 @@ namespace LD58.UI
         [SerializeField] private Transform _powerShellItemParent;
         [SerializeField] private Transform _browserConsoleItemParent;
 
-        [SerializeField] private Button     _powerShellButton;
-        [SerializeField] private Button     _browerConsoleButton;
-        [SerializeField] private Button     _clearButton;
+        [SerializeField] private Button _powerShellButton;
+        [SerializeField] private Button _browerConsoleButton;
+        [SerializeField] private Button _clearButton;
+        [SerializeField] private Button _recallButton;
+        [SerializeField] private Button _enterButton;
+
         [SerializeField] private ScrollRect _scrollRect;
 
-        public bool        IsPowerShell { get; private set; } = true;
+        public bool IsPowerShell { get; private set; } = true;
 
         public ConsoleItem LastItem
         {
-            get=> IsPowerShell ? _powerShellLastItem : _browserConsoleLastItem;
+            get => IsPowerShell ? _powerShellLastItem : _browserConsoleLastItem;
             private set
             {
                 if (IsPowerShell) _powerShellLastItem = value;
@@ -49,7 +52,9 @@ namespace LD58.UI
         private          int                        _pendingListenCommandParameterIndex = 0;
         private          bool                       _isPendingInput                     = false;
         private          ConsoleItem                _pendingInputItem;
-        private readonly Dictionary<string, string> _inputValues = new();
+        private readonly Dictionary<string, string> _inputValues       = new();
+        private          bool                       _isExectingCommand = false;
+        public           Command                    Command => _command;
 
         public bool DisplayCursor
         {
@@ -72,7 +77,29 @@ namespace LD58.UI
             _browerConsoleButton?.onClick.AddListener(() => { Switch(false); });
 
             _powerShellButton?.onClick.AddListener(() => { Switch(true); });
+
+            _enterButton?.onClick.AddListener(() =>
+            {
+                if (!_isExectingCommand && !_isPendingInput)
+                    AddFinishLine();
+            });
+
+            _recallButton?.onClick.AddListener(() => { Recall(); });
+
             SetUp();
+        }
+
+        private void Recall()
+        {
+            if (!_isExectingCommand)
+            {
+                ListenForCommand               = false;
+                _isPendingInput                = false;
+                _pendingInputItem.PendingInput = false;
+                _pendingInputItem.SetColor(Color.gray);
+                AddItem("^C");
+                AddFinishLine();
+            }
         }
 
         [Button]
@@ -89,7 +116,10 @@ namespace LD58.UI
 
         public void StartListeningForCommand(Command command)
         {
-            if (ListenForCommand) return;
+            if (ListenForCommand)
+            {
+                Recall();
+            }
             ListenForCommand = true;
             if (LastItem)
                 LastItem.DisplayCursor = false;
@@ -101,7 +131,7 @@ namespace LD58.UI
             if (command.Parameters.Count == 0)
             {
                 DoCommand();
-                _isPendingInput  = false;
+                _isPendingInput = false;
             }
             else
             {
@@ -113,7 +143,7 @@ namespace LD58.UI
         {
             if (_pendingListenCommandParameterIndex >= _command.Parameters.Count)
             {
-                _isPendingInput  = false;
+                _isPendingInput = false;
                 DoCommand();
                 return;
             }
@@ -238,6 +268,8 @@ namespace LD58.UI
             _clearButton?.onClick.RemoveAllListeners();
             _browerConsoleButton?.onClick.RemoveAllListeners();
             _powerShellButton?.onClick.RemoveAllListeners();
+            _recallButton?.onClick.RemoveAllListeners();
+            _enterButton?.onClick.RemoveAllListeners();
         }
     }
 }

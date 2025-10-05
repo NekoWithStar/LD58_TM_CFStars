@@ -17,6 +17,7 @@ namespace LD58.UI
     {
         private async void DoCommand()
         {
+            _isExectingCommand = true;
             var blankChar  = '░';
             var filledChar = '▓';
             Debug.Log("DoCommand: " + _command.CommandName);
@@ -24,7 +25,7 @@ namespace LD58.UI
             {
                 case CommandConstant.WEB_SCAN:
                     ConsoleItem item = null;
-                    AddItem("----------------------------------------");
+                    AddItem("    ----------------------------------------");
                     AddItem("BuBugBomb WebScan v2.3.5 - Target: www.bmail.com");
                     AddItem("Scan ID: BSID-230518-007 | Initiated: " +
                             System.DateTime.UtcNow.ToString("yyyy-MM-dd HH:mm:ss") + " UTC");
@@ -161,7 +162,8 @@ namespace LD58.UI
                     break;
             }
 
-            ListenForCommand = false;
+            ListenForCommand   = false;
+            _isExectingCommand = false;
             AddFinishLine();
         }
     }
