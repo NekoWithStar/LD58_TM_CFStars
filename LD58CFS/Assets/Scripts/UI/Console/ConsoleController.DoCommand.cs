@@ -66,10 +66,17 @@ namespace LD58.UI
 
             foreach (var lb in _command.Output.LanguageBlocks)
             {
+                // 检查语言是否匹配
                 if (lb.Language == "chinese" && _settingModel.Language.Value == SystemLanguage.ChineseSimplified ||
                     lb.Language == "english" && _settingModel.Language.Value == SystemLanguage.English ||
                     string.IsNullOrEmpty(lb.Language))
                 {
+                    // 检查case是否匹配（如果LanguageBlock指定了case）
+                    if (!string.IsNullOrEmpty(lb.Case) && lb.Case != hitCase)
+                    {
+                        continue; // 跳过不匹配的case
+                    }
+                    
                     foreach (var line in lb.LineBlocks)
                     {
                         var text = line.LineBlock.Text.Trim();

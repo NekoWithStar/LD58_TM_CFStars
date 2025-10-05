@@ -279,6 +279,7 @@ namespace LD58.Util
     public class LanguageBlock
     {
         public string                 Language; // 可以为空（无语言标识），"chinese" 或 "english"
+        public string                 Case;     // 可选，指定此语言块只在特定case下显示
         public List<LineBlockWrapper> LineBlocks = new();
     }
 

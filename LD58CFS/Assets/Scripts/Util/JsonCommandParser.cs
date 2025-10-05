@@ -57,6 +57,7 @@ namespace LD58.Util
         public class JsonLanguageBlock
         {
             public string language;
+            public string @case; // 可选，指定此语言块只在特定case下显示
             public List<JsonLineBlock> lineBlocks;
         }
 
@@ -206,6 +207,7 @@ namespace LD58.Util
                     var langBlock = new LanguageBlock
                     {
                         Language = jsonLangBlock.language,
+                        Case = jsonLangBlock.@case, // 添加case字段支持
                         LineBlocks = new List<LineBlockWrapper>()
                     };
 
