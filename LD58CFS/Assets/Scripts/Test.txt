@@ -1,0 +1,78 @@
+//Global Variables: time, ip
+commandName:
+    WebScan
+params:
+    - name : Target
+      type : email
+      accept : MOONCAKE,ADDRESS
+    - name : Receiver
+case1:
+    - name : Target
+      accept : www@bmail.com,bmail.com
+    - name : Receiver
+case2:
+    - name : Target
+      accept : www.Nmail.com
+output:
+    ----------------------------------------
+    BuBugBomb WebScan v2.3.5 - Target: www.bmail.com
+    Scan ID: BSID-230518-007 | Initiated: $time
+    ----------------------------------------
+    [SCAN SUMMARY]
+    ▸ Target: www.bmail.com ($ip)
+    ▸ Protocol: HTTPS/1.1
+    ▸ Methods: GET, HEAD, OPTIONS
+    ▸ Scanned paths: 12 | Time elapsed: 8.2s
+    $$wait(1)
+    [PATH ENUMERATION PROGRESS]
+    case1:[▓░░░░░░░░░ 8%] /adminpanel      » 404 Not Found (134ms)
+    case2:[▓▓░░░░░░░░ 16%] /admin-login
+    $$progress(0.128,20," /manager"," /manager         » 404 Not Found (128ms)","white","red")
+    [▓▓▓▓▓▓▓▓░░ 50%] /administrator   » 404 Not Found (142ms)
+    [▓▓▓▓▓▓▓▓▓░ 66%] /wp-admin        » 404 Not Found (151ms) 
+    [▓▓▓▓▓▓▓▓▓░ 75%] /backend         » 404 Not Found (138ms)
+    [▓▓▓▓▓▓▓▓▓▓ 83%] /console         » 302 Found → Location: /login (212ms)
+    [▓▓▓▓▓▓▓▓▓▓ 91%] /control-panel   » 404 Not Found (125ms)
+    [▓▓▓▓▓▓▓▓▓▓ 100%] /admin           » 200 OK (184ms) ◀──[CRITICAL]
+                         ├── Server: nginx/1.18.0
+                         ├── Content-Type: text/html
+                         └── X-Powered-By: PHP/7.4.33
+    [ADDITIONAL PATHS SCANNED]
+    /dashboard     » 200 OK (201ms)
+    /system        » 403 Forbidden (225ms)
+    /bmail-admin   » 404 Not Found (132ms)
+    /mail-manager  » 404 Not Found (129ms)
+    /kesi-console  » 404 Not Found (131ms)
+    ----------------------------------------
+    $$wait(0.3)
+    [SCAN CONCLUSIONS]
+    ▸ Valid admin paths: 3
+    ▸ Security rating: Critical (Vulnerable admin portal)
+    ▸ Recommended action: Inspect /admin endpoint
+    [DETECTED ADMIN PORTALS]
+    1. https://www.bmail.com/admin
+       ├── Status: Unauthenticated access allowed
+       ├── Framework: Custom PHP application
+    2. https://www.bmail.com/console
+       ├── Status: Redirects to authentication
+       ├── Framework: Spring Boot 2.7.3
+    3. https://www.bmail.com/dashboard
+       ├── Status: Requires authentication
+       ├── Framework: React.js 18.2.0
+    $$wait(1)
+    ----------------------------------------
+    [INFO] Recommended action: www.bmail.com/admin
+    chinese:
+        我是中文111
+        clickable:
+              text: [INFO]点我获取字段: www.bmail.com/admin
+              gain: 
+                PWD = 123456
+                MOON_CAKE = MoonCake
+         我是中文222
+    english:
+        clickable:
+              text: 我是英文
+              gain: 
+                  PWD = 123456
+                  MOON_CAKE = MoonCake

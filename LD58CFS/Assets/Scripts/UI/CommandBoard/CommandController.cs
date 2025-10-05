@@ -7,7 +7,9 @@
 
 using System;
 using EggFramework;
+using EggFramework.Util.EggCMD;
 using LD58.Constant;
+using LD58.Util;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -42,7 +44,7 @@ namespace LD58.UI.CommandBoard
                 if (cmd.CommandName == command)
                 {
                     var item = Instantiate(_commandBoardItemPrefab, _content);
-                    item.Command = CloneMapUtil<Command>.Clone(cmd);
+                    item.Command = CloneMapUtil<CommandDefinition>.Clone(cmd);
                     item.SetText(command);
                     return item;
                 }

@@ -9,6 +9,8 @@ using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using EggFramework.Util;
+using LD58.UI.CommandBoard;
+using LD58.Util;
 using QFramework;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -17,7 +19,8 @@ using UnityEngine.UI;
 
 namespace LD58.UI
 {
-    public sealed class ConsoleItem : AbstractController, IPointerEnterHandler, IPointerExitHandler
+    public sealed class ConsoleItem : AbstractController, IPointerEnterHandler, IPointerExitHandler,
+        IPointerClickHandler
     {
         [SerializeField] private Text       _text;
         [SerializeField] private GameObject _cursor;
@@ -26,14 +29,16 @@ namespace LD58.UI
         public                   string     Text          => _text.text;
         [ShowInInspector] public bool       DisplayCursor { get; set; } = false;
 
-        public bool DisplayLeft { get; set; } = false;
+        public bool             DisplayLeft  { get; set; } = false;
+        public Parameter Parameter    { get; set; }
+        public bool             PendingInput { get; set; } = false;
 
-        public bool PendingInput { get; set; } = false;
+        public string Key   => Parameter.Name;
+        public string Value => Parameter.GetValue();
 
-        public string Key   { get; set; }
-        public string Value { get; set; }
+        public readonly Dictionary<string, string> BlackBoardItems = new();
 
-        public List<string> AcceptedBlackBoardKey { get; set; }
+        public List<string> AcceptedBlackBoardKey => Parameter.Accept;
 
         private void Awake()
         {
@@ -46,7 +51,7 @@ namespace LD58.UI
             GetComponent<RectTransform>().sizeDelta = new Vector2(GetComponent<RectTransform>().sizeDelta.x,
                 ((int)(StripRichTextTags(text).Length / 46) + 1) * 30);
         }
-        
+
         public static string StripRichTextTags(string input)
         {
             if (string.IsNullOrEmpty(input))
@@ -54,13 +59,13 @@ namespace LD58.UI
 
             // 正则表达式模式，用于匹配常见的富文本标签
             string pattern = @"<[^>]+>|&\w+;";
-        
+
             // 移除所有匹配到的标签
             string result = Regex.Replace(input, pattern, string.Empty);
-        
+
             return result;
         }
-        
+
 
         public void SetColor(Color color)
         {
@@ -92,12 +97,11 @@ namespace LD58.UI
                         if (AcceptedBlackBoardKey.Count == 0 ||
                             AcceptedBlackBoardKey.Contains(Selection.SelectedBlackBoardItem.Key))
                         {
-                            PendingInput = false;
-                            _text.color  = Color.white;
+                            PendingInput    = false;
+                            Parameter.Value = Selection.SelectedBlackBoardItem.Value;
+                            _text.color     = Color.white;
                             _text.text = _text.text.Replace("_____",
-                                $"BlackBoard.GetValue(\"{Selection.SelectedBlackBoardItem.Key}\") `");
-                            Value = Selection.SelectedBlackBoardItem.Value;
-                            Key   = Selection.SelectedBlackBoardItem.Key;
+                                $"{Parameter.GetValue()} `");
                         }
                     }
                 });
@@ -109,6 +113,14 @@ namespace LD58.UI
             if (PendingInput)
                 _text.color = new Color(Color.yellow.r, Color.yellow.g, Color.yellow.b, _text.color.a);
             _unRegister?.UnRegister();
+        }
+
+        void IPointerClickHandler.OnPointerClick(PointerEventData eventData)
+        {
+            foreach (var (key, value) in BlackBoardItems)
+            {
+                FindFirstObjectByType<BlackBoardController>().SetItem(key, value);
+            }
         }
     }
 }

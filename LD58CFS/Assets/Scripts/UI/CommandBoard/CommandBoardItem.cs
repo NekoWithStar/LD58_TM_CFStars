@@ -6,6 +6,8 @@
 #endregion
 
 using System;
+using EggFramework;
+using LD58.Util;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -18,7 +20,7 @@ namespace LD58.UI.CommandBoard
         [SerializeField] private Image _bk;
 
         private ConsoleController _consoleController;
-        public Command Command { get; set; }
+        public CommandDefinition Command { get; set; }
         public void SetText(string text)
         {
             _text.text = text;
@@ -39,7 +41,7 @@ namespace LD58.UI.CommandBoard
 
         public void OnPointerClick(PointerEventData eventData)
         {
-            _consoleController.StartListeningForCommand(Command);
+            _consoleController.StartListeningForCommand(CloneMapUtil<CommandDefinition>.Clone(Command));
         }
     }
 }
