@@ -1,0 +1,197 @@
+{
+  "commandName": "Web-Scan",
+  "parameters": [
+    {
+      "name": "TargetDomain",
+      "type": "string",
+      "accept": ["www.bmail.com"]
+    }
+  ],
+  "cases": [
+    {
+      "name": "case1",
+      "parameterValues": {
+        "TargetDomain": ["www.bmail.com"]
+      },
+      "variables": {
+        "ScanID": "$random6",
+        "SubID": "$random3",
+        "Path1": "https://www.bmail.com/home",
+        "Path2": "https://www.bmail.com/good",
+        "Path3": "https://www.bmail.com/admin",
+        "Path4": "https://www.bmail.com/cat",
+        "AvailablePath": "https://www.bmail.com/admin",
+        "FileSize": "13.1"
+      }
+    }
+  ],
+  "output": {
+    "languageBlocks": [
+      {
+        "language": null,
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════════════",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "BuBugBomb WebScan v2.3.5 - Target: $TargetDomain",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "Scan ID: BSID-$ScanID-$SubID | Initiated: $time UTC",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════════════",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "[SCAN INITIATED]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Target: $TargetDomain",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Protocol: HTTPS/1.1",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Methods: GET, HEAD, OPTIONS",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Scanned paths: 12 | Time elapsed: 8.2s",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "[PATH ENUMERATION]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[▓▓▓▓▓▓░░░░ 33%] $Path1          » 404 Not Found",
+            "delay": 0.4
+          },
+          {
+            "type": "normal",
+            "text": "[▓▓▓▓▓▓▓▓░░ 50%] $Path2          » 404 Not Found",
+            "delay": 0.4
+          },
+          {
+            "type": "normal",
+            "text": "[▓▓▓▓▓▓▓▓▓░ 66%] /database/logs            » 403 Forbidden",
+            "delay": 0.4
+          },
+          {
+            "type": "normal",
+            "text": "[▓▓▓▓▓▓▓▓▓░ 75%] $Path3         » 200 OK",
+            "delay": 0.4
+          },
+          {
+            "type": "normal",
+            "text": "[▓▓▓▓▓▓▓▓▓▓ 83%] /database/credentials    » 401 Unauthorized",
+            "delay": 0.4
+          },
+          {
+            "type": "normal",
+            "text": "[▓▓▓▓▓▓▓▓▓▓ 91%] /database/backup         » 403 Forbidden",
+            "delay": 0.4
+          },
+          {
+            "type": "normal",
+            "text": "[▓▓▓▓▓▓▓▓▓▓ 100%] $Path4        » 404 Not Found",
+            "delay": 0.4
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[INTERESTING PATHS FOUND]",
+            "delay": 0.2
+          },
+          {
+            "type": "clickable",
+            "text": "1. $AvailablePath",
+            "delay": 0.2,
+            "gain": {
+              "BmailAdminPath": "$AvailablePath"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "   ├── HTTP: 200 OK",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "   ├── Content-Type: application/sql",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "   └── Size: $FileSize KB",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════════════",
+            "delay": 0.3
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "case1",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[SUCCESS] Scan completed - 1 interesting path found",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "case1",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[SUCCESS] 扫描完成 - 发现 1 个可疑路径",
+            "delay": 0
+          }
+        ]
+      }
+    ]
+  }
+}

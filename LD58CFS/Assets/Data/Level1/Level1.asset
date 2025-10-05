@@ -239,6 +239,104 @@ MonoBehaviour:
             rid: 5843204037934842732
     Stages: []
     VariableMappingsList: []
+  - CommandName: Web-Scan
+    Parameters:
+    - Parameter:
+        rid: 5843204037934842733
+    Cases:
+    - Name: case1
+      ParameterValues:
+      - Name: TargetDomain
+        Accept:
+        - www.bmail.com
+      VariablesList:
+      - Key: ScanID
+        Value: $random6
+      - Key: SubID
+        Value: $random3
+      - Key: Path1
+        Value: https://www.bmail.com/home
+      - Key: Path2
+        Value: https://www.bmail.com/good
+      - Key: Path3
+        Value: https://www.bmail.com/admin
+      - Key: Path4
+        Value: https://www.bmail.com/cat
+      - Key: AvailablePath
+        Value: https://www.bmail.com/admin
+      - Key: FileSize
+        Value: 13.1
+    Output:
+      LanguageBlocks:
+      - Language: 
+        Case: 
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204037934842734
+        - LineBlock:
+            rid: 5843204037934842735
+        - LineBlock:
+            rid: 5843204037934842736
+        - LineBlock:
+            rid: 5843204037934842737
+        - LineBlock:
+            rid: 5843204037934842738
+        - LineBlock:
+            rid: 5843204037934842739
+        - LineBlock:
+            rid: 5843204037934842740
+        - LineBlock:
+            rid: 5843204037934842741
+        - LineBlock:
+            rid: 5843204037934842742
+        - LineBlock:
+            rid: 5843204037934842743
+        - LineBlock:
+            rid: 5843204037934842744
+        - LineBlock:
+            rid: 5843204037934842745
+        - LineBlock:
+            rid: 5843204037934842746
+        - LineBlock:
+            rid: 5843204037934842747
+        - LineBlock:
+            rid: 5843204037934842748
+        - LineBlock:
+            rid: 5843204037934842749
+        - LineBlock:
+            rid: 5843204037934842750
+        - LineBlock:
+            rid: 5843204037934842751
+        - LineBlock:
+            rid: 5843204037934842752
+        - LineBlock:
+            rid: 5843204037934842753
+        - LineBlock:
+            rid: 5843204037934842754
+        - LineBlock:
+            rid: 5843204037934842755
+        - LineBlock:
+            rid: 5843204037934842756
+        - LineBlock:
+            rid: 5843204037934842757
+        - LineBlock:
+            rid: 5843204037934842758
+        - LineBlock:
+            rid: 5843204037934842759
+        - LineBlock:
+            rid: 5843204037934842760
+      - Language: english
+        Case: case1
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204037934842761
+      - Language: chinese
+        Case: case1
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204037934842762
+    Stages: []
+    VariableMappingsList: []
   references:
     version: 2
     RefIds:
@@ -526,5 +624,200 @@ MonoBehaviour:
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "  \u2514\u2500\u2500 Content: \"$ReplyContent\""
+        Type: normal
+        Delay: 0
+    - rid: 5843204037934842733
+      type: {class: Parameter, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Name: TargetDomain
+        Type: string
+        Accept:
+        - www.bmail.com
+    - rid: 5843204037934842734
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550"
+        Type: normal
+        Delay: 0
+    - rid: 5843204037934842735
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 'BuBugBomb WebScan v2.3.5 - Target: $TargetDomain'
+        Type: normal
+        Delay: 0
+    - rid: 5843204037934842736
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 'Scan ID: BSID-$ScanID-$SubID | Initiated: $time UTC'
+        Type: normal
+        Delay: 0
+    - rid: 5843204037934842737
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550"
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204037934842738
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0
+    - rid: 5843204037934842739
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '[SCAN INITIATED]'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204037934842740
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Target: $TargetDomain'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204037934842741
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Protocol: HTTPS/1.1'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204037934842742
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Methods: GET, HEAD, OPTIONS'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204037934842743
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Scanned paths: 12 | Time elapsed: 8.2s'
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204037934842744
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0
+    - rid: 5843204037934842745
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '[PATH ENUMERATION]'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204037934842746
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[\u2593\u2593\u2593\u2593\u2593\u2593\u2591\u2591\u2591\u2591 33%]
+          $Path1          \xBB 404 Not Found"
+        Type: normal
+        Delay: 0.4
+    - rid: 5843204037934842747
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2591\u2591 50%]
+          $Path2          \xBB 404 Not Found"
+        Type: normal
+        Delay: 0.4
+    - rid: 5843204037934842748
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2591 66%]
+          /database/logs            \xBB 403 Forbidden"
+        Type: normal
+        Delay: 0.4
+    - rid: 5843204037934842749
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2591 75%]
+          $Path3         \xBB 200 OK"
+        Type: normal
+        Delay: 0.4
+    - rid: 5843204037934842750
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593 83%]
+          /database/credentials    \xBB 401 Unauthorized"
+        Type: normal
+        Delay: 0.4
+    - rid: 5843204037934842751
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593 91%]
+          /database/backup         \xBB 403 Forbidden"
+        Type: normal
+        Delay: 0.4
+    - rid: 5843204037934842752
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593 100%]
+          $Path4        \xBB 404 Not Found"
+        Type: normal
+        Delay: 0.4
+    - rid: 5843204037934842753
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204037934842754
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '[INTERESTING PATHS FOUND]'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204037934842755
+      type: {class: ClickableLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 1. $AvailablePath
+        Type: clickable
+        Delay: 0.2
+        Gain:
+        - Key: BmailAdminPath
+          Value: $AvailablePath
+        - Key: AdminPageType
+          Value: SQL Database
+        - Key: AdminPageSize
+          Value: $FileSize KB
+    - rid: 5843204037934842756
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "   \u251C\u2500\u2500 HTTP: 200 OK"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204037934842757
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "   \u251C\u2500\u2500 Content-Type: application/sql"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204037934842758
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "   \u2514\u2500\u2500 Size: $FileSize KB"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204037934842759
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0
+    - rid: 5843204037934842760
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550"
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204037934842761
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '[SUCCESS] Scan completed - 1 interesting path found'
+        Type: normal
+        Delay: 0
+    - rid: 5843204037934842762
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[SUCCESS] \u626B\u63CF\u5B8C\u6210 - \u53D1\u73B0 1 \u4E2A\u53EF\u7591\u8DEF\u5F84"
         Type: normal
         Delay: 0

@@ -252,9 +252,12 @@
             "delay": 0.1
           },
           {
-            "type": "normal",
+            "type": "clickable",
             "text": "  └── Password: $Password",
-            "delay": 0
+            "delay": 0,
+            "gain": {
+              "KesiPassword": "$Password"
+            }
           }
         ]
       },
