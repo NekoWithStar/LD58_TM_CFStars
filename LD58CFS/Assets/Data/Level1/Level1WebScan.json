@@ -14,14 +14,22 @@
         "TargetDomain": ["www.bmail.com"]
       },
       "variables": {
-        "ScanID": "$random6",
-        "SubID": "$random3",
         "Path1": "https://www.bmail.com/home",
         "Path2": "https://www.bmail.com/good",
         "Path3": "https://www.bmail.com/admin",
         "Path4": "https://www.bmail.com/cat",
-        "AvailablePath": "https://www.bmail.com/admin",
-        "FileSize": "13.1"
+        "Path5": "https://www.bmail.com/robots.txt",
+        "Path6": "https://www.bmail.com/sitemap.xml",
+        "Path7": "https://www.bmail.com/login",
+        "Path8": "https://www.bmail.com/api",
+        "Path9": "https://www.bmail.com/backup",
+        "Path10": "https://www.bmail.com/config",
+        "Path11": "https://www.bmail.com/dashboard",
+        "Path12": "https://www.bmail.com/uploads",
+        "AvailablePath": "https://www.bmail.com/admin/login",
+        "FileSize": "13.1",
+        "ResponseTime": "245ms",
+        "Server": "Apache/2.4.41 (Ubuntu)"
       }
     }
   ],
@@ -32,7 +40,7 @@
         "lineBlocks": [
           {
             "type": "normal",
-            "text": "══════════════════════════════════════════════════",
+            "text": "══════════════════════════════════════════",
             "delay": 0
           },
           {
@@ -42,12 +50,12 @@
           },
           {
             "type": "normal",
-            "text": "Scan ID: BSID-$ScanID-$SubID | Initiated: $time UTC",
+            "text": "Scan ID: BSID-$random6-$random3 | Initiated: $time UTC",
             "delay": 0
           },
           {
             "type": "normal",
-            "text": "══════════════════════════════════════════════════",
+            "text": "══════════════════════════════════════════",
             "delay": 0.3
           },
           {
@@ -77,7 +85,17 @@
           },
           {
             "type": "normal",
-            "text": "> Scanned paths: 12 | Time elapsed: 8.2s",
+            "text": "> User-Agent: BuBugBomb WebScan v2.3.5",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Wordlist: common-web-paths.txt (2048 entries)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Scanned paths: 20 | Time elapsed: 12.7s",
             "delay": 0.3
           },
           {
@@ -102,7 +120,7 @@
           },
           {
             "type": "normal",
-            "text": "[▓▓▓▓▓▓▓▓▓░ 66%] /database/logs            » 403 Forbidden",
+            "text": "[▓▓▓▓▓▓▓▓▓░ 66%] https://www.bmail.com/supersecret            » 403 Forbidden",
             "delay": 0.4
           },
           {
@@ -112,17 +130,77 @@
           },
           {
             "type": "normal",
-            "text": "[▓▓▓▓▓▓▓▓▓▓ 83%] /database/credentials    » 401 Unauthorized",
+            "text": "[▓▓▓▓▓▓▓▓▓▓ 83%] https://www.bmail.com/test    » 401 Unauthorized",
             "delay": 0.4
           },
           {
             "type": "normal",
-            "text": "[▓▓▓▓▓▓▓▓▓▓ 91%] /database/backup         » 403 Forbidden",
+            "text": "[▓▓▓▓▓▓▓▓▓▓ 91%] https://www.bmail.com/database/backup         » 403 Forbidden",
             "delay": 0.4
           },
           {
             "type": "normal",
             "text": "[▓▓▓▓▓▓▓▓▓▓ 100%] $Path4        » 404 Not Found",
+            "delay": 0.4
+          },
+          {
+            "type": "normal",
+            "text": "[▓▓▓▓▓▓▓▓▓▓ 100%] $Path5       » 200 OK (robots.txt)",
+            "delay": 0.4
+          },
+          {
+            "type": "normal",
+            "text": "[▓▓▓▓▓▓▓▓▓▓ 100%] $Path6      » 404 Not Found",
+            "delay": 0.4
+          },
+          {
+            "type": "normal",
+            "text": "[▓▓▓▓▓▓▓▓▓▓ 100%] $Path7       » 302 Found (redirect to login)",
+            "delay": 0.4
+          },
+          {
+            "type": "normal",
+            "text": "[▓▓▓▓▓▓▓▓▓▓ 100%] $Path8        » 403 Forbidden",
+            "delay": 0.4
+          },
+          {
+            "type": "normal",
+            "text": "[▓▓▓▓▓▓▓▓▓▓ 100%] $Path9       » 403 Forbidden",
+            "delay": 0.4
+          },
+          {
+            "type": "normal",
+            "text": "[▓▓▓▓▓▓▓▓▓▓ 100%] $Path10      » 500 Internal Server Error",
+            "delay": 0.4
+          },
+          {
+            "type": "normal",
+            "text": "[▓▓▓▓▓▓▓▓▓▓ 100%] $Path11     » 401 Unauthorized",
+            "delay": 0.4
+          },
+          {
+            "type": "normal",
+            "text": "[▓▓▓▓▓▓▓▓▓▓ 100%] $Path12     » 200 OK (directory listing)",
+            "delay": 0.4
+          },
+          {
+            "type": "normal",
+            "text": "[▓▓▓▓▓▓▓▓▓▓ 100%] https://www.bmail.com/.git/HEAD » 200 OK",
+            "delay": 0.4
+          },
+          {
+            "type": "normal",
+            "text": "[▓▓▓▓▓▓▓▓▓▓ 100%] https://www.bmail.com/phpinfo.php » 200 OK",
+            "delay": 0.4
+          },
+          {
+            "type": "normal",
+            "text": "[▓▓▓▓▓▓▓▓▓▓ 100%] https://www.bmail.com/wp-admin » 404 Not Found",
+            "delay": 0.4
+          },
+          {
+            "type": "normal",
+            "text": "[▓▓▓▓▓▓▓▓▓▓ 100%] https://www.bmail.com/admin/login » 200 OK",
             "delay": 0.4
           },
           {
@@ -137,7 +215,7 @@
           },
           {
             "type": "clickable",
-            "text": "1. $AvailablePath",
+            "text": "<color=red>1. $AvailablePath</color>",
             "delay": 0.2,
             "gain": {
               "BmailAdminPath": "$AvailablePath"
@@ -155,7 +233,17 @@
           },
           {
             "type": "normal",
-            "text": "   └── Size: $FileSize KB",
+            "text": "   ├── Size: $FileSize KB",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "   ├── Response Time: $ResponseTime",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "   └── Server: $Server",
             "delay": 0.1
           },
           {
@@ -165,7 +253,7 @@
           },
           {
             "type": "normal",
-            "text": "══════════════════════════════════════════════════",
+            "text": "══════════════════════════════════════════",
             "delay": 0.3
           }
         ]
@@ -187,7 +275,7 @@
         "lineBlocks": [
           {
             "type": "normal",
-            "text": "[SUCCESS] 扫描完成 - 发现 1 个可疑路径",
+            "text": "<color=green>[SUCCESS] 扫描完成 - 发现 1 个可用登陆入口</color>",
             "delay": 0
           }
         ]
