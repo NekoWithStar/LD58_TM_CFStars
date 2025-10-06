@@ -29,6 +29,7 @@ namespace LD58.UI
                 SetItem("who u r", "Cat D");
                 SetItem("MOON_CAKE","MoonCake");
                 SetItem("ADDRESS","www.bmail.com");
+                SetItem("www.bmail.com/admin/login","www.bmail.com/admin/login");
             }
 #endif
         }

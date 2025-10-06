@@ -5,6 +5,8 @@
 
 #endregion
 
+#if UNITY_EDITOR
+
 
 using System.IO;
 using System.Text;
@@ -133,3 +135,4 @@ namespace EggFramework.Util
         }
     }
 }
+#endif
