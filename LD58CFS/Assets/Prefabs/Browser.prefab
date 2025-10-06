@@ -997,6 +997,7 @@ MonoBehaviour:
   _bk: {fileID: 1740319900777006387}
   _desc: account
   _text: {fileID: 1036982322918248801}
+  _passwordMode: 0
 --- !u!1 &1980929491846707105
 GameObject:
   m_ObjectHideFlags: 0
@@ -1433,6 +1434,7 @@ MonoBehaviour:
   _bk: {fileID: 5355389138860202743}
   _desc: password
   _text: {fileID: 1983684839248990618}
+  _passwordMode: 1
 --- !u!1 &3226699915404870222
 GameObject:
   m_ObjectHideFlags: 0
@@ -3270,8 +3272,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _button: {fileID: 5237469103459452741}
-  _accountText: {fileID: 1036982322918248801}
-  _psdText: {fileID: 1983684839248990618}
+  _accountText: {fileID: 4840797774511684933}
+  _psdText: {fileID: 3818726639291589777}
   account: Kesi@Bmail.com
   password: qwertyuiop1234567890
 --- !u!1 &6681760560832929539

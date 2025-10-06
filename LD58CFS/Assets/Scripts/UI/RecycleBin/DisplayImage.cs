@@ -16,12 +16,14 @@ namespace LD58.UI.RecycleBin
     {
         [SerializeField] private Button _button;
         [SerializeField] private Sprite _sprite;
+        [SerializeField] private string _param;
 
         private void Awake()
         {
             _button.onClick.AddListener(() =>
             {
                 Selection.DisplayImage = _sprite;
+                Selection.ImageParam   = _param;
                 this.SendEvent(new WindowOperationEvent
                 {
                     Operation  = EWindowOperation.Open,
