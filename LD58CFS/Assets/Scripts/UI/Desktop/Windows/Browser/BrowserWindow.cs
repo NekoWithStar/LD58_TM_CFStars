@@ -60,6 +60,7 @@ namespace LD58.UI
         protected override void Awake()
         {
             base.Awake();
+#if UNITY_EDITOR
             Clear();
 
             foreach (var linkItem in _linkItems)
@@ -82,7 +83,7 @@ namespace LD58.UI
 
             _searchDropdown.onValueChanged.AddListener(OnSearch);
             _linkDropdown.onValueChanged.AddListener(OnLink);
-
+#endif
             foreach (var navigateConfig in _navigateConfigs)
             {
                 navigateConfig.Panel.SetActive(false);
