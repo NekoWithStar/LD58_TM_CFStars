@@ -1,0 +1,1254 @@
+{
+  "commandName": "SQL-Inject",
+  "parameters": [
+    {
+      "name": "TargetPath",
+      "type": "string",
+      "accept": [
+        "https://mail.bmail.com/database/users",
+        "https://mail.bmail.com/database/settings",
+        "https://mail.bmail.com/database/emails",
+        "https://mail.bmail.com/database/restore",
+        "https://mail.bmail.com/database/logs",
+        "https://mail.bmail.com/database/credentials",
+        "https://mail.bmail.com/database/backup"
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "name": "users",
+      "parameterValues": {
+        "TargetPath": ["https://mail.bmail.com/database/users"]
+      },
+      "variables": {
+        "Payload": "' OR '1'='1' --",
+        "ResponseCode": "200",
+        "ResponseStatus": "OK",
+        "RecordCount": "4",
+        "TableName": "users",
+        "Columns": "username, password",
+        "ExecutionTime": "0.234s"
+      }
+    },
+    {
+      "name": "emails",
+      "parameterValues": {
+        "TargetPath": ["https://mail.bmail.com/database/emails"]
+      },
+      "variables": {
+        "Payload": "' UNION SELECT * FROM emails --",
+        "ResponseCode": "200",
+        "ResponseStatus": "OK",
+        "RecordCount": "6",
+        "TableName": "emails",
+        "Columns": "id, from, to, subject, body",
+        "ExecutionTime": "0.412s"
+      }
+    },
+    {
+      "name": "settings",
+      "parameterValues": {
+        "TargetPath": ["https://mail.bmail.com/database/settings"]
+      },
+      "variables": {
+        "Payload": "' OR 1=1 LIMIT 10 --",
+        "ResponseCode": "200",
+        "ResponseStatus": "OK",
+        "RecordCount": "5",
+        "TableName": "config",
+        "Columns": "key, value",
+        "ExecutionTime": "0.156s"
+      }
+    },
+    {
+      "name": "restore",
+      "parameterValues": {
+        "TargetPath": ["https://mail.bmail.com/database/restore"]
+      },
+      "variables": {
+        "Payload": "' AND 1=1 --",
+        "ResponseCode": "200",
+        "ResponseStatus": "OK",
+        "RecordCount": "1",
+        "TableName": "backups",
+        "Columns": "filename, size, created_at",
+        "ExecutionTime": "0.089s",
+        "BackupFile": "bmail_full_backup_20251006.sql.gz"
+      }
+    },
+    {
+      "name": "invalid",
+      "parameterValues": {
+        "TargetPath": [
+          "https://mail.bmail.com/database/logs",
+          "https://mail.bmail.com/database/credentials",
+          "https://mail.bmail.com/database/backup"
+        ]
+      },
+      "variables": {
+        "ErrorCode": "403",
+        "ErrorMessage": "Access Denied"
+      }
+    }
+  ],
+  "output": {
+    "languageBlocks": [
+      {
+        "language": null,
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "BuBugBomb SQL Injection Tool v3.1.4",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "Session ID: SQL-$random6-MAILDB | Target: $TargetPath",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════",
+            "delay": 0.3
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "users",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[EXPLOITING /database/users]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Payload: $Payload",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Response: $ResponseCode $ResponseStatus",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Table: $TableName | Columns: $Columns",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Execution time: $ExecutionTime",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[DATA RETRIEVED] ($RecordCount records)",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "{\"username\": \"Kesi@Bmail.com\", \"password\": \"qwertyuiop1234567890\"},",
+            "delay": 0.1
+          },
+          {
+            "type": "clickable",
+            "text": "<color=green>{\"username\": \"bwiiter_admin@Bmail.com\", \"password\": \"Bwiiter2025!\"},</color>",
+            "delay": 0.1,
+            "gain": {
+              "BwiiterAdminUsername": "bwiiter_admin@Bmail.com",
+              "BwiiterAdminPassword": "Bwiiter2025!"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "{\"username\": \"it_support\", \"password\": \"support123456\"},",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "{\"username\": \"i_am_hack@Bmail.com\", \"password\": \"@!(*Djd1s0+++2__231d1\"}",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[SUCCESS] SQL injection completed",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "users",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[正在利用 /database/users]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 载荷: $Payload",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 响应: $ResponseCode $ResponseStatus",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 表名: $TableName | 列: $Columns",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 执行时间: $ExecutionTime",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[数据已获取] ($RecordCount 条记录)",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "{\"username\": \"Kesi@Bmail.com\", \"password\": \"qwertyuiop1234567890\"},",
+            "delay": 0.1
+          },
+          {
+            "type": "clickable",
+            "text": "<color=green>{\"username\": \"bwiiter_admin@Bmail.com\", \"password\": \"Bwiiter2025!\"},</color>",
+            "delay": 0.1,
+            "gain": {
+              "BwiiterAdminUsername": "bwiiter_admin@Bmail.com",
+              "BwiiterAdminPassword": "Bwiiter2025!"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "{\"username\": \"it_support\", \"password\": \"support123456\"},",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "{\"username\": \"i_am_hack@Bmail.com\", \"password\": \"@!(*Djd1s0+++2__231d1\"}",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[成功] SQL注入完成</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "emails",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[EXPLOITING /database/emails]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Payload: $Payload",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Response: $ResponseCode $ResponseStatus",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Table: $TableName | Columns: $Columns",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Execution time: $ExecutionTime",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[DATA RETRIEVED] ($RecordCount records)",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "{",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"id\": 1,",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"from\": \"kesi@bmail.com\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"to\": \"it_support@bmail.com\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"subject\": \"URGENT: HELP WITH CAT BEHAVIOR\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"body\": \"My cat keeps ignoring me. What should I do?\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "},",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "{",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"id\": 2,",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"from\": \"bwiiter_admin@bwiiter.com\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"to\": \"team@bwiiter.com\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"subject\": \"Meeting Notes\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"body\": \"Discuss new features for Bwiiter 2.0\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "},",
+            "delay": 0.1
+          },
+          {
+            "type": "clickable",
+            "text": "<color=yellow>{</color>",
+            "delay": 0.05,
+            "gain": {
+              "SuspiciousEmail": "Password Reset Warning from IT"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "  \"id\": 3,",
+            "delay": 0.05
+          },
+          {
+            "type": "clickable",
+            "text": "  \"from\": \"<color=cyan>it_support@bmail.com</color>\",",
+            "delay": 0.05,
+            "gain": {
+              "PhishingSender": "it_support@bmail.com"
+            }
+          },
+          {
+            "type": "clickable",
+            "text": "  \"to\": \"<color=cyan>bwiiter_admin@bwiiter.com</color>\",",
+            "delay": 0.05,
+            "gain": {
+              "PhishingTarget": "bwiiter_admin@bwiiter.com"
+            }
+          },
+          {
+            "type": "clickable",
+            "text": "  \"subject\": \"<color=cyan>URGENT: Password Reset Required</color>\",",
+            "delay": 0.05,
+            "gain": {
+              "PhishingSubject": "URGENT: Password Reset Required"
+            }
+          },
+          {
+            "type": "clickable",
+            "text": "  \"body\": \"Dear Bwiiter Admin, please reset your password by clicking the link below: <color=cyan>http://bwiiter/reset</color>\"",
+            "delay": 0.05,
+            "gain": {
+              "PhishingLink": "http://bwiiter/reset"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>},</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "{",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"id\": 4,",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"from\": \"kesi@bmail.com\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"to\": \"eric@bmail.com\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"subject\": \"LOL - My cat is a pro at napping\",",
+            "delay": 0.05
+          },
+          {
+            "type": "clickable",
+            "text": "  \"body\": \"Check out this video: <color=cyan>youtube.com/watch?v=catnap101</color>\"",
+            "delay": 0.05,
+            "gain": {
+              "CatVideo": "youtube.com/watch?v=catnap101"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "},",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "{",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"id\": 5,",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"from\": \"kesi@bmail.com\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"to\": \"it_support@bmail.com\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"subject\": \"URGENT: I feel someone is eavesdropping on our emails!\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"body\": \"I feel someone is eavesdropping on our emails!\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "},",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "{",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"id\": 6,",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"from\": \"it_support@bmail.com\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"to\": \"kesi@bmail.com\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"subject\": \"REPLY: Impossible!\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"body\": \"Impossible! Our email system is secure.\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "}",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[SUCCESS] SQL injection completed",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "emails",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[正在利用 /database/emails]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 载荷: $Payload",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 响应: $ResponseCode $ResponseStatus",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 表名: $TableName | 列: $Columns",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 执行时间: $ExecutionTime",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[数据已获取] ($RecordCount 条记录)",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "{",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"id\": 1,",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"from\": \"kesi@bmail.com\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"to\": \"it_support@bmail.com\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"subject\": \"紧急：寻求帮助，关于猫咪行为\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"body\": \"我的猫一直不理我。我该怎么办？\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "},",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "{",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"id\": 2,",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"from\": \"bwiiter_admin@bwiiter.com\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"to\": \"team@bwiiter.com\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"subject\": \"会议记录\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"body\": \"讨论 Bwiiter 2.0 的新功能\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "},",
+            "delay": 0.1
+          },
+          {
+            "type": "clickable",
+            "text": "<color=yellow>{</color>",
+            "delay": 0.05,
+            "gain": {
+              "SuspiciousEmail": "来自IT部门的密码重置警告"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "  \"id\": 3,",
+            "delay": 0.05
+          },
+          {
+            "type": "clickable",
+            "text": "  \"from\": \"<color=cyan>it_support@bmail.com</color>\",",
+            "delay": 0.05,
+            "gain": {
+              "PhishingSender": "it_support@bmail.com"
+            }
+          },
+          {
+            "type": "clickable",
+            "text": "  \"to\": \"<color=cyan>bwiiter_admin@bwiiter.com</color>\",",
+            "delay": 0.05,
+            "gain": {
+              "PhishingTarget": "bwiiter_admin@bwiiter.com"
+            }
+          },
+          {
+            "type": "clickable",
+            "text": "  \"subject\": \"<color=cyan>紧急：需要重置密码</color>\",",
+            "delay": 0.05,
+            "gain": {
+              "PhishingSubject": "紧急：需要重置密码"
+            }
+          },
+          {
+            "type": "clickable",
+            "text": "  \"body\": \"尊敬的bwiiter管理员，点击重置密码：<color=cyan>http://bwiiter/reset</color>\"",
+            "delay": 0.05,
+            "gain": {
+              "PhishingLink": "http://bwiiter/reset"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>},</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "{",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"id\": 4,",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"from\": \"kesi@bmail.com\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"to\": \"eric@bmail.com\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"subject\": \"哈哈 - 我的猫是睡觉高手\",",
+            "delay": 0.05
+          },
+          {
+            "type": "clickable",
+            "text": "  \"body\": \"看看这个视频：<color=cyan>youtube.com/watch?v=catnap101</color>\"",
+            "delay": 0.05,
+            "gain": {
+              "CatVideo": "youtube.com/watch?v=catnap101"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "},",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "{",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"id\": 5,",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"from\": \"kesi@bmail.com\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"to\": \"it_support@bmail.com\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"subject\": \"紧急：感觉有人在窃听我们的邮件！\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"body\": \"我感觉有人在窃听我们的邮件！\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "},",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "{",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"id\": 6,",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"from\": \"it_support@bmail.com\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"to\": \"kesi@bmail.com\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"subject\": \"回复：不可能！\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"body\": \"不可能！我们的邮件系统是安全的。\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "}",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[成功] SQL注入完成</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "settings",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[EXPLOITING /database/settings]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Payload: $Payload",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Response: $ResponseCode $ResponseStatus",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Table: $TableName | Columns: $Columns",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Execution time: $ExecutionTime",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[DATA RETRIEVED] ($RecordCount records)",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "{\"key\": \"smtp_server\", \"value\": \"smtp.bmail.com:587\"},",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "{\"key\": \"max_attachment_size\", \"value\": \"25MB\"},",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "{\"key\": \"session_timeout\", \"value\": \"30min\"},",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "{\"key\": \"cat_picture_auto_download\", \"value\": \"enabled\"},",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "{\"key\": \"enable_spell_check\", \"value\": \"false_because_we_cant_spell\"}",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[SUCCESS] SQL injection completed - Just some boring config",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "settings",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[正在利用 /database/settings]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 载荷: $Payload",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 响应: $ResponseCode $ResponseStatus",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 表名: $TableName | 列: $Columns",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 执行时间: $ExecutionTime",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[数据已获取] ($RecordCount 条记录)",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "{\"key\": \"smtp_server\", \"value\": \"smtp.bmail.com:587\"},",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "{\"key\": \"max_attachment_size\", \"value\": \"25MB\"},",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "{\"key\": \"session_timeout\", \"value\": \"30min\"},",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "{\"key\": \"cat_picture_auto_download\", \"value\": \"enabled\"},",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "{\"key\": \"enable_spell_check\", \"value\": \"false_because_we_cant_spell\"}",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[成功] SQL注入完成 - 只是一些无聊的配置</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "restore",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[EXPLOITING /database/restore]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Payload: $Payload",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Response: $ResponseCode $ResponseStatus",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Table: $TableName | Columns: $Columns",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Execution time: $ExecutionTime",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[DATA RETRIEVED] ($RecordCount record)",
+            "delay": 0.2
+          },
+          {
+            "type": "clickable",
+            "text": "<color=red>{</color>",
+            "delay": 0.05,
+            "gain": {
+              "DatabaseBackup": "bmail_full_backup_20251006.sql.gz"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "  \"filename\": \"$BackupFile\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"size\": \"1.2MB\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"created_at\": \"2025-10-06 03:00:00 UTC\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"contains\": [\"users\", \"emails\", \"settings\", \"sessions\"],",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"compressed\": true,",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"encryption\": \"none\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"note\": \"Daily automatic backup - Full database snapshot\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>}</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[WARNING] Unencrypted backup file detected!",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "[SUCCESS] SQL injection completed - Backup file accessible",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "restore",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[正在利用 /database/restore]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 载荷: $Payload",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 响应: $ResponseCode $ResponseStatus",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 表名: $TableName | 列: $Columns",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 执行时间: $ExecutionTime",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[数据已获取] ($RecordCount 条记录)",
+            "delay": 0.2
+          },
+          {
+            "type": "clickable",
+            "text": "<color=red>{</color>",
+            "delay": 0.05,
+            "gain": {
+              "DatabaseBackup": "bmail_full_backup_20251006.sql.gz"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "  \"filename\": \"$BackupFile\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"size\": \"1.2MB\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"created_at\": \"2025-10-06 03:00:00 UTC\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"contains\": [\"users\", \"emails\", \"settings\", \"sessions\"],",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"compressed\": true,",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"encryption\": \"none\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"note\": \"每日自动备份 - 完整数据库快照\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>}</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[警告] 检测到未加密的备份文件！</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[成功] SQL注入完成 - 备份文件可访问</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "default",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[ATTEMPTING EXPLOITATION]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Target: $TargetPath",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[ERROR] Access failed: the path is invalid or permission is denied.</color>",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[ERROR] HTTP 403 - Access Denied</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "default",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[尝试利用中]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 目标: $TargetPath",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[错误] 访问失败，路径无效或权限不足。</color>",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[错误] HTTP 403 - 拒绝访问</color>",
+            "delay": 0
+          }
+        ]
+      }
+    ]
+  }
+}

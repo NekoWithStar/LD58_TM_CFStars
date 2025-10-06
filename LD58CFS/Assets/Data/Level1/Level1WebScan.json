@@ -62,7 +62,12 @@
             "type": "normal",
             "text": "",
             "delay": 0
-          },
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "lineBlocks": [
           {
             "type": "normal",
             "text": "[SCAN INITIATED]",
@@ -95,7 +100,7 @@
           },
           {
             "type": "normal",
-            "text": "> Scanned paths: 20 | Time elapsed: 12.7s",
+            "text": "> Available paths: 20",
             "delay": 0.3
           },
           {
@@ -110,98 +115,98 @@
           },
           {
             "type": "normal",
-            "text": "[▓▓▓▓▓▓░░░░ 33%] $Path1          » 404 Not Found",
-            "delay": 0.4
+            "text": "$$progress(1.2,10,\" $Path1\",\" $Path1          » 404 Not Found\",\"White\",\"Red\")",
+            "delay": 0
           },
           {
             "type": "normal",
-            "text": "[▓▓▓▓▓▓▓▓░░ 50%] $Path2          » 404 Not Found",
-            "delay": 0.4
+            "text": "$$progress(0.4,10,\" $Path2\",\" $Path2          » 404 Not Found\",\"White\",\"Red\")",
+            "delay": 1
           },
           {
             "type": "normal",
-            "text": "[▓▓▓▓▓▓▓▓▓░ 66%] https://www.bmail.com/supersecret            » 403 Forbidden",
-            "delay": 0.4
+            "text": "$$progress(0.4,10,\" https://www.bmail.com/supersecret\",\" https://www.bmail.com/supersecret            » 403 Forbidden\",\"White\",\"Yellow\")",
+            "delay": 0
           },
           {
             "type": "normal",
-            "text": "[▓▓▓▓▓▓▓▓▓░ 75%] $Path3         » 200 OK",
-            "delay": 0.4
+            "text": "$$progress(0.4,10,\" $Path3\",\" $Path3         » 200 OK\",\"White\",\"Green\")",
+            "delay": 0
           },
           {
             "type": "normal",
-            "text": "[▓▓▓▓▓▓▓▓▓▓ 83%] https://www.bmail.com/test    » 401 Unauthorized",
-            "delay": 0.4
+            "text": "$$progress(0.4,10,\" https://www.bmail.com/test\",\" https://www.bmail.com/test    » 401 Unauthorized\",\"White\",\"Yellow\")",
+            "delay": 0
           },
           {
             "type": "normal",
-            "text": "[▓▓▓▓▓▓▓▓▓▓ 91%] https://www.bmail.com/database/backup         » 403 Forbidden",
-            "delay": 0.4
+            "text": "$$progress(0.4,10,\" https://www.bmail.com/database/backup\",\" https://www.bmail.com/database/backup         » 403 Forbidden\",\"White\",\"Yellow\")",
+            "delay": 0
           },
           {
             "type": "normal",
-            "text": "[▓▓▓▓▓▓▓▓▓▓ 100%] $Path4        » 404 Not Found",
-            "delay": 0.4
+            "text": "$$progress(0.4,10,\" $Path4\",\" $Path4        » 404 Not Found\",\"White\",\"Red\")",
+            "delay": 0
           },
           {
             "type": "normal",
-            "text": "[▓▓▓▓▓▓▓▓▓▓ 100%] $Path5       » 200 OK (robots.txt)",
-            "delay": 0.4
+            "text": "$$progress(0.4,10,\" $Path5\",\" $Path5       » 200 OK (robots.txt)\",\"White\",\"Green\")",
+            "delay": 0
           },
           {
             "type": "normal",
-            "text": "[▓▓▓▓▓▓▓▓▓▓ 100%] $Path6      » 404 Not Found",
-            "delay": 0.4
+            "text": "$$progress(0.4,10,\" $Path6\",\" $Path6      » 404 Not Found\",\"White\",\"Red\")",
+            "delay": 0
           },
           {
             "type": "normal",
-            "text": "[▓▓▓▓▓▓▓▓▓▓ 100%] $Path7       » 302 Found (redirect to login)",
-            "delay": 0.4
+            "text": "$$progress(0.4,10,\" $Path7\",\" $Path7       » 302 Found (redirect to login)\",\"White\",\"Yellow\")",
+            "delay": 0
           },
           {
             "type": "normal",
-            "text": "[▓▓▓▓▓▓▓▓▓▓ 100%] $Path8        » 403 Forbidden",
-            "delay": 0.4
+            "text": "$$progress(0.4,10,\" $Path8\",\" $Path8        » 403 Forbidden\",\"White\",\"Yellow\")",
+            "delay": 0
           },
           {
             "type": "normal",
-            "text": "[▓▓▓▓▓▓▓▓▓▓ 100%] $Path9       » 403 Forbidden",
-            "delay": 0.4
+            "text": "$$progress(0.4,10,\" $Path9\",\" $Path9       » 403 Forbidden\",\"White\",\"Yellow\")",
+            "delay": 0
           },
           {
             "type": "normal",
-            "text": "[▓▓▓▓▓▓▓▓▓▓ 100%] $Path10      » 500 Internal Server Error",
-            "delay": 0.4
+            "text": "$$progress(0.4,10,\" $Path10\",\" $Path10      » 500 Internal Server Error\",\"White\",\"Red\")",
+            "delay": 0
           },
           {
             "type": "normal",
-            "text": "[▓▓▓▓▓▓▓▓▓▓ 100%] $Path11     » 401 Unauthorized",
-            "delay": 0.4
+            "text": "$$progress(0.4,10,\" $Path11\",\" $Path11     » 401 Unauthorized\",\"White\",\"Yellow\")",
+            "delay": 0
           },
           {
             "type": "normal",
-            "text": "[▓▓▓▓▓▓▓▓▓▓ 100%] $Path12     » 200 OK (directory listing)",
-            "delay": 0.4
+            "text": "$$progress(0.4,10,\" $Path12\",\" $Path12     » 200 OK (directory listing)\",\"White\",\"Green\")",
+            "delay": 0
           },
           {
             "type": "normal",
-            "text": "[▓▓▓▓▓▓▓▓▓▓ 100%] https://www.bmail.com/.git/HEAD » 200 OK",
-            "delay": 0.4
+            "text": "$$progress(0.4,10,\" https://www.bmail.com/.git/HEAD\",\" https://www.bmail.com/.git/HEAD » 200 OK\",\"White\",\"Green\")",
+            "delay": 0
           },
           {
             "type": "normal",
-            "text": "[▓▓▓▓▓▓▓▓▓▓ 100%] https://www.bmail.com/phpinfo.php » 200 OK",
-            "delay": 0.4
+            "text": "$$progress(0.4,10,\" https://www.bmail.com/phpinfo.php\",\" https://www.bmail.com/phpinfo.php » 200 OK\",\"White\",\"Green\")",
+            "delay": 0
           },
           {
             "type": "normal",
-            "text": "[▓▓▓▓▓▓▓▓▓▓ 100%] https://www.bmail.com/wp-admin » 404 Not Found",
-            "delay": 0.4
+            "text": "$$progress(0.4,10,\" https://www.bmail.com/wp-admin\",\" https://www.bmail.com/wp-admin » 404 Not Found\",\"White\",\"Red\")",
+            "delay": 0
           },
           {
             "type": "normal",
-            "text": "[▓▓▓▓▓▓▓▓▓▓ 100%] https://www.bmail.com/admin/login » 200 OK",
-            "delay": 0.4
+            "text": "$$progress(0.4,10,\" https://www.bmail.com/admin/login\",\" https://www.bmail.com/admin/login » 200 OK\",\"White\",\"Green\")",
+            "delay": 0
           },
           {
             "type": "normal",
@@ -255,13 +260,7 @@
             "type": "normal",
             "text": "══════════════════════════════════════════",
             "delay": 0.3
-          }
-        ]
-      },
-      {
-        "language": "english",
-        "case": "case1",
-        "lineBlocks": [
+          },
           {
             "type": "normal",
             "text": "[SUCCESS] Scan completed - 1 interesting path found",
@@ -271,11 +270,265 @@
       },
       {
         "language": "chinese",
-        "case": "case1",
         "lineBlocks": [
           {
             "type": "normal",
-            "text": "<color=green>[SUCCESS] 扫描完成 - 发现 1 个可用登陆入口</color>",
+            "text": "[扫描开始]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 目标: $TargetDomain",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 协议: HTTPS/1.1",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 方法: GET, HEAD, OPTIONS",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 用户代理: BuBugBomb WebScan v2.3.5",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 词表: common-web-paths.txt (2048 条目)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 可用路径: 20",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "[路径枚举]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.4,10,\" $Path1\",\" $Path1          » 404 未找到\",\"White\",\"Red\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.4,10,\" $Path2\",\" $Path2          » 404 未找到\",\"White\",\"Red\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.4,10,\" https://www.bmail.com/supersecret\",\" https://www.bmail.com/supersecret            » 403 禁止访问\",\"White\",\"Yellow\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.4,10,\" $Path3\",\" $Path3         » 200 正常\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.4,10,\" https://www.bmail.com/test\",\" https://www.bmail.com/test    » 401 未授权\",\"White\",\"Yellow\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.4,10,\" https://www.bmail.com/database/backup\",\" https://www.bmail.com/database/backup         » 403 禁止访问\",\"White\",\"Yellow\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.4,10,\" $Path4\",\" $Path4        » 404 未找到\",\"White\",\"Red\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.4,10,\" $Path5\",\" $Path5       » 200 正常 (robots.txt)\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.4,10,\" $Path6\",\" $Path6      » 404 未找到\",\"White\",\"Red\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.4,10,\" $Path7\",\" $Path7       » 302 找到 (重定向到登录)\",\"White\",\"Yellow\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.4,10,\" $Path8\",\" $Path8        » 403 禁止访问\",\"White\",\"Yellow\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.4,10,\" $Path9\",\" $Path9       » 403 禁止访问\",\"White\",\"Yellow\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.4,10,\" $Path10\",\" $Path10      » 500 内部服务器错误\",\"White\",\"Red\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.4,10,\" $Path11\",\" $Path11     » 401 未授权\",\"White\",\"Yellow\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.4,10,\" $Path12\",\" $Path12     » 200 正常 (目录列表)\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.4,10,\" https://www.bmail.com/.git/HEAD\",\" https://www.bmail.com/.git/HEAD » 200 正常\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.4,10,\" https://www.bmail.com/phpinfo.php\",\" https://www.bmail.com/phpinfo.php » 200 正常\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.4,10,\" https://www.bmail.com/wp-admin\",\" https://www.bmail.com/wp-admin » 404 未找到\",\"White\",\"Red\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.4,10,\" https://www.bmail.com/admin/login\",\" https://www.bmail.com/admin/login » 200 正常\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[发现有趣路径]",
+            "delay": 0.2
+          },
+          {
+            "type": "clickable",
+            "text": "<color=red>1. $AvailablePath</color>",
+            "delay": 0.2,
+            "gain": {
+              "BmailAdminPath": "$AvailablePath"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "   ├── HTTP: 200 正常",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "   ├── 内容类型: application/sql",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "   ├── 大小: $FileSize KB",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "   ├── 响应时间: $ResponseTime",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "   └── 服务器: $Server",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[成功] 扫描完成 - 发现 1 个有趣路径</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "default",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[SCAN INITIATED]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Target: $TargetDomain",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[ERROR] Access failed: the path is invalid or permission is denied.</color>",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[ERROR] Unable to reach target domain.</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "default",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[开始扫描]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 目标: $TargetDomain",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[错误] 访问失败，路径无效或权限不足。</color>",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[错误] 无法访问目标域名。</color>",
             "delay": 0
           }
         ]

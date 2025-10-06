@@ -39,3 +39,10 @@ MonoBehaviour:
       CanNavigate: 0
     AcceptLinkValues:
     - www.bmail.com/admin/login
+  - LevelName: Level2
+    CommandData: {fileID: 11400000, guid: 94c425ce232c4c54898592291dfb887d, type: 2}
+    InitParams:
+    - mail.bmail.com/database
+    SearchItems: []
+    LinkItems: []
+    AcceptLinkValues: []
