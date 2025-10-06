@@ -32,7 +32,7 @@
         "Handshake": "diffie-hellman-group16-sha512",
         "SessionID": "0x9F4B7E1A",
         "ServerFingerprint": "SHA256:1A:2B:3C:4D:5E:6F:7G:8H:9I:0J:1K:2L:3M:4N:5O:6P",
-        "TargetSceneName": "Level4",
+        "TargetSceneName": "Part3_4",
         "ServerVersion": "OpenSSH_9.2p1 Ubuntu-2ubuntu0.1",
         "AuthMethod": "keyboard-interactive",
         "Compression": "zlib@openssh.com",

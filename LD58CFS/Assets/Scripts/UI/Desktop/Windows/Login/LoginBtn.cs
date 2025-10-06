@@ -6,6 +6,7 @@
 #endregion
 
 using System;
+using Cysharp.Threading.Tasks;
 using EggFramework;
 using EggFramework.SimpleAudioSystem.Constant;
 using LD58.Extension;
@@ -23,7 +24,7 @@ namespace LD58.UI.Login
         [SerializeField] private string   password = "qwertyuiop1234567890";
         private void Awake()
         {
-            _button.onClick.AddListener(() =>
+            _button.onClick.AddListener(async () =>
             {
                 var console = FindFirstObjectByType<ConsoleController>();
                 console.AddItemWithoutNewLine("Log In");
@@ -35,6 +36,10 @@ namespace LD58.UI.Login
                     console.AddItem("Success".ToGreen());
                     console.AddFinishLine();
                     Debug.Log("通过第一关");
+                    
+                    // 延时1秒后跳转到 Part1_2 场景
+                    await UniTask.Delay(1000);
+                    UnityEngine.SceneManagement.SceneManager.LoadScene("Part1_2");
                 }
                 else
                 {

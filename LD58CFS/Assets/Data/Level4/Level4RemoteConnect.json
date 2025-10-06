@@ -32,7 +32,7 @@
         "Handshake": "ecdh-sha2-nistp521",
         "SessionID": "0xDEADBEEF",
         "ServerFingerprint": "SHA256:9A:8B:7C:6D:5E:4F:3A:2B:1C:0D:9E:8F:7A:6B:5C:4D",
-        "TargetSceneName": "Level5",
+        "TargetSceneName": "Part4_5",
         "ServerVersion": "MilitarySSH_Secure_v10.5.2",
         "AuthMethod": "password+backdoor-token",
         "Compression": "none",
