@@ -15,7 +15,8 @@ MonoBehaviour:
   Datas:
   - LevelName: Level1
     CommandData: {fileID: 11400000, guid: 9f39fb93e67a4f84f9255f018310f833, type: 2}
-    InitParams: []
+    InitParams:
+    - www.bmain.com
     SearchItems:
     - Desc: "2025\u5E74\u6700\u8F7B\u677E\u5DE5\u4F5C\u662F\u4EC0\u4E48"
       Gains: []
