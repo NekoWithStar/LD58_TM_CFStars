@@ -1,0 +1,603 @@
+{
+  "commandName": "VPN-Forge",
+  "parameters": [
+    {
+      "name": "ConfigPath",
+      "type": "string",
+      "accept": ["/vpn/gateway/config", "/network/vpn.conf"]
+    }
+  ],
+  "cases": [
+    {
+      "name": "vpn_forge_success",
+      "parameterValues": {
+        "ConfigPath": ["/vpn/gateway/config"]
+      },
+      "variables": {
+        "ConfigPath": "/vpn/gateway/config",
+        "GatewayIP": "10.0.1.1",
+        "VPNProtocol": "OpenVPN 2.5.8",
+        "Encryption": "AES-256-GCM",
+        "CertAuthority": "MilBase-CA",
+        "FakeGatewayIP": "10.0.1.254",
+        "PrintServerIP": "10.0.2.50",
+        "PrintServerName": "PRINT-SRV-01"
+      }
+    }
+  ],
+  "output": {
+    "languageBlocks": [
+      {
+        "language": null,
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "BuBugBomb VPN Forge Toolkit v6.2.0",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "Session ID: VPN-$random6-FORGE | Config: $ConfigPath",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════",
+            "delay": 0.3
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "vpn_forge_success",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[LOADING VPN CONFIGURATION]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Reading config from: $ConfigPath",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.0,18,\"  ├── Parsing VPN settings...\",\"  ├── Configuration loaded\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[LEGITIMATE VPN GATEWAY]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Gateway IP: $GatewayIP",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Protocol: $VPNProtocol",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Encryption: $Encryption",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Certificate Authority: $CertAuthority",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Authentication: Certificate + LDAP",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[FORGING FAKE VPN GATEWAY]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Cloning configuration...",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.2,22,\"  ├── Generating fake certificates...\",\"  ├── Fake gateway configured\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[FAKE GATEWAY DEPLOYED]",
+            "delay": 0.2
+          },
+          {
+            "type": "clickable",
+            "text": "  ├── Fake Gateway IP: <color=cyan>$FakeGatewayIP</color>",
+            "delay": 0.1,
+            "gain": {
+              "FakeVPNGateway": "10.0.1.254"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Certificate: Valid (Forged CA)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Status: Active and Listening",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Access: Peripheral Network Zone",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[NETWORK INFILTRATION SUCCESSFUL]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Connected to peripheral network facilities",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Full access to non-core infrastructure",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[DISCOVERED INFRASTRUCTURE]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Scanning accessible network segments...",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "clickable",
+            "text": "  ├── Print Server: <color=cyan>$PrintServerIP</color> ($PrintServerName)",
+            "delay": 0.1,
+            "gain": {
+              "PrintServerIP": "10.0.2.50"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "      ├── OS: Windows Server 2019",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "      ├── Service: Print Spooler (Active)",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "      └── USB Ports: 4 (Accessible)",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.15
+          },
+          {
+            "type": "normal",
+            "text": "  ├── File Server: 10.0.2.51 (FILE-SRV-01)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Email Gateway: 10.0.2.52 (MAIL-GW-01)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Backup Server: 10.0.2.53 (BACKUP-01)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[ALERT] Print server handles data transfers to air-gapped systems</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[INTELLIGENCE] USB drives used for nuclear control room data transfer</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=cyan>[HINT] Use USB-Infect to compromise USB drives through the print server</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[SUCCESS] Fake VPN gateway active - Peripheral network compromised</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "vpn_forge_success",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[加载VPN配置]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 从以下位置读取配置: $ConfigPath",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.0,18,\"  ├── 解析VPN设置中...\",\"  ├── 配置已加载\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[合法VPN网关]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 网关IP: $GatewayIP",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 协议: $VPNProtocol",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 加密: $Encryption",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 证书颁发机构: $CertAuthority",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 认证方式: 证书 + LDAP",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[伪造假VPN网关]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 克隆配置中...",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.2,22,\"  ├── 生成假证书中...\",\"  ├── 假网关已配置\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[假网关已部署]",
+            "delay": 0.2
+          },
+          {
+            "type": "clickable",
+            "text": "  ├── 假网关IP: <color=cyan>$FakeGatewayIP</color>",
+            "delay": 0.1,
+            "gain": {
+              "FakeVPNGateway": "10.0.1.254"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 证书: 有效 (伪造CA)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 状态: 活跃并监听",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 访问: 外围网络区域",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[网络渗透成功]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 已连接到外围网络设施",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 完全访问非核心基础设施",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[发现的基础设施]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 扫描可访问网络段中...",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "clickable",
+            "text": "  ├── 打印服务器: <color=cyan>$PrintServerIP</color> ($PrintServerName)",
+            "delay": 0.1,
+            "gain": {
+              "PrintServerIP": "10.0.2.50"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "      ├── 操作系统: Windows Server 2019",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "      ├── 服务: 打印后台处理程序 (活跃)",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "      └── USB端口: 4个 (可访问)",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.15
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 文件服务器: 10.0.2.51 (FILE-SRV-01)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 邮件网关: 10.0.2.52 (MAIL-GW-01)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 备份服务器: 10.0.2.53 (BACKUP-01)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[警告] 打印服务器处理与物理隔离系统的数据传输</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[情报] USB驱动器用于核弹控制室数据传输</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=cyan>[提示] 使用 USB-Infect 通过打印服务器感染USB驱动器</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[成功] 假VPN网关已激活 - 外围网络已沦陷</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "default",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[LOADING VPN CONFIGURATION]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Reading config from: $ConfigPath",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[ERROR] Configuration file not found or invalid</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[HINT] Obtain VPN gateway config from DNS-Spoof operation</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[FAILED] VPN forge aborted</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "default",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[加载VPN配置]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 从以下位置读取配置: $ConfigPath",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[错误] 配置文件未找到或无效</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[提示] 从DNS-Spoof操作中获取VPN网关配置</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[失败] VPN伪造已中止</color>",
+            "delay": 0
+          }
+        ]
+      }
+    ]
+  }
+}

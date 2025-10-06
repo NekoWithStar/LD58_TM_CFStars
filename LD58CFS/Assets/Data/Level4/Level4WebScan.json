@@ -247,7 +247,7 @@
         ]
       },
       {
-        "language": "chinese",
+        "language": "Chinese",
         "case": "gugugaga_company",
         "lineBlocks": [
           {
@@ -565,7 +565,7 @@
         ]
       },
       {
-        "language": "chinese",
+        "language": "Chinese",
         "case": "military_base_blocked",
         "lineBlocks": [
           {
@@ -732,7 +732,7 @@
         ]
       },
       {
-        "language": "chinese",
+        "language": "Chinese",
         "case": "default",
         "lineBlocks": [
           {

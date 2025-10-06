@@ -66,11 +66,15 @@ namespace LD58.UI
 
             foreach (var lb in _command.Output.LanguageBlocks)
             {
-                // 检查语言是否匹配
-                if (lb.Language == "chinese" && _settingModel.Language.Value == SystemLanguage.ChineseSimplified ||
-                    lb.Language == "english" && _settingModel.Language.Value == SystemLanguage.English ||
+                // 调试输出
+                Debug.Log($"[Language Debug] Block Language: '{lb.Language}', Case: '{lb.Case}', System Language: {_settingModel.Language.Value}, HitCase: '{hitCase}'");
+                
+                // 检查语言是否匹配（不区分大小写）
+                if (string.Equals(lb.Language, "chinese", StringComparison.OrdinalIgnoreCase) && _settingModel.Language.Value == SystemLanguage.ChineseSimplified ||
+                    string.Equals(lb.Language, "english", StringComparison.OrdinalIgnoreCase) && _settingModel.Language.Value == SystemLanguage.English ||
                     string.IsNullOrEmpty(lb.Language))
                 {
+                    Debug.Log($"[Language Debug] Language matched! Processing block...");
                     // 检查case是否匹配（如果LanguageBlock指定了case）
                     if (!string.IsNullOrEmpty(lb.Case))
                     {

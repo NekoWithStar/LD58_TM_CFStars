@@ -1,0 +1,834 @@
+{
+  "commandName": "Zero-Day",
+  "parameters": [
+    {
+      "name": "TargetIP",
+      "type": "string",
+      "accept": ["10.0.3.100", "10.0.3.101"]
+    },
+    {
+      "name": "ExploitType",
+      "type": "string",
+      "accept": ["buffer-overflow", "heap-spray", "rop-chain"]
+    }
+  ],
+  "cases": [
+    {
+      "name": "nuke_control_exploit",
+      "parameterValues": {
+        "TargetIP": ["10.0.3.100"],
+        "ExploitType": ["buffer-overflow"]
+      },
+      "variables": {
+        "TargetIP": "10.0.3.100",
+        "TargetName": "NUKE-CTRL-MAIN",
+        "OS": "Windows 7 SP1 (Air-Gapped)",
+        "Vulnerability": "CVE-2024-114514",
+        "VulnName": "Stack Buffer Overflow in Legacy Service",
+        "ExploitMethod": "Buffer Overflow + ROP Chain",
+        "ShellcodeSize": "384 bytes",
+        "KernelVersion": "6.1.7601",
+        "NukeCommandAddr": "0x114514"
+      }
+    }
+  ],
+  "output": {
+    "languageBlocks": [
+      {
+        "language": null,
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "BuBugBomb Zero-Day Exploit Framework v7.0.0",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "Session ID: 0DAY-$random6-EXPLOIT | Target: $TargetIP",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════",
+            "delay": 0.3
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "nuke_control_exploit",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[TARGET RECONNAISSANCE]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Target System: $TargetIP ($TargetName)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Operating System: $OS",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Kernel Version: $KernelVersion",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Network Status: Air-Gapped (Isolated)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[VULNERABILITY ANALYSIS]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.5,20,\"  ├── Scanning for vulnerabilities...\",\"  ├── Critical vulnerability found\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[CRITICAL VULNERABILITY DETECTED]</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── CVE: $Vulnerability",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Name: $VulnName",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Severity: CRITICAL (10.0/10)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Type: Memory Corruption",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Affected Service: Nuclear Control Service (NCS)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Exploitability: High (No ASLR/DEP)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[EXPLOIT PREPARATION]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Method: $ExploitMethod",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Shellcode Size: $ShellcodeSize",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Target Function: NCS_ProcessCommand()",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[MEMORY LAYOUT ANALYSIS]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Stack Base: 0x0012FF00",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Buffer Address: 0x0012FE80",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Return Address: 0x0012FEA4",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Overflow Offset: 36 bytes",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── ROP Gadgets: Located",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[CRAFTING EXPLOIT PAYLOAD]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.8,28,\"  ├── Building ROP chain...\",\"  ├── Payload ready\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[PAYLOAD STRUCTURE]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  [NOP Sled: 16 bytes]",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  [Shellcode: 256 bytes]",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  [Padding: 36 bytes]",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  [ROP Chain: 64 bytes]",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  [Return Address: 0x7C801234]",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[LAUNCHING EXPLOIT]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Triggering vulnerability...",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(2.5,35,\"  ├── Sending malicious payload...\",\"  ├── Exploit successful!\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.5
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[EXPLOITATION SUCCESSFUL]</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Code Execution: Achieved",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Privilege Level: SYSTEM",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Process Injection: Complete",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Kernel Access: Granted",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[SYSTEM COMPROMISE ANALYSIS]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Full control over nuclear control system achieved",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Memory dump analysis in progress...",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[DISCOVERED CRITICAL FUNCTIONS]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Launch_Sequence() @ 0x00401000",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Abort_Mission() @ 0x00401200",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Authentication_Check() @ 0x00401400",
+            "delay": 0.1
+          },
+          {
+            "type": "clickable",
+            "text": "  └── <color=red>Execute_Command() @ $NukeCommandAddr</color>",
+            "delay": 0.1,
+            "gain": {
+              "NukeExecuteAddr": "0x114514"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.5
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[CRITICAL ALERT] Nuclear launch system fully compromised!</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[WARNING] All safety mechanisms bypassed</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=cyan>[FINAL STEP] Use Nuke-Control to execute command at address $NukeCommandAddr</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[SUCCESS] Zero-day exploit complete - Kernel-level access achieved</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "nuke_control_exploit",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[目标侦察]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 目标系统: $TargetIP ($TargetName)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 操作系统: $OS",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 内核版本: $KernelVersion",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 网络状态: 物理隔离 (孤立)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[漏洞分析]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.5,20,\"  ├── 扫描漏洞中...\",\"  ├── 发现严重漏洞\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[检测到严重漏洞]</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── CVE编号: $Vulnerability",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 名称: 旧版服务栈缓冲区溢出",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 严重性: 严重 (10.0/10)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 类型: 内存损坏",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 受影响服务: 核弹控制服务 (NCS)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 可利用性: 高 (无ASLR/DEP)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[漏洞利用准备]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 方法: 缓冲区溢出 + ROP链",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Shellcode大小: $ShellcodeSize",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 目标函数: NCS_ProcessCommand()",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[内存布局分析]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 栈基址: 0x0012FF00",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 缓冲区地址: 0x0012FE80",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 返回地址: 0x0012FEA4",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 溢出偏移: 36字节",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── ROP小工具: 已定位",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[制作漏洞利用载荷]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.8,28,\"  ├── 构建ROP链中...\",\"  ├── 载荷准备就绪\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[载荷结构]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  [NOP滑板: 16字节]",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  [Shellcode: 256字节]",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  [填充: 36字节]",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  [ROP链: 64字节]",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  [返回地址: 0x7C801234]",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[启动漏洞利用]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 触发漏洞中...",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(2.5,35,\"  ├── 发送恶意载荷中...\",\"  ├── 漏洞利用成功!\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.5
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[漏洞利用成功]</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 代码执行: 已实现",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 权限级别: 系统",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 进程注入: 完成",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 内核访问: 已授权",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[系统入侵分析]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 已实现对核弹控制系统的完全控制",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 内存转储分析中...",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[发现的关键函数]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Launch_Sequence() @ 0x00401000",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Abort_Mission() @ 0x00401200",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Authentication_Check() @ 0x00401400",
+            "delay": 0.1
+          },
+          {
+            "type": "clickable",
+            "text": "  └── <color=red>Execute_Command() @ $NukeCommandAddr</color>",
+            "delay": 0.1,
+            "gain": {
+              "NukeExecuteAddr": "0x114514"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.5
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[严重警告] 核弹发射系统完全沦陷!</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[警告] 所有安全机制已被绕过</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=cyan>[最后一步] 使用 Nuke-Control 在地址 $NukeCommandAddr 执行命令</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[成功] 零日漏洞利用完成 - 已获得内核级访问权限</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "default",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[TARGET RECONNAISSANCE]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Target System: $TargetIP",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[ERROR] Target system unreachable or exploit type invalid</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[HINT] Target the nuclear control system IP from USB-Infect</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[FAILED] Exploitation aborted</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "default",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[目标侦察]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 目标系统: $TargetIP",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[错误] 目标系统不可达或漏洞利用类型无效</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[提示] 瞄准从USB-Infect获得的核弹控制系统IP</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[失败] 漏洞利用已中止</color>",
+            "delay": 0
+          }
+        ]
+      }
+    ]
+  }
+}

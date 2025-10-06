@@ -1,0 +1,677 @@
+{
+  "commandName": "USB-Infect",
+  "parameters": [
+    {
+      "name": "TargetServer",
+      "type": "string",
+      "accept": ["10.0.2.50", "10.0.2.51"]
+    }
+  ],
+  "cases": [
+    {
+      "name": "print_server_success",
+      "parameterValues": {
+        "TargetServer": ["10.0.2.50"]
+      },
+      "variables": {
+        "TargetServer": "10.0.2.50",
+        "ServerName": "PRINT-SRV-01",
+        "OS": "Windows Server 2019",
+        "USBPorts": "4",
+        "PayloadSize": "2.4 MB",
+        "InfectionVector": "Print Spooler Service",
+        "NukeControlIP": "10.0.3.100",
+        "NukeControlName": "NUKE-CTRL-MAIN"
+      }
+    }
+  ],
+  "output": {
+    "languageBlocks": [
+      {
+        "language": null,
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "BuBugBomb USB Infection Module v6.3.1",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "Session ID: USB-$random6-INFECT | Target: $TargetServer",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════",
+            "delay": 0.3
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "print_server_success",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[CONNECTING TO PRINT SERVER]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Target: $TargetServer ($ServerName)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Operating System: $OS",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.0,15,\"  ├── Authenticating...\",\"  ├── Connection established\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[PRINT SPOOLER ANALYSIS]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Service: Print Spooler (spoolsv.exe)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Status: Running",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Privileges: SYSTEM",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── USB Monitoring: Active",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Available Ports: $USBPorts",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[DEPLOYING USB INFECTION PAYLOAD]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Payload Type: AutoRun Worm",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Payload Size: $PayloadSize",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Infection Method: $InfectionVector",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.5,25,\"  ├── Injecting payload into spooler...\",\"  ├── Payload activated\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[PAYLOAD CONFIGURATION]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Trigger: USB Device Insert",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Target Files: *.exe, *.dll, *.sys",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Stealth Mode: Enabled",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Persistence: Registry + Service",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Final Target: Air-Gapped Systems",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[MONITORING USB ACTIVITY]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Waiting for USB device insertion...",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.5
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(2.0,30,\"  ├── Detecting USB events...\",\"  ├── USB device connected: Kingston 32GB\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[INFECTION SUCCESS]</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Device: Kingston DataTraveler 32GB",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Owner: maintenance_tech_07",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Files Infected: 8",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Infected Files: autorun.inf, setup.exe, driver.dll",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Detection Rate: 0% (Fully Undetectable)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.5
+          },
+          {
+            "type": "normal",
+            "text": "[TRACKING INFECTED USB]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> USB movement detected...",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 14:23:15 - USB disconnected from PRINT-SRV-01",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 14:45:32 - USB connected to ADMIN-WORKSTATION-05",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 15:12:08 - USB disconnected",
+            "delay": 0.1
+          },
+          {
+            "type": "clickable",
+            "text": "  └── 15:20:41 - <color=cyan>USB connected to $NukeControlIP ($NukeControlName)</color>",
+            "delay": 0.1,
+            "gain": {
+              "NukeControlIP": "10.0.3.100"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.5
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[CRITICAL ALERT] Payload executed on nuclear control system!</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[INTELLIGENCE] Air-gapped barrier breached via infected USB</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=cyan>[HINT] Use Zero-Day exploit to gain control of the nuclear system</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[SUCCESS] USB infection chain complete - Nuclear control system compromised</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "print_server_success",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[连接打印服务器]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 目标: $TargetServer ($ServerName)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 操作系统: $OS",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.0,15,\"  ├── 认证中...\",\"  ├── 连接已建立\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[打印后台处理程序分析]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 服务: 打印后台处理程序 (spoolsv.exe)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 状态: 运行中",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 权限: 系统",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── USB监控: 活跃",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 可用端口: $USBPorts",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[部署USB感染载荷]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 载荷类型: 自动运行蠕虫",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 载荷大小: $PayloadSize",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 感染方法: $InfectionVector",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.5,25,\"  ├── 注入载荷到后台处理程序...\",\"  ├── 载荷已激活\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[载荷配置]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 触发器: USB设备插入",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 目标文件: *.exe, *.dll, *.sys",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 隐身模式: 已启用",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 持久化: 注册表 + 服务",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 最终目标: 物理隔离系统",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[监控USB活动]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 等待USB设备插入中...",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.5
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(2.0,30,\"  ├── 检测USB事件中...\",\"  ├── USB设备已连接: 金士顿32GB\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[感染成功]</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 设备: 金士顿 DataTraveler 32GB",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 所有者: maintenance_tech_07",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 已感染文件: 8个",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 感染文件: autorun.inf, setup.exe, driver.dll",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 检测率: 0% (完全不可检测)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.5
+          },
+          {
+            "type": "normal",
+            "text": "[追踪感染的USB]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 检测到USB移动...",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 14:23:15 - USB从PRINT-SRV-01断开",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 14:45:32 - USB连接到ADMIN-WORKSTATION-05",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 15:12:08 - USB断开",
+            "delay": 0.1
+          },
+          {
+            "type": "clickable",
+            "text": "  └── 15:20:41 - <color=cyan>USB连接到 $NukeControlIP ($NukeControlName)</color>",
+            "delay": 0.1,
+            "gain": {
+              "NukeControlIP": "10.0.3.100"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.5
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[严重警告] 载荷已在核弹控制系统执行!</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[情报] 通过感染USB突破物理隔离屏障</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=cyan>[提示] 使用 Zero-Day 漏洞利用工具控制核弹系统</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[成功] USB感染链完成 - 核弹控制系统已入侵</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "default",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[CONNECTING TO SERVER]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Target: $TargetServer",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[ERROR] Server not accessible or invalid target</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[HINT] Target the print server discovered from VPN-Forge</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[FAILED] USB infection aborted</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "default",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[连接服务器]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 目标: $TargetServer",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[错误] 服务器不可访问或目标无效</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[提示] 瞄准从VPN-Forge发现的打印服务器</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[失败] USB感染已中止</color>",
+            "delay": 0
+          }
+        ]
+      }
+    ]
+  }
+}
