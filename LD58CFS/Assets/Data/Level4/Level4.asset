@@ -1,0 +1,4890 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81e523f5a7944b969387d48819e01ab7, type: 3}
+  m_Name: Level4
+  m_EditorClassIdentifier: 
+  Commands:
+  - CommandName: MITM
+    Parameters:
+    - Parameter:
+        rid: 5843204056160665696
+    Cases:
+    - Name: military_base
+      ParameterValues:
+      - Name: TargetIP
+        Accept:
+        - 114.514.191.810
+      VariablesList:
+      - Key: TargetIP
+        Value: 114.514.191.810
+      - Key: Port
+        Value: 22
+      - Key: Protocol
+        Value: SSH
+      - Key: TargetName
+        Value: '[CLASSIFIED] Military Installation'
+      - Key: BackdoorUser
+        Value: gugugaga_maintenance
+      - Key: BackdoorPass
+        Value: GGG-B4ckd00r-2025!
+      - Key: GatewayIP
+        Value: 203.0.113.45
+      - Key: EncryptionType
+        Value: AES-256-CBC
+      - Key: AuthMethod
+        Value: Certificate + Backdoor Token
+    Output:
+      LanguageBlocks:
+      - Language: 
+        Case: 
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204056160665697
+        - LineBlock:
+            rid: 5843204056160665698
+        - LineBlock:
+            rid: 5843204056160665699
+        - LineBlock:
+            rid: 5843204056160665700
+      - Language: english
+        Case: military_base
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204056160665701
+        - LineBlock:
+            rid: 5843204056160665702
+        - LineBlock:
+            rid: 5843204056160665703
+        - LineBlock:
+            rid: 5843204056160665704
+        - LineBlock:
+            rid: 5843204056160665705
+        - LineBlock:
+            rid: 5843204056160665706
+        - LineBlock:
+            rid: 5843204056160665707
+        - LineBlock:
+            rid: 5843204056160665708
+        - LineBlock:
+            rid: 5843204056160665709
+        - LineBlock:
+            rid: 5843204056160665710
+        - LineBlock:
+            rid: 5843204056160665711
+        - LineBlock:
+            rid: 5843204056160665712
+        - LineBlock:
+            rid: 5843204056160665713
+        - LineBlock:
+            rid: 5843204056160665714
+        - LineBlock:
+            rid: 5843204056160665715
+        - LineBlock:
+            rid: 5843204056160665716
+        - LineBlock:
+            rid: 5843204056160665717
+        - LineBlock:
+            rid: 5843204056160665718
+        - LineBlock:
+            rid: 5843204056160665719
+        - LineBlock:
+            rid: 5843204056160665720
+        - LineBlock:
+            rid: 5843204056160665721
+        - LineBlock:
+            rid: 5843204056160665722
+        - LineBlock:
+            rid: 5843204056160665723
+        - LineBlock:
+            rid: 5843204056160665724
+        - LineBlock:
+            rid: 5843204056160665725
+        - LineBlock:
+            rid: 5843204056160665726
+        - LineBlock:
+            rid: 5843204056160665727
+        - LineBlock:
+            rid: 5843204056160665728
+        - LineBlock:
+            rid: 5843204056160665729
+        - LineBlock:
+            rid: 5843204056160665730
+        - LineBlock:
+            rid: 5843204056160665731
+        - LineBlock:
+            rid: 5843204056160665732
+        - LineBlock:
+            rid: 5843204056160665733
+        - LineBlock:
+            rid: 5843204056160665734
+        - LineBlock:
+            rid: 5843204056160665735
+        - LineBlock:
+            rid: 5843204056160665736
+      - Language: chinese
+        Case: military_base
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204056160665737
+        - LineBlock:
+            rid: 5843204056160665738
+        - LineBlock:
+            rid: 5843204056160665739
+        - LineBlock:
+            rid: 5843204056160665740
+        - LineBlock:
+            rid: 5843204056160665741
+        - LineBlock:
+            rid: 5843204056160665742
+        - LineBlock:
+            rid: 5843204056160665743
+        - LineBlock:
+            rid: 5843204056160665744
+        - LineBlock:
+            rid: 5843204056160665745
+        - LineBlock:
+            rid: 5843204056160665746
+        - LineBlock:
+            rid: 5843204056160665747
+        - LineBlock:
+            rid: 5843204056160665748
+        - LineBlock:
+            rid: 5843204056160665749
+        - LineBlock:
+            rid: 5843204056160665750
+        - LineBlock:
+            rid: 5843204056160665751
+        - LineBlock:
+            rid: 5843204056160665752
+        - LineBlock:
+            rid: 5843204056160665753
+        - LineBlock:
+            rid: 5843204056160665754
+        - LineBlock:
+            rid: 5843204056160665755
+        - LineBlock:
+            rid: 5843204056160665756
+        - LineBlock:
+            rid: 5843204056160665757
+        - LineBlock:
+            rid: 5843204056160665758
+        - LineBlock:
+            rid: 5843204056160665759
+        - LineBlock:
+            rid: 5843204056160665760
+        - LineBlock:
+            rid: 5843204056160665761
+        - LineBlock:
+            rid: 5843204056160665762
+        - LineBlock:
+            rid: 5843204056160665763
+        - LineBlock:
+            rid: 5843204056160665764
+        - LineBlock:
+            rid: 5843204056160665765
+        - LineBlock:
+            rid: 5843204056160665766
+        - LineBlock:
+            rid: 5843204056160665767
+        - LineBlock:
+            rid: 5843204056160665768
+        - LineBlock:
+            rid: 5843204056160665769
+        - LineBlock:
+            rid: 5843204056160665770
+        - LineBlock:
+            rid: 5843204056160665771
+        - LineBlock:
+            rid: 5843204056160665772
+      - Language: english
+        Case: default
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204056160665773
+        - LineBlock:
+            rid: 5843204056160665774
+        - LineBlock:
+            rid: 5843204056160665775
+        - LineBlock:
+            rid: 5843204056160665776
+      - Language: chinese
+        Case: default
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204056160665777
+        - LineBlock:
+            rid: 5843204056160665778
+        - LineBlock:
+            rid: 5843204056160665779
+        - LineBlock:
+            rid: 5843204056160665780
+    Stages: []
+    VariableMappingsList: []
+  - CommandName: SQL-Inject
+    Parameters:
+    - Parameter:
+        rid: 5843204056160665781
+    Cases:
+    - Name: client_data
+      ParameterValues:
+      - Name: TargetPath
+        Accept:
+        - 203.0.113.45/client-data
+      VariablesList:
+      - Key: Payload
+        Value: ''' UNION SELECT * FROM clients WHERE encryption_status=''active''
+          --'
+      - Key: ResponseCode
+        Value: 200
+      - Key: ResponseStatus
+        Value: OK
+      - Key: RecordCount
+        Value: 5
+      - Key: TableName
+        Value: client_database
+      - Key: Columns
+        Value: client_id, company_name, ip_address, service_type, contract_level
+      - Key: ExecutionTime
+        Value: 0.487s
+      - Key: MilitaryIP
+        Value: 114.514.191.810
+    - Name: company_logs
+      ParameterValues:
+      - Name: TargetPath
+        Accept:
+        - 203.0.113.45/company-logs
+      VariablesList:
+      - Key: Payload
+        Value: ''' OR ''1''=''1'' --'
+      - Key: ResponseCode
+        Value: 200
+      - Key: ResponseStatus
+        Value: OK
+      - Key: RecordCount
+        Value: 8
+      - Key: TableName
+        Value: activity_logs
+      - Key: Columns
+        Value: timestamp, employee, action, details
+      - Key: ExecutionTime
+        Value: 0.234s
+    Output:
+      LanguageBlocks:
+      - Language: 
+        Case: 
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204056160665782
+        - LineBlock:
+            rid: 5843204056160665783
+        - LineBlock:
+            rid: 5843204056160665784
+        - LineBlock:
+            rid: 5843204056160665785
+      - Language: english
+        Case: client_data
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204056160665786
+        - LineBlock:
+            rid: 5843204056160665787
+        - LineBlock:
+            rid: 5843204056160665788
+        - LineBlock:
+            rid: 5843204056160665789
+        - LineBlock:
+            rid: 5843204056160665790
+        - LineBlock:
+            rid: 5843204056160665791
+        - LineBlock:
+            rid: 5843204056160665792
+        - LineBlock:
+            rid: 5843204056160665793
+        - LineBlock:
+            rid: 5843204056160665794
+        - LineBlock:
+            rid: 5843204056160665795
+        - LineBlock:
+            rid: 5843204056160665796
+        - LineBlock:
+            rid: 5843204056160665797
+        - LineBlock:
+            rid: 5843204056160665798
+        - LineBlock:
+            rid: 5843204056160665799
+        - LineBlock:
+            rid: 5843204056160665800
+        - LineBlock:
+            rid: 5843204056160665801
+        - LineBlock:
+            rid: 5843204056160665802
+        - LineBlock:
+            rid: 5843204056160665803
+        - LineBlock:
+            rid: 5843204056160665804
+        - LineBlock:
+            rid: 5843204056160665805
+        - LineBlock:
+            rid: 5843204056160665806
+        - LineBlock:
+            rid: 5843204056160665807
+        - LineBlock:
+            rid: 5843204056160665808
+        - LineBlock:
+            rid: 5843204056160665809
+        - LineBlock:
+            rid: 5843204056160665810
+        - LineBlock:
+            rid: 5843204056160665811
+        - LineBlock:
+            rid: 5843204056160665812
+        - LineBlock:
+            rid: 5843204056160665813
+        - LineBlock:
+            rid: 5843204056160665814
+        - LineBlock:
+            rid: 5843204056160665815
+        - LineBlock:
+            rid: 5843204056160665816
+        - LineBlock:
+            rid: 5843204056160665817
+        - LineBlock:
+            rid: 5843204056160665818
+        - LineBlock:
+            rid: 5843204056160665819
+        - LineBlock:
+            rid: 5843204056160665820
+        - LineBlock:
+            rid: 5843204056160665821
+        - LineBlock:
+            rid: 5843204056160665822
+        - LineBlock:
+            rid: 5843204056160665823
+        - LineBlock:
+            rid: 5843204056160665824
+        - LineBlock:
+            rid: 5843204056160665825
+        - LineBlock:
+            rid: 5843204056160665826
+        - LineBlock:
+            rid: 5843204056160665827
+        - LineBlock:
+            rid: 5843204056160665828
+        - LineBlock:
+            rid: 5843204056160665829
+        - LineBlock:
+            rid: 5843204056160665830
+        - LineBlock:
+            rid: 5843204056160665831
+        - LineBlock:
+            rid: 5843204056160665832
+        - LineBlock:
+            rid: 5843204056160665833
+        - LineBlock:
+            rid: 5843204056160665834
+        - LineBlock:
+            rid: 5843204056160665835
+        - LineBlock:
+            rid: 5843204056160665836
+        - LineBlock:
+            rid: 5843204056160665837
+      - Language: chinese
+        Case: client_data
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204056160665838
+        - LineBlock:
+            rid: 5843204056160665839
+        - LineBlock:
+            rid: 5843204056160665840
+        - LineBlock:
+            rid: 5843204056160665841
+        - LineBlock:
+            rid: 5843204056160665842
+        - LineBlock:
+            rid: 5843204056160665843
+        - LineBlock:
+            rid: 5843204056160665844
+        - LineBlock:
+            rid: 5843204056160665845
+        - LineBlock:
+            rid: 5843204056160665846
+        - LineBlock:
+            rid: 5843204056160665847
+        - LineBlock:
+            rid: 5843204056160665848
+        - LineBlock:
+            rid: 5843204056160665849
+        - LineBlock:
+            rid: 5843204056160665850
+        - LineBlock:
+            rid: 5843204056160665851
+        - LineBlock:
+            rid: 5843204056160665852
+        - LineBlock:
+            rid: 5843204056160665853
+        - LineBlock:
+            rid: 5843204056160665854
+        - LineBlock:
+            rid: 5843204056160665855
+        - LineBlock:
+            rid: 5843204056160665856
+        - LineBlock:
+            rid: 5843204056160665857
+        - LineBlock:
+            rid: 5843204056160665858
+        - LineBlock:
+            rid: 5843204056160665859
+        - LineBlock:
+            rid: 5843204056160665860
+        - LineBlock:
+            rid: 5843204056160665861
+        - LineBlock:
+            rid: 5843204056160665862
+        - LineBlock:
+            rid: 5843204056160665863
+        - LineBlock:
+            rid: 5843204056160665864
+        - LineBlock:
+            rid: 5843204056160665865
+        - LineBlock:
+            rid: 5843204056160665866
+        - LineBlock:
+            rid: 5843204056160665867
+        - LineBlock:
+            rid: 5843204056160665868
+        - LineBlock:
+            rid: 5843204056160665869
+        - LineBlock:
+            rid: 5843204056160665870
+        - LineBlock:
+            rid: 5843204056160665871
+        - LineBlock:
+            rid: 5843204056160665872
+        - LineBlock:
+            rid: 5843204056160665873
+        - LineBlock:
+            rid: 5843204056160665874
+        - LineBlock:
+            rid: 5843204056160665875
+        - LineBlock:
+            rid: 5843204056160665876
+        - LineBlock:
+            rid: 5843204056160665877
+        - LineBlock:
+            rid: 5843204056160665878
+        - LineBlock:
+            rid: 5843204056160665879
+        - LineBlock:
+            rid: 5843204056160665880
+        - LineBlock:
+            rid: 5843204056160665881
+        - LineBlock:
+            rid: 5843204056160665882
+        - LineBlock:
+            rid: 5843204056160665883
+        - LineBlock:
+            rid: 5843204056160665884
+        - LineBlock:
+            rid: 5843204056160665885
+        - LineBlock:
+            rid: 5843204056160665886
+        - LineBlock:
+            rid: 5843204056160665887
+        - LineBlock:
+            rid: 5843204056160665888
+        - LineBlock:
+            rid: 5843204056160665889
+      - Language: english
+        Case: company_logs
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204056160665890
+        - LineBlock:
+            rid: 5843204056160665891
+        - LineBlock:
+            rid: 5843204056160665892
+        - LineBlock:
+            rid: 5843204056160665893
+        - LineBlock:
+            rid: 5843204056160665894
+        - LineBlock:
+            rid: 5843204056160665895
+        - LineBlock:
+            rid: 5843204056160665896
+        - LineBlock:
+            rid: 5843204056160665897
+        - LineBlock:
+            rid: 5843204056160665898
+        - LineBlock:
+            rid: 5843204056160665899
+        - LineBlock:
+            rid: 5843204056160665900
+        - LineBlock:
+            rid: 5843204056160665901
+        - LineBlock:
+            rid: 5843204056160665902
+        - LineBlock:
+            rid: 5843204056160665903
+        - LineBlock:
+            rid: 5843204056160665904
+        - LineBlock:
+            rid: 5843204056160665905
+        - LineBlock:
+            rid: 5843204056160665906
+        - LineBlock:
+            rid: 5843204056160665907
+        - LineBlock:
+            rid: 5843204056160665908
+        - LineBlock:
+            rid: 5843204056160665909
+        - LineBlock:
+            rid: 5843204056160665910
+        - LineBlock:
+            rid: 5843204056160665911
+        - LineBlock:
+            rid: 5843204056160665912
+        - LineBlock:
+            rid: 5843204056160665913
+        - LineBlock:
+            rid: 5843204056160665914
+        - LineBlock:
+            rid: 5843204056160665915
+        - LineBlock:
+            rid: 5843204056160665916
+        - LineBlock:
+            rid: 5843204056160665917
+        - LineBlock:
+            rid: 5843204056160665918
+        - LineBlock:
+            rid: 5843204056160665919
+        - LineBlock:
+            rid: 5843204056160665920
+        - LineBlock:
+            rid: 5843204056160665921
+        - LineBlock:
+            rid: 5843204056160665922
+        - LineBlock:
+            rid: 5843204056160665923
+        - LineBlock:
+            rid: 5843204056160665924
+        - LineBlock:
+            rid: 5843204056160665925
+        - LineBlock:
+            rid: 5843204056160665926
+        - LineBlock:
+            rid: 5843204056160665927
+        - LineBlock:
+            rid: 5843204056160665928
+        - LineBlock:
+            rid: 5843204056160665929
+        - LineBlock:
+            rid: 5843204056160665930
+        - LineBlock:
+            rid: 5843204056160665931
+        - LineBlock:
+            rid: 5843204056160665932
+        - LineBlock:
+            rid: 5843204056160665933
+        - LineBlock:
+            rid: 5843204056160665934
+        - LineBlock:
+            rid: 5843204056160665935
+        - LineBlock:
+            rid: 5843204056160665936
+        - LineBlock:
+            rid: 5843204056160665937
+        - LineBlock:
+            rid: 5843204056160665938
+        - LineBlock:
+            rid: 5843204056160665939
+        - LineBlock:
+            rid: 5843204056160665940
+        - LineBlock:
+            rid: 5843204056160665941
+        - LineBlock:
+            rid: 5843204056160665942
+        - LineBlock:
+            rid: 5843204056160665943
+        - LineBlock:
+            rid: 5843204056160665944
+        - LineBlock:
+            rid: 5843204056160665945
+        - LineBlock:
+            rid: 5843204056160665946
+        - LineBlock:
+            rid: 5843204056160665947
+        - LineBlock:
+            rid: 5843204056160665948
+        - LineBlock:
+            rid: 5843204056160665949
+        - LineBlock:
+            rid: 5843204056160665950
+        - LineBlock:
+            rid: 5843204056160665951
+        - LineBlock:
+            rid: 5843204056160665952
+        - LineBlock:
+            rid: 5843204056160665953
+        - LineBlock:
+            rid: 5843204056160665954
+        - LineBlock:
+            rid: 5843204056160665955
+        - LineBlock:
+            rid: 5843204056160665956
+        - LineBlock:
+            rid: 5843204056160665957
+        - LineBlock:
+            rid: 5843204056160665958
+        - LineBlock:
+            rid: 5843204056160665959
+        - LineBlock:
+            rid: 5843204056160665960
+        - LineBlock:
+            rid: 5843204056160665961
+        - LineBlock:
+            rid: 5843204056160665962
+      - Language: chinese
+        Case: company_logs
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204056160665963
+        - LineBlock:
+            rid: 5843204056160665964
+        - LineBlock:
+            rid: 5843204056160665965
+        - LineBlock:
+            rid: 5843204056160665966
+        - LineBlock:
+            rid: 5843204056160665967
+        - LineBlock:
+            rid: 5843204056160665968
+        - LineBlock:
+            rid: 5843204056160665969
+        - LineBlock:
+            rid: 5843204056160665970
+        - LineBlock:
+            rid: 5843204056160665971
+        - LineBlock:
+            rid: 5843204056160665972
+        - LineBlock:
+            rid: 5843204056160665973
+        - LineBlock:
+            rid: 5843204056160665974
+        - LineBlock:
+            rid: 5843204056160665975
+        - LineBlock:
+            rid: 5843204056160665976
+        - LineBlock:
+            rid: 5843204056160665977
+        - LineBlock:
+            rid: 5843204056160665978
+        - LineBlock:
+            rid: 5843204056160665979
+        - LineBlock:
+            rid: 5843204056160665980
+        - LineBlock:
+            rid: 5843204056160665981
+        - LineBlock:
+            rid: 5843204056160665982
+        - LineBlock:
+            rid: 5843204056160665983
+        - LineBlock:
+            rid: 5843204056160665984
+        - LineBlock:
+            rid: 5843204056160665985
+        - LineBlock:
+            rid: 5843204056160665986
+        - LineBlock:
+            rid: 5843204056160665987
+        - LineBlock:
+            rid: 5843204056160665988
+        - LineBlock:
+            rid: 5843204056160665989
+        - LineBlock:
+            rid: 5843204056160665990
+        - LineBlock:
+            rid: 5843204056160665991
+        - LineBlock:
+            rid: 5843204056160665992
+        - LineBlock:
+            rid: 5843204056160665993
+        - LineBlock:
+            rid: 5843204056160665994
+        - LineBlock:
+            rid: 5843204056160665995
+        - LineBlock:
+            rid: 5843204056160665996
+        - LineBlock:
+            rid: 5843204056160665997
+        - LineBlock:
+            rid: 5843204056160665998
+        - LineBlock:
+            rid: 5843204056160665999
+        - LineBlock:
+            rid: 5843204056160666000
+        - LineBlock:
+            rid: 5843204056160666001
+        - LineBlock:
+            rid: 5843204056160666002
+        - LineBlock:
+            rid: 5843204056160666003
+        - LineBlock:
+            rid: 5843204056160666004
+        - LineBlock:
+            rid: 5843204056160666005
+        - LineBlock:
+            rid: 5843204056160666006
+        - LineBlock:
+            rid: 5843204056160666007
+        - LineBlock:
+            rid: 5843204056160666008
+        - LineBlock:
+            rid: 5843204056160666009
+        - LineBlock:
+            rid: 5843204056160666010
+        - LineBlock:
+            rid: 5843204056160666011
+        - LineBlock:
+            rid: 5843204056160666012
+        - LineBlock:
+            rid: 5843204056160666013
+        - LineBlock:
+            rid: 5843204056160666014
+        - LineBlock:
+            rid: 5843204056160666015
+        - LineBlock:
+            rid: 5843204056160666016
+        - LineBlock:
+            rid: 5843204056160666017
+        - LineBlock:
+            rid: 5843204056160666018
+        - LineBlock:
+            rid: 5843204056160666019
+        - LineBlock:
+            rid: 5843204056160666020
+        - LineBlock:
+            rid: 5843204056160666021
+        - LineBlock:
+            rid: 5843204056160666022
+        - LineBlock:
+            rid: 5843204056160666023
+        - LineBlock:
+            rid: 5843204056160666024
+        - LineBlock:
+            rid: 5843204056160666025
+        - LineBlock:
+            rid: 5843204056160666026
+        - LineBlock:
+            rid: 5843204056160666027
+        - LineBlock:
+            rid: 5843204056160666028
+        - LineBlock:
+            rid: 5843204056160666029
+        - LineBlock:
+            rid: 5843204056160666030
+      - Language: english
+        Case: default
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204056160666031
+        - LineBlock:
+            rid: 5843204056160666032
+        - LineBlock:
+            rid: 5843204056160666033
+        - LineBlock:
+            rid: 5843204056160666034
+      - Language: chinese
+        Case: default
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204056160666035
+        - LineBlock:
+            rid: 5843204056160666036
+        - LineBlock:
+            rid: 5843204056160666037
+        - LineBlock:
+            rid: 5843204056160666038
+    Stages: []
+    VariableMappingsList: []
+  - CommandName: Web-Scan
+    Parameters:
+    - Parameter:
+        rid: 5843204056160666039
+    Cases:
+    - Name: gugugaga_company
+      ParameterValues:
+      - Name: TargetDomain
+        Accept:
+        - 203.0.113.45
+      VariablesList:
+      - Key: TargetIP
+        Value: 203.0.113.45
+      - Key: Port
+        Value: 443
+      - Key: ServerName
+        Value: GuguGaga Security Platform
+      - Key: Path1
+        Value: 203.0.113.45/client-data
+      - Key: Status1
+        Value: 200
+      - Key: Size1
+        Value: 47GB
+      - Key: Path2
+        Value: 203.0.113.45/company-logs
+      - Key: Status2
+        Value: 200
+      - Key: Size2
+        Value: 8.3GB
+      - Key: Path3
+        Value: 203.0.113.45/admin-panel
+      - Key: Status3
+        Value: 403
+    - Name: military_base_blocked
+      ParameterValues:
+      - Name: TargetDomain
+        Accept:
+        - 114.514.191.810
+      VariablesList:
+      - Key: TargetIP
+        Value: 114.514.191.810
+      - Key: ErrorCode
+        Value: 0xC0000001
+      - Key: BlockReason
+        Value: Advanced Firewall Detection
+    Output:
+      LanguageBlocks:
+      - Language: 
+        Case: 
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204056160666040
+        - LineBlock:
+            rid: 5843204056160666041
+        - LineBlock:
+            rid: 5843204056160666042
+        - LineBlock:
+            rid: 5843204056160666043
+      - Language: english
+        Case: gugugaga_company
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204056160666044
+        - LineBlock:
+            rid: 5843204056160666045
+        - LineBlock:
+            rid: 5843204056160666046
+        - LineBlock:
+            rid: 5843204056160666047
+        - LineBlock:
+            rid: 5843204056160666048
+        - LineBlock:
+            rid: 5843204056160666049
+        - LineBlock:
+            rid: 5843204056160666050
+        - LineBlock:
+            rid: 5843204056160666051
+        - LineBlock:
+            rid: 5843204056160666052
+        - LineBlock:
+            rid: 5843204056160666053
+        - LineBlock:
+            rid: 5843204056160666054
+        - LineBlock:
+            rid: 5843204056160666055
+        - LineBlock:
+            rid: 5843204056160666056
+        - LineBlock:
+            rid: 5843204056160666057
+        - LineBlock:
+            rid: 5843204056160666058
+        - LineBlock:
+            rid: 5843204056160666059
+        - LineBlock:
+            rid: 5843204056160666060
+        - LineBlock:
+            rid: 5843204056160666061
+        - LineBlock:
+            rid: 5843204056160666062
+        - LineBlock:
+            rid: 5843204056160666063
+        - LineBlock:
+            rid: 5843204056160666064
+        - LineBlock:
+            rid: 5843204056160666065
+        - LineBlock:
+            rid: 5843204056160666066
+        - LineBlock:
+            rid: 5843204056160666067
+        - LineBlock:
+            rid: 5843204056160666068
+        - LineBlock:
+            rid: 5843204056160666069
+        - LineBlock:
+            rid: 5843204056160666070
+        - LineBlock:
+            rid: 5843204056160666071
+        - LineBlock:
+            rid: 5843204056160666072
+        - LineBlock:
+            rid: 5843204056160666073
+        - LineBlock:
+            rid: 5843204056160666074
+        - LineBlock:
+            rid: 5843204056160666075
+        - LineBlock:
+            rid: 5843204056160666076
+      - Language: chinese
+        Case: gugugaga_company
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204056160666077
+        - LineBlock:
+            rid: 5843204056160666078
+        - LineBlock:
+            rid: 5843204056160666079
+        - LineBlock:
+            rid: 5843204056160666080
+        - LineBlock:
+            rid: 5843204056160666081
+        - LineBlock:
+            rid: 5843204056160666082
+        - LineBlock:
+            rid: 5843204056160666083
+        - LineBlock:
+            rid: 5843204056160666084
+        - LineBlock:
+            rid: 5843204056160666085
+        - LineBlock:
+            rid: 5843204056160666086
+        - LineBlock:
+            rid: 5843204056160666087
+        - LineBlock:
+            rid: 5843204056160666088
+        - LineBlock:
+            rid: 5843204056160666089
+        - LineBlock:
+            rid: 5843204056160666090
+        - LineBlock:
+            rid: 5843204056160666091
+        - LineBlock:
+            rid: 5843204056160666092
+        - LineBlock:
+            rid: 5843204056160666093
+        - LineBlock:
+            rid: 5843204056160666094
+        - LineBlock:
+            rid: 5843204056160666095
+        - LineBlock:
+            rid: 5843204056160666096
+        - LineBlock:
+            rid: 5843204056160666097
+        - LineBlock:
+            rid: 5843204056160666098
+        - LineBlock:
+            rid: 5843204056160666099
+        - LineBlock:
+            rid: 5843204056160666100
+        - LineBlock:
+            rid: 5843204056160666101
+        - LineBlock:
+            rid: 5843204056160666102
+        - LineBlock:
+            rid: 5843204056160666103
+        - LineBlock:
+            rid: 5843204056160666104
+        - LineBlock:
+            rid: 5843204056160666105
+        - LineBlock:
+            rid: 5843204056160666106
+        - LineBlock:
+            rid: 5843204056160666107
+        - LineBlock:
+            rid: 5843204056160666108
+        - LineBlock:
+            rid: 5843204056160666109
+      - Language: english
+        Case: military_base_blocked
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204056160666110
+        - LineBlock:
+            rid: 5843204056160666111
+        - LineBlock:
+            rid: 5843204056160666112
+        - LineBlock:
+            rid: 5843204056160666113
+        - LineBlock:
+            rid: 5843204056160666114
+        - LineBlock:
+            rid: 5843204056160666115
+        - LineBlock:
+            rid: 5843204056160666116
+        - LineBlock:
+            rid: 5843204056160666117
+        - LineBlock:
+            rid: 5843204056160666118
+        - LineBlock:
+            rid: 5843204056160666119
+        - LineBlock:
+            rid: 5843204056160666120
+        - LineBlock:
+            rid: 5843204056160666121
+        - LineBlock:
+            rid: 5843204056160666122
+        - LineBlock:
+            rid: 5843204056160666123
+        - LineBlock:
+            rid: 5843204056160666124
+        - LineBlock:
+            rid: 5843204056160666125
+        - LineBlock:
+            rid: 5843204056160666126
+      - Language: chinese
+        Case: military_base_blocked
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204056160666127
+        - LineBlock:
+            rid: 5843204056160666128
+        - LineBlock:
+            rid: 5843204056160666129
+        - LineBlock:
+            rid: 5843204056160666130
+        - LineBlock:
+            rid: 5843204056160666131
+        - LineBlock:
+            rid: 5843204056160666132
+        - LineBlock:
+            rid: 5843204056160666133
+        - LineBlock:
+            rid: 5843204056160666134
+        - LineBlock:
+            rid: 5843204056160666135
+        - LineBlock:
+            rid: 5843204056160666136
+        - LineBlock:
+            rid: 5843204056160666137
+        - LineBlock:
+            rid: 5843204056160666138
+        - LineBlock:
+            rid: 5843204056160666139
+        - LineBlock:
+            rid: 5843204056160666140
+        - LineBlock:
+            rid: 5843204056160666141
+        - LineBlock:
+            rid: 5843204056160666142
+        - LineBlock:
+            rid: 5843204056160666143
+      - Language: english
+        Case: default
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204056160666144
+        - LineBlock:
+            rid: 5843204056160666145
+        - LineBlock:
+            rid: 5843204056160666146
+        - LineBlock:
+            rid: 5843204056160666147
+      - Language: chinese
+        Case: default
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204056160666148
+        - LineBlock:
+            rid: 5843204056160666149
+        - LineBlock:
+            rid: 5843204056160666150
+        - LineBlock:
+            rid: 5843204056160666151
+    Stages: []
+    VariableMappingsList: []
+  - CommandName: Remote-Connect
+    Parameters:
+    - Parameter:
+        rid: 5843204056160666152
+    - Parameter:
+        rid: 5843204056160666153
+    - Parameter:
+        rid: 5843204056160666154
+    Cases:
+    - Name: military_base_success
+      ParameterValues:
+      - Name: TargetIP
+        Accept:
+        - 114.514.191.810
+      - Name: Username
+        Accept:
+        - gugugaga_maintenance
+      - Name: Password
+        Accept:
+        - GGG-B4ckd00r-2025!
+      VariablesList:
+      - Key: Port
+        Value: 22
+      - Key: Protocol
+        Value: SSH
+      - Key: Encryption
+        Value: AES-256-CBC
+      - Key: Handshake
+        Value: ecdh-sha2-nistp521
+      - Key: SessionID
+        Value: 0xDEADBEEF
+      - Key: ServerFingerprint
+        Value: SHA256:9A:8B:7C:6D:5E:4F:3A:2B:1C:0D:9E:8F:7A:6B:5C:4D
+      - Key: TargetSceneName
+        Value: Level5
+      - Key: ServerVersion
+        Value: MilitarySSH_Secure_v10.5.2
+      - Key: AuthMethod
+        Value: password+backdoor-token
+      - Key: Compression
+        Value: none
+      - Key: MAC
+        Value: hmac-sha2-512
+      - Key: KeyExchange
+        Value: ecdh-sha2-nistp521
+      - Key: SystemInfo
+        Value: '[CLASSIFIED] Military Network Core'
+      - Key: AccessLevel
+        Value: MAINTENANCE (FULL PRIVILEGES)
+      - Key: Location
+        Value: Undisclosed Military Installation
+      - Key: SecurityClearance
+        Value: Level 3 - Infrastructure Access
+    Output:
+      LanguageBlocks:
+      - Language: 
+        Case: 
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204056160666155
+        - LineBlock:
+            rid: 5843204056160666156
+        - LineBlock:
+            rid: 5843204056160666157
+        - LineBlock:
+            rid: 5843204056160666158
+        - LineBlock:
+            rid: 5843204056160666159
+      - Language: english
+        Case: military_base_success
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204056160666160
+        - LineBlock:
+            rid: 5843204056160666161
+        - LineBlock:
+            rid: 5843204056160666162
+        - LineBlock:
+            rid: 5843204056160666163
+        - LineBlock:
+            rid: 5843204056160666164
+        - LineBlock:
+            rid: 5843204056160666165
+        - LineBlock:
+            rid: 5843204056160666166
+        - LineBlock:
+            rid: 5843204056160666167
+        - LineBlock:
+            rid: 5843204056160666168
+        - LineBlock:
+            rid: 5843204056160666169
+        - LineBlock:
+            rid: 5843204056160666170
+        - LineBlock:
+            rid: 5843204056160666171
+        - LineBlock:
+            rid: 5843204056160666172
+        - LineBlock:
+            rid: 5843204056160666173
+        - LineBlock:
+            rid: 5843204056160666174
+        - LineBlock:
+            rid: 5843204056160666175
+        - LineBlock:
+            rid: 5843204056160666176
+        - LineBlock:
+            rid: 5843204056160666177
+        - LineBlock:
+            rid: 5843204056160666178
+        - LineBlock:
+            rid: 5843204056160666179
+        - LineBlock:
+            rid: 5843204056160666180
+        - LineBlock:
+            rid: 5843204056160666181
+        - LineBlock:
+            rid: 5843204056160666182
+        - LineBlock:
+            rid: 5843204056160666183
+        - LineBlock:
+            rid: 5843204056160666184
+        - LineBlock:
+            rid: 5843204056160666185
+        - LineBlock:
+            rid: 5843204056160666186
+        - LineBlock:
+            rid: 5843204056160666187
+        - LineBlock:
+            rid: 5843204056160666188
+        - LineBlock:
+            rid: 5843204056160666189
+        - LineBlock:
+            rid: 5843204056160666190
+        - LineBlock:
+            rid: 5843204056160666191
+        - LineBlock:
+            rid: 5843204056160666192
+        - LineBlock:
+            rid: 5843204056160666193
+        - LineBlock:
+            rid: 5843204056160666194
+        - LineBlock:
+            rid: 5843204056160666195
+        - LineBlock:
+            rid: 5843204056160666196
+        - LineBlock:
+            rid: 5843204056160666197
+        - LineBlock:
+            rid: 5843204056160666198
+        - LineBlock:
+            rid: 5843204056160666199
+        - LineBlock:
+            rid: 5843204056160666200
+        - LineBlock:
+            rid: 5843204056160666201
+        - LineBlock:
+            rid: 5843204056160666202
+        - LineBlock:
+            rid: 5843204056160666203
+        - LineBlock:
+            rid: 5843204056160666204
+        - LineBlock:
+            rid: 5843204056160666205
+        - LineBlock:
+            rid: 5843204056160666206
+        - LineBlock:
+            rid: 5843204056160666207
+      - Language: chinese
+        Case: military_base_success
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204056160666208
+        - LineBlock:
+            rid: 5843204056160666209
+        - LineBlock:
+            rid: 5843204056160666210
+        - LineBlock:
+            rid: 5843204056160666211
+        - LineBlock:
+            rid: 5843204056160666212
+        - LineBlock:
+            rid: 5843204056160666213
+        - LineBlock:
+            rid: 5843204056160666214
+        - LineBlock:
+            rid: 5843204056160666215
+        - LineBlock:
+            rid: 5843204056160666216
+        - LineBlock:
+            rid: 5843204056160666217
+        - LineBlock:
+            rid: 5843204056160666218
+        - LineBlock:
+            rid: 5843204056160666219
+        - LineBlock:
+            rid: 5843204056160666220
+        - LineBlock:
+            rid: 5843204056160666221
+        - LineBlock:
+            rid: 5843204056160666222
+        - LineBlock:
+            rid: 5843204056160666223
+        - LineBlock:
+            rid: 5843204056160666224
+        - LineBlock:
+            rid: 5843204056160666225
+        - LineBlock:
+            rid: 5843204056160666226
+        - LineBlock:
+            rid: 5843204056160666227
+        - LineBlock:
+            rid: 5843204056160666228
+        - LineBlock:
+            rid: 5843204056160666229
+        - LineBlock:
+            rid: 5843204056160666230
+        - LineBlock:
+            rid: 5843204056160666231
+        - LineBlock:
+            rid: 5843204056160666232
+        - LineBlock:
+            rid: 5843204056160666233
+        - LineBlock:
+            rid: 5843204056160666234
+        - LineBlock:
+            rid: 5843204056160666235
+        - LineBlock:
+            rid: 5843204056160666236
+        - LineBlock:
+            rid: 5843204056160666237
+        - LineBlock:
+            rid: 5843204056160666238
+        - LineBlock:
+            rid: 5843204056160666239
+        - LineBlock:
+            rid: 5843204056160666240
+        - LineBlock:
+            rid: 5843204056160666241
+        - LineBlock:
+            rid: 5843204056160666242
+        - LineBlock:
+            rid: 5843204056160666243
+        - LineBlock:
+            rid: 5843204056160666244
+        - LineBlock:
+            rid: 5843204056160666245
+        - LineBlock:
+            rid: 5843204056160666246
+        - LineBlock:
+            rid: 5843204056160666247
+        - LineBlock:
+            rid: 5843204056160666248
+        - LineBlock:
+            rid: 5843204056160666249
+        - LineBlock:
+            rid: 5843204056160666250
+        - LineBlock:
+            rid: 5843204056160666251
+        - LineBlock:
+            rid: 5843204056160666252
+        - LineBlock:
+            rid: 5843204056160666253
+        - LineBlock:
+            rid: 5843204056160666254
+        - LineBlock:
+            rid: 5843204056160666255
+      - Language: english
+        Case: default
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204056160666256
+        - LineBlock:
+            rid: 5843204056160666257
+        - LineBlock:
+            rid: 5843204056160666258
+        - LineBlock:
+            rid: 5843204056160666259
+      - Language: chinese
+        Case: default
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204056160666260
+        - LineBlock:
+            rid: 5843204056160666261
+        - LineBlock:
+            rid: 5843204056160666262
+        - LineBlock:
+            rid: 5843204056160666263
+    Stages: []
+    VariableMappingsList: []
+  TextAssets: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 5843204056160665696
+      type: {class: Parameter, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Name: TargetIP
+        Type: string
+        Accept:
+        - 114.514.191.810
+    - rid: 5843204056160665697
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550"
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160665698
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: BuBugBomb MITM Attack Tool v5.2.0
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160665699
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 'Session ID: MITM-$random6-FINAL | Target: $TargetIP'
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160665700
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550"
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160665701
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '[INITIALIZING MITM ATTACK]'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160665702
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Target: $TargetIP:$Port ($TargetName)'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665703
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Protocol: $Protocol'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665704
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Gateway: $GatewayIP (GuguGaga Security)'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665705
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160665706
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(1.5,30,\"  \u251C\u2500\u2500 ARP spoofing network...\",\" 
+          \u251C\u2500\u2500 Network poisoned\",\"White\",\"Green\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160665707
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160665708
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(2.0,40,\"  \u251C\u2500\u2500 Intercepting SSH handshake...\",\" 
+          \u251C\u2500\u2500 Handshake captured\",\"White\",\"Green\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160665709
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160665710
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '[TRAFFIC ANALYSIS]'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160665711
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Encryption: $EncryptionType'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665712
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Auth Method: $AuthMethod'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665713
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Backdoor Status: ACTIVE'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665714
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160665715
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(1.8,35,\"  \u251C\u2500\u2500 Extracting backdoor credentials...\",\" 
+          \u251C\u2500\u2500 Credentials extracted\",\"White\",\"Green\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160665716
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160665717
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '[BACKDOOR CREDENTIALS DISCOVERED]'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160665718
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u250C\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665719
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2502 CLASSIFIED ACCESS CREDENTIALS        \u2502"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665720
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u251C\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665721
+      type: {class: ClickableLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2502 Username: <color=cyan>$BackdoorUser</color>      \u2502"
+        Type: clickable
+        Delay: 0.1
+        Gain:
+        - Key: MilitaryUsername
+          Value: gugugaga_maintenance
+    - rid: 5843204056160665722
+      type: {class: ClickableLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2502 Password: <color=cyan>$BackdoorPass</color> \u2502"
+        Type: clickable
+        Delay: 0.1
+        Gain:
+        - Key: MilitaryPassword
+          Value: GGG-B4ckd00r-2025!
+    - rid: 5843204056160665723
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2502 Access Level: MAINTENANCE (FULL)    \u2502"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665724
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2502 Installed By: GuguGaga Security      \u2502"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665725
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2502 Installation Date: 2025-10-03        \u2502"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665726
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665727
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160665728
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '[INTERCEPTED TRAFFIC SAMPLE]'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160665729
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> [2025-10-06 14:23:15] GuguGaga Gateway \u2192 Military Base"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665730
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Protocol: SSH (Port $Port)'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665731
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Message: "Automated security scan initiated"'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665732
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Backdoor Token: VALID'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665733
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160665734
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: <color=yellow>[WARNING] This backdoor provides unrestricted access
+          to classified systems</color>
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160665735
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160665736
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: <color=green>[SUCCESS] MITM attack completed - Backdoor credentials
+          acquired</color>
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160665737
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[\u521D\u59CB\u5316\u4E2D\u95F4\u4EBA\u653B\u51FB]"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160665738
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u76EE\u6807: $TargetIP:$Port ($TargetName)"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665739
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u534F\u8BAE: $Protocol"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665740
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u7F51\u5173: $GatewayIP (\u5495\u5495\u560E\u560E\u5B89\u4FDD)"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665741
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160665742
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(1.5,30,\"  \u251C\u2500\u2500 ARP \u6B3A\u9A97\u7F51\u7EDC\u4E2D...\",\" 
+          \u251C\u2500\u2500 \u7F51\u7EDC\u5DF2\u6C61\u67D3\",\"White\",\"Green\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160665743
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160665744
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(2.0,40,\"  \u251C\u2500\u2500 \u62E6\u622A SSH \u63E1\u624B\u4E2D...\",\" 
+          \u251C\u2500\u2500 \u63E1\u624B\u5DF2\u6355\u83B7\",\"White\",\"Green\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160665745
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160665746
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[\u6D41\u91CF\u5206\u6790]"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160665747
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u52A0\u5BC6: $EncryptionType"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665748
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u8BA4\u8BC1\u65B9\u6CD5: $AuthMethod"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665749
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u540E\u95E8\u72B6\u6001: \u6D3B\u8DC3"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665750
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160665751
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(1.8,35,\"  \u251C\u2500\u2500 \u63D0\u53D6\u540E\u95E8\u51ED\u8BC1\u4E2D...\",\" 
+          \u251C\u2500\u2500 \u51ED\u8BC1\u5DF2\u63D0\u53D6\",\"White\",\"Green\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160665752
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160665753
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[\u53D1\u73B0\u540E\u95E8\u51ED\u8BC1]"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160665754
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u250C\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665755
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2502 \u673A\u5BC6\u8BBF\u95EE\u51ED\u8BC1                        
+          \u2502"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665756
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u251C\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665757
+      type: {class: ClickableLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2502 \u7528\u6237\u540D: <color=cyan>$BackdoorUser</color>     
+          \u2502"
+        Type: clickable
+        Delay: 0.1
+        Gain:
+        - Key: MilitaryUsername
+          Value: gugugaga_maintenance
+    - rid: 5843204056160665758
+      type: {class: ClickableLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2502 \u5BC6\u7801: <color=cyan>$BackdoorPass</color> \u2502"
+        Type: clickable
+        Delay: 0.1
+        Gain:
+        - Key: MilitaryPassword
+          Value: GGG-B4ckd00r-2025!
+    - rid: 5843204056160665759
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2502 \u8BBF\u95EE\u7EA7\u522B: \u7EF4\u62A4\uFF08\u5B8C\u5168\uFF09              
+          \u2502"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665760
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2502 \u5B89\u88C5\u8005: \u5495\u5495\u560E\u560E\u5B89\u4FDD                
+          \u2502"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665761
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2502 \u5B89\u88C5\u65E5\u671F: 2025-10-03                 \u2502"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665762
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665763
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160665764
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[\u62E6\u622A\u7684\u6D41\u91CF\u6837\u672C]"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160665765
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> [2025-10-06 14:23:15] \u5495\u5495\u560E\u560E\u7F51\u5173 \u2192
+          \u519B\u4E8B\u57FA\u5730"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665766
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u534F\u8BAE: SSH (\u7AEF\u53E3 $Port)"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665767
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u6D88\u606F: \"\u81EA\u52A8\u5B89\u5168\u626B\u63CF\u5DF2\u542F\u52A8\""
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665768
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u540E\u95E8\u4EE4\u724C: \u6709\u6548"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665769
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160665770
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=yellow>[\u8B66\u544A] \u6B64\u540E\u95E8\u63D0\u4F9B\u5BF9\u673A\u5BC6\u7CFB\u7EDF\u7684\u65E0\u9650\u5236\u8BBF\u95EE</color>"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160665771
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160665772
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=green>[\u6210\u529F] \u4E2D\u95F4\u4EBA\u653B\u51FB\u5B8C\u6210
+          - \u5DF2\u83B7\u5F97\u540E\u95E8\u51ED\u8BC1</color>"
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160665773
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '[ATTEMPTING MITM ATTACK]'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160665774
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Target: $TargetIP'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665775
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160665776
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '<color=red>[ERROR] Access failed: the path is invalid or permission
+          is denied.</color>'
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160665777
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[\u5C1D\u8BD5\u4E2D\u95F4\u4EBA\u653B\u51FB]"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160665778
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u76EE\u6807: $TargetIP"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665779
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160665780
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=red>[\u9519\u8BEF] \u8BBF\u95EE\u5931\u8D25\uFF0C\u8DEF\u5F84\u65E0\u6548\u6216\u6743\u9650\u4E0D\u8DB3\u3002</color>"
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160665781
+      type: {class: Parameter, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Name: TargetPath
+        Type: string
+        Accept:
+        - 203.0.113.45/client-data
+        - 203.0.113.45/company-logs
+    - rid: 5843204056160665782
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550"
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160665783
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: BuBugBomb SQL Injection Tool v5.1.0
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160665784
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 'Session ID: SQL-$random6-FINAL | Target: $TargetPath'
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160665785
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550"
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160665786
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '[EXPLOITING CLIENT DATABASE]'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160665787
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Payload: $Payload'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665788
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Response: $ResponseCode $ResponseStatus'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160665789
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160665790
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(1.8,35,\"  \u251C\u2500\u2500 Decrypting AES-256...\",\" 
+          \u251C\u2500\u2500 Extraction complete\",\"White\",\"Green\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160665791
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160665792
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '[DECRYPTED DATA] ($RecordCount clients)'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160665793
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Table: $TableName | Columns: $Columns'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665794
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Execution time: $ExecutionTime'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665795
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160665796
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '['
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665797
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  {'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665798
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "client_id": "GGG-001",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665799
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "company_name": "CatFood Mega Corp",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665800
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "ip_address": "192.168.42.100",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665801
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "service_type": "Basic Firewall",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665802
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "contract_level": "Bronze"'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665803
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  },'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665804
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  {'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665805
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "client_id": "GGG-002",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665806
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "company_name": "Meow Technologies Inc.",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665807
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "ip_address": "10.0.0.50",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665808
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "service_type": "Advanced IDS/IPS",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665809
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "contract_level": "Silver"'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665810
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  },'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665811
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  {'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665812
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "client_id": "GGG-003",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665813
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "company_name": "Purr-fect Security Solutions",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665814
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "ip_address": "172.16.0.200",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665815
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "service_type": "Penetration Testing",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665816
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "contract_level": "Gold"'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665817
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  },'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665818
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  {'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665819
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "client_id": "GGG-004",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665820
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "company_name": "Whiskers Consulting Group",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665821
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "ip_address": "203.0.113.99",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665822
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "service_type": "Managed Firewall Service",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665823
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "contract_level": "Platinum"'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665824
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  },'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665825
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  {'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665826
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "client_id": "GGG-CLASSIFIED",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665827
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "company_name": "[REDACTED] Military Installation",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665828
+      type: {class: ClickableLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "ip_address": "<color=cyan>$MilitaryIP</color>",'
+        Type: clickable
+        Delay: 0.05
+        Gain:
+        - Key: MilitaryBaseIP
+          Value: 114.514.191.810
+    - rid: 5843204056160665829
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "service_type": "Full Security Suite + Backdoor Access",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665830
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "contract_level": "CLASSIFIED - LEVEL 5"'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665831
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  }'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665832
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: ']'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665833
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160665834
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: <color=yellow>[WARNING] Classified client detected in database</color>
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160665835
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: <color=yellow>[WARNING] Backdoor access confirmed - Security breach
+          potential</color>
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665836
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160665837
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: <color=green>[SUCCESS] SQL injection completed</color>
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160665838
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[\u6B63\u5728\u5229\u7528\u5BA2\u6237\u7AEF\u6570\u636E\u5E93]"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160665839
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u8F7D\u8377: $Payload"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665840
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u54CD\u5E94: $ResponseCode $ResponseStatus"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160665841
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160665842
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(1.8,35,\"  \u251C\u2500\u2500 \u89E3\u5BC6 AES-256 \u4E2D...\",\" 
+          \u251C\u2500\u2500 \u63D0\u53D6\u5B8C\u6210\",\"White\",\"Green\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160665843
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160665844
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[\u5DF2\u89E3\u5BC6\u6570\u636E] ($RecordCount \u4E2A\u5BA2\u6237)"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160665845
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u8868\u540D: $TableName | \u5217: $Columns"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665846
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u6267\u884C\u65F6\u95F4: $ExecutionTime"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665847
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160665848
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '['
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665849
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  {'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665850
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "client_id": "GGG-001",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665851
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "    \"company_name\": \"\u732B\u7CAE\u8D85\u7EA7\u516C\u53F8\","
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665852
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "ip_address": "192.168.42.100",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665853
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "    \"service_type\": \"\u57FA\u7840\u9632\u706B\u5899\","
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665854
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "    \"contract_level\": \"\u9752\u94DC\""
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665855
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  },'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665856
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  {'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665857
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "client_id": "GGG-002",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665858
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "    \"company_name\": \"\u55B5\u55B5\u79D1\u6280\u6709\u9650\u516C\u53F8\","
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665859
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "ip_address": "10.0.0.50",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665860
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "    \"service_type\": \"\u9AD8\u7EA7 IDS/IPS\","
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665861
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "    \"contract_level\": \"\u767D\u94F6\""
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665862
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  },'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665863
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  {'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665864
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "client_id": "GGG-003",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665865
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "    \"company_name\": \"\u5B8C\u7F8E\u5B89\u5168\u89E3\u51B3\u65B9\u6848\","
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665866
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "ip_address": "172.16.0.200",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665867
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "    \"service_type\": \"\u6E17\u900F\u6D4B\u8BD5\","
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665868
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "    \"contract_level\": \"\u9EC4\u91D1\""
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665869
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  },'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665870
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  {'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665871
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "client_id": "GGG-004",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665872
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "    \"company_name\": \"\u80E1\u987B\u54A8\u8BE2\u96C6\u56E2\","
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665873
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "ip_address": "203.0.113.99",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665874
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "    \"service_type\": \"\u6258\u7BA1\u9632\u706B\u5899\u670D\u52A1\","
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665875
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "    \"contract_level\": \"\u767D\u91D1\""
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665876
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  },'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665877
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  {'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665878
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "client_id": "GGG-CLASSIFIED",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665879
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "    \"company_name\": \"[\u5DF2\u7F16\u8F91] \u519B\u4E8B\u8BBE\u65BD\","
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665880
+      type: {class: ClickableLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "ip_address": "<color=cyan>$MilitaryIP</color>",'
+        Type: clickable
+        Delay: 0.05
+        Gain:
+        - Key: MilitaryBaseIP
+          Value: 114.514.191.810
+    - rid: 5843204056160665881
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "    \"service_type\": \"\u5B8C\u6574\u5B89\u5168\u5957\u4EF6 + \u540E\u95E8\u8BBF\u95EE\","
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665882
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "    \"contract_level\": \"\u673A\u5BC6 - 5\u7EA7\""
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665883
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  }'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665884
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: ']'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665885
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160665886
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=yellow>[\u8B66\u544A] \u6570\u636E\u5E93\u4E2D\u68C0\u6D4B\u5230\u673A\u5BC6\u5BA2\u6237</color>"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160665887
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=yellow>[\u8B66\u544A] \u540E\u95E8\u8BBF\u95EE\u5DF2\u786E\u8BA4
+          - \u5B58\u5728\u5B89\u5168\u6F0F\u6D1E\u98CE\u9669</color>"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665888
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160665889
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=green>[\u6210\u529F] SQL\u6CE8\u5165\u5B8C\u6210</color>"
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160665890
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '[EXPLOITING COMPANY LOGS]'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160665891
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Payload: $Payload'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665892
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Response: $ResponseCode $ResponseStatus'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160665893
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Table: $TableName | Columns: $Columns'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665894
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Execution time: $ExecutionTime'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665895
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160665896
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '[DATA RETRIEVED] ($RecordCount records)'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160665897
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '['
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665898
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  {'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665899
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "timestamp": "2025-10-01 09:23:15",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665900
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "employee": "dev_scratchy",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665901
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "action": "CODE DEPLOYMENT",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665902
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "details": "Deployed vulnerability scanner v3.1'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665903
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '                - Now with 50% more bugs!"'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665904
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  },'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665905
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  {'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665906
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "timestamp": "2025-10-02 14:45:33",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665907
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "employee": "ceo_fluffy",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665908
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "action": "MEETING",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665909
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "details": "All-hands meeting: Discussed why'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665910
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '                catnip is not a valid expense category"'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665911
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  },'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665912
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  {'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665913
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "timestamp": "2025-10-03 11:12:47",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665914
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "employee": "security_mittens",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665915
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "action": "BACKDOOR INSTALLATION",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665916
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "details": "Installed ''maintenance access'' on'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665917
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '                military client firewall. Boss said'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665918
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '                it''s totally legal, right?"'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665919
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  },'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665920
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  {'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665921
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "timestamp": "2025-10-04 16:30:22",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665922
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "employee": "hr_whiskers",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665923
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "action": "POLICY UPDATE",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665924
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "details": "Reminder: Please don''t use'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665925
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '                ''password123'' as your password.'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665926
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '                Looking at you, Tom."'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665927
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  },'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665928
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  {'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665929
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "timestamp": "2025-10-04 17:15:08",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665930
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "employee": "admin_paws",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665931
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "action": "SERVER MAINTENANCE",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665932
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "details": "Cleaned out server room. Found 3'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665933
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '                hairballs and a half-eaten tuna'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665934
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '                sandwich from 2023"'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665935
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  },'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665936
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  {'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665937
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "timestamp": "2025-10-05 10:42:19",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665938
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "employee": "network_felix",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665939
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "action": "INCIDENT RESPONSE",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665940
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "details": "Client reported ''suspicious activity''.'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665941
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '                Turns out it was just our backdoor'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665942
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '                doing its thing. Crisis averted!"'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665943
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  },'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665944
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  {'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665945
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "timestamp": "2025-10-05 13:55:44",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665946
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "employee": "intern_buttons",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665947
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "action": "COFFEE RUN",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665948
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "details": "Bought 47 espressos. Turns out the'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665949
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '                dev team really needs caffeine'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665950
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '                during crunch time"'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665951
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  },'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665952
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  {'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665953
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "timestamp": "2025-10-06 08:33:27",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665954
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "employee": "cto_socks",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665955
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "action": "ARCHITECTURE REVIEW",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665956
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "details": "Reviewed backdoor code. It''s beautiful.'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665957
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '                A work of art. Shakespeare would'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665958
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '                be proud."'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665959
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  }'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665960
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: ']'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665961
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160665962
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: <color=green>[SUCCESS] SQL injection completed</color>
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160665963
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[\u6B63\u5728\u5229\u7528\u516C\u53F8\u65E5\u5FD7]"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160665964
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u8F7D\u8377: $Payload"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665965
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u54CD\u5E94: $ResponseCode $ResponseStatus"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160665966
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u8868\u540D: $TableName | \u5217: $Columns"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665967
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u6267\u884C\u65F6\u95F4: $ExecutionTime"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665968
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160665969
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[\u6570\u636E\u5DF2\u83B7\u53D6] ($RecordCount \u6761\u8BB0\u5F55)"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160665970
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '['
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665971
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  {'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665972
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "timestamp": "2025-10-01 09:23:15",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665973
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "employee": "dev_scratchy",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665974
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "    \"action\": \"\u4EE3\u7801\u90E8\u7F72\","
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665975
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "    \"details\": \"\u90E8\u7F72\u6F0F\u6D1E\u626B\u63CF\u5668 v3.1
+          - \u73B0\u5728\u6709"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665976
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "                50%\u66F4\u591A\u7684bug\uFF01\""
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665977
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  },'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665978
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  {'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665979
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "timestamp": "2025-10-02 14:45:33",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665980
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "employee": "ceo_fluffy",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665981
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "    \"action\": \"\u4F1A\u8BAE\","
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665982
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "    \"details\": \"\u5168\u4F53\u4F1A\u8BAE\uFF1A\u8BA8\u8BBA\u4E3A\u4EC0\u4E48\u732B\u8584\u8377\u4E0D\u662F"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665983
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "                \u6709\u6548\u7684\u62A5\u9500\u7C7B\u522B\""
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665984
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  },'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665985
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  {'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665986
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "timestamp": "2025-10-03 11:12:47",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665987
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "employee": "security_mittens",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665988
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "    \"action\": \"\u540E\u95E8\u5B89\u88C5\","
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665989
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "    \"details\": \"\u5728\u519B\u4E8B\u5BA2\u6237\u9632\u706B\u5899\u4E0A\u5B89\u88C5\u4E86'\u7EF4\u62A4"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665990
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "                \u8BBF\u95EE'\u3002\u8001\u677F\u8BF4\u8FD9\u662F\u5B8C\u5168\u5408\u6CD5\u7684\uFF0C"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665991
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "                \u5BF9\u5427\uFF1F\""
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665992
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  },'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160665993
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  {'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665994
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "timestamp": "2025-10-04 16:30:22",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665995
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "employee": "hr_whiskers",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665996
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "    \"action\": \"\u653F\u7B56\u66F4\u65B0\","
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665997
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "    \"details\": \"\u63D0\u9192\uFF1A\u8BF7\u4E0D\u8981\u4F7F\u7528'password123'"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665998
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "                \u4F5C\u4E3A\u5BC6\u7801\u3002\u8BF4\u7684\u5C31\u662F\u4F60\uFF0CTom\u3002\""
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160665999
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  },'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666000
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  {'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666001
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "timestamp": "2025-10-04 17:15:08",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666002
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "employee": "admin_paws",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666003
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "    \"action\": \"\u670D\u52A1\u5668\u7EF4\u62A4\","
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666004
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "    \"details\": \"\u6E05\u7406\u670D\u52A1\u5668\u673A\u623F\u3002\u53D1\u73B03\u4E2A\u6BDB\u7403\u548C"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666005
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "                \u4E00\u4E2A2023\u5E74\u5403\u5269\u7684\u91D1\u67AA\u9C7C\u4E09\u660E\u6CBB\""
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666006
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  },'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666007
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  {'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666008
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "timestamp": "2025-10-05 10:42:19",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666009
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "employee": "network_felix",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666010
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "    \"action\": \"\u4E8B\u4EF6\u54CD\u5E94\","
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666011
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "    \"details\": \"\u5BA2\u6237\u62A5\u544A'\u53EF\u7591\u6D3B\u52A8'\u3002\u7ED3\u679C\u53EA\u662F"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666012
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "                \u6211\u4EEC\u7684\u540E\u95E8\u5728\u5DE5\u4F5C\u3002\u5371\u673A\u89E3\u9664\uFF01\""
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666013
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  },'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666014
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  {'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666015
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "timestamp": "2025-10-05 13:55:44",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666016
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "employee": "intern_buttons",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666017
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "    \"action\": \"\u5496\u5561\u91C7\u8D2D\","
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666018
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "    \"details\": \"\u4E70\u4E8647\u676F\u6D53\u7F29\u5496\u5561\u3002\u539F\u6765\u5F00\u53D1\u56E2\u961F"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666019
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "                \u5728\u8D76\u5DE5\u65F6\u771F\u7684\u5F88\u9700\u8981\u5496\u5561\u56E0\""
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666020
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  },'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666021
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  {'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666022
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "timestamp": "2025-10-06 08:33:27",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666023
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '    "employee": "cto_socks",'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666024
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "    \"action\": \"\u67B6\u6784\u5BA1\u67E5\","
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666025
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "    \"details\": \"\u5BA1\u67E5\u540E\u95E8\u4EE3\u7801\u3002\u592A\u7F8E\u4E86\u3002\u827A\u672F\u54C1\u3002"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666026
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "                \u838E\u58EB\u6BD4\u4E9A\u4F1A\u611F\u5230\u9A84\u50B2\u3002\""
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666027
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '  }'
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666028
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: ']'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666029
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666030
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=green>[\u6210\u529F] SQL\u6CE8\u5165\u5B8C\u6210</color>"
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160666031
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '[ATTEMPTING EXPLOITATION]'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666032
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Target: $TargetPath'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666033
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160666034
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '<color=red>[ERROR] Access failed: the path is invalid or permission
+          is denied.</color>'
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160666035
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[\u5C1D\u8BD5\u5229\u7528\u4E2D]"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666036
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u76EE\u6807: $TargetPath"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666037
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160666038
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=red>[\u9519\u8BEF] \u8BBF\u95EE\u5931\u8D25\uFF0C\u8DEF\u5F84\u65E0\u6548\u6216\u6743\u9650\u4E0D\u8DB3\u3002</color>"
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160666039
+      type: {class: Parameter, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Name: TargetDomain
+        Type: string
+        Accept:
+        - 203.0.113.45
+        - 114.514.191.810
+    - rid: 5843204056160666040
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550"
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160666041
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: BuBugBomb Web Scanner v5.0.1
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160666042
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 'Session ID: SCAN-$random6-FINAL | Target: $TargetDomain'
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160666043
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550"
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160666044
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '[INITIALIZING DEEP SCAN]'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666045
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Target: $TargetIP:$Port'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666046
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Server: $ServerName'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666047
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> SSL/TLS: TLS 1.3 (AES-256-GCM)'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666048
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666049
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(1.5,30,\"  \u251C\u2500\u2500 Enumerating endpoints...\",\" 
+          \u251C\u2500\u2500 Scan complete\",\"White\",\"Green\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160666050
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160666051
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '[DISCOVERED ENDPOINTS]'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666052
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666053
+      type: {class: ClickableLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=green>\u2713</color> <color=cyan>$Path1</color>"
+        Type: clickable
+        Delay: 0.1
+        Gain:
+        - Key: ClientDataPath
+          Value: 203.0.113.45/client-data
+    - rid: 5843204056160666054
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "  \u251C\u2500\u2500 Status: $Status1 OK"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666055
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "  \u251C\u2500\u2500 Size: $Size1"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666056
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "  \u2514\u2500\u2500 Type: Encrypted Client Database (AES-256)"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666057
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.15
+    - rid: 5843204056160666058
+      type: {class: ClickableLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=green>\u2713</color> <color=cyan>$Path2</color>"
+        Type: clickable
+        Delay: 0.1
+        Gain:
+        - Key: CompanyLogsPath
+          Value: 203.0.113.45/company-logs
+    - rid: 5843204056160666059
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "  \u251C\u2500\u2500 Status: $Status2 OK"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666060
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "  \u251C\u2500\u2500 Size: $Size2"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666061
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "  \u2514\u2500\u2500 Type: Company Activity Logs"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666062
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.15
+    - rid: 5843204056160666063
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=red>\u2717</color> $Path3"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666064
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "  \u251C\u2500\u2500 Status: $Status3 Forbidden"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666065
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160666066
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '[SECURITY ANALYSIS]'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666067
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Firewall: pfSense 2.7.0 (Advanced Rules Detected)'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666068
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> IDS/IPS: Suricata 7.0.1 (Active Monitoring)'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666069
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> WAF: ModSecurity 3.0 (Paranoia Level 2)'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666070
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666071
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '[ANALYSIS COMPLETE]'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666072
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Accessible endpoints: 2'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666073
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Encrypted databases: 1'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666074
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Recommended: Use SQL-Inject to decrypt client data'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666075
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666076
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: <color=green>[SUCCESS] Deep scan completed</color>
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160666077
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[\u521D\u59CB\u5316\u6DF1\u5EA6\u626B\u63CF]"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666078
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u76EE\u6807: $TargetIP:$Port"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666079
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u670D\u52A1\u5668: $ServerName"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666080
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> SSL/TLS: TLS 1.3 (AES-256-GCM)'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666081
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666082
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(1.5,30,\"  \u251C\u2500\u2500 \u679A\u4E3E\u7AEF\u70B9\u4E2D...\",\" 
+          \u251C\u2500\u2500 \u626B\u63CF\u5B8C\u6210\",\"White\",\"Green\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160666083
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160666084
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[\u53D1\u73B0\u7684\u7AEF\u70B9]"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666085
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666086
+      type: {class: ClickableLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=green>\u2713</color> <color=cyan>$Path1</color>"
+        Type: clickable
+        Delay: 0.1
+        Gain:
+        - Key: ClientDataPath
+          Value: 203.0.113.45/client-data
+    - rid: 5843204056160666087
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "  \u251C\u2500\u2500 \u72B6\u6001: $Status1 OK"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666088
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "  \u251C\u2500\u2500 \u5927\u5C0F: $Size1"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666089
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "  \u2514\u2500\u2500 \u7C7B\u578B: \u52A0\u5BC6\u5BA2\u6237\u7AEF\u6570\u636E\u5E93
+          (AES-256)"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666090
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.15
+    - rid: 5843204056160666091
+      type: {class: ClickableLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=green>\u2713</color> <color=cyan>$Path2</color>"
+        Type: clickable
+        Delay: 0.1
+        Gain:
+        - Key: CompanyLogsPath
+          Value: 203.0.113.45/company-logs
+    - rid: 5843204056160666092
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "  \u251C\u2500\u2500 \u72B6\u6001: $Status2 OK"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666093
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "  \u251C\u2500\u2500 \u5927\u5C0F: $Size2"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666094
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "  \u2514\u2500\u2500 \u7C7B\u578B: \u516C\u53F8\u6D3B\u52A8\u65E5\u5FD7"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666095
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.15
+    - rid: 5843204056160666096
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=red>\u2717</color> $Path3"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666097
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "  \u251C\u2500\u2500 \u72B6\u6001: $Status3 \u7981\u6B62\u8BBF\u95EE"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666098
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160666099
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[\u5B89\u5168\u5206\u6790]"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666100
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u9632\u706B\u5899: pfSense 2.7.0 (\u68C0\u6D4B\u5230\u9AD8\u7EA7\u89C4\u5219)"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666101
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> IDS/IPS: Suricata 7.0.1 (\u4E3B\u52A8\u76D1\u63A7)"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666102
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> WAF: ModSecurity 3.0 (\u504F\u6267\u7EA7\u522B 2)"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666103
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666104
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[\u5206\u6790\u5B8C\u6210]"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666105
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u53EF\u8BBF\u95EE\u7AEF\u70B9: 2"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666106
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u52A0\u5BC6\u6570\u636E\u5E93: 1"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666107
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u5EFA\u8BAE: \u4F7F\u7528 SQL-Inject \u89E3\u5BC6\u5BA2\u6237\u7AEF\u6570\u636E"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666108
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666109
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=green>[\u6210\u529F] \u6DF1\u5EA6\u626B\u63CF\u5B8C\u6210</color>"
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160666110
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '[ATTEMPTING SCAN]'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666111
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Target: $TargetIP'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666112
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160666113
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(1.0,20,\"  \u251C\u2500\u2500 Probing target...\",\"  \u251C\u2500\u2500
+          Connection blocked\",\"White\",\"Red\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160666114
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666115
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '<color=red>[ERROR] $ErrorCode: CONNECTION BLOCKED</color>'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666116
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666117
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '[DETECTION ANALYSIS]'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666118
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Reason: $BlockReason'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666119
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Firewall Type: Military-Grade (Classified)'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666120
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Protection Level: CRITICAL'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666121
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Active Countermeasures: Detected'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666122
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666123
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: <color=yellow>[WARNING] Direct scanning is ineffective</color>
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666124
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: <color=yellow>[WARNING] Advanced techniques required</color>
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666125
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666126
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: <color=red>[FAILED] Scan aborted - target unreachable</color>
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160666127
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[\u5C1D\u8BD5\u626B\u63CF\u4E2D]"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666128
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u76EE\u6807: $TargetIP"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666129
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160666130
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(1.0,20,\"  \u251C\u2500\u2500 \u63A2\u6D4B\u76EE\u6807\u4E2D...\",\" 
+          \u251C\u2500\u2500 \u8FDE\u63A5\u88AB\u963B\u6B62\",\"White\",\"Red\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160666131
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666132
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=red>[\u9519\u8BEF] $ErrorCode: \u8FDE\u63A5\u88AB\u963B\u6B62</color>"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666133
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666134
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[\u68C0\u6D4B\u5206\u6790]"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666135
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u539F\u56E0: $BlockReason"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666136
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u9632\u706B\u5899\u7C7B\u578B: \u519B\u7528\u7EA7\u522B (\u673A\u5BC6)"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666137
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u4FDD\u62A4\u7B49\u7EA7: \u5173\u952E"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666138
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u4E3B\u52A8\u5BF9\u6297\u63AA\u65BD: \u5DF2\u68C0\u6D4B"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666139
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666140
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=yellow>[\u8B66\u544A] \u76F4\u63A5\u626B\u63CF\u65E0\u6548</color>"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666141
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=yellow>[\u8B66\u544A] \u9700\u8981\u9AD8\u7EA7\u6280\u672F</color>"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666142
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666143
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=red>[\u5931\u8D25] \u626B\u63CF\u4E2D\u6B62 - \u76EE\u6807\u65E0\u6CD5\u8BBF\u95EE</color>"
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160666144
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '[ATTEMPTING SCAN]'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666145
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Target: $TargetDomain'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666146
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160666147
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '<color=red>[ERROR] Access failed: the path is invalid or permission
+          is denied.</color>'
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160666148
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[\u5C1D\u8BD5\u626B\u63CF\u4E2D]"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666149
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u76EE\u6807: $TargetDomain"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666150
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160666151
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=red>[\u9519\u8BEF] \u8BBF\u95EE\u5931\u8D25\uFF0C\u8DEF\u5F84\u65E0\u6548\u6216\u6743\u9650\u4E0D\u8DB3\u3002</color>"
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160666152
+      type: {class: Parameter, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Name: TargetIP
+        Type: string
+        Accept:
+        - 114.514.191.810
+    - rid: 5843204056160666153
+      type: {class: Parameter, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Name: Username
+        Type: string
+        Accept:
+        - gugugaga_maintenance
+    - rid: 5843204056160666154
+      type: {class: Parameter, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Name: Password
+        Type: string
+        Accept:
+        - GGG-B4ckd00r-2025!
+    - rid: 5843204056160666155
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550"
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160666156
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: BuBugBomb Remote Access v4.2.1
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160666157
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 'Session ID: SSH-$random6-MLTR | Target: $TargetIP'
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160666158
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550"
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160666159
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160666160
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '[INITIATING REMOTE CONNECTION]'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666161
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Target IP: $TargetIP'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666162
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Port: $Port'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666163
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Protocol: $Protocol'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666164
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Username: $Username'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666165
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160666166
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(1.5,30,\"  \u251C\u2500\u2500 Establishing encrypted tunnel...\",\" 
+          \u251C\u2500\u2500 Tunnel established\",\"White\",\"Green\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160666167
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666168
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '[SERVER HANDSHAKE]'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666169
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Server Version: $ServerVersion'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666170
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Server Fingerprint: $ServerFingerprint'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666171
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Key Exchange: $KeyExchange'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666172
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Encryption: $Encryption'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666173
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> MAC Algorithm: $MAC'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666174
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160666175
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(2.0,40,\"  \u251C\u2500\u2500 Authenticating with backdoor
+          credentials...\",\"  \u251C\u2500\u2500 Authentication successful\",\"White\",\"Green\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160666176
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666177
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '[AUTHENTICATION DETAILS]'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666178
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Method: $AuthMethod'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666179
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Backdoor Token: VALID'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666180
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Session ID: $SessionID'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666181
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Access Level: $AccessLevel'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666182
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160666183
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(1.2,25,\"  \u251C\u2500\u2500 Loading system information...\",\" 
+          \u251C\u2500\u2500 System info loaded\",\"White\",\"Green\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160666184
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160666185
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '[SYSTEM INFORMATION]'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666186
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u250C\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666187
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2502 [CLASSIFIED] MILITARY NETWORK        \u2502"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666188
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u251C\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666189
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2502 System: $SystemInfo                  \u2502"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666190
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2502 Location: $Location                  \u2502"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666191
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2502 Security Clearance: $SecurityClearance\u2502"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666192
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2502 Connected via: GuguGaga Backdoor     \u2502"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666193
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666194
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160666195
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: <color=yellow>[SECURITY ALERT] You have entered a classified military
+          network</color>
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666196
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: <color=yellow>[SECURITY ALERT] All activities are monitored and logged</color>
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666197
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160666198
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '[ACCESS GRANTED]'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666199
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Connected to $TargetIP:$Port'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666200
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Session established successfully'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666201
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Full maintenance privileges granted'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666202
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160666203
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: <color=green>[SUCCESS] Remote connection established</color>
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666204
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: <color=green>[SUCCESS] Infiltration complete - Military network compromised</color>
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666205
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160666206
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: <color=cyan>Mission Accomplished! Thanks to GuguGaga's backdoor, you
+          now have full access to the military infrastructure.</color>
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160666207
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 2
+    - rid: 5843204056160666208
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[\u521D\u59CB\u5316\u8FDC\u7A0B\u8FDE\u63A5]"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666209
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u76EE\u6807 IP: $TargetIP"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666210
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u7AEF\u53E3: $Port"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666211
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u534F\u8BAE: $Protocol"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666212
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u7528\u6237\u540D: $Username"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666213
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160666214
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(1.5,30,\"  \u251C\u2500\u2500 \u5EFA\u7ACB\u52A0\u5BC6\u96A7\u9053\u4E2D...\",\" 
+          \u251C\u2500\u2500 \u96A7\u9053\u5DF2\u5EFA\u7ACB\",\"White\",\"Green\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160666215
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666216
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[\u670D\u52A1\u5668\u63E1\u624B]"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666217
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u670D\u52A1\u5668\u7248\u672C: $ServerVersion"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666218
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u670D\u52A1\u5668\u6307\u7EB9: $ServerFingerprint"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666219
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u5BC6\u94A5\u4EA4\u6362: $KeyExchange"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666220
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u52A0\u5BC6\u7B97\u6CD5: $Encryption"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666221
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> MAC \u7B97\u6CD5: $MAC"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666222
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160666223
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(2.0,40,\"  \u251C\u2500\u2500 \u4F7F\u7528\u540E\u95E8\u51ED\u8BC1\u8BA4\u8BC1\u4E2D...\",\" 
+          \u251C\u2500\u2500 \u8BA4\u8BC1\u6210\u529F\",\"White\",\"Green\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160666224
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666225
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[\u8BA4\u8BC1\u8BE6\u60C5]"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666226
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u65B9\u6CD5: $AuthMethod"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666227
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u540E\u95E8\u4EE4\u724C: \u6709\u6548"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666228
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u4F1A\u8BDD ID: $SessionID"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666229
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u8BBF\u95EE\u7EA7\u522B: $AccessLevel"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666230
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160666231
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(1.2,25,\"  \u251C\u2500\u2500 \u52A0\u8F7D\u7CFB\u7EDF\u4FE1\u606F\u4E2D...\",\" 
+          \u251C\u2500\u2500 \u7CFB\u7EDF\u4FE1\u606F\u5DF2\u52A0\u8F7D\",\"White\",\"Green\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160666232
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160666233
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[\u7CFB\u7EDF\u4FE1\u606F]"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666234
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u250C\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666235
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2502 [\u673A\u5BC6] \u519B\u4E8B\u7F51\u7EDC                     
+          \u2502"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666236
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u251C\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666237
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2502 \u7CFB\u7EDF: $SystemInfo                    \u2502"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666238
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2502 \u4F4D\u7F6E: $Location                      \u2502"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666239
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2502 \u5B89\u5168\u8BB8\u53EF: $SecurityClearance         \u2502"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666240
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2502 \u8FDE\u63A5\u65B9\u5F0F: \u5495\u5495\u560E\u560E\u540E\u95E8               
+          \u2502"
+        Type: normal
+        Delay: 0.05
+    - rid: 5843204056160666241
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666242
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160666243
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=yellow>[\u5B89\u5168\u8B66\u544A] \u60A8\u5DF2\u8FDB\u5165\u673A\u5BC6\u519B\u4E8B\u7F51\u7EDC</color>"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666244
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=yellow>[\u5B89\u5168\u8B66\u544A] \u6240\u6709\u6D3B\u52A8\u5747\u88AB\u76D1\u63A7\u548C\u8BB0\u5F55</color>"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666245
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160666246
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[\u8BBF\u95EE\u5DF2\u6388\u6743]"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666247
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u5DF2\u8FDE\u63A5\u5230 $TargetIP:$Port"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666248
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u4F1A\u8BDD\u5EFA\u7ACB\u6210\u529F"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666249
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u5DF2\u6388\u4E88\u5B8C\u5168\u7EF4\u62A4\u6743\u9650"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666250
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160666251
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=green>[\u6210\u529F] \u8FDC\u7A0B\u8FDE\u63A5\u5DF2\u5EFA\u7ACB</color>"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666252
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=green>[\u6210\u529F] \u6E17\u900F\u5B8C\u6210 - \u519B\u4E8B\u7F51\u7EDC\u5DF2\u88AB\u653B\u9677</color>"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666253
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160666254
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=cyan>\u8FDE\u63A5\u5B8C\u6210\uFF01\u501F\u52A9\u5495\u5495\u560E\u560E\u7684\u540E\u95E8\uFF0C\u4F60\u73B0\u5728\u62E5\u6709\u5BF9\u519B\u4E8B\u57FA\u7840\u8BBE\u65BD\u7684\u5B8C\u5168\u8BBF\u95EE\u6743\u9650\u3002</color>"
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160666255
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 2
+    - rid: 5843204056160666256
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '[ATTEMPTING REMOTE CONNECTION]'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666257
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Target: $TargetIP'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666258
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160666259
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '<color=red>[ERROR] Connection failed: Invalid credentials or target
+          unreachable.</color>'
+        Type: normal
+        Delay: 0
+    - rid: 5843204056160666260
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[\u5C1D\u8BD5\u8FDC\u7A0B\u8FDE\u63A5]"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204056160666261
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u76EE\u6807: $TargetIP"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204056160666262
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204056160666263
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=red>[\u9519\u8BEF] \u8FDE\u63A5\u5931\u8D25\uFF0C\u51ED\u8BC1\u65E0\u6548\u6216\u76EE\u6807\u4E0D\u53EF\u8FBE\u3002</color>"
+        Type: normal
+        Delay: 0
