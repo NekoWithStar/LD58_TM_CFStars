@@ -26,8 +26,8 @@ namespace LD58.UI.CommandBoard
 #endif
         private void Awake()
         {
-            _content.DestroyChild();
 #if UNITY_EDITOR
+            _content.DestroyChild();
             if (_debug)
             {
                 AddCommand(CommandConstant.WEB_SCAN);
