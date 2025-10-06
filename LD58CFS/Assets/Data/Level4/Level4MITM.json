@@ -161,7 +161,7 @@
           },
           {
             "type": "clickable",
-            "text": "│ Username: <color=cyan>$BackdoorUser</color>      │",
+            "text": "│ Username: <color=cyan> $BackdoorUser </color>      │",
             "delay": 0.1,
             "gain": {
               "MilitaryUsername": "gugugaga_maintenance"
@@ -169,7 +169,7 @@
           },
           {
             "type": "clickable",
-            "text": "│ Password: <color=cyan>$BackdoorPass</color> │",
+            "text": "│ Password: <color=cyan> $BackdoorPass </color> │",
             "delay": 0.1,
             "gain": {
               "MilitaryPassword": "GGG-B4ckd00r-2025!"
