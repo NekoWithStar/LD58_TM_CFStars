@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: ResRefSprite
   m_EditorClassIdentifier: 
   ResRefs:
+  - Name: Assets/Arts/Manga/Final1Aa1.png
+    Data: {fileID: 694955835, guid: 10bd59e101b2ffd4e8ba8d48cbddccf9, type: 3}
   - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/v2/Capsule.png
     Data: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
   - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconinviteusers.png
@@ -71,6 +73,8 @@ MonoBehaviour:
     Data: {fileID: 21300000, guid: c34cd61ed96ff9a40a54e159467c5155, type: 3}
   - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconcurrentbranch.png
     Data: {fileID: 21300000, guid: d30af1e364af1fc48be2ff2dcb0d4724, type: 3}
+  - Name: Assets/Arts/Manga/Final1B1.png
+    Data: {fileID: -525111818, guid: d3aa4ae3bfd0e2445b29cb5a425bc84b, type: 3}
   - Name: Assets/Arts/UI/Button/Button12_Only32_1px.png
     Data: {fileID: -1134550029, guid: f380516ff0f5edc4dac35889d8cc6856, type: 3}
   - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconplasticnotifypendingchanges.png
@@ -107,6 +111,8 @@ MonoBehaviour:
     Data: {fileID: 21300000, guid: 55747841a2e3b47dab36dc8d5e0dc4df, type: 3}
   - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/v2/Triangle.png
     Data: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  - Name: Assets/Arts/Manga/Final1Aa2.png
+    Data: {fileID: -614616719, guid: 750e0b84d9258024ba9c2c3188a08029, type: 3}
   - Name: Assets/Arts/Manga/P5B2.png
     Data: {fileID: -1585610706, guid: b5a069cb43c3dc0468ebfe613cb55b8d, type: 3}
   - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconbranchincomingchanges.png
@@ -241,6 +247,8 @@ MonoBehaviour:
     Data: {fileID: 518906957, guid: fdb6f1065b21a184f94f1938bfb660ab, type: 3}
   - Name: Assets/Arts/UI/photos/95w1Big.png
     Data: {fileID: 21300000, guid: 6ef75dccabcca8b4ea1bc125a7590c4d, type: 3}
+  - Name: Assets/Arts/Manga/Final1B2.png
+    Data: {fileID: -1052890766, guid: 8eff53ca76f671c439bb429fc295f68d, type: 3}
   - Name: Assets/Arts/UI/bugCat.png
     Data: {fileID: 21300000, guid: ce104d734b9364c449779e7c98fa54e4, type: 3}
   - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconlabel@2x.png

@@ -17,6 +17,8 @@ MonoBehaviour:
     Data: {fileID: 2800000, guid: 0029170d14ce6c04c9f45c22cdae5559, type: 3}
   - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconlockedremoteoverlay.png
     Data: {fileID: 2800000, guid: 1046ed65e6aaffb4391378f6d08d6c14, type: 3}
+  - Name: Assets/Arts/Manga/Final1Aa1.png
+    Data: {fileID: 2800000, guid: 10bd59e101b2ffd4e8ba8d48cbddccf9, type: 3}
   - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/v2/Capsule.png
     Data: {fileID: 2800000, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
   - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconplastic.png
@@ -283,6 +285,8 @@ MonoBehaviour:
     Data: {fileID: 2800000, guid: d3b5c4f7d6b94f64085b3713bffa680e, type: 3}
   - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconcurrentbranch.png
     Data: {fileID: 2800000, guid: d30af1e364af1fc48be2ff2dcb0d4724, type: 3}
+  - Name: Assets/Arts/Manga/Final1B1.png
+    Data: {fileID: 2800000, guid: d3aa4ae3bfd0e2445b29cb5a425bc84b, type: 3}
   - Name: Packages/com.unity.ugui/Editor Resources/Textures/SectionHeader_Light.psd
     Data: {fileID: 2800000, guid: e3b0f810fdea84e40ab4ba20f256f7e8, type: 3}
   - Name: Assets/Arts/UI/Button/Button12_Only32_1px.png
@@ -393,6 +397,8 @@ MonoBehaviour:
     Data: {fileID: 2800000, guid: 75f26f1c549568c4e9950a368bd08cb8, type: 3}
   - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/v2/Triangle.png
     Data: {fileID: 2800000, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  - Name: Assets/Arts/Manga/Final1Aa2.png
+    Data: {fileID: 2800000, guid: 750e0b84d9258024ba9c2c3188a08029, type: 3}
   - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackCurvesButtonEnabled.png
     Data: {fileID: 2800000, guid: 9589d5d9eb09dec43b2ad51af4e78b1e, type: 3}
   - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineSignalSelected.png
@@ -991,6 +997,8 @@ MonoBehaviour:
     Data: {fileID: 2800000, guid: 8ef7c0fbb1fbcd64e954e5eafe1652ad, type: 3}
   - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineKeyframe.png
     Data: {fileID: 2800000, guid: 8eba099eb091faf419fecdcd5cdabfd7, type: 3}
+  - Name: Assets/Arts/Manga/Final1B2.png
+    Data: {fileID: 2800000, guid: 8eff53ca76f671c439bb429fc295f68d, type: 3}
   - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackCurvesButtonEnabled@2x.png
     Data: {fileID: 2800000, guid: 9e541b6dcfb77d34481f69b3d62d0343, type: 3}
   - Name: Packages/com.unity.settings-manager/Content/Options.png

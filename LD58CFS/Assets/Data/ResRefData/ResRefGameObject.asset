@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: ResRefGameObject
   m_EditorClassIdentifier: 
   ResRefs:
+  - Name: Assets/Prefabs/DataLine.prefab
+    Data: {fileID: 6051509145143990503, guid: 41a833e7406b864448ca289dfc056bf5, type: 3}
   - Name: Assets/Prefabs/CommandBoardItem.prefab
     Data: {fileID: 8604691886984056631, guid: 132a372dc5765944b90553d646041305, type: 3}
   - Name: Assets/Prefabs/ImageViewer.prefab
