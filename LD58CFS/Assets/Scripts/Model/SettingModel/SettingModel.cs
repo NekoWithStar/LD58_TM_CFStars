@@ -25,7 +25,7 @@ namespace LD58.Model
             Language.Register(val => StorageUtil.SaveByJson(nameof(Language),   val));
         }
 
-        public BsProperty<SystemLanguage> Language  { get; } = new(SystemLanguage.ChineseSimplified);
+        public BsProperty<SystemLanguage> Language  { get; } = new(SystemLanguage.English);
         public BsProperty<float>          BgmVolume { get; } = new(1f);
         public BsProperty<float>          SfxVolume { get; } = new(1f);
     }

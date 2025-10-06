@@ -1,24 +1,26 @@
+using Cysharp.Threading.Tasks;
+using EggFramework.UIUtil;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneLoadIn : MonoBehaviour
 {
-    [Tooltip("ÒªÌø×ªµÄ³¡¾°Ãû£¨·ÇÍË³ö°´Å¥Ê±ÓÐÐ§£©")]
+    [Tooltip("Òªï¿½ï¿½×ªï¿½Ä³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë³ï¿½ï¿½ï¿½Å¥Ê±ï¿½ï¿½Ð§ï¿½ï¿½")]
     public string targetSceneName;
 
-    [Tooltip("ÊÇ·ñÎªÍË³ö°´Å¥")]
+    [Tooltip("ï¿½Ç·ï¿½Îªï¿½Ë³ï¿½ï¿½ï¿½Å¥")]
     public bool isExitButton = false;
 
-    // UI°´Å¥µã»÷Ê±µ÷ÓÃ´Ë·½·¨
-    public void OnButtonClick()
+    // UIï¿½ï¿½Å¥ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ã´Ë·ï¿½ï¿½ï¿½
+    public async void OnButtonClick()
     {
         if (isExitButton)
         {
 #if UNITY_EDITOR
-            // ±à¼­Æ÷ÖÐ¹Ø±ÕÔËÐÐ
+            // ï¿½à¼­ï¿½ï¿½ï¿½Ð¹Ø±ï¿½ï¿½ï¿½ï¿½ï¿½
             UnityEditor.EditorApplication.isPlaying = false;
 #else
-            // ±à¼­Æ÷ÍâÍË³öÔËÐÐ
+            // ï¿½à¼­ï¿½ï¿½ï¿½ï¿½ï¿½Ë³ï¿½ï¿½ï¿½ï¿½ï¿½
             Application.Quit();
 #endif
         }
@@ -26,11 +28,14 @@ public class SceneLoadIn : MonoBehaviour
         {
             if (!string.IsNullOrEmpty(targetSceneName))
             {
-                SceneManager.LoadScene(targetSceneName);
+                BlackScreenManager.Inst.EnterBlack(1f);
+                await UniTask.Delay(1000);
+                await UniTask.WhenAll(UniTask.Delay(600), SceneManager.LoadSceneAsync(targetSceneName).ToUniTask());
+                BlackScreenManager.Inst.ExitBlack(1f);
             }
             else
             {
-                Debug.LogWarning("Î´ÉèÖÃÄ¿±ê³¡¾°Ãû£¡");
+                Debug.LogWarning("Î´ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ê³¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
             }
         }
     }

@@ -16,9 +16,12 @@
     "100012": "MyGoodCat.png",
     "100013": "IDCard.png",
     "100014": "Search",
-    "100015": "What's the easiest job in 2025?",
-    "100016": "Can cats eat mooncake?",
-    "100017": "How do I log into the Bmail system?",
-    "100018": "When is the Cat Beauty Contest at the Meow Planet Club?"
+    "200015": "What's the easiest job in 2025?",
+    "200016": "Can cats eat mooncake?",
+    "200017": "How do I log into the Bmail system?",
+    "200018": "When is the Cat Beauty Contest at the Meow Planet Club?",
+    "100015": "Start",
+    "100016": "Exit",
+    "100017": "English"
   }
 }
