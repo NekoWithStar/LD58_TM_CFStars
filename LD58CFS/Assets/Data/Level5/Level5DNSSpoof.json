@@ -103,7 +103,12 @@
           },
           {
             "type": "normal",
-            "text": "> DNS Server: $DNSServer",
+            "text": "> DNS Server: $DNSServer (BIND 9.16.23)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> DNS Protocol: UDP/53 + TCP/53 (Zone transfer)",
             "delay": 0.1
           },
           {
@@ -119,6 +124,41 @@
           {
             "type": "normal",
             "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[DNS SERVER RECONNAISSANCE]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Querying DNS version: BIND 9.16.23-Ubuntu",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── DNSSEC Status: Enabled (requires bypass)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Recursive Queries: Allowed (internal only)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Cache Size: 512 MB (8,742 entries)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Response Rate Limiting: 10 queries/sec",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
             "delay": 0.3
           },
           {
@@ -129,6 +169,11 @@
           {
             "type": "normal",
             "text": "> DNS server requires administrative credentials...",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Exploiting TSIG key weakness (MD5 hash collision)",
             "delay": 0.1
           },
           {
@@ -163,8 +208,53 @@
           },
           {
             "type": "normal",
-            "text": "  └── Access Level: DNS Administrator",
+            "text": "  ├── Access Level: DNS Administrator",
             "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Session Token: 0xA7B2...D4F9 (HMAC-SHA256)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[DNS QUERY INTERCEPTION PHASE]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Sniffing DNS traffic on port 53...",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Detected query types: A, AAAA, MX, TXT, CNAME",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Target query pattern: *.$TargetDomain",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Man-in-the-middle position confirmed",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.8,12,\"  ├── Crafting malicious DNS responses...\",\"  ├── Responses forged\",\"White\",\"Purple\")",
+            "delay": 0
           },
           {
             "type": "normal",
@@ -178,6 +268,26 @@
           },
           {
             "type": "normal",
+            "text": "  ├── Bypassing DNSSEC validation...",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Forging RRSIG signatures (RSA-2048 collision)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Injecting malicious A record into cache",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── TTL manipulation: Extended to 3600 seconds",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
             "text": "",
             "delay": 0.1
           },
@@ -185,6 +295,36 @@
             "type": "normal",
             "text": "$$progress(1.5,25,\"  ├── Intercepting DNS queries...\",\"  ├── Cache poisoned successfully\",\"White\",\"Green\")",
             "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[CACHE POISONING ANALYSIS]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Query ID Prediction: Transaction ID 0x4A7B",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Source Port Spoofing: Port 53 (DNS standard)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Race Condition: Response injected in 18ms window",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Kaminsky Attack Variant: Multiple subdomain flooding",
+            "delay": 0.1
           },
           {
             "type": "normal",
@@ -203,12 +343,22 @@
           },
           {
             "type": "normal",
+            "text": "  ├── Domain: $TargetDomain → $FakeIP",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
             "text": "  ├── TTL: $CacheTime seconds",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  ├── Priority: High",
+            "text": "  ├── Priority: High (Zone apex record)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Propagation: Cached across 47 downstream resolvers",
             "delay": 0.1
           },
           {
@@ -235,6 +385,51 @@
             "type": "normal",
             "text": "> Fake server ready to intercept communications",
             "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[MALICIOUS DNS SERVER SETUP]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Fake HTTP server listening on $FakeIP:80",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── SSL certificate cloned (same CN: $TargetDomain)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Phishing pages deployed (login forms, file uploads)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Credential harvesting: Active",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Session hijacking: Waiting for internal traffic",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.8,28,\"  ├── Monitoring victim connections...\",\"  ├── 12 clients redirected\",\"Cyan\",\"Yellow\")",
+            "delay": 0
           },
           {
             "type": "normal",
@@ -335,7 +530,12 @@
           },
           {
             "type": "normal",
-            "text": "> DNS服务器: $DNSServer",
+            "text": "> DNS服务器: $DNSServer (BIND 9.16.23)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> DNS协议: UDP/53 + TCP/53 (区域传输)",
             "delay": 0.1
           },
           {
@@ -351,6 +551,41 @@
           {
             "type": "normal",
             "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[DNS服务器侦察]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 查询DNS版本: BIND 9.16.23-Ubuntu",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── DNSSEC状态: 已启用 (需要绕过)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 递归查询: 允许 (仅限内网)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 缓存大小: 512 MB (8,742 条记录)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 响应速率限制: 10 查询/秒",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
             "delay": 0.3
           },
           {
@@ -361,6 +596,11 @@
           {
             "type": "normal",
             "text": "> DNS服务器需要管理凭据...",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 利用TSIG密钥弱点 (MD5哈希碰撞)",
             "delay": 0.1
           },
           {
@@ -395,8 +635,53 @@
           },
           {
             "type": "normal",
-            "text": "  └── 访问级别: DNS管理员",
+            "text": "  ├── 访问级别: DNS管理员",
             "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 会话令牌: 0xA7B2...D4F9 (HMAC-SHA256)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[DNS查询拦截阶段]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 嗅探端口53上的DNS流量...",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 检测到查询类型: A, AAAA, MX, TXT, CNAME",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 目标查询模式: *.$TargetDomain",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 中间人位置确认",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.8,12,\"  ├── 制作恶意DNS响应...\",\"  ├── 响应已伪造\",\"White\",\"Purple\")",
+            "delay": 0
           },
           {
             "type": "normal",
@@ -410,6 +695,26 @@
           },
           {
             "type": "normal",
+            "text": "  ├── 绕过DNSSEC验证...",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 伪造RRSIG签名 (RSA-2048碰撞)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 注入恶意A记录到缓存",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── TTL操纵: 延长至3600秒",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
             "text": "",
             "delay": 0.1
           },
@@ -417,6 +722,36 @@
             "type": "normal",
             "text": "$$progress(1.5,25,\"  ├── 拦截DNS查询中...\",\"  ├── 缓存投毒成功\",\"White\",\"Green\")",
             "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[缓存投毒分析]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 查询ID预测: 事务ID 0x4A7B",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 源端口欺骗: 端口53 (DNS标准)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 竞争条件: 响应注入于18ms窗口",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Kaminsky攻击变体: 多子域洪水",
+            "delay": 0.1
           },
           {
             "type": "normal",
@@ -435,12 +770,22 @@
           },
           {
             "type": "normal",
+            "text": "  ├── 域名: $TargetDomain → $FakeIP",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
             "text": "  ├── TTL: $CacheTime 秒",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  ├── 优先级: 高",
+            "text": "  ├── 优先级: 高 (区域顶点记录)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 传播: 已缓存至47个下游解析器",
             "delay": 0.1
           },
           {
@@ -467,6 +812,51 @@
             "type": "normal",
             "text": "> 伪造服务器准备拦截通信",
             "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[恶意DNS服务器设置]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 伪造HTTP服务器监听 $FakeIP:80",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── SSL证书已克隆 (相同CN: $TargetDomain)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 钓鱼页面已部署 (登录表单、文件上传)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 凭据收集: 活跃中",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 会话劫持: 等待内网流量",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.8,28,\"  ├── 监控受害者连接...\",\"  ├── 12个客户端已重定向\",\"Cyan\",\"Yellow\")",
+            "delay": 0
           },
           {
             "type": "normal",
@@ -567,7 +957,12 @@
           },
           {
             "type": "normal",
-            "text": "> DNS Server: $DNSServer",
+            "text": "> DNS Server: $DNSServer (BIND 9.16.23)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> DNS Protocol: UDP/53 + TCP/53 (Zone transfer)",
             "delay": 0.1
           },
           {
@@ -583,12 +978,97 @@
           {
             "type": "normal",
             "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[DNS SERVER RECONNAISSANCE]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Querying DNS version: BIND 9.16.23-Ubuntu",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── DNSSEC Status: Disabled (vulnerable to basic poisoning)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Recursive Queries: Allowed (internal only)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Cache Size: 512 MB (8,742 entries)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Response Rate Limiting: None detected (exploitable)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[DNS QUERY INTERCEPTION PHASE]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Sniffing DNS traffic on port 53...",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Detected query types: A, AAAA, MX, TXT, CNAME",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Target query pattern: *.$TargetDomain",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Man-in-the-middle position confirmed",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.8,12,\"  ├── Crafting malicious DNS responses...\",\"  ├── Responses forged\",\"White\",\"Purple\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
             "delay": 0.3
           },
           {
             "type": "normal",
             "text": "[INJECTING FAKE DNS RECORDS]",
             "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Injecting malicious A record into cache",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── TTL manipulation: Extended to 3600 seconds",
+            "delay": 0.1
           },
           {
             "type": "normal",
@@ -599,6 +1079,36 @@
             "type": "normal",
             "text": "$$progress(1.5,25,\"  ├── Intercepting DNS queries...\",\"  ├── Cache poisoned successfully\",\"White\",\"Green\")",
             "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[CACHE POISONING ANALYSIS]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Query ID Prediction: Transaction ID 0x4A7B",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Source Port Spoofing: Port 53 (DNS standard)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Race Condition: Response injected in 18ms window",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Kaminsky Attack Variant: Multiple subdomain flooding",
+            "delay": 0.1
           },
           {
             "type": "normal",
@@ -617,12 +1127,22 @@
           },
           {
             "type": "normal",
+            "text": "  ├── Domain: $TargetDomain → $FakeIP",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
             "text": "  ├── TTL: $CacheTime seconds",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  ├── Priority: High",
+            "text": "  ├── Priority: High (Zone apex record)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Propagation: Cached across 47 downstream resolvers",
             "delay": 0.1
           },
           {
@@ -649,6 +1169,51 @@
             "type": "normal",
             "text": "> Fake server ready to intercept communications",
             "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[MALICIOUS DNS SERVER SETUP]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Fake HTTP server listening on $FakeIP:80",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── SSL certificate cloned (same CN: $TargetDomain)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Phishing pages deployed (login forms, file uploads)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Credential harvesting: Active",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Session hijacking: Waiting for internal traffic",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.8,28,\"  ├── Monitoring victim connections...\",\"  ├── 12 clients redirected\",\"Cyan\",\"Yellow\")",
+            "delay": 0
           },
           {
             "type": "normal",
@@ -739,7 +1304,12 @@
           },
           {
             "type": "normal",
-            "text": "> DNS服务器: $DNSServer",
+            "text": "> DNS服务器: $DNSServer (BIND 9.16.23)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> DNS协议: UDP/53 + TCP/53 (区域传输)",
             "delay": 0.1
           },
           {
@@ -755,12 +1325,97 @@
           {
             "type": "normal",
             "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[DNS服务器侦察]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 查询DNS版本: BIND 9.16.23-Ubuntu",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── DNSSEC状态: 已禁用 (易受基础投毒攻击)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 递归查询: 允许 (仅限内网)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 缓存大小: 512 MB (8,742 条记录)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 响应速率限制: 未检测到 (可被利用)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[DNS查询拦截阶段]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 嗅探端口53上的DNS流量...",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 检测到查询类型: A, AAAA, MX, TXT, CNAME",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 目标查询模式: *.$TargetDomain",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 中间人位置确认",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.8,12,\"  ├── 制作恶意DNS响应...\",\"  ├── 响应已伪造\",\"White\",\"Purple\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
             "delay": 0.3
           },
           {
             "type": "normal",
             "text": "[注入伪造DNS记录]",
             "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 注入恶意A记录到缓存",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── TTL操纵: 延长至3600秒",
+            "delay": 0.1
           },
           {
             "type": "normal",
@@ -771,6 +1426,36 @@
             "type": "normal",
             "text": "$$progress(1.5,25,\"  ├── 拦截DNS查询中...\",\"  ├── 缓存投毒成功\",\"White\",\"Green\")",
             "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[缓存投毒分析]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 查询ID预测: 事务ID 0x4A7B",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 源端口欺骗: 端口53 (DNS标准)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 竞争条件: 响应注入于18ms窗口",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Kaminsky攻击变体: 多子域洪水",
+            "delay": 0.1
           },
           {
             "type": "normal",
@@ -789,12 +1474,22 @@
           },
           {
             "type": "normal",
+            "text": "  ├── 域名: $TargetDomain → $FakeIP",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
             "text": "  ├── TTL: $CacheTime 秒",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  ├── 优先级: 高",
+            "text": "  ├── 优先级: 高 (区域顶点记录)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 传播: 已缓存至47个下游解析器",
             "delay": 0.1
           },
           {
@@ -821,6 +1516,51 @@
             "type": "normal",
             "text": "> 伪造服务器准备拦截通信",
             "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[恶意DNS服务器设置]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 伪造HTTP服务器监听 $FakeIP:80",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── SSL证书已克隆 (相同CN: $TargetDomain)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 钓鱼页面已部署 (登录表单、文件上传)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 凭据收集: 活跃中",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 会话劫持: 等待内网流量",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.8,28,\"  ├── 监控受害者连接...\",\"  ├── 12个客户端已重定向\",\"Cyan\",\"Yellow\")",
+            "delay": 0
           },
           {
             "type": "normal",
