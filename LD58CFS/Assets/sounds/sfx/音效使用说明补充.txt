@@ -7,3 +7,22 @@ lockin：用于移动信息栏到shell里时使用
 bubbledie：可考虑替换lockin？从巴巴伯一的素材库里找回来的，但可能风格不太适合大概
 
 recall/clear：用于clear和recall按键按键返回或清空shell时使用
+
+clickmouse：鼠标点击时使用
+
+sign:成功获取新信息时播放
+chimes：同上，看哪个更适合，或者相同用法用在不同地方
+
+balloon：系统弹窗之类的使用
+
+CHORD：点击无法打开的文件或网站之类的东西时播放
+exclamation：同上，看哪个更适合，或者相同用法用在不同地方
+
+TADA：每关通关时播放
+
+nuclear：第五关前漫画使用（即该漫画不用音乐，大概？），记得开启循环播放，假装搞的很严肃的样子（）
+
+BOOOM！：最后通关引爆核弹时播放
+
+
+
