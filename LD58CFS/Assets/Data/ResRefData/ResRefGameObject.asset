@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea2c9cb932bd423a994dfd9110b38270, type: 3}
+  m_Name: ResRefGameObject
+  m_EditorClassIdentifier: 
+  ResRefs:
+  - Name: Assets/Prefabs/CommandBoardItem.prefab
+    Data: {fileID: 8604691886984056631, guid: 132a372dc5765944b90553d646041305, type: 3}
+  - Name: Assets/Prefabs/ImageViewer.prefab
+    Data: {fileID: 3657279218724511358, guid: 338b776907b8ee64eb855b2496ec8f74, type: 3}
+  - Name: Assets/Prefabs/FontChanger.prefab
+    Data: {fileID: 4086396768788325183, guid: 83aab03b5a66cae42b4606ae0f1e9f03, type: 3}
+  - Name: Assets/Prefabs/BlackScreen.prefab
+    Data: {fileID: 8822044163353168904, guid: 34ead85876ad8994989c8d0beed2ba75, type: 3}
+  - Name: Assets/Prefabs/Browser.prefab
+    Data: {fileID: 4043896749521612887, guid: f471ffde24e36a6419d20bc531572370, type: 3}
+  - Name: Assets/Prefabs/Canvas.prefab
+    Data: {fileID: 5647418748265889098, guid: f55bec5ba9836f441b1fdcf229c74b4d, type: 3}
+  - Name: Assets/Prefabs/ConsoleItem.prefab
+    Data: {fileID: 4553686545393133383, guid: 0a5fde431235e4f4fa9e1e8d2a741d72, type: 3}
+  - Name: Assets/Prefabs/TaskItem.prefab
+    Data: {fileID: 2875631654636475363, guid: 6a83cbc44707da34facbd9b03fc92215, type: 3}
+  - Name: Assets/Prefabs/BlackBoardItem.prefab
+    Data: {fileID: 1401011961160465640, guid: 0bec223abbcfc2f4ca5a4c51a5d99a9e, type: 3}
+  - Name: Assets/Prefabs/Recycle.prefab
+    Data: {fileID: 46199347443320762, guid: 9b05947b939c61345b1f6be8e4d6ae16, type: 3}
+  - Name: Assets/Prefabs/LocalizationHandle.prefab
+    Data: {fileID: 7422317121140000309, guid: 7d16a5965da1ce742985cea1ad2219e9, type: 3}
+  - Name: Assets/Prefabs/DesktopIcon.prefab
+    Data: {fileID: 2117275922934153998, guid: 8e881b2885e5ab941835cc1d539f55c3, type: 3}

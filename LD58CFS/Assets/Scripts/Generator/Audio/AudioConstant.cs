@@ -6,15 +6,23 @@ namespace EggFramework.SimpleAudioSystem.Constant
 	{
 		public static class BGM
 		{
+			public const string GAME = "game";
 			public const string OTHER = "other";
 			public const string THEME_ORIGINAL = "theme_original";
+			public const string G_UGUGAGAAND_NUCLEAR = "GUGUGAGA and NUCLEAR";
 			public const string THEME = "theme";
+			public const string E_GGTIME = "EGGTIME";
 			public const string P_IPEBOMB = "PIPEBOMB";
+			public const string FLUTE = "flute";
 			public static List<string> BGMIds = new(){
+			      GAME,
 			      OTHER,
 			      THEME_ORIGINAL,
+			      G_UGUGAGAAND_NUCLEAR,
 			      THEME,
+			      E_GGTIME,
 			      P_IPEBOMB,
+			      FLUTE,
 			};
 		}
 		public static class SFX
@@ -24,9 +32,12 @@ namespace EggFramework.SimpleAudioSystem.Constant
 			public const string OPENSYSTEM_95 = "opensystem_95";
 			public const string SIGN = "sign";
 			public const string T_ADA = "TADA";
+			public const string CLICKMOUSE = "clickmouse";
+			public const string B_OOOM = "BOOOM";
 			public const string MESSAGE_FAST = "message_fast";
 			public const string OPENSYSTEM_XP = "opensystem_xp";
 			public const string SHUTDOWNSYSTEM = "shutdownsystem";
+			public const string NUCLEAR = "nuclear";
 			public const string HARDWAREERROR = "hardwareerror";
 			public const string SYSTEMERROR = "systemerror";
 			public const string CONNECTED = "connected";
@@ -48,9 +59,12 @@ namespace EggFramework.SimpleAudioSystem.Constant
 			      OPENSYSTEM_95,
 			      SIGN,
 			      T_ADA,
+			      CLICKMOUSE,
+			      B_OOOM,
 			      MESSAGE_FAST,
 			      OPENSYSTEM_XP,
 			      SHUTDOWNSYSTEM,
+			      NUCLEAR,
 			      HARDWAREERROR,
 			      SYSTEMERROR,
 			      CONNECTED,

@@ -595,6 +595,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _levelDatas: {fileID: 11400000, guid: daff0bc80290c5a49ba45f2a4f75f580, type: 2}
   LevelName: Level1
+  InitBGM: game
 --- !u!1001 &7655402779588141190
 PrefabInstance:
   m_ObjectHideFlags: 0
