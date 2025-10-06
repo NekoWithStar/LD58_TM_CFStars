@@ -19,18 +19,19 @@ namespace LD58.UI
         [SerializeField] private Transform  _content;
 
         [SerializeField] private bool _debug;
+
         private void Awake()
         {
-            _content.DestroyChild();
 #if UNITY_EDITOR
             if (_debug)
             {
-                SetItem("qwertyuiop1234567890", "qwertyuiop1234567890");
-                SetItem("who u r", "Cat D");
-                SetItem("MOON_CAKE","MoonCake");
-                SetItem("ADDRESS","www.bmail.com");
-                SetItem("www.bmail.com/admin/login","www.bmail.com/admin/login");
-                SetItem("Kesi@Bmail.com","Kesi@Bmail.com");
+                _content.DestroyChild();
+                SetItem("qwertyuiop1234567890",      "qwertyuiop1234567890");
+                SetItem("who u r",                   "Cat D");
+                SetItem("MOON_CAKE",                 "MoonCake");
+                SetItem("ADDRESS",                   "www.bmail.com");
+                SetItem("www.bmail.com/admin/login", "www.bmail.com/admin/login");
+                SetItem("Kesi@Bmail.com",            "Kesi@Bmail.com");
             }
 #endif
         }
@@ -46,21 +47,19 @@ namespace LD58.UI
                 bbi.Value = value;
                 return;
             }
+
             var item = Instantiate(_blackBoardItemPrefab, _content);
-            bbi  = item.GetComponent<BlackBoardItem>();
+            bbi = item.GetComponent<BlackBoardItem>();
             bbi.SetText($"{value}");
-            bbi.Key   = key;
-            bbi.Value = value;
+            bbi.Key          = key;
+            bbi.Value        = value;
             _boardItems[key] = bbi;
         }
 
         [Button]
         public void Clear()
         {
-            foreach (Transform trans in _content.transform)
-            {
-                Destroy(trans.gameObject);
-            }
+            _content.DestroyChild();
             _boardItems.Clear();
         }
     }

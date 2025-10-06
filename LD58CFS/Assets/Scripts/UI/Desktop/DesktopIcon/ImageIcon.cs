@@ -12,10 +12,12 @@ namespace LD58.UI.Desktop
     public sealed class ImageIcon : DesktopIcon
     {
         [SerializeField] private Sprite _image;
+        [SerializeField] private string _param;
         protected override void BeforeOpen()
         {
             base.BeforeOpen();
             Selection.DisplayImage = _image;
+            Selection.ImageParam   = _param;
         }
     }
 }
