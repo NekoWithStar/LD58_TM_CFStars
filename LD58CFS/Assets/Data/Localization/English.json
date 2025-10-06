@@ -1,0 +1,12 @@
+{
+  "Language": 10,
+  "LocalizationData": {
+    "100000": "BlackBoard",
+    "100001": "CommandBoard",
+    "100002": "Recall",
+    "100003": "Enter",
+    "100004": "Clear",
+    "100005": "BrowserConsole",
+    "100006": "PowerShell"
+  }
+}

@@ -1091,6 +1091,7 @@ GameObject:
   - component: {fileID: 234339046}
   - component: {fileID: 234339048}
   - component: {fileID: 234339047}
+  - component: {fileID: 234339049}
   m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
@@ -1150,9 +1151,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Enter
-
-'
+  m_Text: "\u56DE\u8F66"
 --- !u!222 &234339048
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1161,6 +1160,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 234339045}
   m_CullTransparentMesh: 1
+--- !u!114 &234339049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234339045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d27911f4f6d54c19882d08b887d28c35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LocalizationId: 100003
+  LanguageItems:
+  - Language: 40
+    Content: "\u56DE\u8F66"
+  - Language: 10
+    Content: Enter
+  AbleToUpdateAutomatically: 1
 --- !u!1001 &252242778
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2813,6 +2831,7 @@ GameObject:
   - component: {fileID: 625197616}
   - component: {fileID: 625197618}
   - component: {fileID: 625197617}
+  - component: {fileID: 625197619}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -2872,9 +2891,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'CommandBoard
-
-'
+  m_Text: "\u547D\u4EE4\u9762\u677F"
 --- !u!222 &625197618
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2883,6 +2900,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 625197615}
   m_CullTransparentMesh: 1
+--- !u!114 &625197619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625197615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d27911f4f6d54c19882d08b887d28c35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LocalizationId: 100001
+  LanguageItems:
+  - Language: 40
+    Content: "\u547D\u4EE4\u9762\u677F"
+  - Language: 10
+    Content: CommandBoard
+  AbleToUpdateAutomatically: 1
 --- !u!1 &669656101
 GameObject:
   m_ObjectHideFlags: 0
@@ -2991,6 +3027,7 @@ GameObject:
   - component: {fileID: 682421251}
   - component: {fileID: 682421253}
   - component: {fileID: 682421252}
+  - component: {fileID: 682421254}
   m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
@@ -3050,9 +3087,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Clear
-
-'
+  m_Text: "\u6E05\u9664"
 --- !u!222 &682421253
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3061,6 +3096,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 682421250}
   m_CullTransparentMesh: 1
+--- !u!114 &682421254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682421250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d27911f4f6d54c19882d08b887d28c35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LocalizationId: 100004
+  LanguageItems:
+  - Language: 40
+    Content: "\u6E05\u9664"
+  - Language: 10
+    Content: Clear
+  AbleToUpdateAutomatically: 1
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -4685,6 +4739,7 @@ GameObject:
   - component: {fileID: 1375887253}
   - component: {fileID: 1375887255}
   - component: {fileID: 1375887254}
+  - component: {fileID: 1375887256}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -4744,9 +4799,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'BlackBoard
-
-'
+  m_Text: "\u9ED1\u677F"
 --- !u!222 &1375887255
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4755,6 +4808,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1375887252}
   m_CullTransparentMesh: 1
+--- !u!114 &1375887256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375887252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d27911f4f6d54c19882d08b887d28c35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LocalizationId: 100000
+  LanguageItems:
+  - Language: 40
+    Content: "\u9ED1\u677F"
+  - Language: 10
+    Content: BlackBoard
+  AbleToUpdateAutomatically: 1
 --- !u!1 &1394813171
 GameObject:
   m_ObjectHideFlags: 0
@@ -5267,6 +5339,7 @@ GameObject:
   - component: {fileID: 1715974607}
   - component: {fileID: 1715974609}
   - component: {fileID: 1715974608}
+  - component: {fileID: 1715974610}
   m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
@@ -5326,7 +5399,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: BrowserConsole
+  m_Text: "\u6D4F\u89C8\u5668\u63A7\u5236\u53F0"
 --- !u!222 &1715974609
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5335,6 +5408,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1715974606}
   m_CullTransparentMesh: 1
+--- !u!114 &1715974610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715974606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d27911f4f6d54c19882d08b887d28c35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LocalizationId: 100005
+  LanguageItems:
+  - Language: 40
+    Content: "\u6D4F\u89C8\u5668\u63A7\u5236\u53F0"
+  - Language: 10
+    Content: BrowserConsole
+  AbleToUpdateAutomatically: 1
 --- !u!224 &1716966392 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1023717157615358907, guid: 8e881b2885e5ab941835cc1d539f55c3, type: 3}
@@ -5351,6 +5443,7 @@ GameObject:
   - component: {fileID: 1767224845}
   - component: {fileID: 1767224847}
   - component: {fileID: 1767224846}
+  - component: {fileID: 1767224848}
   m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
@@ -5410,7 +5503,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: PowerShell
+  m_Text: "\u547D\u4EE4\u884C"
 --- !u!222 &1767224847
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5419,6 +5512,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1767224844}
   m_CullTransparentMesh: 1
+--- !u!114 &1767224848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767224844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d27911f4f6d54c19882d08b887d28c35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LocalizationId: 100006
+  LanguageItems:
+  - Language: 40
+    Content: "\u547D\u4EE4\u884C"
+  - Language: 10
+    Content: PowerShell
+  AbleToUpdateAutomatically: 1
 --- !u!1 &1781081151
 GameObject:
   m_ObjectHideFlags: 0
@@ -6420,6 +6532,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2061301472}
   m_CullTransparentMesh: 1
+--- !u!1 &2075379473
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2075379474}
+  - component: {fileID: 2075379475}
+  m_Layer: 0
+  m_Name: LocalizationHandle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2075379474
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075379473}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2075379475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075379473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 152dbae240734ea1bc336e196ca1ae19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LocalizationConfigTextAssets:
+  - {fileID: 4900000, guid: 3569d26a83964de48a920292003120af, type: 3}
+  - {fileID: 4900000, guid: f493165bcfd656440908390cabe9ca22, type: 3}
+  Packages:
+  - Language: 40
+  - Language: 10
+  Asset: {fileID: 0}
 --- !u!1001 &2080346329
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6537,6 +6700,7 @@ GameObject:
   - component: {fileID: 2136047218}
   - component: {fileID: 2136047220}
   - component: {fileID: 2136047219}
+  - component: {fileID: 2136047221}
   m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
@@ -6596,7 +6760,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Recall
+  m_Text: "\u7EC8\u6B62"
 --- !u!222 &2136047220
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6605,6 +6769,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2136047217}
   m_CullTransparentMesh: 1
+--- !u!114 &2136047221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136047217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d27911f4f6d54c19882d08b887d28c35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LocalizationId: 100002
+  LanguageItems:
+  - Language: 40
+    Content: "\u7EC8\u6B62"
+  - Language: 10
+    Content: Recall
+  AbleToUpdateAutomatically: 1
 --- !u!1 &2143847710
 GameObject:
   m_ObjectHideFlags: 0
@@ -8057,3 +8240,4 @@ SceneRoots:
   - {fileID: 1886694068}
   - {fileID: 929757372}
   - {fileID: 7929472308338695096}
+  - {fileID: 2075379474}
