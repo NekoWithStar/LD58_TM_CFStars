@@ -14,15 +14,38 @@ namespace LD58.UI
 {
     public sealed class ImageViewer : AbstractWindowController
     {
-        [SerializeField] private Image _image;
+        [SerializeField] private Image   _image;
         [SerializeField] private Vector2 _bounds = new(800, 600);
-        
+        [SerializeField] private Button  _button;
+
+        private string _param;
+
+        protected override void Awake()
+        {
+            base.Awake();
+            _button.onClick.AddListener(() =>
+            {
+                if (!string.IsNullOrEmpty(_param))
+                {
+                    FindFirstObjectByType<BlackBoardController>().SetItem(_param, _param);
+                }
+            });
+        }
+
+        protected override void OnDestroy()
+        {
+            _button.onClick.RemoveAllListeners();
+            base.OnDestroy();
+        }
+
         public override void OnFocus()
         {
             base.OnFocus();
             _image.sprite = Selection.DisplayImage;
+            _param        = Selection.ImageParam;
             Adjust();
         }
+
         [Button]
         private void Adjust()
         {
@@ -30,10 +53,10 @@ namespace LD58.UI
             {
                 // 获取 Sprite 的原始像素尺寸
                 Vector2 spritePixelSize = new Vector2(_image.sprite.rect.width, _image.sprite.rect.height);
-    
+
                 // 获取该 Sprite 的 Pixels Per Unit
                 float pixelsPerUnit = _image.sprite.pixelsPerUnit;
-    
+
                 // 计算在 Unity UI 中的实际“逻辑尺寸”（单位：RectTransform 的单位，即像素）
                 Vector2 spriteSizeInUI = spritePixelSize / pixelsPerUnit;
 
@@ -41,7 +64,7 @@ namespace LD58.UI
                 // 所以可以直接用 _bounds（假设它是目标容器的可用尺寸，如 Panel 的 rect.size）
 
                 float scale = Mathf.Min(_bounds.x / spriteSizeInUI.x, _bounds.y / spriteSizeInUI.y);
-    
+
                 // 设置 Image 的 sizeDelta 为缩放后的逻辑尺寸
                 _image.rectTransform.sizeDelta = spriteSizeInUI * scale;
             }
