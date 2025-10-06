@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d275cd3eb699d5c4dae754c2d646edc5
+guid: ba4a801c0cdedbc48ae8a30fab76589c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: P3A_0
+      name: P3B2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e403ceacbc418ea4fbbaf5ad34782e43
-      internalID: -704593747
+      spriteID: 38833b5e54bd3ba48ad52ff70ed9c1cb
+      internalID: 1981306058
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: P3A_1
+      name: P3B2_1
       rect:
         serializedVersion: 2
         x: 100
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d98446b882c2b8f4881bab7d54bf5526
-      internalID: -1728659756
+      spriteID: c09c320509e72774c83b2aea097cb1e7
+      internalID: 1085950784
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: P3A_2
+      name: P3B2_2
       rect:
         serializedVersion: 2
         x: 200
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5cc919e3cf661e14899c531a679f0cb4
-      internalID: -668573509
+      spriteID: 9d20b30a1106b0d43b5f3ac3868e6353
+      internalID: 2134333219
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: P3A_3
+      name: P3B2_3
       rect:
         serializedVersion: 2
         x: 300
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2190718d13ba22e4ea971d16c5d2eb0f
-      internalID: -1220028511
+      spriteID: 8eb3125234fb50344923b061d2fa79d7
+      internalID: 1244500210
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: P3A_4
+      name: P3B2_4
       rect:
         serializedVersion: 2
         x: 400
@@ -208,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb9f0ebc2abd8dc4ea475dea7b75325c
-      internalID: -821402656
+      spriteID: 18c6576fa454eed4cb61273441de59e7
+      internalID: 21194479
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: P3A_5
+      name: P3B2_5
       rect:
         serializedVersion: 2
         x: 500
@@ -229,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1137a0aa19bcb5e4ab3614d95415e943
-      internalID: -1449255701
+      spriteID: dcb35f6d857b57341b99edcbcdbcf4ff
+      internalID: -1282580608
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: P3A_6
+      name: P3B2_6
       rect:
         serializedVersion: 2
         x: 600
@@ -250,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 443e2212db1aa1d479d96cceaa4fe111
-      internalID: -633332464
+      spriteID: ee2ed9165a3bb3348ad995d36206e1d7
+      internalID: -808431211
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: P3A_7
+      name: P3B2_7
       rect:
         serializedVersion: 2
         x: 700
@@ -271,14 +271,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85e1fa539b98d054795070aaa096b87a
-      internalID: 625807384
+      spriteID: 8e6e93b49a184ad48b00157fd9dbc963
+      internalID: -616750644
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: P3A_8
+      name: P3B2_8
       rect:
         serializedVersion: 2
         x: 800
@@ -292,14 +292,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 056cf5fb3727b584fb3962bee53a00e5
-      internalID: 40317830
+      spriteID: 203d5c5b38cd3e84a961f3628d4e7c00
+      internalID: 340583947
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: P3A_9
+      name: P3B2_9
       rect:
         serializedVersion: 2
         x: 900
@@ -313,14 +313,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88a0e92cc111f3949ac4406f0eefa054
-      internalID: -451054071
+      spriteID: 32d437e515c2a124983ca03f5b1e9085
+      internalID: 939326878
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: P3A_10
+      name: P3B2_10
       rect:
         serializedVersion: 2
         x: 1000
@@ -334,14 +334,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 281f201486ec85e4184bab956c3e6457
-      internalID: -233338359
+      spriteID: 3dd9500b7d556c04c9ea5c4b8aa4064b
+      internalID: 58731108
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: P3A_11
+      name: P3B2_11
       rect:
         serializedVersion: 2
         x: 1100
@@ -355,14 +355,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78db1075d40c4464fb626b90d58d266c
-      internalID: 703540208
+      spriteID: b064e88b0a74af247ae7842a2ce18b1d
+      internalID: -108737994
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: P3A_12
+      name: P3B2_12
       rect:
         serializedVersion: 2
         x: 1200
@@ -376,14 +376,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f5fd2e263ac3b342a50d73bfeb684fd
-      internalID: -1071542279
+      spriteID: 5645c2777e830d64fae856cf140836cc
+      internalID: 1065915756
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: P3A_13
+      name: P3B2_13
       rect:
         serializedVersion: 2
         x: 1300
@@ -397,14 +397,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7ce0bbcedfd7e741853eba5c1b8201f
-      internalID: 922885317
+      spriteID: 13238af7106d65e46938d7d929ba207c
+      internalID: -2128819712
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: P3A_14
+      name: P3B2_14
       rect:
         serializedVersion: 2
         x: 1400
@@ -418,14 +418,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 670a98e80e87c184ca30db609c8d1eee
-      internalID: -1268202261
+      spriteID: 9e7ce5bc5456f4e46a45ef850e23e17d
+      internalID: 577102110
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: P3A_15
+      name: P3B2_15
       rect:
         serializedVersion: 2
         x: 1500
@@ -439,218 +439,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee54aaba8cfefbc4082c7fe6afa9604f
-      internalID: -1343606540
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: P3A_16
-      rect:
-        serializedVersion: 2
-        x: 1600
-        y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2f5adc5e698c7344387dd7df1006d0e8
-      internalID: -1085752990
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: P3A_17
-      rect:
-        serializedVersion: 2
-        x: 1700
-        y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a37e84b8685db8c42b54b6965c9a21f7
-      internalID: -653676645
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: P3A_18
-      rect:
-        serializedVersion: 2
-        x: 1800
-        y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a83b74671629d3141837673b1e16f60c
-      internalID: 1508220335
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: P3A_19
-      rect:
-        serializedVersion: 2
-        x: 1900
-        y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1c75e020f0897584ebb082f45302ff41
-      internalID: 1188015265
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: P3A_20
-      rect:
-        serializedVersion: 2
-        x: 2000
-        y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1f29065cba1826943a030e6e4a9a6697
-      internalID: -235883331
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: P3A_21
-      rect:
-        serializedVersion: 2
-        x: 2100
-        y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 72a0edd4e702a034aabf60317089b63d
-      internalID: -1071662104
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: P3A_22
-      rect:
-        serializedVersion: 2
-        x: 2200
-        y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b08275ad1fd569a48a0c016c0a0fd366
-      internalID: 1177936214
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: P3A_23
-      rect:
-        serializedVersion: 2
-        x: 2300
-        y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 601049e554e56ea43a3b16a7ecd2a925
-      internalID: -40296078
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: P3A_24
-      rect:
-        serializedVersion: 2
-        x: 2400
-        y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0a6a926fcbc84ad4d857e51a18a805ab
-      internalID: -1635873044
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: P3A_25
-      rect:
-        serializedVersion: 2
-        x: 2500
-        y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c75065a95234be846a2caa22085c8e96
-      internalID: 1956355543
+      spriteID: c274f70255c1d074c9d3506bca56b53c
+      internalID: 174059673
       vertices: []
       indices: 
       edges: []
@@ -658,7 +448,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 8144f381b4f364a4680f404bc252680c
+    spriteID: 202d5c01b45896643be9c1d94dd2dbc9
     internalID: 0
     vertices: []
     indices: 
@@ -666,32 +456,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      P3A_0: -704593747
-      P3A_1: -1728659756
-      P3A_10: -233338359
-      P3A_11: 703540208
-      P3A_12: -1071542279
-      P3A_13: 922885317
-      P3A_14: -1268202261
-      P3A_15: -1343606540
-      P3A_16: -1085752990
-      P3A_17: -653676645
-      P3A_18: 1508220335
-      P3A_19: 1188015265
-      P3A_2: -668573509
-      P3A_20: -235883331
-      P3A_21: -1071662104
-      P3A_22: 1177936214
-      P3A_23: -40296078
-      P3A_24: -1635873044
-      P3A_25: 1956355543
-      P3A_3: -1220028511
-      P3A_4: -821402656
-      P3A_5: -1449255701
-      P3A_6: -633332464
-      P3A_7: 625807384
-      P3A_8: 40317830
-      P3A_9: -451054071
+      P3B2_0: 1981306058
+      P3B2_1: 1085950784
+      P3B2_10: 58731108
+      P3B2_11: -108737994
+      P3B2_12: 1065915756
+      P3B2_13: -2128819712
+      P3B2_14: 577102110
+      P3B2_15: 174059673
+      P3B2_2: 2134333219
+      P3B2_3: 1244500210
+      P3B2_4: 21194479
+      P3B2_5: -1282580608
+      P3B2_6: -808431211
+      P3B2_7: -616750644
+      P3B2_8: 340583947
+      P3B2_9: 939326878
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

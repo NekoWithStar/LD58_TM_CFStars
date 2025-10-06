@@ -4,60 +4,69 @@
     {
       "name": "TargetIP",
       "type": "string",
-      "accept": ["199.16.156.6", "192.168.1.1", "mail.bmail.com"]
+      "accept": ["114.514.191.810", "203.0.113.45"]
     },
     {
       "name": "Username",
       "type": "string",
-      "accept": ["AdminBBBB123", "admin", "root"]
+      "accept": ["gugugaga_maintenance", "admin", "root"]
     },
     {
       "name": "Password",
       "type": "string",
-      "accept": ["Bwiiter2025!", "password", "123456"]
+      "accept": ["GGG-B4ckd00r-2025!", "password", "123456"]
     }
   ],
   "cases": [
     {
-      "name": "case1",
+      "name": "military_base_success",
       "parameterValues": {
-        "TargetIP": ["199.16.156.6"],
-        "Username": ["AdminBBBB123"],
-        "Password": ["Bwiiter2025!"]
+        "TargetIP": ["114.514.191.810"],
+        "Username": ["gugugaga_maintenance"],
+        "Password": ["GGG-B4ckd00r-2025!"]
       },
       "variables": {
         "Port": "22",
         "Protocol": "SSH",
-        "Encryption": "AES-256-CTR",
-        "Handshake": "diffie-hellman-group14-sha256",
-        "SessionID": "0x9F4B7E1A",
-        "ServerFingerprint": "SHA256:7B:3F:9A:2C:D1:8E:4F:6A:B9:C7:5D:2E:1A:8F:3B:6C",
-        "TargetSceneName": "Level3"
-      }
-    },
-    {
-      "name": "wrong_credentials",
-      "parameterValues": {
-        "TargetIP": ["199.16.156.6"],
-        "Username": ["admin", "root", "AdminBBBB123"],
-        "Password": ["password", "123456"]
-      },
-      "variables": {
-        "Port": "22",
-        "Protocol": "SSH",
-        "ErrorCode": "0xC0000006A",
-        "FailureReason": "Authentication Failed",
-        "AttemptCount": "1",
-        "MaxAttempts": "3"
+        "Encryption": "AES-256-CBC",
+        "Handshake": "ecdh-sha2-nistp521",
+        "SessionID": "0xDEADBEEF",
+        "ServerFingerprint": "SHA256:9A:8B:7C:6D:5E:4F:3A:2B:1C:0D:9E:8F:7A:6B:5C:4D",
+        "TargetSceneName": "Level5",
+        "ServerVersion": "MilitarySSH_Secure_v10.5.2",
+        "AuthMethod": "password+backdoor-token",
+        "Compression": "none",
+        "MAC": "hmac-sha2-512",
+        "KeyExchange": "ecdh-sha2-nistp521",
+        "SystemInfo": "[CLASSIFIED] Military Network Core",
+        "AccessLevel": "MAINTENANCE (FULL PRIVILEGES)",
+        "Location": "Undisclosed Military Installation",
+        "SecurityClearance": "Level 3 - Infrastructure Access"
       }
     },
     {
       "name": "wrong_target",
       "parameterValues": {
-        "TargetIP": ["192.168.1.1", "mail.bmail.com"]
+        "TargetIP": ["203.0.113.45"]
       },
       "variables": {
-        "ErrorMsg": "This target is not accessible or backdoor not installed yet"
+        "ErrorMsg": "You already have access to GuguGaga's server. Try the military base instead."
+      }
+    },
+    {
+      "name": "wrong_credentials",
+      "parameterValues": {
+        "TargetIP": ["114.514.191.810"],
+        "Username": ["admin", "root"],
+        "Password": ["password", "123456", "GGG-B4ckd00r-2025!"]
+      },
+      "variables": {
+        "Port": "22",
+        "Protocol": "SSH",
+        "FailureReason": "Authentication Failed",
+        "ErrorCode": "0xC0000006A",
+        "AttemptCount": "1",
+        "MaxAttempts": "3"
       }
     }
   ],
@@ -78,7 +87,7 @@
           },
           {
             "type": "normal",
-            "text": "Session ID: SSH-$random6-REMOTE | Target: $TargetIP",
+            "text": "Session ID: SSH-$random6-MLTR | Target: $TargetIP",
             "delay": 0
           },
           {
@@ -95,6 +104,7 @@
       },
       {
         "language": "english",
+        "case": "military_base_success",
         "lineBlocks": [
           {
             "type": "normal",
@@ -118,88 +128,43 @@
           },
           {
             "type": "normal",
-            "text": "",
-            "delay": 0.2
-          },
-          {
-            "type": "normal",
-            "text": "$$progress(0.8,10,\"  ├── Establishing TCP connection...\",\"  ├── TCP connection established\",\"White\",\"Green\")",
-            "delay": 0
-          },
-          {
-            "type": "normal",
-            "text": "  ├── Remote host: $TargetIP:$Port",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "  ├── Server version: OpenSSH_8.9p1 Ubuntu-3ubuntu0.1",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "  └── Host key fingerprint: $ServerFingerprint",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "",
-            "delay": 0.3
-          },
-          {
-            "type": "normal",
-            "text": "[AUTHENTICATION]",
-            "delay": 0.2
-          },
-          {
-            "type": "normal",
-            "text": "> Method: password",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
             "text": "> Username: $Username",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "> Password: ************",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "",
-            "delay": 0.2
-          },
-          {
-            "type": "normal",
-            "text": "$$progress(1.0,12,\"  ├── Sending authentication request...\",\"  ├── Authentication successful\",\"White\",\"Green\")",
-            "delay": 0
-          },
-          {
-            "type": "normal",
-            "text": "  ├── User privileges: administrator",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "  ├── Home directory: /home/$Username",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "  └── Shell: /bin/bash",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
             "text": "",
             "delay": 0.3
           },
           {
             "type": "normal",
-            "text": "[SECURE CHANNEL]",
+            "text": "$$progress(1.5,30,\"  ├── Establishing encrypted tunnel...\",\"  ├── Tunnel established\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
             "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[SERVER HANDSHAKE]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Server Version: $ServerVersion",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Server Fingerprint: $ServerFingerprint",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Key Exchange: $KeyExchange",
+            "delay": 0.1
           },
           {
             "type": "normal",
@@ -208,17 +173,7 @@
           },
           {
             "type": "normal",
-            "text": "> Key exchange: $Handshake",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "> MAC: hmac-sha2-256",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "> Compression: none",
+            "text": "> MAC Algorithm: $MAC",
             "delay": 0.1
           },
           {
@@ -228,97 +183,37 @@
           },
           {
             "type": "normal",
-            "text": "$$progress(0.6,8,\"  ├── Initializing secure channel...\",\"  ├── Secure channel active\",\"White\",\"Cyan\")",
+            "text": "$$progress(2.0,40,\"  ├── Authenticating with backdoor credentials...\",\"  ├── Authentication successful\",\"White\",\"Green\")",
             "delay": 0
           },
           {
             "type": "normal",
-            "text": "  ├── Session ID: $SessionID",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "  ├── Channel type: session",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "  └── Window size: 2097152 bytes",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
             "text": "",
-            "delay": 0.3
-          },
-          {
-            "type": "normal",
-            "text": "[SYSTEM ENUMERATION]",
             "delay": 0.2
           },
           {
             "type": "normal",
-            "text": "$$progress(0.9,10,\"  ├── Gathering system information...\",\"  ├── System enumeration complete\",\"White\",\"Yellow\")",
-            "delay": 0
-          },
-          {
-            "type": "normal",
-            "text": "  ├── OS: Ubuntu 22.04.3 LTS",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "  ├── Kernel: 5.15.0-89-generic",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "  ├── Architecture: x86_64",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "  ├── CPU: Intel(R) Xeon(R) CPU @ 2.40GHz (4 cores)",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "  ├── Memory: 15.6 GB",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "  └── Uptime: 47 days, 3:15:42",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "",
-            "delay": 0.3
-          },
-          {
-            "type": "normal",
-            "text": "[PRIVILEGE ESCALATION]",
+            "text": "[AUTHENTICATION DETAILS]",
             "delay": 0.2
           },
           {
             "type": "normal",
-            "text": "$$progress(1.2,15,\"  ├── Checking sudo privileges...\",\"  ├── Sudo access confirmed\",\"White\",\"Red\")",
-            "delay": 0
-          },
-          {
-            "type": "normal",
-            "text": "  ├── User can run ALL commands as root",
+            "text": "> Method: $AuthMethod",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  ├── NOPASSWD: /usr/bin/systemctl",
+            "text": "> Backdoor Token: VALID",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  └── Elevated privileges obtained",
+            "text": "> Session ID: $SessionID",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Access Level: $AccessLevel",
             "delay": 0.1
           },
           {
@@ -328,53 +223,135 @@
           },
           {
             "type": "normal",
-            "text": "══════════════════════════════════════════════════",
+            "text": "$$progress(1.2,25,\"  ├── Loading system information...\",\"  ├── System info loaded\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
             "delay": 0.3
           },
           {
             "type": "normal",
-            "text": "<color=green>[SUCCESS] Remote access established</color>",
+            "text": "[SYSTEM INFORMATION]",
             "delay": 0.2
           },
           {
             "type": "normal",
-            "text": "  ├── Full administrative access granted",
-            "delay": 0.1
+            "text": "┌──────────────────────────────────────┐",
+            "delay": 0.05
           },
           {
             "type": "normal",
-            "text": "  ├── Connection stable and encrypted",
-            "delay": 0.1
+            "text": "│ [CLASSIFIED] MILITARY NETWORK        │",
+            "delay": 0.05
           },
           {
             "type": "normal",
-            "text": "  └── Ready for deep system penetration",
+            "text": "├──────────────────────────────────────┤",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "│ System: $SystemInfo                  │",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "│ Location: $Location                  │",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "│ Security Clearance: $SecurityClearance│",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "│ Connected via: GuguGaga Backdoor     │",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "└──────────────────────────────────────┘",
             "delay": 0.1
           },
           {
             "type": "normal",
             "text": "",
-            "delay": 0.5
-          },
-          {
-            "type": "normal",
-            "text": "<color=cyan>[TRANSITION] Entering target system environment...</color>",
             "delay": 0.3
           },
           {
             "type": "normal",
-            "text": "$$wait(1.5)",
+            "text": "<color=yellow>[SECURITY ALERT] You have entered a classified military network</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[SECURITY ALERT] All activities are monitored and logged</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[ACCESS GRANTED]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Connected to $TargetIP:$Port",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Session established successfully",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Full maintenance privileges granted",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[SUCCESS] Remote connection established</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[SUCCESS] Infiltration complete - Military network compromised</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=cyan>Mission Accomplished! Thanks to GuguGaga's backdoor, you now have full access to the military infrastructure.</color>",
             "delay": 0
           },
           {
             "type": "normal",
-            "text": "$$scene($TargetSceneName)",
-            "delay": 0
+            "text": "",
+            "delay": 2,
+            "sceneName": "$$scene($TargetSceneName)"
           }
         ]
       },
       {
         "language": "chinese",
+        "case": "military_base_success",
         "lineBlocks": [
           {
             "type": "normal",
@@ -383,7 +360,7 @@
           },
           {
             "type": "normal",
-            "text": "> 目标IP: $TargetIP",
+            "text": "> 目标 IP: $TargetIP",
             "delay": 0.1
           },
           {
@@ -398,53 +375,18 @@
           },
           {
             "type": "normal",
-            "text": "",
-            "delay": 0.2
-          },
-          {
-            "type": "normal",
-            "text": "$$progress(0.8,10,\"  ├── 正在建立TCP连接...\",\"  ├── TCP连接已建立\",\"White\",\"Green\")",
-            "delay": 0
-          },
-          {
-            "type": "normal",
-            "text": "  ├── 远程主机: $TargetIP:$Port",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "  ├── 服务器版本: OpenSSH_8.9p1 Ubuntu-3ubuntu0.1",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "  └── 主机密钥指纹: $ServerFingerprint",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "",
-            "delay": 0.3
-          },
-          {
-            "type": "normal",
-            "text": "[身份验证]",
-            "delay": 0.2
-          },
-          {
-            "type": "normal",
-            "text": "> 方法: 密码",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
             "text": "> 用户名: $Username",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "> 密码: ************",
-            "delay": 0.1
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.5,30,\"  ├── 建立加密隧道中...\",\"  ├── 隧道已建立\",\"White\",\"Green\")",
+            "delay": 0
           },
           {
             "type": "normal",
@@ -453,52 +395,32 @@
           },
           {
             "type": "normal",
-            "text": "$$progress(1.0,12,\"  ├── 正在发送身份验证请求...\",\"  ├── 身份验证成功\",\"White\",\"Green\")",
-            "delay": 0
-          },
-          {
-            "type": "normal",
-            "text": "  ├── 用户权限: 管理员",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "  ├── 主目录: /home/$Username",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "  └── Shell: /bin/bash",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "",
-            "delay": 0.3
-          },
-          {
-            "type": "normal",
-            "text": "[安全通道]",
+            "text": "[服务器握手]",
             "delay": 0.2
           },
           {
             "type": "normal",
-            "text": "> 加密: $Encryption",
+            "text": "> 服务器版本: $ServerVersion",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "> 密钥交换: $Handshake",
+            "text": "> 服务器指纹: $ServerFingerprint",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "> MAC: hmac-sha2-256",
+            "text": "> 密钥交换: $KeyExchange",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "> 压缩: 无",
+            "text": "> 加密算法: $Encryption",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> MAC 算法: $MAC",
             "delay": 0.1
           },
           {
@@ -508,97 +430,37 @@
           },
           {
             "type": "normal",
-            "text": "$$progress(0.6,8,\"  ├── 正在初始化安全通道...\",\"  ├── 安全通道已激活\",\"White\",\"Cyan\")",
+            "text": "$$progress(2.0,40,\"  ├── 使用后门凭证认证中...\",\"  ├── 认证成功\",\"White\",\"Green\")",
             "delay": 0
           },
           {
             "type": "normal",
-            "text": "  ├── 会话ID: $SessionID",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "  ├── 通道类型: session",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "  └── 窗口大小: 2097152 字节",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
             "text": "",
-            "delay": 0.3
-          },
-          {
-            "type": "normal",
-            "text": "[系统枚举]",
             "delay": 0.2
           },
           {
             "type": "normal",
-            "text": "$$progress(0.9,10,\"  ├── 正在收集系统信息...\",\"  ├── 系统枚举完成\",\"White\",\"Yellow\")",
-            "delay": 0
-          },
-          {
-            "type": "normal",
-            "text": "  ├── 操作系统: Ubuntu 22.04.3 LTS",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "  ├── 内核: 5.15.0-89-generic",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "  ├── 架构: x86_64",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "  ├── CPU: Intel(R) Xeon(R) CPU @ 2.40GHz (4核)",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "  ├── 内存: 15.6 GB",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "  └── 运行时间: 47天, 3:15:42",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "",
-            "delay": 0.3
-          },
-          {
-            "type": "normal",
-            "text": "[权限提升]",
+            "text": "[认证详情]",
             "delay": 0.2
           },
           {
             "type": "normal",
-            "text": "$$progress(1.2,15,\"  ├── 正在检查sudo权限...\",\"  ├── Sudo访问已确认\",\"White\",\"Red\")",
-            "delay": 0
-          },
-          {
-            "type": "normal",
-            "text": "  ├── 用户可以以root身份运行所有命令",
+            "text": "> 方法: $AuthMethod",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  ├── NOPASSWD: /usr/bin/systemctl",
+            "text": "> 后门令牌: 有效",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  └── 已获得提升权限",
+            "text": "> 会话 ID: $SessionID",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 访问级别: $AccessLevel",
             "delay": 0.1
           },
           {
@@ -608,47 +470,200 @@
           },
           {
             "type": "normal",
-            "text": "══════════════════════════════════════════════════",
+            "text": "$$progress(1.2,25,\"  ├── 加载系统信息中...\",\"  ├── 系统信息已加载\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
             "delay": 0.3
           },
           {
             "type": "normal",
-            "text": "<color=green>[成功] 远程访问已建立</color>",
+            "text": "[系统信息]",
             "delay": 0.2
           },
           {
             "type": "normal",
-            "text": "  ├── 已授予完全管理访问权限",
-            "delay": 0.1
+            "text": "┌──────────────────────────────────────┐",
+            "delay": 0.05
           },
           {
             "type": "normal",
-            "text": "  ├── 连接稳定且已加密",
-            "delay": 0.1
+            "text": "│ [机密] 军事网络                      │",
+            "delay": 0.05
           },
           {
             "type": "normal",
-            "text": "  └── 准备深度系统渗透",
+            "text": "├──────────────────────────────────────┤",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "│ 系统: $SystemInfo                    │",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "│ 位置: $Location                      │",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "│ 安全许可: $SecurityClearance         │",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "│ 连接方式: 咕咕嘎嘎后门                │",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "└──────────────────────────────────────┘",
             "delay": 0.1
           },
           {
             "type": "normal",
             "text": "",
-            "delay": 0.5
-          },
-          {
-            "type": "normal",
-            "text": "<color=cyan>[转换] 正在进入目标系统环境...</color>",
             "delay": 0.3
           },
           {
             "type": "normal",
-            "text": "$$wait(1.5)",
+            "text": "<color=yellow>[安全警告] 您已进入机密军事网络</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[安全警告] 所有活动均被监控和记录</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[访问已授权]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 已连接到 $TargetIP:$Port",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 会话建立成功",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 已授予完全维护权限",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[成功] 远程连接已建立</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[成功] 渗透完成 - 军事网络已被攻陷</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=cyan>连接完成！借助咕咕嘎嘎的后门，你现在拥有对军事基础设施的完全访问权限。</color>",
             "delay": 0
           },
           {
             "type": "normal",
-            "text": "$$scene($TargetSceneName)",
+            "text": "",
+            "delay": 2,
+            "sceneName": "$$scene($TargetSceneName)"
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "wrong_target",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[ATTEMPTING REMOTE CONNECTION]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Target: $TargetIP",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[INFO] Target already compromised</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$ErrorMsg",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "wrong_target",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[尝试远程连接]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 目标: $TargetIP",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[信息] 目标已被攻陷</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "你已经可以访问咕咕嘎嘎的服务器了。试试军事基地吧。",
             "delay": 0
           }
         ]
@@ -689,7 +704,7 @@
           },
           {
             "type": "normal",
-            "text": "$$progress(1.0,20,\"  ├── Establishing connection...\",\"  ├── Connected\",\"White\",\"Green\")",
+            "text": "$$progress(1.2,25,\"  ├── Establishing connection...\",\"  ├── Connected\",\"White\",\"Green\")",
             "delay": 0
           },
           {
@@ -749,7 +764,7 @@
           },
           {
             "type": "normal",
-            "text": "<color=cyan>[HINT] Check credentials from SQL injection results</color>",
+            "text": "<color=cyan>[HINT] You need valid backdoor credentials to access this system</color>",
             "delay": 0.1
           },
           {
@@ -800,7 +815,7 @@
           },
           {
             "type": "normal",
-            "text": "$$progress(1.0,20,\"  ├── 建立连接中...\",\"  ├── 已连接\",\"White\",\"Green\")",
+            "text": "$$progress(1.2,25,\"  ├── 建立连接中...\",\"  ├── 已连接\",\"White\",\"Green\")",
             "delay": 0
           },
           {
@@ -860,7 +875,7 @@
           },
           {
             "type": "normal",
-            "text": "<color=cyan>[提示] 检查SQL注入结果中的凭证</color>",
+            "text": "<color=cyan>[提示] 你需要有效的后门凭证才能访问此系统</color>",
             "delay": 0.1
           },
           {
@@ -877,7 +892,7 @@
       },
       {
         "language": "english",
-        "case": "wrong_target",
+        "case": "default",
         "lineBlocks": [
           {
             "type": "normal",
@@ -896,34 +911,14 @@
           },
           {
             "type": "normal",
-            "text": "<color=yellow>[INFO] Connection attempt initiated</color>",
-            "delay": 0.2
-          },
-          {
-            "type": "normal",
-            "text": "",
-            "delay": 0.2
-          },
-          {
-            "type": "normal",
-            "text": "<color=red>[ERROR] Target unreachable</color>",
-            "delay": 0.2
-          },
-          {
-            "type": "normal",
-            "text": "",
-            "delay": 0.2
-          },
-          {
-            "type": "normal",
-            "text": "$ErrorMsg",
+            "text": "<color=red>[ERROR] Connection failed: Invalid credentials or target unreachable.</color>",
             "delay": 0
           }
         ]
       },
       {
         "language": "chinese",
-        "case": "wrong_target",
+        "case": "default",
         "lineBlocks": [
           {
             "type": "normal",
@@ -942,120 +937,8 @@
           },
           {
             "type": "normal",
-            "text": "<color=yellow>[信息] 连接尝试已启动</color>",
-            "delay": 0.2
-          },
-          {
-            "type": "normal",
-            "text": "",
-            "delay": 0.2
-          },
-          {
-            "type": "normal",
-            "text": "<color=red>[错误] 目标无法访问</color>",
-            "delay": 0.2
-          },
-          {
-            "type": "normal",
-            "text": "",
-            "delay": 0.2
-          },
-          {
-            "type": "normal",
-            "text": "此目标不可访问或尚未安装后门",
+            "text": "<color=red>[错误] 连接失败，凭证无效或目标不可达。</color>",
             "delay": 0
-          }
-        ]
-      },
-      {
-        "language": "english",
-        "case": "default",
-        "lineBlocks": [
-          {
-            "type": "normal",
-            "text": "[CONNECTION ATTEMPT]",
-            "delay": 0.2
-          },
-          {
-            "type": "normal",
-            "text": "> Target: $TargetIP",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "> Username: $Username",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "",
-            "delay": 0.3
-          },
-          {
-            "type": "normal",
-            "text": "<color=red>[ERROR] Authentication failed</color>",
-            "delay": 0.2
-          },
-          {
-            "type": "normal",
-            "text": "<color=red>  └── Invalid credentials or target unreachable</color>",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "",
-            "delay": 0.2
-          },
-          {
-            "type": "normal",
-            "text": "<color=yellow>[HINT] Verify IP address, username, and password</color>",
-            "delay": 0.1
-          }
-        ]
-      },
-      {
-        "language": "chinese",
-        "case": "default",
-        "lineBlocks": [
-          {
-            "type": "normal",
-            "text": "[连接尝试]",
-            "delay": 0.2
-          },
-          {
-            "type": "normal",
-            "text": "> 目标: $TargetIP",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "> 用户名: $Username",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "",
-            "delay": 0.3
-          },
-          {
-            "type": "normal",
-            "text": "<color=red>[错误] 身份验证失败</color>",
-            "delay": 0.2
-          },
-          {
-            "type": "normal",
-            "text": "<color=red>  └── 凭据无效或目标无法访问</color>",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "",
-            "delay": 0.2
-          },
-          {
-            "type": "normal",
-            "text": "<color=yellow>[提示] 验证IP地址、用户名和密码</color>",
-            "delay": 0.1
           }
         ]
       }

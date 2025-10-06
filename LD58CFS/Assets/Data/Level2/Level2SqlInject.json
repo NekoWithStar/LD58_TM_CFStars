@@ -355,12 +355,12 @@
           },
           {
             "type": "normal",
-            "text": "  \"from\": \"bwiiter_admin@bwiiter.com\",",
+            "text": "  \"from\": \"bwiiter_admin@Bmail.com\",",
             "delay": 0.05
           },
           {
             "type": "normal",
-            "text": "  \"to\": \"team@bwiiter.com\",",
+            "text": "  \"to\": \"team@Bmail.com\",",
             "delay": 0.05
           },
           {
@@ -401,10 +401,10 @@
           },
           {
             "type": "clickable",
-            "text": "  \"to\": \"<color=cyan>bwiiter_admin@bwiiter.com</color>\",",
+            "text": "  \"to\": \"<color=cyan>bwiiter_admin@Bmail.com</color>\",",
             "delay": 0.05,
             "gain": {
-              "PhishingTarget": "bwiiter_admin@bwiiter.com"
+              "PhishingTarget": "bwiiter_admin@Bmail.com"
             }
           },
           {
@@ -634,12 +634,12 @@
           },
           {
             "type": "normal",
-            "text": "  \"from\": \"bwiiter_admin@bwiiter.com\",",
+            "text": "  \"from\": \"bwiiter_admin@Bmail.com\",",
             "delay": 0.05
           },
           {
             "type": "normal",
-            "text": "  \"to\": \"team@bwiiter.com\",",
+            "text": "  \"to\": \"team@Bmail.com\",",
             "delay": 0.05
           },
           {
@@ -680,10 +680,10 @@
           },
           {
             "type": "clickable",
-            "text": "  \"to\": \"<color=cyan>bwiiter_admin@bwiiter.com</color>\",",
+            "text": "  \"to\": \"<color=cyan>bwiiter_admin@Bmail.com</color>\",",
             "delay": 0.05,
             "gain": {
-              "PhishingTarget": "bwiiter_admin@bwiiter.com"
+              "PhishingTarget": "bwiiter_admin@Bmail.com"
             }
           },
           {

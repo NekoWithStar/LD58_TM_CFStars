@@ -72,9 +72,20 @@ namespace LD58.UI
                     string.IsNullOrEmpty(lb.Language))
                 {
                     // 检查case是否匹配（如果LanguageBlock指定了case）
-                    if (!string.IsNullOrEmpty(lb.Case) && lb.Case != hitCase)
+                    if (!string.IsNullOrEmpty(lb.Case))
                     {
-                        continue; // 跳过不匹配的case
+                        // "default" 是特殊case，当没有匹配到任何case时显示
+                        if (lb.Case == "default")
+                        {
+                            if (!string.IsNullOrEmpty(hitCase))
+                            {
+                                continue; // 如果有匹配的case，跳过default分支
+                            }
+                        }
+                        else if (lb.Case != hitCase)
+                        {
+                            continue; // 跳过不匹配的case
+                        }
                     }
                     
                     foreach (var line in lb.LineBlocks)

@@ -9,7 +9,7 @@
     {
       "name": "Username",
       "type": "string",
-      "accept": ["gugu-admin"]
+      "accept": ["gugu-admin", "system-admin"]
     }
   ],
   "cases": [
@@ -39,11 +39,12 @@
       "name": "bwiiter_server_scan",
       "parameterValues": {
         "TargetIP": ["199.16.156.6"],
-        "Username": ["gugu-admin"]
+        "Username": ["system-admin"]
       },
       "variables": {
         "TargetIP": "199.16.156.6",
-        "Username": "gugu-admin",
+        "Username": "system-admin",
+        "Password": "P@ssw0rd2025!",
         "FirewallType": "pfSense 2.7.0",
         "AuthMethod": "Local + LDAP",
         "HashType": "bcrypt",
@@ -54,8 +55,7 @@
         "Attempts": "1,234",
         "TimeElapsed": "2.8s",
         "GPUUtilization": "76%",
-        "ScanResult": "No exploitable vulnerabilities found",
-        "Recommendation": "Use alternative attack vectors"
+        "MetaInfo": "Congratulations! You've discovered the hidden meta layer. The developer is NekoWithStar, and this game was made for LD58. Fun fact: The stars in the title represent creativity and endless possibilities. Keep exploring!"
       }
     }
   ],
@@ -300,7 +300,7 @@
           },
           {
             "type": "normal",
-            "text": "══════════════════════════════════════════════════",
+            "text": "══════════════════════════════════════════",
             "delay": 0.3
           },
           {
@@ -539,7 +539,7 @@
           },
           {
             "type": "normal",
-            "text": "══════════════════════════════════════════════════",
+            "text": "══════════════════════════════════════════",
             "delay": 0.3
           },
           {
@@ -570,7 +570,7 @@
         "lineBlocks": [
           {
             "type": "normal",
-            "text": "[FIREWALL VULNERABILITY SCAN]",
+            "text": "[INITIALIZING PASSWORD CRACK]",
             "delay": 0.2
           },
           {
@@ -595,32 +595,32 @@
           },
           {
             "type": "normal",
-            "text": "[VULNERABILITY ASSESSMENT]",
+            "text": "[HASH ANALYSIS]",
             "delay": 0.2
           },
           {
             "type": "normal",
-            "text": "$$progress(0.6,8,\"  ├── Scanning for known vulnerabilities...\",\"  ├── Vulnerability scan complete\",\"White\",\"Blue\")",
+            "text": "$$progress(0.4,6,\"  ├── Extracting password hash...\",\"  ├── Hash extracted successfully\",\"White\",\"Blue\")",
             "delay": 0
           },
           {
             "type": "normal",
-            "text": "  ├── CVE-2023-45678: Not applicable (version too new)",
+            "text": "  ├── Hash Type: $HashType",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  ├── CVE-2022-33456: Patched",
+            "text": "  ├── Key Length: $KeyLength",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  ├── CVE-2021-22345: Not vulnerable",
+            "text": "  ├── Iterations: $Iterations",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  └── Zero-day exploits: None detected",
+            "text": "  └── Salt: $Salt",
             "delay": 0.1
           },
           {
@@ -630,92 +630,32 @@
           },
           {
             "type": "normal",
-            "text": "[CONFIGURATION ANALYSIS]",
+            "text": "[BRUTE FORCE ATTACK]",
             "delay": 0.2
           },
           {
             "type": "normal",
-            "text": "> Authentication: $AuthMethod",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "> Hash Algorithm: $HashType",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "> Security Level: High",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "> Last Updated: 2025-09-15",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "",
-            "delay": 0.2
-          },
-          {
-            "type": "normal",
-            "text": "$$progress(0.4,6,\"  ├── Analyzing firewall rules...\",\"  ├── Rule analysis complete\",\"White\",\"Cyan\")",
+            "text": "$$progress(1.5,15,\"  ├── Attempting password combinations...\",\"  ├── Attack blocked by developer defenses\",\"White\",\"Red\")",
             "delay": 0
           },
           {
             "type": "normal",
-            "text": "  ├── Inbound rules: 47 active",
+            "text": "  ├── Attempts: 742",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  ├── Outbound rules: 23 active",
+            "text": "  ├── Time Elapsed: 1.2s",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  ├── NAT rules: 12 configured",
+            "text": "  ├── GPU Utilization: 45%",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  └── IDS/IPS: Enabled",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "",
-            "delay": 0.3
-          },
-          {
-            "type": "normal",
-            "text": "[ATTACK VECTOR ANALYSIS]",
-            "delay": 0.2
-          },
-          {
-            "type": "normal",
-            "text": "$$progress(0.5,7,\"  ├── Testing attack vectors...\",\"  ├── Attack vector analysis complete\",\"White\",\"Yellow\")",
-            "delay": 0
-          },
-          {
-            "type": "normal",
-            "text": "  ├── SQL Injection: Blocked",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "  ├── XSS Attempts: Detected and logged",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "  ├── Brute Force: Rate limited",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "  └── Zero-day exploits: No success",
+            "text": "  └── Dictionary: rockyou.txt + custom",
             "delay": 0.1
           },
           {
@@ -725,27 +665,62 @@
           },
           {
             "type": "normal",
-            "text": "══════════════════════════════════════════════════",
-            "delay": 0.3
-          },
-          {
-            "type": "normal",
-            "text": "<color=orange>[SCAN COMPLETE] $ScanResult</color>",
+            "text": "[DEVELOPER DEFENSE ACTIVATED]",
             "delay": 0.2
           },
           {
             "type": "normal",
-            "text": "  ├── Firewall is properly hardened",
+            "text": "<color=red>⚠️ LDGamejam 58 Developer Defense System ⚠️</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── This server is protected by NekoWithStar's anti-hacking measures",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  ├── No exploitable vulnerabilities found",
+            "text": "  ├── Brute force attacks are detected and blocked",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  └── $Recommendation",
+            "text": "  ├── Password cracking attempts trigger security alerts",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Access denied",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[FAILED] Password cracking blocked</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Developer defenses activated",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Attack vectors neutralized",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Alternative approaches required",
             "delay": 0.1
           }
         ]
@@ -756,7 +731,7 @@
         "lineBlocks": [
           {
             "type": "normal",
-            "text": "[防火墙漏洞扫描]",
+            "text": "[初始化密码破解]",
             "delay": 0.2
           },
           {
@@ -781,32 +756,32 @@
           },
           {
             "type": "normal",
-            "text": "[漏洞评估]",
+            "text": "[哈希分析]",
             "delay": 0.2
           },
           {
             "type": "normal",
-            "text": "$$progress(0.6,8,\"  ├── 扫描已知漏洞...\",\"  ├── 漏洞扫描完成\",\"White\",\"Blue\")",
+            "text": "$$progress(0.4,6,\"  ├── 提取密码哈希...\",\"  ├── 哈希提取成功\",\"White\",\"Blue\")",
             "delay": 0
           },
           {
             "type": "normal",
-            "text": "  ├── CVE-2023-45678: 不适用 (版本过新)",
+            "text": "  ├── 哈希类型: $HashType",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  ├── CVE-2022-33456: 已修补",
+            "text": "  ├── 密钥长度: $KeyLength",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  ├── CVE-2021-22345: 无漏洞",
+            "text": "  ├── 迭代次数: $Iterations",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  └── 零日漏洞: 未检测到",
+            "text": "  └── 盐值: $Salt",
             "delay": 0.1
           },
           {
@@ -816,92 +791,32 @@
           },
           {
             "type": "normal",
-            "text": "[配置分析]",
+            "text": "[暴力破解攻击]",
             "delay": 0.2
           },
           {
             "type": "normal",
-            "text": "> 认证方式: $AuthMethod",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "> 哈希算法: $HashType",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "> 安全等级: 高",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "> 最后更新: 2025-09-15",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "",
-            "delay": 0.2
-          },
-          {
-            "type": "normal",
-            "text": "$$progress(0.4,6,\"  ├── 分析防火墙规则...\",\"  ├── 规则分析完成\",\"White\",\"Cyan\")",
+            "text": "$$progress(1.5,15,\"  ├── 尝试密码组合...\",\"  ├── 攻击被开发者防御阻挡\",\"White\",\"Red\")",
             "delay": 0
           },
           {
             "type": "normal",
-            "text": "  ├── 入站规则: 47个活跃",
+            "text": "  ├── 尝试次数: 742",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  ├── 出站规则: 23个活跃",
+            "text": "  ├── 耗时: 1.2s",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  ├── NAT规则: 12个已配置",
+            "text": "  ├── GPU利用率: 45%",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  └── IDS/IPS: 已启用",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "",
-            "delay": 0.3
-          },
-          {
-            "type": "normal",
-            "text": "[攻击向量分析]",
-            "delay": 0.2
-          },
-          {
-            "type": "normal",
-            "text": "$$progress(0.5,7,\"  ├── 测试攻击向量...\",\"  ├── 攻击向量分析完成\",\"White\",\"Yellow\")",
-            "delay": 0
-          },
-          {
-            "type": "normal",
-            "text": "  ├── SQL注入: 已阻止",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "  ├── XSS尝试: 已检测并记录",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "  ├── 暴力破解: 速率限制",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "  └── 零日漏洞: 无成功",
+            "text": "  └── 字典: rockyou.txt + 自定义",
             "delay": 0.1
           },
           {
@@ -911,27 +826,62 @@
           },
           {
             "type": "normal",
-            "text": "══════════════════════════════════════════════════",
-            "delay": 0.3
-          },
-          {
-            "type": "normal",
-            "text": "<color=orange>[扫描完成] $ScanResult</color>",
+            "text": "[开发者防御已激活]",
             "delay": 0.2
           },
           {
             "type": "normal",
-            "text": "  ├── 防火墙已正确加固",
+            "text": "<color=red>⚠️ LDGamejam 58 开发者防御系统 ⚠️</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 此服务器受 NekoWithStar 的反黑客措施保护",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  ├── 未发现可利用漏洞",
+            "text": "  ├── 暴力破解攻击被检测并阻挡",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  └── $Recommendation",
+            "text": "  ├── 密码破解尝试触发安全警报",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 访问被拒绝",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[失败] 密码破解被阻挡</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 开发者防御已激活",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 攻击向量已中和",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 需要其他方法",
             "delay": 0.1
           }
         ]

@@ -1,0 +1,762 @@
+{
+  "commandName": "Web-Scan",
+  "parameters": [
+    {
+      "name": "TargetDomain",
+      "type": "string",
+      "accept": [
+        "203.0.113.45",
+        "114.514.191.810"
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "name": "gugugaga_company",
+      "parameterValues": {
+        "TargetDomain": ["203.0.113.45"]
+      },
+      "variables": {
+        "TargetIP": "203.0.113.45",
+        "Port": "443",
+        "ServerName": "GuguGaga Security Platform",
+        "Path1": "203.0.113.45/client-data",
+        "Status1": "200",
+        "Size1": "47GB",
+        "Path2": "203.0.113.45/company-logs",
+        "Status2": "200",
+        "Size2": "8.3GB",
+        "Path3": "203.0.113.45/admin-panel",
+        "Status3": "403"
+      }
+    },
+    {
+      "name": "military_base_blocked",
+      "parameterValues": {
+        "TargetDomain": ["114.514.191.810"]
+      },
+      "variables": {
+        "TargetIP": "114.514.191.810",
+        "ErrorCode": "0xC0000001",
+        "BlockReason": "Advanced Firewall Detection"
+      }
+    }
+  ],
+  "output": {
+    "languageBlocks": [
+      {
+        "language": null,
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "BuBugBomb Web Scanner v5.0.1",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "Session ID: SCAN-$random6-FINAL | Target: $TargetDomain",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════",
+            "delay": 0.3
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "gugugaga_company",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[INITIALIZING DEEP SCAN]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Target: $TargetIP:$Port",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Server: $ServerName",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> SSL/TLS: TLS 1.3 (AES-256-GCM)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.5,30,\"  ├── Enumerating endpoints...\",\"  ├── Scan complete\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[DISCOVERED ENDPOINTS]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.1
+          },
+          {
+            "type": "clickable",
+            "text": "<color=green>✓</color> <color=cyan>$Path1</color>",
+            "delay": 0.1,
+            "gain": {
+              "ClientDataPath": "203.0.113.45/client-data"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Status: $Status1 OK",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Size: $Size1",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  └── Type: Encrypted Client Database (AES-256)",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.15
+          },
+          {
+            "type": "clickable",
+            "text": "<color=green>✓</color> <color=cyan>$Path2</color>",
+            "delay": 0.1,
+            "gain": {
+              "CompanyLogsPath": "203.0.113.45/company-logs"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Status: $Status2 OK",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Size: $Size2",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  └── Type: Company Activity Logs",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.15
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>✗</color> $Path3",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Status: $Status3 Forbidden",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[SECURITY ANALYSIS]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Firewall: pfSense 2.7.0 (Advanced Rules Detected)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> IDS/IPS: Suricata 7.0.1 (Active Monitoring)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> WAF: ModSecurity 3.0 (Paranoia Level 2)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[ANALYSIS COMPLETE]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Accessible endpoints: 2",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Encrypted databases: 1",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Recommended: Use SQL-Inject to decrypt client data",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[SUCCESS] Deep scan completed</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "gugugaga_company",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[初始化深度扫描]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 目标: $TargetIP:$Port",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 服务器: $ServerName",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> SSL/TLS: TLS 1.3 (AES-256-GCM)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.5,30,\"  ├── 枚举端点中...\",\"  ├── 扫描完成\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[发现的端点]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.1
+          },
+          {
+            "type": "clickable",
+            "text": "<color=green>✓</color> <color=cyan>$Path1</color>",
+            "delay": 0.1,
+            "gain": {
+              "ClientDataPath": "203.0.113.45/client-data"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 状态: $Status1 OK",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 大小: $Size1",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  └── 类型: 加密客户端数据库 (AES-256)",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.15
+          },
+          {
+            "type": "clickable",
+            "text": "<color=green>✓</color> <color=cyan>$Path2</color>",
+            "delay": 0.1,
+            "gain": {
+              "CompanyLogsPath": "203.0.113.45/company-logs"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 状态: $Status2 OK",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 大小: $Size2",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  └── 类型: 公司活动日志",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.15
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>✗</color> $Path3",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 状态: $Status3 禁止访问",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[安全分析]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 防火墙: pfSense 2.7.0 (检测到高级规则)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> IDS/IPS: Suricata 7.0.1 (主动监控)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> WAF: ModSecurity 3.0 (偏执级别 2)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[分析完成]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 可访问端点: 2",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 加密数据库: 1",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 建议: 使用 SQL-Inject 解密客户端数据",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[成功] 深度扫描完成</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "military_base_blocked",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[ATTEMPTING SCAN]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Target: $TargetIP",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.0,20,\"  ├── Probing target...\",\"  ├── Connection blocked\",\"White\",\"Red\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[ERROR] $ErrorCode: CONNECTION BLOCKED</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "[DETECTION ANALYSIS]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Reason: $BlockReason",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Firewall Type: Military-Grade (Classified)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Protection Level: CRITICAL",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Active Countermeasures: Detected",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> IDS/IPS: ACTIVE (Snort Enterprise + Custom Rules)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Traffic Filtering: Deep Packet Inspection",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Anomaly Detection: Machine Learning Based",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[BLOCKED PORTS]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Port 80/HTTP: CLOSED",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "> Port 443/HTTPS: CLOSED",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "> Port 22/SSH: FILTERED (Whitelist Only)",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "> Port 3389/RDP: CLOSED",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[WARNING] Direct scanning is ineffective</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[WARNING] Advanced techniques required</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "<color=cyan>[HINT] Try investigating the security company that maintains this network</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[FAILED] Scan aborted - target unreachable</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "military_base_blocked",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[尝试扫描中]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 目标: $TargetIP",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.0,20,\"  ├── 探测目标中...\",\"  ├── 连接被阻止\",\"White\",\"Red\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[错误] $ErrorCode: 连接被阻止</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "[检测分析]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 原因: $BlockReason",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 防火墙类型: 军用级别 (机密)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 保护等级: 关键",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 主动对抗措施: 已检测",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 入侵检测/防御: 活跃 (Snort Enterprise + 自定义规则)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 流量过滤: 深度包检测",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 异常检测: 基于机器学习",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[被阻止的端口]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 端口 80/HTTP: 关闭",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "> 端口 443/HTTPS: 关闭",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "> 端口 22/SSH: 已过滤 (仅白名单)",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "> 端口 3389/RDP: 关闭",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[警告] 直接扫描无效</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[警告] 需要高级技术</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "<color=cyan>[提示] 尝试调查维护此网络的安保公司</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[失败] 扫描中止 - 目标无法访问</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "default",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[ATTEMPTING SCAN]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Target: $TargetDomain",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[ERROR] Access failed: the path is invalid or permission is denied.</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "default",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[尝试扫描中]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 目标: $TargetDomain",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[错误] 访问失败，路径无效或权限不足。</color>",
+            "delay": 0
+          }
+        ]
+      }
+    ]
+  }
+}
