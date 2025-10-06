@@ -6,6 +6,8 @@
 #endregion
 
 using Cysharp.Threading.Tasks;
+using EggFramework;
+using EggFramework.SimpleAudioSystem.Constant;
 using LD58.Model;
 using LD58.Util;
 using QFramework;
@@ -68,6 +70,7 @@ namespace LD58.UI
         {
             _clearButton?.onClick.AddListener(() =>
             {
+                this.PlaySFX(AudioConstant.SFX.RECALL_CLEAR);
                 Clear();
                 AddFinishLine();
             });
@@ -89,12 +92,17 @@ namespace LD58.UI
 
         private void Recall()
         {
+            this.PlaySFX(AudioConstant.SFX.RECALL_CLEAR);
             if (!_isExecutingCommand)
             {
                 ListenForCommand               = false;
                 _isPendingInput                = false;
-                _pendingInputItem.PendingInput = false;
-                _pendingInputItem.SetColor(Color.gray);
+                if (_pendingInputItem)
+                {
+                    _pendingInputItem.PendingInput = false;
+                    _pendingInputItem.SetColor(Color.gray);
+                }
+              
                 AddItem("^C");
                 AddFinishLine();
             }

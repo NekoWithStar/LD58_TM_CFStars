@@ -10,6 +10,8 @@ using System.Collections.Generic;
 using System.Linq;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
+using EggFramework;
+using EggFramework.SimpleAudioSystem.Constant;
 using QFramework;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -180,6 +182,7 @@ namespace LD58.UI
 
             windowConfig.Window.SetActive(false);
             _windowStates[windowName]                                                 = EWindowState.Close;
+            this.PlaySFX(AudioConstant.SFX.DISCONNECTED);
             _windowObjects[windowName].GetComponent<AbstractWindowController>().Focus = false;
             FindFirstObjectByType<TaskBar>()?.RemoveTaskItem(windowName);
         }
@@ -232,6 +235,7 @@ namespace LD58.UI
             _windowStates[windowName]                                          = EWindowState.Focused;
             windowConfig.Window.GetComponent<AbstractWindowController>().Focus = true;
             windowConfig.Window.GetComponent<AbstractWindowController>().OnFocus();
+            this.PlaySFX(AudioConstant.SFX.CONNECTED);
 
             foreach (var eWindowState in _windowStates.ToDictionary(kv => kv.Key, kv => kv.Value))
             {

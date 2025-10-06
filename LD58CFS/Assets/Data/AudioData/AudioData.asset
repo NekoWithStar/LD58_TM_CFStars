@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a138566e36d6b5459dfa56407088892, type: 3}
   m_Name: AudioData
   m_EditorClassIdentifier: 
-  BGMAudios: []
+  BGMAudios:
+  - {fileID: 8300000, guid: 9205b43ce4745b44abdb04a9c0709205, type: 3}
+  - {fileID: 8300000, guid: 33c4ec45b41dce3448583716f3abdd58, type: 3}
+  - {fileID: 8300000, guid: d7f88b3fc3716cf41b1937f020cd8360, type: 3}
+  - {fileID: 8300000, guid: 0ff1a4581bf5c1f4da960620b05069d4, type: 3}
   SFXAudios:
   - {fileID: 8300000, guid: 52f83d65bdaa85b408bb6dfd621ac31f, type: 3}
   - {fileID: 8300000, guid: 72a696488c130e3448c33cca668a4e55, type: 3}
@@ -28,12 +32,15 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 47dca2009f08ac54f9ba9be34abfe6f6, type: 3}
   - {fileID: 8300000, guid: 980fc330adacc8940999040a15c1639e, type: 3}
   - {fileID: 8300000, guid: 792029b3b073c524f82ad731d1def4a0, type: 3}
+  - {fileID: 8300000, guid: 1bafdbd90bdac5c46a8a6ebb0b0c3a6e, type: 3}
   - {fileID: 8300000, guid: 8b7732974c511274785a3c45e40044e4, type: 3}
   - {fileID: 8300000, guid: 0e82e915c8f46c149bb02545e30721db, type: 3}
   - {fileID: 8300000, guid: 0e4dac176f8e61544b883d4b5399bdb7, type: 3}
+  - {fileID: 8300000, guid: 2ec7ea2508ed01d45839c92b49d48124, type: 3}
   - {fileID: 8300000, guid: 3ec3aac74d02d564f88630aa4e1088e9, type: 3}
   - {fileID: 8300000, guid: cea57c7cee7ed9b4b9bf9a4ac92ad539, type: 3}
   - {fileID: 8300000, guid: 3f512b95f5e6ec1448ce0eca42c060c9, type: 3}
+  - {fileID: 8300000, guid: efa5b6b0c8304a24fa05a81df1427833, type: 3}
   Mixer: {fileID: 0}
   Groups: []
   Settings: []

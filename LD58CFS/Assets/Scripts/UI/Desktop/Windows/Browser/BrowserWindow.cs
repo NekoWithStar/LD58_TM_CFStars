@@ -8,6 +8,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using EggFramework;
+using EggFramework.SimpleAudioSystem.Constant;
 using LD58.Extension;
 using LD58.Model;
 using LD58.Util;
@@ -107,6 +109,7 @@ namespace LD58.UI
 
         private void OnSearch(int index)
         {
+            this.PlaySFX(AudioConstant.SFX.BALLOON);
             foreach (var gain in _valuePairs[index].Gains)
             {
                 FindFirstObjectByType<BlackBoardController>().SetItem(gain, gain);
@@ -133,6 +136,7 @@ namespace LD58.UI
             FindFirstObjectByType<BlackBoardController>().SetItem(_linkItems[index].Desc, _linkItems[index].Desc);
             var console = FindFirstObjectByType<ConsoleController>();
             console.Switch(false);
+            this.PlaySFX(AudioConstant.SFX.BALLOON);
             if (_linkItems[index].CanNavigate)
             {
                 _preLinkIndex = index;
@@ -168,7 +172,7 @@ namespace LD58.UI
         {
             if (!AcceptedLinkValues.Contains(history) && !init) return;
             if (_linkItems.Any(item => item.Desc == history)) return;
-
+            this.PlaySFX(AudioConstant.SFX.CHIMES);
             _linkDropdown.options.Add(new Dropdown.OptionData
             {
                 text  = history,
