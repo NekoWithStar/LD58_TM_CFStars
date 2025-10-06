@@ -1,0 +1,559 @@
+{
+  "commandName": "MITM",
+  "parameters": [
+    {
+      "name": "TargetIP",
+      "type": "string",
+      "accept": ["203.0.113.45"]
+    }
+  ],
+  "cases": [
+    {
+      "name": "gugu_gaga_server",
+      "parameterValues": {
+        "TargetIP": ["203.0.113.45"]
+      },
+      "variables": {
+        "TargetIP": "203.0.113.45",
+        "Port": "443",
+        "Protocol": "HTTPS",
+        "VulnCVE": "CVE-2023-1234",
+        "CapturedUsername": "gugu-admin",
+        "SessionID": "MITM-0x9F4B7E1A",
+        "PacketsIntercepted": "1,247",
+        "DataSize": "2.3MB",
+        "Encryption": "AES-256-GCM",
+        "HandshakeTime": "0.089s"
+      }
+    }
+  ],
+  "output": {
+    "languageBlocks": [
+      {
+        "language": null,
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "BuBugBomb Man-In-The-Middle v3.1.7",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "Session ID: $SessionID | Target: $TargetIP",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════",
+            "delay": 0.3
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "gugu_gaga_server",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[INITIALIZING MITM ATTACK]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Target: $TargetIP:$Port",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Protocol: $Protocol",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Vulnerability: $VulnCVE (Remote Code Execution)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[ARP POISONING]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.5,8,\"  ├── Spoofing ARP tables...\",\"  ├── ARP poisoning active\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Target MAC: AA:BB:CC:DD:EE:FF",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Gateway MAC: FF:EE:DD:CC:BB:AA",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Traffic interception enabled",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[EXPLOITING VULNERABILITY]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Exploiting: $VulnCVE",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Payload: Buffer overflow in authentication handler",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Shellcode: 512 bytes (encrypted)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.2,12,\"  ├── Injecting exploit payload...\",\"  ├── Remote code execution achieved\",\"White\",\"Red\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Process ID: 1847 (nginx)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Memory corruption: 0x7fffdeadbeef",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Backdoor established",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[TRAFFIC INTERCEPTION]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.8,10,\"  ├── Monitoring network traffic...\",\"  ├── Traffic capture active\",\"White\",\"Cyan\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Packets intercepted: $PacketsIntercepted",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Data captured: $DataSize",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Encryption: $Encryption",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Handshake time: $HandshakeTime",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[CREDENTIAL CAPTURE]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.6,8,\"  ├── Analyzing captured packets...\",\"  ├── Credentials extracted\",\"White\",\"Yellow\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Protocol: HTTP Basic Auth",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Auth method: Base64 encoded",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Username captured:",
+            "delay": 0.2
+          },
+          {
+            "type": "clickable",
+            "text": "      <color=green>$CapturedUsername</color>",
+            "delay": 0.1,
+            "gain": {
+              "GuguAdminUsername": "gugu-admin"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════════════",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[SUCCESS] MITM attack completed</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Man-in-the-middle position established",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Vulnerability successfully exploited",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Credentials captured and ready for use",
+            "delay": 0.1
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "gugu_gaga_server",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[初始化中间人攻击]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 目标: $TargetIP:$Port",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 协议: $Protocol",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 漏洞: $VulnCVE (远程代码执行)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[ARP 欺骗]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.5,8,\"  ├── 伪造ARP表...\",\"  ├── ARP欺骗已激活\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 目标MAC: AA:BB:CC:DD:EE:FF",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 网关MAC: FF:EE:DD:CC:BB:AA",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 流量拦截已启用",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[利用漏洞]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 利用: $VulnCVE",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 载荷: 身份验证处理器缓冲区溢出",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Shellcode: 512字节 (已加密)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.2,12,\"  ├── 注入漏洞载荷...\",\"  ├── 远程代码执行已实现\",\"White\",\"Red\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 进程ID: 1847 (nginx)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 内存损坏: 0x7fffdeadbeef",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 后门已建立",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[流量拦截]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.8,10,\"  ├── 监控网络流量...\",\"  ├── 流量捕获已激活\",\"White\",\"Cyan\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 拦截数据包: $PacketsIntercepted",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 捕获数据: $DataSize",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 加密: $Encryption",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 握手时间: $HandshakeTime",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[凭据捕获]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.6,8,\"  ├── 分析捕获的数据包...\",\"  ├── 凭据已提取\",\"White\",\"Yellow\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 协议: HTTP基本认证",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 认证方法: Base64编码",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 捕获的用户名:",
+            "delay": 0.2
+          },
+          {
+            "type": "clickable",
+            "text": "      <color=green>$CapturedUsername</color>",
+            "delay": 0.1,
+            "gain": {
+              "GuguAdminUsername": "gugu-admin"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════════════",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[成功] 中间人攻击完成</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 中间人位置已建立",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 漏洞成功利用",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 凭据已捕获并准备使用",
+            "delay": 0.1
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "default",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[ATTEMPTING MITM]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Target: $TargetIP",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[ERROR] MITM attack failed</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>  └── Target not vulnerable or network protected</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[HINT] Ensure target is on the same network segment</color>",
+            "delay": 0.1
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "default",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[尝试中间人攻击]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 目标: $TargetIP",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[错误] 中间人攻击失败</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>  └── 目标无漏洞或网络受保护</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[提示] 确保目标在同一网络段</color>",
+            "delay": 0.1
+          }
+        ]
+      }
+    ]
+  }
+}

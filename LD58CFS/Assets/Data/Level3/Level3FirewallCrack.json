@@ -1,0 +1,1033 @@
+{
+  "commandName": "Firewall-Crack",
+  "parameters": [
+    {
+      "name": "TargetIP",
+      "type": "string",
+      "accept": ["203.0.113.45", "199.16.156.6"]
+    },
+    {
+      "name": "Username",
+      "type": "string",
+      "accept": ["gugu-admin"]
+    }
+  ],
+  "cases": [
+    {
+      "name": "gugu_admin_crack",
+      "parameterValues": {
+        "TargetIP": ["203.0.113.45"],
+        "Username": ["gugu-admin"]
+      },
+      "variables": {
+        "TargetIP": "203.0.113.45",
+        "Username": "gugu-admin",
+        "Password": "#$Secure123!",
+        "FirewallType": "Cisco ASA 9.12(4)",
+        "AuthMethod": "RADIUS + TACACS+",
+        "HashType": "PBKDF2-SHA256",
+        "KeyLength": "256-bit",
+        "Iterations": "10000",
+        "Salt": "0xDEADBEEFCAFEBABE",
+        "SessionID": "CRACK-0x8F3A6D2B",
+        "Attempts": "2,847",
+        "TimeElapsed": "4.2s",
+        "GPUUtilization": "98%"
+      }
+    },
+    {
+      "name": "bwiiter_server_scan",
+      "parameterValues": {
+        "TargetIP": ["199.16.156.6"],
+        "Username": ["gugu-admin"]
+      },
+      "variables": {
+        "TargetIP": "199.16.156.6",
+        "Username": "gugu-admin",
+        "FirewallType": "pfSense 2.7.0",
+        "AuthMethod": "Local + LDAP",
+        "HashType": "bcrypt",
+        "KeyLength": "128-bit",
+        "Iterations": "12",
+        "Salt": "0xCAFEBABEDADBEEF",
+        "SessionID": "CRACK-0x7C2E9F4A",
+        "Attempts": "1,234",
+        "TimeElapsed": "2.8s",
+        "GPUUtilization": "76%",
+        "ScanResult": "No exploitable vulnerabilities found",
+        "Recommendation": "Use alternative attack vectors"
+      }
+    }
+  ],
+  "output": {
+    "languageBlocks": [
+      {
+        "language": null,
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "BuBugBomb Firewall Cracker v5.2.3",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "Session ID: $SessionID | Target: $TargetIP",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════",
+            "delay": 0.3
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "gugu_admin_crack",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[INITIALIZING FIREWALL CRACK]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Target: $TargetIP",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Username: $Username",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Firewall: $FirewallType",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[RECONNAISSANCE]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.4,6,\"  ├── Fingerprinting firewall...\",\"  ├── Firewall identified\",\"White\",\"Blue\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Model: Cisco ASA 5506-X",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── OS Version: 9.12(4)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Auth: $AuthMethod",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Interfaces: 8 (4 active)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[HASH EXTRACTION]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Hash Type: $HashType",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Key Length: $KeyLength",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Iterations: $Iterations",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Salt: $Salt",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.8,10,\"  ├── Extracting password hash...\",\"  ├── Hash extracted successfully\",\"White\",\"Yellow\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Memory dump: 512MB captured",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Process: asa_daemon (PID: 2341)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Hash location: 0x7f8b9c2d4e6f",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[BRUTE FORCE ATTACK]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Dictionary: rockyou.txt + custom rules",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> GPU: NVIDIA RTX 4090 (16384 cores)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Speed: 2.8 GH/s",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(2.5,25,\"  ├── Cracking password hash...\",\"  ├── Password cracked!\",\"White\",\"Red\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Attempts: $Attempts",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Time elapsed: $TimeElapsed",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── GPU utilization: $GPUUtilization",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Password recovered:",
+            "delay": 0.2
+          },
+          {
+            "type": "clickable",
+            "text": "      <color=green>$Password</color>",
+            "delay": 0.1,
+            "gain": {
+              "GuguAdminPassword": "#$Secure123!"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[VERIFICATION]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.3,4,\"  ├── Testing credentials...\",\"  ├── Authentication successful\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Login attempt: SUCCESS",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Privileges: Administrator",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Session established",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════════════",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[SUCCESS] Firewall cracked</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Password hash successfully cracked",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Administrative access obtained",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Credentials ready for remote access",
+            "delay": 0.1
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "gugu_admin_crack",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[初始化防火墙破解]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 目标: $TargetIP",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 用户名: $Username",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 防火墙: $FirewallType",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[侦察阶段]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.4,6,\"  ├── 指纹识别防火墙...\",\"  ├── 防火墙已识别\",\"White\",\"Blue\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 型号: Cisco ASA 5506-X",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 操作系统版本: 9.12(4)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 认证: $AuthMethod",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 接口: 8个 (4个活跃)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[哈希提取]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 哈希类型: $HashType",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 密钥长度: $KeyLength",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 迭代次数: $Iterations",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 盐值: $Salt",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.8,10,\"  ├── 提取密码哈希...\",\"  ├── 哈希提取成功\",\"White\",\"Yellow\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 内存转储: 512MB 已捕获",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 进程: asa_daemon (PID: 2341)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 哈希位置: 0x7f8b9c2d4e6f",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[暴力破解攻击]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 字典: rockyou.txt + 自定义规则",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> GPU: NVIDIA RTX 4090 (16384 核心)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 速度: 2.8 GH/s",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(2.5,25,\"  ├── 破解密码哈希...\",\"  ├── 密码已破解！\",\"White\",\"Red\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 尝试次数: $Attempts",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 耗时: $TimeElapsed",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── GPU利用率: $GPUUtilization",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 恢复的密码:",
+            "delay": 0.2
+          },
+          {
+            "type": "clickable",
+            "text": "      <color=green>$Password</color>",
+            "delay": 0.1,
+            "gain": {
+              "GuguAdminPassword": "#$Secure123!"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[验证阶段]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.3,4,\"  ├── 测试凭据...\",\"  ├── 认证成功\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 登录尝试: 成功",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 权限: 管理员",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 会话已建立",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════════════",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[成功] 防火墙已破解</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 密码哈希成功破解",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 已获得管理访问权限",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 凭据已准备好用于远程访问",
+            "delay": 0.1
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "bwiiter_server_scan",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[FIREWALL VULNERABILITY SCAN]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Target: $TargetIP",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Username: $Username",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Firewall: $FirewallType",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[VULNERABILITY ASSESSMENT]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.6,8,\"  ├── Scanning for known vulnerabilities...\",\"  ├── Vulnerability scan complete\",\"White\",\"Blue\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  ├── CVE-2023-45678: Not applicable (version too new)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── CVE-2022-33456: Patched",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── CVE-2021-22345: Not vulnerable",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Zero-day exploits: None detected",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[CONFIGURATION ANALYSIS]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Authentication: $AuthMethod",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Hash Algorithm: $HashType",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Security Level: High",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Last Updated: 2025-09-15",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.4,6,\"  ├── Analyzing firewall rules...\",\"  ├── Rule analysis complete\",\"White\",\"Cyan\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Inbound rules: 47 active",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Outbound rules: 23 active",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── NAT rules: 12 configured",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── IDS/IPS: Enabled",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[ATTACK VECTOR ANALYSIS]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.5,7,\"  ├── Testing attack vectors...\",\"  ├── Attack vector analysis complete\",\"White\",\"Yellow\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  ├── SQL Injection: Blocked",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── XSS Attempts: Detected and logged",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Brute Force: Rate limited",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Zero-day exploits: No success",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════════════",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=orange>[SCAN COMPLETE] $ScanResult</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Firewall is properly hardened",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── No exploitable vulnerabilities found",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── $Recommendation",
+            "delay": 0.1
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "bwiiter_server_scan",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[防火墙漏洞扫描]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 目标: $TargetIP",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 用户名: $Username",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 防火墙: $FirewallType",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[漏洞评估]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.6,8,\"  ├── 扫描已知漏洞...\",\"  ├── 漏洞扫描完成\",\"White\",\"Blue\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  ├── CVE-2023-45678: 不适用 (版本过新)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── CVE-2022-33456: 已修补",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── CVE-2021-22345: 无漏洞",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 零日漏洞: 未检测到",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[配置分析]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 认证方式: $AuthMethod",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 哈希算法: $HashType",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 安全等级: 高",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 最后更新: 2025-09-15",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.4,6,\"  ├── 分析防火墙规则...\",\"  ├── 规则分析完成\",\"White\",\"Cyan\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 入站规则: 47个活跃",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 出站规则: 23个活跃",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── NAT规则: 12个已配置",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── IDS/IPS: 已启用",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[攻击向量分析]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.5,7,\"  ├── 测试攻击向量...\",\"  ├── 攻击向量分析完成\",\"White\",\"Yellow\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  ├── SQL注入: 已阻止",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── XSS尝试: 已检测并记录",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 暴力破解: 速率限制",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 零日漏洞: 无成功",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════════════",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=orange>[扫描完成] $ScanResult</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 防火墙已正确加固",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 未发现可利用漏洞",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── $Recommendation",
+            "delay": 0.1
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "default",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[ATTEMPTING FIREWALL CRACK]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Target: $TargetIP",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Username: $Username",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[ERROR] Firewall crack failed</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>  └── Insufficient privileges or hash extraction failed</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[HINT] Ensure you have the correct username from MITM</color>",
+            "delay": 0.1
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "default",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[尝试防火墙破解]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 目标: $TargetIP",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 用户名: $Username",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[错误] 防火墙破解失败</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>  └── 权限不足或哈希提取失败</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[提示] 确保从 MITM 获取了正确的用户名</color>",
+            "delay": 0.1
+          }
+        ]
+      }
+    ]
+  }
+}

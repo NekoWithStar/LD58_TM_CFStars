@@ -1,0 +1,421 @@
+{
+  "commandName": "Web-Scan",
+  "parameters": [
+    {
+      "name": "TargetDomain",
+      "type": "string",
+      "accept": [
+        "199.16.156.6"
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "name": "bwiiter_server",
+      "parameterValues": {
+        "TargetDomain": ["199.16.156.6"]
+      },
+      "variables": {
+        "TargetIP": "199.16.156.6",
+        "Port": "8888",
+        "ServerName": "Bwiiter Internal Server",
+        "Path1": "199.16.156.6/vuln-report",
+        "Status1": "200",
+        "Size1": "13GB",
+        "Path2": "199.16.156.6/logs",
+        "Status2": "200",
+        "Size2": "21GB",
+        "Path3": "199.16.156.6/database",
+        "Status3": "403",
+        "GuguGagaIP": "203.0.113.45",
+        "CVE1": "CVE-2023-1234",
+        "CVE2": "CVE-2022-5678"
+      }
+    }
+  ],
+  "output": {
+    "languageBlocks": [
+      {
+        "language": null,
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "BuBugBomb Web Scanner v4.2.1",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "Session ID: SCAN-$random6-BWIITER | Target: $TargetDomain",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════",
+            "delay": 0.3
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "bwiiter_server",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[INITIALIZING SCAN]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Target: $TargetIP:$Port",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Server: $ServerName",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(Scanning endpoints,25,cyan)",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[DISCOVERED ENDPOINTS]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.1
+          },
+          {
+            "type": "clickable",
+            "text": "<color=green>✓ <color=cyan>$Path1</color></color>",
+            "delay": 0.1,
+            "gain": {
+              "VulnReportPath": "199.16.156.6/vuln-report"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Status: $Status1 OK",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Size: $Size1",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  └── Type: Vulnerability Report Database",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.15
+          },
+          {
+            "type": "clickable",
+            "text": "<color=green>✓ <color=cyan>$Path2</color></color>",
+            "delay": 0.1,
+            "gain": {
+              "LogsPath": "199.16.156.6/logs"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Status: $Status2 OK",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Size: $Size2",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  └── Type: System Event Logs",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.15
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>✗ $Path3</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Status: $Status3 Forbidden",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  └── Note: Access denied - Authentication required",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[ANALYSIS COMPLETE]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Accessible endpoints: 2",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Restricted endpoints: 1",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Recommended: Use SQL-Inject on accessible endpoints",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[SUCCESS] Scan completed</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "bwiiter_server",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[初始化扫描]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 目标: $TargetIP:$Port",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 服务器: $ServerName",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(扫描端点中,25,cyan)",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[发现的端点]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.1
+          },
+          {
+            "type": "clickable",
+            "text": "<color=green>✓ <color=cyan>$Path1</color></color>",
+            "delay": 0.1,
+            "gain": {
+              "VulnReportPath": "199.16.156.6/vuln-report"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 状态: $Status1 OK",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 大小: $Size1",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  └── 类型: 漏洞报告数据库",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.15
+          },
+          {
+            "type": "clickable",
+            "text": "<color=green>✓ <color=cyan>$Path2</color></color>",
+            "delay": 0.1,
+            "gain": {
+              "LogsPath": "199.16.156.6/logs"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 状态: $Status2 OK",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 大小: $Size2",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  └── 类型: 系统事件日志",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.15
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>✗ $Path3</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 状态: $Status3 禁止访问",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  └── 注释: 拒绝访问 - 需要身份验证",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[分析完成]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 可访问端点: 2",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 受限端点: 1",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 建议: 对可访问端点使用 SQL-Inject",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[成功] 扫描完成</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "default",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[ATTEMPTING SCAN]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Target: $TargetDomain",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[ERROR] Access failed: the path is invalid or permission is denied.</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "default",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[尝试扫描中]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 目标: $TargetDomain",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[错误] 访问失败，路径无效或权限不足。</color>",
+            "delay": 0
+          }
+        ]
+      }
+    ]
+  }
+}

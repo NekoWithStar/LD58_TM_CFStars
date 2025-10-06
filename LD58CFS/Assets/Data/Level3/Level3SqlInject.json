@@ -1,0 +1,1142 @@
+{
+  "commandName": "SQL-Inject",
+  "parameters": [
+    {
+      "name": "TargetPath",
+      "type": "string",
+      "accept": [
+        "199.16.156.6/vuln-report",
+        "199.16.156.6/logs",
+        "199.16.156.6/database"
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "name": "logs",
+      "parameterValues": {
+        "TargetPath": ["199.16.156.6/logs"]
+      },
+      "variables": {
+        "Payload": "' OR '1'='1' --",
+        "ResponseCode": "200",
+        "ResponseStatus": "OK",
+        "RecordCount": "10",
+        "TableName": "system_logs",
+        "Columns": "timestamp, user, event, details",
+        "ExecutionTime": "0.312s"
+      }
+    },
+    {
+      "name": "vuln_report",
+      "parameterValues": {
+        "TargetPath": ["199.16.156.6/vuln-report"]
+      },
+      "variables": {
+        "Payload": "' UNION SELECT * FROM vulnerability_reports --",
+        "ResponseCode": "200",
+        "ResponseStatus": "OK",
+        "RecordCount": "1",
+        "TableName": "vulnerability_reports",
+        "Columns": "target_company, server_ip, scan_schedule, vulnerabilities",
+        "ExecutionTime": "0.189s",
+        "TargetCompany": "GuguGaga",
+        "ServerIP": "203.0.113.45",
+        "ScanSchedule": "2025-10-06 14:00:00 UTC",
+        "CVE1": "CVE-2023-1234",
+        "CVE1Desc": "Remote Code Execution",
+        "CVE2": "CVE-2022-5678",
+        "CVE2Desc": "Buffer Overflow"
+      }
+    },
+    {
+      "name": "database",
+      "parameterValues": {
+        "TargetPath": ["199.16.156.6/database"]
+      },
+      "variables": {
+        "ErrorCode": "403",
+        "ErrorMessage": "Access Denied - Authentication Required"
+      }
+    }
+  ],
+  "output": {
+    "languageBlocks": [
+      {
+        "language": null,
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "BuBugBomb SQL Injection Tool v4.0.2",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "Session ID: SQL-$random6-BWIITER | Target: $TargetPath",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════",
+            "delay": 0.3
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "logs",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[EXPLOITING /logs]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Payload: $Payload",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Response: $ResponseCode $ResponseStatus",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Table: $TableName | Columns: $Columns",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Execution time: $ExecutionTime",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[DATA RETRIEVED] ($RecordCount records)",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-03 09:15:23\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"user\": \"dev_whiskers\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"event\": \"CODE COMMIT\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"details\": \"Emergency fix: Typo '==' as '=' crashed entire chat system\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-04 10:30:45\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"user\": \"sysadmin_tom\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"event\": \"SERVER MAINTENANCE\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"details\": \"Found three cats warming up in server cabinet during database restart - please stop putting cats there\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-05 12:45:12\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"user\": \"hr_miao\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"event\": \"POLICY UPDATE\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"details\": \"New rule: No more cat puns in code comments (though last week's 'purr-formance optimization' was hilarious)\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-05 15:33:47\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"user\": \"ceo_paws\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"event\": \"COMPANY MEETING\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"details\": \"Important decision: Approved 'Nap time doesn't count as work hours' proposal\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-05 16:55:19\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"user\": \"network_felix\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"event\": \"CONFIG CHANGE\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"details\": \"WiFi optimization: Renamed 2.4GHz to 'TunaNet', 5GHz to 'SalmonStream'\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-05 17:32:12\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"user\": \"security_meow\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"event\": \"COMPANY MEETING\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"details\": \"Has anyone reviewed GuguGaga's vulnerability analysis method? Is it safe to send our data back to them?\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-05 17:33:32\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"user\": \"security_meow\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"event\": \"COMPANY MEETING\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"details\": \"You mean the content in /vuln-report? I embedded some cat photos when they sent the scan data back, haha\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-05 18:30:22\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"user\": \"security_meow\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"event\": \"PEN TEST FAILED\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"details\": \"When hacker tried brute force, our kitten unplugged the network cable - congrats on 'Best Security Guard of the Month' award\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-05 20:15:08\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"user\": \"dev_claws\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"event\": \"VERSION RELEASE\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"details\": \"Released Bwiiter 2.0: New 'Cat Face Recognition Login' feature\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-06 12:40:51\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"user\": \"janitor_fuzzy\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"event\": \"INCIDENT REPORT\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"details\": \"Emergency: Cafeteria added 5 new dishes\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  }",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "]",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[SUCCESS] SQL injection completed</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "logs",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[正在利用 /logs]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 载荷: $Payload",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 响应: $ResponseCode $ResponseStatus",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 表名: $TableName | 列: $Columns",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 执行时间: $ExecutionTime",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[数据已获取] ($RecordCount 条记录)",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-03 09:15:23\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"user\": \"dev_whiskers\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"event\": \"CODE COMMIT\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"details\": \"紧急修复：把'=='误写成'='导致整个聊天系统崩溃\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-04 10:30:45\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"user\": \"sysadmin_tom\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"event\": \"SERVER MAINTENANCE\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"details\": \"重启数据库时发现三只猫在机柜里取暖，请你们不要再把猫放进来了\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-05 12:45:12\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"user\": \"hr_miao\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"event\": \"POLICY UPDATE\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"details\": \"发布新规：禁止在代码注释里写猫咪冷笑话\"",
+            "delay": 0.05
+          },
+                    {
+            "type": "normal",
+            "text": "    \"details\": \"虽然上次'purr-formance优化'的梗确实很好笑）\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-05 15:33:47\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"user\": \"ceo_paws\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"event\": \"COMPANY MEETING\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"details\": \"重要决议：通过'午睡不算工时'提案\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-05 16:55:19\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"user\": \"network_felix\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"event\": \"CONFIG CHANGE\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"details\": \"优化WiFi：把2.4GHz频段重命名为'TunaNet'\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-05 17:32:12\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"user\": \"security_meow\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"event\": \"COMPANY MEETING\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"details\": \"有人看过GuguGaga的漏洞分析方式了吗??把我们数据回传回去是不是不太安全?\"",
+            "delay": 0.05
+          },
+                    {
+            "type": "normal",
+            "text": "    \"details\": \"把我们数据回传回去是不是不太安全?\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-05 17:33:32\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"user\": \"security_meow\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"event\": \"COMPANY MEETING\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"details\": \"你是说/vuln-report里的内容吗\"",
+            "delay": 0.05
+          },
+                    {
+            "type": "normal",
+            "text": "    \"details\": \"我在他们扫完漏洞回传数据的时候嵌入了一些猫咪照片，哈哈\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-05 18:30:22\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"user\": \"security_meow\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"event\": \"PEN TEST FAILED\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"details\": \"黑客试图暴力破解时，我们的小猫拔掉了网线\"",
+            "delay": 0.05
+          },
+                    {
+            "type": "normal",
+            "text": "    \"details\": \"恭喜它获得本月'最佳安全卫士'奖\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-05 20:15:08\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"user\": \"dev_claws\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"event\": \"VERSION RELEASE\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"details\": \"发布Bwiiter 2.0：新增'猫脸识别登录'功能\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-06 12:40:51\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"user\": \"janitor_fuzzy\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"event\": \"INCIDENT REPORT\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"details\": \"紧急事件：餐厅新增5个新菜\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  }",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "]",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[成功] SQL注入完成</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "vuln_report",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[EXPLOITING /vuln-report]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Payload: $Payload",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Response: $ResponseCode $ResponseStatus",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Table: $TableName | Columns: $Columns",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Execution time: $ExecutionTime",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[DATA RETRIEVED] ($RecordCount record)",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "{",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"target_company\": \"$TargetCompany\",",
+            "delay": 0.05
+          },
+          {
+            "type": "clickable",
+            "text": "  \"server_ip\": \"<color=cyan>$ServerIP</color>\",",
+            "delay": 0.05,
+            "gain": {
+              "GuguGagaServerIP": "203.0.113.45"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "  \"scan_schedule\": \"$ScanSchedule\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"vulnerabilities\": [",
+            "delay": 0.05
+          },
+          {
+            "type": "clickable",
+            "text": "    \"<color=cyan>$CVE1</color>: $CVE1Desc\",",
+            "delay": 0.05,
+            "gain": {
+              "CVE2023": "CVE-2023-1234"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "    \"$CVE2: $CVE2Desc\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  ]",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "}",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[SUCCESS] SQL injection completed</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "vuln_report",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[正在利用 /vuln-report]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 载荷: $Payload",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 响应: $ResponseCode $ResponseStatus",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 表名: $TableName | 列: $Columns",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 执行时间: $ExecutionTime",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[数据已获取] ($RecordCount 条记录)",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "{",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"target_company\": \"$TargetCompany\",",
+            "delay": 0.05
+          },
+          {
+            "type": "clickable",
+            "text": "  \"server_ip\": \"<color=cyan>$ServerIP</color>\",",
+            "delay": 0.05,
+            "gain": {
+              "GuguGagaServerIP": "203.0.113.45"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "  \"scan_schedule\": \"$ScanSchedule\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  \"vulnerabilities\": [",
+            "delay": 0.05
+          },
+          {
+            "type": "clickable",
+            "text": "    \"<color=cyan>$CVE1</color>: $CVE1Desc\",",
+            "delay": 0.05,
+            "gain": {
+              "CVE2023": "CVE-2023-1234"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "    \"$CVE2: $CVE2Desc\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  ]",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "}",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[成功] SQL注入完成</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "database",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[ATTEMPTING EXPLOITATION]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Target: $TargetPath",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[ERROR] HTTP $ErrorCode - $ErrorMessage</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "database",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[尝试利用中]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 目标: $TargetPath",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[错误] HTTP $ErrorCode - $ErrorMessage</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "default",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[ATTEMPTING EXPLOITATION]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Target: $TargetPath",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[ERROR] Access failed: the path is invalid or permission is denied.</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "default",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[尝试利用中]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 目标: $TargetPath",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[错误] 访问失败，路径无效或权限不足。</color>",
+            "delay": 0
+          }
+        ]
+      }
+    ]
+  }
+}
