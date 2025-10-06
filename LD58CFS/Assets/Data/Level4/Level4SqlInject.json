@@ -1,0 +1,1382 @@
+{
+  "commandName": "SQL-Inject",
+  "parameters": [
+    {
+      "name": "TargetPath",
+      "type": "string",
+      "accept": [
+        "203.0.113.45/client-data",
+        "203.0.113.45/company-logs"
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "name": "client_data",
+      "parameterValues": {
+        "TargetPath": ["203.0.113.45/client-data"]
+      },
+      "variables": {
+        "Payload": "' UNION SELECT * FROM clients WHERE encryption_status='active' --",
+        "ResponseCode": "200",
+        "ResponseStatus": "OK",
+        "RecordCount": "5",
+        "TableName": "client_database",
+        "Columns": "client_id, company_name, ip_address, service_type, contract_level",
+        "ExecutionTime": "0.487s",
+        "MilitaryIP": "114.514.191.810"
+      }
+    },
+    {
+      "name": "company_logs",
+      "parameterValues": {
+        "TargetPath": ["203.0.113.45/company-logs"]
+      },
+      "variables": {
+        "Payload": "' OR '1'='1' --",
+        "ResponseCode": "200",
+        "ResponseStatus": "OK",
+        "RecordCount": "8",
+        "TableName": "activity_logs",
+        "Columns": "timestamp, employee, action, details",
+        "ExecutionTime": "0.234s"
+      }
+    }
+  ],
+  "output": {
+    "languageBlocks": [
+      {
+        "language": null,
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "BuBugBomb SQL Injection Tool v5.1.0",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "Session ID: SQL-$random6-FINAL | Target: $TargetPath",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════",
+            "delay": 0.3
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "client_data",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[EXPLOITING CLIENT DATABASE]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Payload: $Payload",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Response: $ResponseCode $ResponseStatus",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.8,35,\"  ├── Decrypting AES-256...\",\"  ├── Extraction complete\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[DECRYPTED DATA] ($RecordCount clients)",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Table: $TableName | Columns: $Columns",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Execution time: $ExecutionTime",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"client_id\": \"GGG-001\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"company_name\": \"CatFood Mega Corp\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"ip_address\": \"192.168.42.100\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"service_type\": \"Basic Firewall\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"contract_level\": \"Bronze\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"client_id\": \"GGG-002\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"company_name\": \"Meow Technologies Inc.\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"ip_address\": \"10.0.0.50\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"service_type\": \"Advanced IDS/IPS\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"contract_level\": \"Silver\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"client_id\": \"GGG-003\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"company_name\": \"Purr-fect Security Solutions\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"ip_address\": \"172.16.0.200\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"service_type\": \"Penetration Testing\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"contract_level\": \"Gold\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"client_id\": \"GGG-004\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"company_name\": \"Whiskers Consulting Group\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"ip_address\": \"203.0.113.99\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"service_type\": \"Managed Firewall Service\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"contract_level\": \"Platinum\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"client_id\": \"GGG-CLASSIFIED\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"company_name\": \"[REDACTED] Military Installation\",",
+            "delay": 0.05
+          },
+          {
+            "type": "clickable",
+            "text": "    \"ip_address\": \"<color=cyan>$MilitaryIP</color>\",",
+            "delay": 0.05,
+            "gain": {
+              "MilitaryBaseIP": "114.514.191.810"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "    \"service_type\": \"Full Security Suite + Backdoor Access\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"contract_level\": \"CLASSIFIED - LEVEL 5\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  }",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "]",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[WARNING] Classified client detected in database</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[WARNING] Backdoor access confirmed - Security breach potential</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[SUCCESS] SQL injection completed</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "client_data",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[正在利用客户端数据库]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 载荷: $Payload",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 响应: $ResponseCode $ResponseStatus",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.8,35,\"  ├── 解密 AES-256 中...\",\"  ├── 提取完成\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[已解密数据] ($RecordCount 个客户)",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 表名: $TableName | 列: $Columns",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 执行时间: $ExecutionTime",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"client_id\": \"GGG-001\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"company_name\": \"猫粮超级公司\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"ip_address\": \"192.168.42.100\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"service_type\": \"基础防火墙\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"contract_level\": \"青铜\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"client_id\": \"GGG-002\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"company_name\": \"Bwiiter科技有限公司\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"ip_address\": \"199.16.156.6\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"service_type\": \"漏洞检测和数据窃取\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"contract_level\": \"塑料级\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"client_id\": \"GGG-003\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"company_name\": \"完美安全解决方案\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"ip_address\": \"172.16.0.200\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"service_type\": \"渗透测试\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"contract_level\": \"黄金\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"client_id\": \"GGG-004\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"company_name\": \"胡须咨询集团\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"ip_address\": \"203.0.113.99\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"service_type\": \"托管防火墙服务\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"contract_level\": \"白金\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"client_id\": \"GGG-CLASSIFIED\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"company_name\": \"[已编辑] 军事设施\",",
+            "delay": 0.05
+          },
+          {
+            "type": "clickable",
+            "text": "    \"ip_address\": \"<color=cyan>$MilitaryIP</color>\",",
+            "delay": 0.05,
+            "gain": {
+              "MilitaryBaseIP": "114.514.191.810"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "    \"service_type\": \"完整安全套件 + 后门访问\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"contract_level\": \"机密 - 5级\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  }",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "]",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[警告] 数据库中检测到机密客户</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[警告] 后门访问已确认 - 存在安全漏洞风险</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[成功] SQL注入完成</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "company_logs",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[EXPLOITING COMPANY LOGS]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Payload: $Payload",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Response: $ResponseCode $ResponseStatus",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Table: $TableName | Columns: $Columns",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Execution time: $ExecutionTime",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[DATA RETRIEVED] ($RecordCount records)",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-01 09:23:15\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"employee\": \"dev_scratchy\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"action\": \"CODE DEPLOYMENT\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"details\": \"Deployed vulnerability scanner v3.1",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "                - Now with 50% more bugs!\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-02 14:45:33\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"employee\": \"ceo_fluffy\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"action\": \"MEETING\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"details\": \"All-hands meeting: Discussed why",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "                catnip is not a valid expense category\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-03 11:12:47\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"employee\": \"security_mittens\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"action\": \"BACKDOOR INSTALLATION\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"details\": \"Installed 'maintenance access' on",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "                military client firewall. Boss said",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "                it's totally legal, right?\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-04 16:30:22\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"employee\": \"hr_whiskers\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"action\": \"POLICY UPDATE\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"details\": \"Reminder: Please don't use",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "                'password123' as your password.",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "                Looking at you, Tom.\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-04 17:15:08\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"employee\": \"admin_paws\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"action\": \"SERVER MAINTENANCE\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"details\": \"Cleaned out server room. Found 3",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "                hairballs and a half-eaten tuna",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "                sandwich from 2023\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-05 10:42:19\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"employee\": \"network_felix\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"action\": \"INCIDENT RESPONSE\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"details\": \"Client reported 'suspicious activity'.",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "                Turns out it was just our backdoor",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "                doing its thing. Crisis averted!\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-05 13:55:44\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"employee\": \"intern_buttons\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"action\": \"COFFEE RUN\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"details\": \"Bought 47 espressos. Turns out the",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "                dev team really needs caffeine",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "                during crunch time\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-06 08:33:27\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"employee\": \"cto_socks\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"action\": \"ARCHITECTURE REVIEW\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"details\": \"Reviewed backdoor code. It's beautiful.",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "                A work of art. Shakespeare would",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "                be proud.\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  }",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "]",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[SUCCESS] SQL injection completed</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "company_logs",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[正在利用公司日志]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 载荷: $Payload",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 响应: $ResponseCode $ResponseStatus",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 表名: $TableName | 列: $Columns",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 执行时间: $ExecutionTime",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[数据已获取] ($RecordCount 条记录)",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-01 09:23:15\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"employee\": \"dev_scratchy\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"action\": \"代码部署\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"details\": \"部署漏洞扫描器 v3.1 - 现在有",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "                50%更多的bug！\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-02 14:45:33\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"employee\": \"ceo_fluffy\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"action\": \"会议\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"details\": \"全体会议：讨论为什么猫薄荷不是",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "                有效的报销类别\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-03 11:12:47\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"employee\": \"security_mittens\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"action\": \"后门安装\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"details\": \"在军事客户防火墙上安装了'维护",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "                访问'。老板说这是完全合法的，",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "                对吧？\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-04 16:30:22\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"employee\": \"hr_whiskers\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"action\": \"政策更新\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"details\": \"提醒：请不要使用'password123'",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "                作为密码。说的就是你，Tom。\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-04 17:15:08\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"employee\": \"admin_paws\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"action\": \"服务器维护\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"details\": \"清理服务器机房。发现3个毛球和",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "                一个2023年吃剩的金枪鱼三明治\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-05 10:42:19\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"employee\": \"network_felix\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"action\": \"事件响应\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"details\": \"客户报告'可疑活动'。结果只是",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "                我们的后门在工作。危机解除！\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-05 13:55:44\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"employee\": \"intern_buttons\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"action\": \"咖啡采购\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"details\": \"买了47杯浓缩咖啡。原来开发团队",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "                在赶工时真的很需要咖啡因\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-06 08:33:27\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"employee\": \"cto_socks\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"action\": \"架构审查\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"details\": \"审查后门代码。太美了。艺术品。",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "                莎士比亚会感到骄傲。\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  }",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "]",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[成功] SQL注入完成</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "default",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[ATTEMPTING EXPLOITATION]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Target: $TargetPath",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[ERROR] Access failed: the path is invalid or permission is denied.</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "default",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[尝试利用中]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 目标: $TargetPath",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[错误] 访问失败，路径无效或权限不足。</color>",
+            "delay": 0
+          }
+        ]
+      }
+    ]
+  }
+}

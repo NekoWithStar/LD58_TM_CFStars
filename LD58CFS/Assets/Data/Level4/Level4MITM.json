@@ -1,0 +1,496 @@
+{
+  "commandName": "MITM",
+  "parameters": [
+    {
+      "name": "TargetIP",
+      "type": "string",
+      "accept": [
+        "114.514.191.810"
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "name": "military_base",
+      "parameterValues": {
+        "TargetIP": ["114.514.191.810"]
+      },
+      "variables": {
+        "TargetIP": "114.514.191.810",
+        "Port": "22",
+        "Protocol": "SSH",
+        "TargetName": "[CLASSIFIED] Military Installation",
+        "BackdoorUser": "gugugaga_maintenance",
+        "BackdoorPass": "GGG-B4ckd00r-2025!",
+        "GatewayIP": "203.0.113.45",
+        "EncryptionType": "AES-256-CBC",
+        "AuthMethod": "Certificate + Backdoor Token"
+      }
+    }
+  ],
+  "output": {
+    "languageBlocks": [
+      {
+        "language": null,
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "BuBugBomb MITM Attack Tool v5.2.0",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "Session ID: MITM-$random6-FINAL | Target: $TargetIP",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════",
+            "delay": 0.3
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "military_base",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[INITIALIZING MITM ATTACK]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Target: $TargetIP:$Port ($TargetName)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Protocol: $Protocol",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Gateway: $GatewayIP (GuguGaga Security)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.5,30,\"  ├── ARP spoofing network...\",\"  ├── Network poisoned\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(2.0,40,\"  ├── Intercepting SSH handshake...\",\"  ├── Handshake captured\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[TRAFFIC ANALYSIS]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Encryption: $EncryptionType",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Auth Method: $AuthMethod",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Backdoor Status: ACTIVE",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.8,35,\"  ├── Extracting backdoor credentials...\",\"  ├── Credentials extracted\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[BACKDOOR CREDENTIALS DISCOVERED]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "┌──────────────────────────────────────┐",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "│ CLASSIFIED ACCESS CREDENTIALS        │",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "├──────────────────────────────────────┤",
+            "delay": 0.05
+          },
+          {
+            "type": "clickable",
+            "text": "│ Username: <color=cyan>$BackdoorUser</color>      │",
+            "delay": 0.1,
+            "gain": {
+              "MilitaryUsername": "gugugaga_maintenance"
+            }
+          },
+          {
+            "type": "clickable",
+            "text": "│ Password: <color=cyan>$BackdoorPass</color> │",
+            "delay": 0.1,
+            "gain": {
+              "MilitaryPassword": "GGG-B4ckd00r-2025!"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "│ Access Level: MAINTENANCE (FULL)    │",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "│ Installed By: GuguGaga Security      │",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "│ Installation Date: 2025-10-03        │",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "└──────────────────────────────────────┘",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[INTERCEPTED TRAFFIC SAMPLE]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> [2025-10-06 14:23:15] GuguGaga Gateway → Military Base",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Protocol: SSH (Port $Port)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Message: \"Automated security scan initiated\"",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Backdoor Token: VALID",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[WARNING] This backdoor provides unrestricted access to classified systems</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[SUCCESS] MITM attack completed - Backdoor credentials acquired</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "military_base",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[初始化中间人攻击]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 目标: $TargetIP:$Port ($TargetName)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 协议: $Protocol",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 网关: $GatewayIP (咕咕嘎嘎安保)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.5,30,\"  ├── ARP 欺骗网络中...\",\"  ├── 网络已污染\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(2.0,40,\"  ├── 拦截 SSH 握手中...\",\"  ├── 握手已捕获\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[流量分析]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 加密: $EncryptionType",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 认证方法: $AuthMethod",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 后门状态: 活跃",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.8,35,\"  ├── 提取后门凭证中...\",\"  ├── 凭证已提取\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[发现后门凭证]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "┌──────────────────────────────────────┐",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "│ 机密访问凭证                         │",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "├──────────────────────────────────────┤",
+            "delay": 0.05
+          },
+          {
+            "type": "clickable",
+            "text": "│ 用户名: <color=cyan>$BackdoorUser</color>      │",
+            "delay": 0.1,
+            "gain": {
+              "MilitaryUsername": "gugugaga_maintenance"
+            }
+          },
+          {
+            "type": "clickable",
+            "text": "│ 密码: <color=cyan>$BackdoorPass</color> │",
+            "delay": 0.1,
+            "gain": {
+              "MilitaryPassword": "GGG-B4ckd00r-2025!"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "│ 访问级别: 维护（完全）               │",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "│ 安装者: 咕咕嘎嘎安保                 │",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "│ 安装日期: 2025-10-03                 │",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "└──────────────────────────────────────┘",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[拦截的流量样本]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> [2025-10-06 14:23:15] 咕咕嘎嘎网关 → 军事基地",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 协议: SSH (端口 $Port)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 消息: \"自动安全扫描已启动\"",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 后门令牌: 有效",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[警告] 此后门提供对机密系统的无限制访问</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[成功] 中间人攻击完成 - 已获得后门凭证</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "default",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[ATTEMPTING MITM ATTACK]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Target: $TargetIP",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[ERROR] Access failed: the path is invalid or permission is denied.</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "default",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[尝试中间人攻击]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 目标: $TargetIP",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[错误] 访问失败，路径无效或权限不足。</color>",
+            "delay": 0
+          }
+        ]
+      }
+    ]
+  }
+}

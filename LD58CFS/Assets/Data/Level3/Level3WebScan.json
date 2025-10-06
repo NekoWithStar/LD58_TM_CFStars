@@ -86,7 +86,7 @@
           },
           {
             "type": "normal",
-            "text": "$$progress(Scanning endpoints,25,cyan)",
+            "text": "$$progress(0.8,10,\"  ├── Scanning endpoints...\",\"  ├── Scan complete\",\"White\",\"Cyan\")",
             "delay": 0
           },
           {
@@ -238,7 +238,7 @@
           },
           {
             "type": "normal",
-            "text": "$$progress(扫描端点中,25,cyan)",
+            "text": "$$progress(0.8,10,\"  ├── 扫描端点中...\",\"  ├── 扫描完成\",\"White\",\"Cyan\")",
             "delay": 0
           },
           {
