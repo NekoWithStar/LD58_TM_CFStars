@@ -5,6 +5,7 @@
 
 #endregion
 
+using System;
 using System.Collections.Generic;
 using LD58.Model;
 using Newtonsoft.Json;
@@ -26,7 +27,19 @@ namespace LD58
 
         private bool _loaded;
 
-        [ShowInInspector]
+        private static LocalizationHandle _inst;
+
+        private void Awake()
+        {
+            if (_inst)
+            {
+                Destroy(gameObject);
+                return;
+            }
+            ReloadAllConfig();
+        }
+
+        [ShowInInspector, ShowIf("@UnityEngine.Application.isPlaying")]
         public SystemLanguage Language
         {
             get => this.GetModel<ISettingModel>().Language.Value;
@@ -43,6 +56,24 @@ namespace LD58
             }
 
             _loaded = true;
+        }
+
+        [Button]
+        public string GetLocalizedStringById(int id)
+        {
+            if (!_loaded) ReloadAllConfig();
+            var                 target         = this.GetModel<ISettingModel>().Language.Value;
+            LocalizationPackage targetPackage = null;
+            foreach (var package in Packages)
+            {
+                if (package.Language == target)
+                {
+                    targetPackage = package;
+                }
+            }
+
+            if (targetPackage == null) return null;
+            return targetPackage.LocalizationData.GetValueOrDefault(id);
         }
 
         public string GetLocalizedStringByChineseSimplified(string chinese)
@@ -75,6 +106,38 @@ namespace LD58
             }
 
             return chinese;
+        }
+        [Button]
+        public string GetLocalizedStringByEnglish(string english)
+        {
+            if (!_loaded) ReloadAllConfig();
+            var target = this.GetModel<ISettingModel>().Language.Value;
+            if (target == SystemLanguage.English) return english;
+            LocalizationPackage englishPackage = null;
+            foreach (var package in Packages)
+            {
+                if (package.Language == SystemLanguage.English)
+                {
+                    englishPackage = package;
+                }
+            }
+
+            if (englishPackage == null) return english;
+            foreach (var package in Packages)
+            {
+                if (package.Language == target)
+                {
+                    foreach (var (key, value) in englishPackage.LocalizationData)
+                    {
+                        if (value == english)
+                        {
+                            return package.LocalizationData.GetValueOrDefault(key, english);
+                        }
+                    }
+                }
+            }
+
+            return english;
         }
 #if UNITY_EDITOR
         [Button]

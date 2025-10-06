@@ -1,12 +1,24 @@
 {
   "Language": 10,
   "LocalizationData": {
-    "100000": "BlackBoard",
-    "100001": "CommandBoard",
-    "100002": "Recall",
-    "100003": "Enter",
-    "100004": "Clear",
-    "100005": "BrowserConsole",
-    "100006": "PowerShell"
+    "100000": "Enter",
+    "100001": "Recall",
+    "100002": "Clear",
+    "100003": "BrowserConsole",
+    "100004": "PowerShell",
+    "100005": "BlackBoard",
+    "100006": "CommandBoard",
+    "100007": "Browser",
+    "100008": "ImageViewer",
+    "100009": "Recycle",
+    "100010": "GoodInternet.exe",
+    "100011": "Recycle",
+    "100012": "MyGoodCat.png",
+    "100013": "IDCard.png",
+    "100014": "Search",
+    "100015": "What's the easiest job in 2025?",
+    "100016": "Can cats eat mooncake?",
+    "100017": "How do I log into the Bmail system?",
+    "100018": "When is the Cat Beauty Contest at the Meow Planet Club?"
   }
 }

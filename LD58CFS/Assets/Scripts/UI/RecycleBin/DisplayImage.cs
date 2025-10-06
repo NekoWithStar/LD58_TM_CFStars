@@ -6,6 +6,7 @@
 #endregion
 
 using System;
+using LD58.Model;
 using QFramework;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,14 +17,18 @@ namespace LD58.UI.RecycleBin
     {
         [SerializeField] private Button _button;
         [SerializeField] private Sprite _sprite;
+        [SerializeField] private Sprite _cnsprite;
         [SerializeField] private string _param;
 
         private void Awake()
         {
             _button.onClick.AddListener(() =>
             {
-                Selection.DisplayImage = _sprite;
-                Selection.ImageParam   = _param;
+                Selection.DisplayImage =
+                    this.GetModel<ISettingModel>().Language.Value == SystemLanguage.ChineseSimplified
+                        ? _cnsprite
+                        : _sprite;
+                Selection.ImageParam = _param;
                 this.SendEvent(new WindowOperationEvent
                 {
                     Operation  = EWindowOperation.Open,

@@ -136,6 +136,8 @@ namespace LD58.UI
 
         void IPointerClickHandler.OnPointerClick(PointerEventData eventData)
         {
+            if (BlackBoardItems.Count > 0)
+                this.PlaySFX(AudioConstant.SFX.CHIMES);
             foreach (var (key, value) in BlackBoardItems)
             {
                 FindFirstObjectByType<BlackBoardController>().SetItem(key, value);

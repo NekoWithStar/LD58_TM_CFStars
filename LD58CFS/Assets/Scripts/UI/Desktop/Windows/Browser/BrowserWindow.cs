@@ -192,7 +192,7 @@ namespace LD58.UI
             if (_valuePairs.Any(ky => ky.Desc == history)) return;
             _searchDropdown.options.Add(new Dropdown.OptionData
             {
-                text  = history,
+                text  = FindFirstObjectByType<LocalizationHandle>().GetLocalizedStringByEnglish(history),
                 image = null
             });
 

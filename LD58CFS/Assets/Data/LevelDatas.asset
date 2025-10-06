@@ -17,15 +17,15 @@ MonoBehaviour:
     CommandData: {fileID: 11400000, guid: 9f39fb93e67a4f84f9255f018310f833, type: 2}
     InitParams: []
     SearchItems:
-    - Desc: "2025\u5E74\u6700\u8F7B\u677E\u5DE5\u4F5C\u662F\u4EC0\u4E48"
+    - Desc: What's the easiest job in 2025?
       Gains: []
-    - Desc: "\u732B\u54AA\u53EF\u4EE5\u5403\u6708\u997C\u5417?"
+    - Desc: Can cats eat mooncake?
       Gains:
       - mooncake
-    - Desc: "\u6211\u8BE5\u600E\u4E48\u6837\u4F7F\u7528Bmail\u7684\u540E\u53F0\u7CFB\u7EDF?"
+    - Desc: How do I log into the Bmail system?
       Gains:
       - Bmail system
-    - Desc: "\u55B5\u661F\u4EBA\u4FF1\u4E50\u90E8  \u7684 \u732B\u54AA\u9009\u7F8E\u7684\u65F6\u95F4\u662F\u4EC0\u4E48\u65F6\u5019?"
+    - Desc: When is the Cat Beauty Contest at the Meow Planet Club?
       Gains:
       - CatBeautyContest
       - MeowPlanetClub@Bmail.com

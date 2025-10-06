@@ -16,6 +16,7 @@ namespace LD58.UI
     public abstract class AbstractWindowController : AbstractController, IDragHandler, IPointerDownHandler
     {
         [SerializeField] protected string WindowName;
+        [SerializeField] private   int    WindowNameLocalizeId;
         [SerializeField] private   Button CloseButton;
         [SerializeField] private   Button MinimizeButton;
         [SerializeField] private   Text   TitleText;
@@ -43,7 +44,7 @@ namespace LD58.UI
                     Operation  = EWindowOperation.Close
                 });
             });
-            TitleText.text = WindowName;
+            TitleText.text = FindFirstObjectByType<LocalizationHandle>().GetLocalizedStringById(WindowNameLocalizeId);
         }
         
         public virtual void OnFocus()
