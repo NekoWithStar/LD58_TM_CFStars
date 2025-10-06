@@ -98,11 +98,33 @@ namespace LD58.UI
 #endif
         }
 
+        protected override void OnDestroy()
+        {
+            _linkDropdown.onValueChanged.RemoveAllListeners();
+            _searchDropdown.onValueChanged.RemoveAllListeners();
+            base.OnDestroy();
+        }
+
         private void OnSearch(int index)
         {
             foreach (var gain in _valuePairs[index].Gains)
             {
                 FindFirstObjectByType<BlackBoardController>().SetItem(gain, gain);
+            }
+        }
+
+        public void SetBrowserInitData(List<SearchItem> searchItems, List<LinkItem> linkItems, List<string> acceptLinks)
+        {
+            Clear();
+            AcceptedLinkValues.AddRange(acceptLinks);
+            foreach (var searchItem in searchItems)
+            {
+                AddBrowserSearchHistoryItem(searchItem.Desc, searchItem.Gains);
+            }
+
+            foreach (var linkItem in linkItems)
+            {
+                AddBrowserLinkHistoryItem(linkItem.Desc, linkItem.CanNavigate, true);
             }
         }
 
@@ -142,9 +164,9 @@ namespace LD58.UI
         }
 
         [Button]
-        public void AddBrowserLinkHistoryItem(string history, bool canNavigate)
+        public void AddBrowserLinkHistoryItem(string history, bool canNavigate, bool init = false)
         {
-            if (!AcceptedLinkValues.Contains(history)) return;
+            if (!AcceptedLinkValues.Contains(history) && !init) return;
             if (_linkItems.Any(item => item.Desc == history)) return;
 
             _linkDropdown.options.Add(new Dropdown.OptionData
@@ -181,7 +203,8 @@ namespace LD58.UI
         {
             _linkDropdown.options.Clear();
             _searchDropdown.options.Clear();
-            _searchDropdown.onValueChanged.RemoveAllListeners();
+            _linkItems.Clear();
+            _valuePairs.Clear();
         }
     }
 }
