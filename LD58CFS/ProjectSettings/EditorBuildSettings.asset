@@ -24,8 +24,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Level5.unity
     guid: 485890161b0895f46a3e3fff2fd7d2f2
   - enabled: 1
-    path: Assets/Scenes/Manga/Part1_2.unity
+    path: Assets/Scenes/MangaUse/Part1_2.unity
     guid: 020371eab63f3b44d80c577c947f4b74
+  - enabled: 1
+    path: Assets/Scenes/MangaUse/Part3_4.unity
+    guid: 2c8ae9e009f0a6d4faed131884f07a6c
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: e0bf53d60845e5b4c9f7edfd53b1aecd, type: 2}
   m_UseUCBPForAssetBundles: 0
