@@ -16,8 +16,7 @@ namespace LD58.UI
     {
         [SerializeField] private Image _image;
         [SerializeField] private Vector2 _bounds = new(800, 600);
-
-      
+        
         public override void OnFocus()
         {
             base.OnFocus();

@@ -36,6 +36,21 @@ namespace LD58.UI.CommandBoard
 #endif
         }
 
+        public void SetCommandData(CommandData commandData)
+        {
+            Clear();
+            _commandData = commandData;
+            foreach (var cmd in commandData.Commands)
+            {
+                AddCommand(cmd.CommandName);
+            }
+        }
+
+        public void Clear()
+        {
+            _content.DestroyChild();
+        }
+
         [Button]
         public CommandBoardItem AddCommand(string command)
         {
