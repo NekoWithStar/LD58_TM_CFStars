@@ -217,8 +217,7 @@ namespace LD58.Util
             {
                 foreach (var jsonLangBlock in jsonDef.output.languageBlocks)
                 {
-                    Debug.Log($"[JSON Parser] Parsing language block: language='{jsonLangBlock.language}', case='{jsonLangBlock.@case}'");
-                    
+
                     var langBlock = new LanguageBlock
                     {
                         Language = jsonLangBlock.language,

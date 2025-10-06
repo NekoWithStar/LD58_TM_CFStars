@@ -334,18 +334,22 @@
           {
             "type": "normal",
             "text": "",
+            "delay": 0.5
+          },
+          {
+            "type": "normal",
+            "text": "<color=cyan>[TRANSITION] Accessing military infrastructure...</color>",
             "delay": 0.3
           },
           {
             "type": "normal",
-            "text": "<color=cyan>Mission Accomplished! Thanks to GuguGaga's backdoor, you now have full access to the military infrastructure.</color>",
+            "text": "$$wait(1.5)",
             "delay": 0
           },
           {
             "type": "normal",
-            "text": "",
-            "delay": 2,
-            "sceneName": "$$scene($TargetSceneName)"
+            "text": "$$scene($TargetSceneName)",
+            "delay": 0
           }
         ]
       },
@@ -581,18 +585,22 @@
           {
             "type": "normal",
             "text": "",
+            "delay": 0.5
+          },
+          {
+            "type": "normal",
+            "text": "<color=cyan>[转换] 正在访问军事基础设施...</color>",
             "delay": 0.3
           },
           {
             "type": "normal",
-            "text": "<color=cyan>连接完成！借助咕咕嘎嘎的后门，你现在拥有对军事基础设施的完全访问权限。</color>",
+            "text": "$$wait(1.5)",
             "delay": 0
           },
           {
             "type": "normal",
-            "text": "",
-            "delay": 2,
-            "sceneName": "$$scene($TargetSceneName)"
+            "text": "$$scene($TargetSceneName)",
+            "delay": 0
           }
         ]
       },
