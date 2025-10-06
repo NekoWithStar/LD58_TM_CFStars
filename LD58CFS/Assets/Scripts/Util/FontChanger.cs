@@ -15,7 +15,8 @@ namespace LD58.Util
 {
     public sealed class FontChanger : MonoBehaviour
     {
-        [SerializeField] private Font _font;
+        [SerializeField] private Font       _font;
+        [SerializeField] private GameObject _target;
 
         private void Awake()
         {
@@ -25,10 +26,19 @@ namespace LD58.Util
         [Button("替换所有字体")]
         private void ChangeFontInScene()
         {
-            foreach (var text in FindObjectsByType<Text>(FindObjectsSortMode.None))
+            if (!_target)
+                foreach (var text in FindObjectsByType<Text>(FindObjectsSortMode.None))
+                {
+                    text.font = _font;
+                    EditorUtility.SetDirty(text);
+                }
+            else
             {
-                text.font = _font;
-                EditorUtility.SetDirty(text);
+                foreach (var componentsInChild in _target.GetComponentsInChildren<Text>(true))
+                {
+                    componentsInChild.font = _font;
+                    EditorUtility.SetDirty(componentsInChild);
+                }
             }
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();

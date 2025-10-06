@@ -308,6 +308,7 @@ MonoBehaviour:
   Mask: {fileID: 3086330390749260867}
   _image: {fileID: 3943334533905096634}
   _bounds: {x: 642, y: 304}
+  _button: {fileID: 981534450639895775}
 --- !u!1 &3766630632628177359
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,8 +511,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 26
+    m_Font: {fileID: 12800000, guid: 297546ef92f06124e81280c2c8ddc810, type: 3}
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -631,10 +632,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2951530585880445634}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 405.33334, y: 304}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9113885396806701109
 CanvasRenderer:
