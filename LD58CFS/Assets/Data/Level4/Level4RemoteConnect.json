@@ -342,10 +342,10 @@
             "delay": 0
           },
           {
-            "type": "loadScene",
+            "type": "normal",
             "text": "",
             "delay": 2,
-            "sceneName": "$TargetSceneName"
+            "sceneName": "$$scene($TargetSceneName)"
           }
         ]
       },
@@ -589,10 +589,10 @@
             "delay": 0
           },
           {
-            "type": "loadScene",
+            "type": "normal",
             "text": "",
             "delay": 2,
-            "sceneName": "$TargetSceneName"
+            "sceneName": "$$scene($TargetSceneName)"
           }
         ]
       },
