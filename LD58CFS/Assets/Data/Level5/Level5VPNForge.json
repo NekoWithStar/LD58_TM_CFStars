@@ -623,17 +623,17 @@
           },
           {
             "type": "normal",
-            "text": "│  Network Segments: $NetworkSegments                    │",
+            "text": "│  Network Segments: $NetworkSegments                    ",
             "delay": 0.05
           },
           {
             "type": "normal",
-            "text": "│  Total Hosts: $TotalHosts                          │",
+            "text": "│  Total Hosts: $TotalHosts                          ",
             "delay": 0.05
           },
           {
             "type": "normal",
-            "text": "│  Critical Nodes: $CriticalNodes                       │",
+            "text": "│  Critical Nodes: $CriticalNodes                       ",
             "delay": 0.05
           },
           {
@@ -1120,17 +1120,17 @@
           },
           {
             "type": "normal",
-            "text": "│  网络段数: $NetworkSegments                           │",
+            "text": "│  网络段数: $NetworkSegments                           ",
             "delay": 0.05
           },
           {
             "type": "normal",
-            "text": "│  总主机数: $TotalHosts                             │",
+            "text": "│  总主机数: $TotalHosts                             ",
             "delay": 0.05
           },
           {
             "type": "normal",
-            "text": "│  关键节点: $CriticalNodes                             │",
+            "text": "│  关键节点: $CriticalNodes                             ",
             "delay": 0.05
           },
           {

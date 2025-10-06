@@ -5,23 +5,33 @@
       "name": "TargetServer",
       "type": "string",
       "accept": ["10.0.2.50", "10.0.2.51"]
+    },
+    {
+      "name": "VPNGateway",
+      "type": "string",
+      "accept": ["10.0.1.254"]
     }
   ],
   "cases": [
     {
       "name": "print_server_success",
       "parameterValues": {
-        "TargetServer": ["10.0.2.50"]
+        "TargetServer": ["10.0.2.50"],
+        "VPNGateway": ["10.0.1.254"]
       },
       "variables": {
         "TargetServer": "10.0.2.50",
+        "VPNGateway": "10.0.1.254",
         "ServerName": "PRINT-SRV-01",
         "OS": "Windows Server 2019",
         "USBPorts": "4",
         "PayloadSize": "2.4 MB",
         "InfectionVector": "Print Spooler Service",
         "NukeControlIP": "10.0.3.100",
-        "NukeControlName": "NUKE-CTRL-MAIN"
+        "NukeControlName": "NUKE-CTRL-MAIN",
+        "GatewayRoute": "10.0.1.254 → 10.0.2.0/24 → 10.0.2.50",
+        "EncryptionType": "AES-256-GCM",
+        "TunnelPort": "1194"
       }
     }
   ],
@@ -58,6 +68,136 @@
         "lineBlocks": [
           {
             "type": "normal",
+            "text": "[ESTABLISHING VPN TUNNEL CONNECTION]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Fake Gateway: $VPNGateway",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Encryption: $EncryptionType",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Tunnel Port: $TunnelPort",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.2,18,\"  ├── Initiating VPN handshake...\",\"  ├── Tunnel established\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[VPN TUNNEL ACTIVE]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Local Endpoint: 10.0.1.100:$TunnelPort",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Remote Endpoint: $VPNGateway:$TunnelPort",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Tunnel Interface: tun0",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── MTU: 1500 bytes",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Status: ESTABLISHED",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[NETWORK ROUTING ANALYSIS]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Route Path: $GatewayRoute",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.0,15,\"  ├── Mapping internal network...\",\"  ├── Print server subnet located\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[SUBNET TOPOLOGY - 10.0.2.0/24]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Gateway: 10.0.2.1 (Core Router)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── DNS: 10.0.2.2 (Already Compromised)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Print Servers: 10.0.2.50-51",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── File Servers: 10.0.2.60-62",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Active Hosts: 23",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
             "text": "[CONNECTING TO PRINT SERVER]",
             "delay": 0.2
           },
@@ -73,13 +213,53 @@
           },
           {
             "type": "normal",
+            "text": "> Access Vector: VPN Tunnel → SMB",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
             "text": "",
             "delay": 0.3
           },
           {
             "type": "normal",
-            "text": "$$progress(1.0,15,\"  ├── Authenticating...\",\"  ├── Connection established\",\"White\",\"Green\")",
+            "text": "$$progress(1.5,22,\"  ├── Authenticating via tunnel...\",\"  ├── SMB session established\",\"White\",\"Green\")",
             "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[SMB SESSION DETAILS]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Protocol: SMB 3.1.1",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Authentication: NTLM (Passed via VPN)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Session Key: 0x7F3A...8B2E (128-bit)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Shares Available: 5",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Privileges: Administrator",
+            "delay": 0.1
           },
           {
             "type": "normal",
@@ -94,6 +274,11 @@
           {
             "type": "normal",
             "text": "  ├── Service: Print Spooler (spoolsv.exe)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── PID: 1844",
             "delay": 0.1
           },
           {
@@ -113,7 +298,12 @@
           },
           {
             "type": "normal",
-            "text": "  └── Available Ports: $USBPorts",
+            "text": "  ├── Available Ports: $USBPorts",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Security: No USB filtering",
             "delay": 0.1
           },
           {
@@ -128,7 +318,7 @@
           },
           {
             "type": "normal",
-            "text": "> Payload Type: AutoRun Worm",
+            "text": "> Payload Type: AutoRun Worm + Air-Gap Bridge",
             "delay": 0.1
           },
           {
@@ -143,12 +333,62 @@
           },
           {
             "type": "normal",
+            "text": "> Target Chain: Print Server → USB → Air-Gapped System",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.8,28,\"  ├── Crafting malicious payload...\",\"  ├── Payload compiled\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[PAYLOAD COMPONENTS]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── autorun.inf (Trigger)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── setup.exe (Loader, 845 KB)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── driver.dll (Payload Core, 1.2 MB)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── config.dat (Encrypted C2 Config)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── usb_bridge.sys (Kernel Module, 380 KB)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
             "text": "",
             "delay": 0.2
           },
           {
             "type": "normal",
-            "text": "$$progress(1.5,25,\"  ├── Injecting payload into spooler...\",\"  ├── Payload activated\",\"White\",\"Green\")",
+            "text": "$$progress(1.5,25,\"  ├── Injecting into spooler service...\",\"  ├── Payload injected successfully\",\"White\",\"Green\")",
             "delay": 0
           },
           {
@@ -173,17 +413,27 @@
           },
           {
             "type": "normal",
-            "text": "  ├── Stealth Mode: Enabled",
+            "text": "  ├── Stealth Mode: Enabled (Rootkit Active)",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  ├── Persistence: Registry + Service",
+            "text": "  ├── Persistence: Registry + Service + MBR",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  └── Final Target: Air-Gapped Systems",
+            "text": "  ├── Anti-Detection: Polymorphic Code",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Propagation: Cross-Platform (Win/Linux)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Final Target: Air-Gapped Nuclear Systems",
             "delay": 0.1
           },
           {
@@ -198,6 +448,16 @@
           },
           {
             "type": "normal",
+            "text": "> Hook installed: USB Device Notification API",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Watching ports: USB1-4 (All monitored)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
             "text": "> Waiting for USB device insertion...",
             "delay": 0.1
           },
@@ -208,7 +468,62 @@
           },
           {
             "type": "normal",
-            "text": "$$progress(2.0,30,\"  ├── Detecting USB events...\",\"  ├── USB device connected: Kingston 32GB\",\"White\",\"Green\")",
+            "text": "$$progress(2.5,35,\"  ├── Detecting USB events...\",\"  ├── USB device connected!\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[USB DEVICE DETECTED]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Device: Kingston DataTraveler 32GB",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── VID/PID: 0x0951/0x1666",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Serial: 60A44C413E58BAE1180400F7",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── File System: NTFS",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Owner: maintenance_tech_07",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Access Level: Unrestricted",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Usage Pattern: Frequently used on air-gapped systems",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.8,28,\"  ├── Infecting USB device...\",\"  ├── Infection complete\",\"White\",\"Green\")",
             "delay": 0
           },
           {
@@ -223,42 +538,32 @@
           },
           {
             "type": "normal",
-            "text": "  ├── Device: Kingston DataTraveler 32GB",
+            "text": "  ├── Files Infected: 12",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  ├── Owner: maintenance_tech_07",
+            "text": "  ├── Core Payload: autorun.inf, setup.exe, driver.dll",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  ├── Files Infected: 8",
+            "text": "  ├── Hidden Files: config.dat, .usb_bridge (Hidden+System)",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  ├── Infected Files: autorun.inf, setup.exe, driver.dll",
+            "text": "  ├── Code Signature: Spoofed (Microsoft Corporation)",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  └── Detection Rate: 0% (Fully Undetectable)",
+            "text": "  ├── Detection Rate: 0/67 AV Engines",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "",
-            "delay": 0.5
-          },
-          {
-            "type": "normal",
-            "text": "[TRACKING INFECTED USB]",
-            "delay": 0.2
-          },
-          {
-            "type": "normal",
-            "text": "> USB movement detected...",
+            "text": "  └── Estimated Propagation: 3-5 air-gapped systems",
             "delay": 0.1
           },
           {
@@ -268,45 +573,12 @@
           },
           {
             "type": "normal",
-            "text": "  ├── 14:23:15 - USB disconnected from PRINT-SRV-01",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "  ├── 14:45:32 - USB connected to ADMIN-WORKSTATION-05",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "  ├── 15:12:08 - USB disconnected",
-            "delay": 0.1
-          },
-          {
-            "type": "clickable",
-            "text": "  └── 15:20:41 - <color=cyan>USB connected to $NukeControlIP ($NukeControlName)</color>",
-            "delay": 0.1,
-            "gain": {
-              "NukeControlIP": "10.0.3.100"
-            }
-          },
-          {
-            "type": "normal",
-            "text": "",
-            "delay": 0.5
-          },
-          {
-            "type": "normal",
-            "text": "<color=yellow>[CRITICAL ALERT] Payload executed on nuclear control system!</color>",
+            "text": "[PROPAGATION INTELLIGENCE]",
             "delay": 0.2
           },
           {
             "type": "normal",
-            "text": "<color=yellow>[INTELLIGENCE] Air-gapped barrier breached via infected USB</color>",
-            "delay": 0.2
-          },
-          {
-            "type": "normal",
-            "text": "<color=cyan>[HINT] Use Zero-Day exploit to gain control of the nuclear system</color>",
+            "text": "> Tracking maintenance technician movements...",
             "delay": 0.1
           },
           {
@@ -316,7 +588,67 @@
           },
           {
             "type": "normal",
-            "text": "<color=green>[SUCCESS] USB infection chain complete - Nuclear control system compromised</color>",
+            "text": "[PREDICTED TARGET SYSTEMS]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── PRIMARY: $NukeControlIP ($NukeControlName)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "      └── Air-Gapped Nuclear Control System",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  ├── SECONDARY: 10.0.3.101 (NUKE-BACKUP-01)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "      └── Backup Control Terminal",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  └── TERTIARY: 10.0.3.110-112 (Monitoring Stations)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "      └── Real-time Reactor Monitors",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[ALERT] USB bridge established to air-gapped zone</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[INTELLIGENCE] Payload will activate on next USB insertion to nuclear systems</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=cyan>[HINT] Use Zero-Day exploit to compromise nuclear control system</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[SUCCESS] USB infection deployed - Air-gap bridge active</color>",
             "delay": 0
           }
         ]
@@ -325,6 +657,136 @@
         "language": "chinese",
         "case": "print_server_success",
         "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[建立VPN隧道连接]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 假网关: $VPNGateway",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 加密方式: $EncryptionType",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 隧道端口: $TunnelPort",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.2,18,\"  ├── 启动VPN握手...\",\"  ├── 隧道已建立\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[VPN隧道激活]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 本地端点: 10.0.1.100:$TunnelPort",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 远程端点: $VPNGateway:$TunnelPort",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 隧道接口: tun0",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── MTU: 1500字节",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 状态: 已建立",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[网络路由分析]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 路由路径: $GatewayRoute",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.0,15,\"  ├── 映射内部网络...\",\"  ├── 打印服务器子网已定位\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[子网拓扑 - 10.0.2.0/24]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 网关: 10.0.2.1 (核心路由器)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── DNS: 10.0.2.2 (已沦陷)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 打印服务器: 10.0.2.50-51",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 文件服务器: 10.0.2.60-62",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 活动主机: 23",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
           {
             "type": "normal",
             "text": "[连接打印服务器]",
@@ -342,13 +804,53 @@
           },
           {
             "type": "normal",
+            "text": "> 访问向量: VPN隧道 → SMB",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
             "text": "",
             "delay": 0.3
           },
           {
             "type": "normal",
-            "text": "$$progress(1.0,15,\"  ├── 认证中...\",\"  ├── 连接已建立\",\"White\",\"Green\")",
+            "text": "$$progress(1.5,22,\"  ├── 通过隧道认证...\",\"  ├── SMB会话已建立\",\"White\",\"Green\")",
             "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[SMB会话详情]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 协议: SMB 3.1.1",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 认证: NTLM (通过VPN传递)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 会话密钥: 0x7F3A...8B2E (128位)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 可用共享: 5",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 权限: 管理员",
+            "delay": 0.1
           },
           {
             "type": "normal",
@@ -363,6 +865,11 @@
           {
             "type": "normal",
             "text": "  ├── 服务: 打印后台处理程序 (spoolsv.exe)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── PID: 1844",
             "delay": 0.1
           },
           {
@@ -382,7 +889,12 @@
           },
           {
             "type": "normal",
-            "text": "  └── 可用端口: $USBPorts",
+            "text": "  ├── 可用端口: $USBPorts",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 安全: 无USB过滤",
             "delay": 0.1
           },
           {
@@ -397,7 +909,7 @@
           },
           {
             "type": "normal",
-            "text": "> 载荷类型: 自动运行蠕虫",
+            "text": "> 载荷类型: 自动运行蠕虫 + 空气隙桥接",
             "delay": 0.1
           },
           {
@@ -412,12 +924,62 @@
           },
           {
             "type": "normal",
+            "text": "> 目标链: 打印服务器 → USB → 空气隔离系统",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.8,28,\"  ├── 制作恶意载荷...\",\"  ├── 载荷已编译\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[载荷组件]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── autorun.inf (触发器)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── setup.exe (加载器, 845 KB)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── driver.dll (载荷核心, 1.2 MB)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── config.dat (加密C2配置)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── usb_bridge.sys (内核模块, 380 KB)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
             "text": "",
             "delay": 0.2
           },
           {
             "type": "normal",
-            "text": "$$progress(1.5,25,\"  ├── 注入载荷到后台处理程序...\",\"  ├── 载荷已激活\",\"White\",\"Green\")",
+            "text": "$$progress(1.5,25,\"  ├── 注入后台处理程序服务...\",\"  ├── 载荷注入成功\",\"White\",\"Green\")",
             "delay": 0
           },
           {
@@ -442,17 +1004,27 @@
           },
           {
             "type": "normal",
-            "text": "  ├── 隐身模式: 已启用",
+            "text": "  ├── 隐身模式: 已启用 (Rootkit激活)",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  ├── 持久化: 注册表 + 服务",
+            "text": "  ├── 持久性: 注册表 + 服务 + MBR",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  └── 最终目标: 物理隔离系统",
+            "text": "  ├── 反检测: 多态代码",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 传播: 跨平台 (Win/Linux)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 最终目标: 空气隔离核武系统",
             "delay": 0.1
           },
           {
@@ -467,7 +1039,17 @@
           },
           {
             "type": "normal",
-            "text": "> 等待USB设备插入中...",
+            "text": "> 已安装钩子: USB设备通知API",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 监控端口: USB1-4 (全部监控)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 等待USB设备插入...",
             "delay": 0.1
           },
           {
@@ -477,7 +1059,62 @@
           },
           {
             "type": "normal",
-            "text": "$$progress(2.0,30,\"  ├── 检测USB事件中...\",\"  ├── USB设备已连接: 金士顿32GB\",\"White\",\"Green\")",
+            "text": "$$progress(2.5,35,\"  ├── 检测USB事件...\",\"  ├── USB设备已连接!\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[检测到USB设备]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 设备: 金士顿DataTraveler 32GB",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── VID/PID: 0x0951/0x1666",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 序列号: 60A44C413E58BAE1180400F7",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 文件系统: NTFS",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 所有者: maintenance_tech_07",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 访问级别: 无限制",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 使用模式: 频繁用于空气隔离系统",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.8,28,\"  ├── 感染USB设备...\",\"  ├── 感染完成\",\"White\",\"Green\")",
             "delay": 0
           },
           {
@@ -492,42 +1129,32 @@
           },
           {
             "type": "normal",
-            "text": "  ├── 设备: 金士顿 DataTraveler 32GB",
+            "text": "  ├── 感染文件数: 12",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  ├── 所有者: maintenance_tech_07",
+            "text": "  ├── 核心载荷: autorun.inf, setup.exe, driver.dll",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  ├── 已感染文件: 8个",
+            "text": "  ├── 隐藏文件: config.dat, .usb_bridge (隐藏+系统)",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  ├── 感染文件: autorun.inf, setup.exe, driver.dll",
+            "text": "  ├── 代码签名: 伪造 (微软公司)",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  └── 检测率: 0% (完全不可检测)",
+            "text": "  ├── 检测率: 0/67 杀毒引擎",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "",
-            "delay": 0.5
-          },
-          {
-            "type": "normal",
-            "text": "[追踪感染的USB]",
-            "delay": 0.2
-          },
-          {
-            "type": "normal",
-            "text": "> 检测到USB移动...",
+            "text": "  └── 预计传播: 3-5个空气隔离系统",
             "delay": 0.1
           },
           {
@@ -537,45 +1164,12 @@
           },
           {
             "type": "normal",
-            "text": "  ├── 14:23:15 - USB从PRINT-SRV-01断开",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "  ├── 14:45:32 - USB连接到ADMIN-WORKSTATION-05",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "  ├── 15:12:08 - USB断开",
-            "delay": 0.1
-          },
-          {
-            "type": "clickable",
-            "text": "  └── 15:20:41 - <color=cyan>USB连接到 $NukeControlIP ($NukeControlName)</color>",
-            "delay": 0.1,
-            "gain": {
-              "NukeControlIP": "10.0.3.100"
-            }
-          },
-          {
-            "type": "normal",
-            "text": "",
-            "delay": 0.5
-          },
-          {
-            "type": "normal",
-            "text": "<color=yellow>[严重警告] 载荷已在核弹控制系统执行!</color>",
+            "text": "[传播情报]",
             "delay": 0.2
           },
           {
             "type": "normal",
-            "text": "<color=yellow>[情报] 通过感染USB突破物理隔离屏障</color>",
-            "delay": 0.2
-          },
-          {
-            "type": "normal",
-            "text": "<color=cyan>[提示] 使用 Zero-Day 漏洞利用工具控制核弹系统</color>",
+            "text": "> 追踪维护技术员移动...",
             "delay": 0.1
           },
           {
@@ -585,24 +1179,38 @@
           },
           {
             "type": "normal",
-            "text": "<color=green>[成功] USB感染链完成 - 核弹控制系统已入侵</color>",
-            "delay": 0
-          }
-        ]
-      },
-      {
-        "language": "english",
-        "case": "default",
-        "lineBlocks": [
-          {
-            "type": "normal",
-            "text": "[CONNECTING TO SERVER]",
+            "text": "[预测目标系统]",
             "delay": 0.2
           },
           {
             "type": "normal",
-            "text": "> Target: $TargetServer",
+            "text": "  ├── 主要: $NukeControlIP ($NukeControlName)",
             "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "      └── 空气隔离核武控制系统",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 次要: 10.0.3.101 (NUKE-BACKUP-01)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "      └── 备份控制终端",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  └── 第三: 10.0.3.110-112 (监控站)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "      └── 实时反应堆监控器",
+            "delay": 0.05
           },
           {
             "type": "normal",
@@ -611,12 +1219,17 @@
           },
           {
             "type": "normal",
-            "text": "<color=red>[ERROR] Server not accessible or invalid target</color>",
+            "text": "<color=yellow>[警告] USB桥接已建立到空气隔离区</color>",
             "delay": 0.2
           },
           {
             "type": "normal",
-            "text": "<color=yellow>[HINT] Target the print server discovered from VPN-Forge</color>",
+            "text": "<color=yellow>[情报] 载荷将在下次插入核武系统时激活</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=cyan>[提示] 使用 Zero-Day 来入侵核武控制系统</color>",
             "delay": 0.1
           },
           {
@@ -626,48 +1239,7 @@
           },
           {
             "type": "normal",
-            "text": "<color=red>[FAILED] USB infection aborted</color>",
-            "delay": 0
-          }
-        ]
-      },
-      {
-        "language": "chinese",
-        "case": "default",
-        "lineBlocks": [
-          {
-            "type": "normal",
-            "text": "[连接服务器]",
-            "delay": 0.2
-          },
-          {
-            "type": "normal",
-            "text": "> 目标: $TargetServer",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "",
-            "delay": 0.3
-          },
-          {
-            "type": "normal",
-            "text": "<color=red>[错误] 服务器不可访问或目标无效</color>",
-            "delay": 0.2
-          },
-          {
-            "type": "normal",
-            "text": "<color=yellow>[提示] 瞄准从VPN-Forge发现的打印服务器</color>",
-            "delay": 0.1
-          },
-          {
-            "type": "normal",
-            "text": "",
-            "delay": 0.2
-          },
-          {
-            "type": "normal",
-            "text": "<color=red>[失败] USB感染已中止</color>",
+            "text": "<color=green>[成功] USB感染已部署 - 空气隙桥接激活</color>",
             "delay": 0
           }
         ]

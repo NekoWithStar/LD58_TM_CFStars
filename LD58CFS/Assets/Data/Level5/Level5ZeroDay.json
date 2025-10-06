@@ -50,6 +50,46 @@
             "type": "normal",
             "text": "══════════════════════════════════════════",
             "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[INIT] Synchronizing shadow uplink → SHA256($TargetIP) = $random64",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[AUTH] Spoofed credentials accepted · Trust level escalated",
+            "delay": 0.15
+          },
+          {
+            "type": "normal",
+            "text": "[SYNC] Air-gap breach tunnel established via quantum relay",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.2,18,\"  ├── Calibrating zero-day payload bus...\",\"  ├── Payload bus locked\",\"White\",\"Lime\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.25
+          },
+          {
+            "type": "normal",
+            "text": "[TRACELESS MODE] Kernel logging muted · Telemetry rerouted",
+            "delay": 0.15
+          },
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════",
+            "delay": 0.35
           }
         ]
       },
@@ -80,6 +120,101 @@
           {
             "type": "normal",
             "text": "> Network Status: Air-Gapped (Isolated)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Physical Security: Tier-4 Hardened Facility",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Radiation Shielding: 2.3m reinforced concrete",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.3,20,\"  ├── Establishing covert C2 channel...\",\"  ├── C2 tunnel encrypted (AES-256)\",\"White\",\"Cyan\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.25
+          },
+          {
+            "type": "normal",
+            "text": "[BINARY ANALYSIS PHASE]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.6,25,\"  ├── Disassembling target binary...\",\"  ├── Entry points mapped\",\"White\",\"Yellow\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Entropy scan: Non-packed (raw executable)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Import table: 47 functions analyzed",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── String artifacts: 1,203 discovered",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Code flow graph: 89 basic blocks identified",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Danger functions: strcpy(), memcpy(), sprintf() detected",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[ANTI-DEBUGGING DETECTION]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.4,22,\"  ├── Scanning for anti-analysis tricks...\",\"  ├── Countermeasures neutralized\",\"White\",\"Magenta\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  ├── IsDebuggerPresent(): Hooked & bypassed",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── PEB.BeingDebugged: Patched to 0x00",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── NtGlobalFlag: Sanitized",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Timing checks: Neutralized via TSC emulation",
             "delay": 0.1
           },
           {
@@ -139,7 +274,72 @@
           },
           {
             "type": "normal",
-            "text": "  └── Exploitability: High (No ASLR/DEP)",
+            "text": "  ├── Exploitability: High (No ASLR/DEP)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Crash Signature: 0xDEADC0DE",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Proof Artifact: nuke_ctrl_core.dmp (encrypted)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Mitigations: None (Legacy whitelist)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Attack Surface: TCP/7777 (internal)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Time-to-Exploit: 8.3 seconds (estimated)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[REAL-TIME MEMORY SCAN]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.7,26,\"  ├── Dumping process memory space...\",\"  ├── Memory regions mapped\",\"White\",\"Lime\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  ├── .text section: 0x00400000-0x0045F000 (RX)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── .data section: 0x00460000-0x00468000 (RW)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── .rdata section: 0x00469000-0x0046B000 (R)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Heap region: 0x00500000-0x00800000 (RW)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Stack region: 0x0012C000-0x00130000 (RW)",
             "delay": 0.1
           },
           {
@@ -169,8 +369,73 @@
           },
           {
             "type": "normal",
+            "text": "> Payload Entropy: 7.98 bits/byte (stealth)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Environmental Spoof: Maintenance downtime replay",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
             "text": "",
             "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[SANDBOX VALIDATION]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.6,24,\"  ├── Replaying exploit in isolated VM...\",\"  ├── Sandbox bypass confirmed\",\"White\",\"Cyan\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  └── Crash-free verification: Passed (5/5 iterations)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[KERNEL MODULE INJECTION PREP]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.5,23,\"  ├── Compiling rootkit module...\",\"  ├── Module signed with stolen cert\",\"White\",\"Red\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Driver signature: Microsoft Windows Hardware Compatibility",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Timestamp: Backdated to 2019-03-14",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Load priority: SYSTEM_START (0x01)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Hook targets: NtCreateFile, NtReadVirtualMemory",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
           },
           {
             "type": "normal",
@@ -199,7 +464,57 @@
           },
           {
             "type": "normal",
-            "text": "  └── ROP Gadgets: Located",
+            "text": "  ├── ROP Gadgets: Located",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── SEH chain: Corrupted at 0x0012FEB8",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Safe exception handler: Disabled",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.25
+          },
+          {
+            "type": "normal",
+            "text": "[GADGET CHAIN CONSTRUCTION]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.9,29,\"  ├── Searching for ROP gadgets...\",\"  ├── Chain constructed (12 gadgets)\",\"White\",\"Orange\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 0x7C801234: pop eax ; ret",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 0x7C801567: pop ebx ; ret",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 0x7C8018A3: xchg eax, esp ; ret",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 0x7C801D42: mov [eax], ebx ; ret",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 0x7C802F91: jmp esp (pivot point)",
             "delay": 0.1
           },
           {
@@ -216,6 +531,16 @@
             "type": "normal",
             "text": "",
             "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.0,16,\"  ├── Obfuscating shellcode traces...\",\"  ├── Obfuscation complete\",\"White\",\"Aqua\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.4,21,\"  ├── Encoding payload with XOR cipher...\",\"  ├── Payload polymorphic\",\"White\",\"Purple\")",
+            "delay": 0
           },
           {
             "type": "normal",
@@ -254,7 +579,77 @@
           },
           {
             "type": "normal",
+            "text": "  [Encrypted Beacon: 32 bytes]",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  [Anti-Forensics Capsule: 24 bytes]",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
             "text": "  [Return Address: 0x7C801234]",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[ATTACK VECTOR SIMULATION]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(2.0,30,\"  ├── Modeling defensive heuristics...\",\"  ├── No anomalies detected\",\"White\",\"Magenta\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Thermal signature spoof: In sync",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Network flow analysis: Normal pattern",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Behavioral detection: Evaded",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[ENCRYPTED CHANNEL ESTABLISHMENT]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.5,24,\"  ├── Generating session keys (RSA-4096)...\",\"  ├── Secure channel active\",\"White\",\"Cyan\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Cipher suite: TLS 1.3 + ChaCha20-Poly1305",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Perfect forward secrecy: Enabled",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Traffic obfuscation: Domain fronting active",
             "delay": 0.1
           },
           {
@@ -269,6 +664,11 @@
           },
           {
             "type": "normal",
+            "text": "> Transmission Path: Quantum Tunnel-4 (noise floor 0.4%)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
             "text": "> Triggering vulnerability...",
             "delay": 0.1
           },
@@ -279,8 +679,53 @@
           },
           {
             "type": "normal",
+            "text": "$$progress(0.8,12,\"  ├── Injecting packet stream...\",\"  ├── Packets delivered\",\"White\",\"Yellow\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
             "text": "$$progress(2.5,35,\"  ├── Sending malicious payload...\",\"  ├── Exploit successful!\",\"White\",\"Green\")",
             "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.2,22,\"  ├── Spoofing audit logs...\",\"  ├── Audit trail sanitized\",\"White\",\"Yellow\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.4
+          },
+          {
+            "type": "normal",
+            "text": "[SHELLCODE EXECUTION TRACE]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── EIP hijacked → 0x7C801234",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Stack pivot executed → ESP = 0x0012FE80",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Shellcode decryption → XOR key 0xDEADBEEF",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── VirtualProtect() → RWX permissions granted",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── CreateRemoteThread() → Reflective DLL injection",
+            "delay": 0.1
           },
           {
             "type": "normal",
@@ -309,7 +754,47 @@
           },
           {
             "type": "normal",
-            "text": "  └── Kernel Access: Granted",
+            "text": "  ├── Kernel Access: Granted",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Telemetry Cloak: Active",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[KERNEL-MODE ESCALATION]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.8,27,\"  ├── Loading kernel module...\",\"  ├── Rootkit installed\",\"White\",\"Red\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  ├── SSDT hooking: Complete (12 syscalls redirected)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── IRP dispatch table: Patched",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── File hiding: Active (13 artifacts cloaked)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Process hiding: PID masking enabled",
             "delay": 0.1
           },
           {
@@ -331,6 +816,26 @@
             "type": "normal",
             "text": "> Memory dump analysis in progress...",
             "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Command uplink disguised as status heartbeat",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Persistence implant staged (sleep 900s)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(2.1,32,\"  ├── Extracting critical data structures...\",\"  ├── Function table extracted\",\"White\",\"Cyan\")",
+            "delay": 0
           },
           {
             "type": "normal",
@@ -428,6 +933,101 @@
           },
           {
             "type": "normal",
+            "text": "> 物理安防: 4级加固设施",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 辐射屏蔽: 2.3米加固混凝土",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.3,20,\"  ├── 建立隐蔽C2通道...\",\"  ├── C2隧道已加密 (AES-256)\",\"White\",\"Cyan\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.25
+          },
+          {
+            "type": "normal",
+            "text": "[二进制分析阶段]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.6,25,\"  ├── 反汇编目标二进制...\",\"  ├── 入口点已映射\",\"White\",\"Yellow\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 熵值扫描: 未加壳 (原始可执行文件)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 导入表: 47个函数已分析",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 字符串特征: 发现1,203个",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 代码流图: 识别出89个基本块",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 危险函数: 检测到strcpy(), memcpy(), sprintf()",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[反调试检测]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.4,22,\"  ├── 扫描反分析技巧...\",\"  ├── 对抗措施已解除\",\"White\",\"Magenta\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  ├── IsDebuggerPresent(): 已hook并绕过",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── PEB.BeingDebugged: 已修补为0x00",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── NtGlobalFlag: 已清理",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 时序检查: 通过TSC模拟解除",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
             "text": "",
             "delay": 0.3
           },
@@ -483,7 +1083,72 @@
           },
           {
             "type": "normal",
-            "text": "  └── 可利用性: 高 (无ASLR/DEP)",
+            "text": "  ├── 可利用性: 高 (无ASLR/DEP)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 崩溃签名: 0xDEADC0DE",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 证据文件: nuke_ctrl_core.dmp (加密)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 缓解措施: 无 (遗留白名单)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 攻击面: TCP/7777 (内部)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 利用时间: 8.3秒 (估计)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[实时内存扫描]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.7,26,\"  ├── 转储进程内存空间...\",\"  ├── 内存区域已映射\",\"White\",\"Lime\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  ├── .text段: 0x00400000-0x0045F000 (RX)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── .data段: 0x00460000-0x00468000 (RW)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── .rdata段: 0x00469000-0x0046B000 (R)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 堆区域: 0x00500000-0x00800000 (RW)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 栈区域: 0x0012C000-0x00130000 (RW)",
             "delay": 0.1
           },
           {
@@ -513,8 +1178,73 @@
           },
           {
             "type": "normal",
+            "text": "> 载荷熵值: 7.98 bit/byte (隐匿)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 环境伪装: 维护停机重放",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
             "text": "",
             "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[沙盒验证]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.6,24,\"  ├── 在隔离虚拟机中复现漏洞...\",\"  ├── 沙盒绕过已确认\",\"White\",\"Cyan\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  └── 无崩溃验证: 通过 (5/5 次)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[内核模块注入准备]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.5,23,\"  ├── 编译rootkit模块...\",\"  ├── 模块已用窃取证书签名\",\"White\",\"Red\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 驱动签名: Microsoft Windows Hardware Compatibility",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 时间戳: 倒填至2019-03-14",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 加载优先级: SYSTEM_START (0x01)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Hook目标: NtCreateFile, NtReadVirtualMemory",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
           },
           {
             "type": "normal",
@@ -543,7 +1273,57 @@
           },
           {
             "type": "normal",
-            "text": "  └── ROP小工具: 已定位",
+            "text": "  ├── ROP小工具: 已定位",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── SEH链: 在0x0012FEB8处破坏",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 安全异常处理: 已禁用",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.25
+          },
+          {
+            "type": "normal",
+            "text": "[小工具链构建]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.9,29,\"  ├── 搜索ROP小工具...\",\"  ├── 链已构建 (12个小工具)\",\"White\",\"Orange\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 0x7C801234: pop eax ; ret",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 0x7C801567: pop ebx ; ret",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 0x7C8018A3: xchg eax, esp ; ret",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 0x7C801D42: mov [eax], ebx ; ret",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 0x7C802F91: jmp esp (枢轴点)",
             "delay": 0.1
           },
           {
@@ -560,6 +1340,16 @@
             "type": "normal",
             "text": "",
             "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.0,16,\"  ├── 混淆Shellcode特征...\",\"  ├── 混淆完成\",\"White\",\"Aqua\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.4,21,\"  ├── 使用XOR密码编码载荷...\",\"  ├── 载荷多态化\",\"White\",\"Purple\")",
+            "delay": 0
           },
           {
             "type": "normal",
@@ -598,7 +1388,77 @@
           },
           {
             "type": "normal",
+            "text": "  [加密信标: 32字节]",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  [反取证胶囊: 24字节]",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
             "text": "  [返回地址: 0x7C801234]",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[攻击向量模拟]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(2.0,30,\"  ├── 建模防御启发式...\",\"  ├── 未检测到异常\",\"White\",\"Magenta\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 热成像伪装: 已同步",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 网络流分析: 正常模式",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 行为检测: 已规避",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[加密通道建立]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.5,24,\"  ├── 生成会话密钥 (RSA-4096)...\",\"  ├── 安全通道已激活\",\"White\",\"Cyan\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 密码套件: TLS 1.3 + ChaCha20-Poly1305",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 完美前向保密: 已启用",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 流量混淆: 域前置激活",
             "delay": 0.1
           },
           {
@@ -613,6 +1473,11 @@
           },
           {
             "type": "normal",
+            "text": "> 传输通道: 量子隧道-4 (噪声底 0.4%)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
             "text": "> 触发漏洞中...",
             "delay": 0.1
           },
@@ -623,8 +1488,53 @@
           },
           {
             "type": "normal",
+            "text": "$$progress(0.8,12,\"  ├── 注入数据包流...\",\"  ├── 数据包已发送\",\"White\",\"Yellow\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
             "text": "$$progress(2.5,35,\"  ├── 发送恶意载荷中...\",\"  ├── 漏洞利用成功!\",\"White\",\"Green\")",
             "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.2,22,\"  ├── 伪造审计日志...\",\"  ├── 审计轨迹已清洗\",\"White\",\"Yellow\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.4
+          },
+          {
+            "type": "normal",
+            "text": "[Shellcode执行追踪]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── EIP劫持 → 0x7C801234",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 栈枢轴执行 → ESP = 0x0012FE80",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Shellcode解密 → XOR密钥 0xDEADBEEF",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── VirtualProtect() → 授予RWX权限",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── CreateRemoteThread() → 反射型DLL注入",
+            "delay": 0.1
           },
           {
             "type": "normal",
@@ -653,7 +1563,47 @@
           },
           {
             "type": "normal",
-            "text": "  └── 内核访问: 已授权",
+            "text": "  ├── 内核访问: 已授权",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 遥测隐身: 已激活",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[内核模式提权]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.8,27,\"  ├── 加载内核模块...\",\"  ├── Rootkit已安装\",\"White\",\"Red\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  ├── SSDT挂钩: 完成 (12个系统调用已重定向)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── IRP分发表: 已修补",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 文件隐藏: 激活 (13个伪装已隐藏)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 进程隐藏: PID伪装已启用",
             "delay": 0.1
           },
           {
@@ -675,6 +1625,26 @@
             "type": "normal",
             "text": "> 内存转储分析中...",
             "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 命令上行伪装为状态心跳",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 持久化植入已布置 (休眠900秒)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(2.1,32,\"  ├── 提取关键数据结构...\",\"  ├── 函数表已提取\",\"White\",\"Cyan\")",
+            "delay": 0
           },
           {
             "type": "normal",
