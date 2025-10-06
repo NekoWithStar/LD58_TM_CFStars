@@ -1,0 +1,985 @@
+{
+  "commandName": "VPN-Tool",
+  "parameters": [
+    {
+      "name": "TargetIP",
+      "type": "string",
+      "accept": ["199.16.156.6"]
+    }
+  ],
+  "cases": [
+    {
+      "name": "case1",
+      "parameterValues": {
+        "TargetIP": ["199.16.156.6"]
+      },
+      "variables": {
+        "Port": "8888",
+        "Protocol": "OpenVPN",
+        "Encryption": "AES-256-GCM",
+        "Handshake": "ECDHE-RSA-AES256-GCM-SHA384",
+        "SessionID": "0x7F3A9B2C",
+        "DestinationIP": "203.0.113.45",
+        "TargetPort": "8080",
+        "CatImageSize": "200KB",
+        "PDFFileName": "2025年度猫咪大赛参赛名单.pdf",
+        "Username": "AdminBBBB123"
+      }
+    }
+  ],
+  "output": {
+    "languageBlocks": [
+      {
+        "language": null,
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "BuBugBomb VPN Console v3.1.4",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "Session ID: VPN-$random6-BWIITER | Target: $TargetIP",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[CONNECTION ESTABLISHED]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Target IP: $TargetIP",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Port: $Port",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Protocol: $Protocol",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Encryption: $Encryption",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Handshake: $Handshake",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Session ID: $SessionID",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.8,10,\"  ├── Establishing VPN tunnel...\",\"  ├── VPN tunnel established at $time\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Tunnel interface: tun0",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── MTU: 1500 bytes",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Cipher: AES-256-GCM",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Compression: LZ4-v2",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[TRAFFIC MONITORING]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> monitor --protocol all --filter \"credential|login|password\"",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Listening on interface: tun0",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Capture filter: tcp port $TargetPort or udp",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Analysis mode: Deep packet inspection (DPI)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.2,15,\"  ├── Initializing packet capture...\",\"  ├── Packet capture initialized\",\"White\",\"Cyan\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.6,8,\"  ├── Decrypting traffic streams...\",\"  ├── Traffic decryption complete\",\"White\",\"Yellow\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[INTERCEPTED TRAFFIC LOG]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Total packets captured: 847",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Analyzed sessions: 23",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Matched patterns: 5",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Displaying relevant entries...",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=cyan>[",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-05 15:45:23\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"source_ip\": \"$TargetIP\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"destination_ip\": \"$DestinationIP\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"target_port\": \"$TargetPort\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"protocol\": \"HTTP\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"status\": \"Data Transfer\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"message\": \"Sent a very blurry cat photo, size approx. $CatImageSize\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-05 15:46:12\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"source_ip\": \"$TargetIP\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"destination_ip\": \"$DestinationIP\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"target_port\": \"$TargetPort\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"protocol\": \"HTTP\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"status\": \"Chat Message\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"message\": \"Just had lunch, it was leftover pizza from last time.\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-05 15:47:03\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"source_ip\": \"$TargetIP\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"destination_ip\": \"$DestinationIP\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"target_port\": \"$TargetPort\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"protocol\": \"HTTP\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"status\": \"File Transfer\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"message\": \"Uploaded a file named '$PDFFileName'\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-05 15:48:21\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"source_ip\": \"$TargetIP\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"destination_ip\": \"$DestinationIP\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"target_port\": \"$TargetPort\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"protocol\": \"HTTP\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"status\": \"Chat Message\",",
+            "delay": 0.05
+          },
+          {
+            "type": "clickable",
+            "text": "    \"message\": \"<color=red>I forgot my username again, do you remember it?</color>\"",
+            "delay": 0.05,
+            "gain": {
+              "ChatHint": "AdminBBBB123"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-05 15:48:32\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"source_ip\": \"$DestinationIP\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"destination_ip\": \"$TargetIP\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"target_port\": \"$TargetPort\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"protocol\": \"HTTP\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"status\": \"Chat Message\",",
+            "delay": 0.05
+          },
+          {
+            "type": "clickable",
+            "text": "    \"message\": \"<color=red>$Username, don't forget it next time.</color>\"",
+            "delay": 0.05,
+            "gain": {
+              "BwiiterUsername": "$Username"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "  }",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "]</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════════════",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[SUCCESS] Traffic analysis completed</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Credentials extracted: 1",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Sensitive data intercepted: 3 items",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Connection remains active (monitoring continues)",
+            "delay": 0.1
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[连接已建立]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 目标IP: $TargetIP",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 端口: $Port",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 协议: $Protocol",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 加密: $Encryption",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 握手: $Handshake",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 会话ID: $SessionID",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.8,10,\"  ├── 正在建立VPN隧道...\",\"  ├── VPN隧道已建立于 $time\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 隧道接口: tun0",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── MTU: 1500 字节",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 密码: AES-256-GCM",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 压缩: LZ4-v2",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[流量监控]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> monitor --protocol all --filter \"credential|login|password\"",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 监听接口: tun0",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 捕获过滤器: tcp port $TargetPort or udp",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 分析模式: 深度包检测 (DPI)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.2,15,\"  ├── 初始化数据包捕获...\",\"  ├── 数据包捕获已初始化\",\"White\",\"Cyan\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.6,8,\"  ├── 解密流量...\",\"  ├── 流量解密完成\",\"White\",\"Yellow\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[拦截流量日志]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 捕获总数据包: 847",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 已分析会话: 23",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 匹配模式: 5",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 显示相关条目...",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=cyan>[",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-05 15:45:23\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"source_ip\": \"$TargetIP\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"destination_ip\": \"$DestinationIP\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"target_port\": \"$TargetPort\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"protocol\": \"HTTP\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"status\": \"数据传输\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"message\": \"向外发送了一张非常模糊的猫咪照片，尺寸约为 $CatImageSize\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-05 15:46:12\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"source_ip\": \"$TargetIP\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"destination_ip\": \"$DestinationIP\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"target_port\": \"$TargetPort\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"protocol\": \"HTTP\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"status\": \"聊天消息\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"message\": \"刚刚吃了个午餐，居然是上次剩的披萨。\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-05 15:47:03\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"source_ip\": \"$TargetIP\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"destination_ip\": \"$DestinationIP\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"target_port\": \"$TargetPort\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"protocol\": \"HTTP\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"status\": \"文件传输\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"message\": \"上传了一个名为'$PDFFileName'的文件\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-05 15:48:21\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"source_ip\": \"$TargetIP\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"destination_ip\": \"$DestinationIP\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"target_port\": \"$TargetPort\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"protocol\": \"HTTP\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"status\": \"聊天消息\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"message\": \"我又忘记我的用户名了，你还记得吗?\"",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  },",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  {",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"timestamp\": \"2025-10-05 15:48:32\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"source_ip\": \"$DestinationIP\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"destination_ip\": \"$TargetIP\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"target_port\": \"$TargetPort\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"protocol\": \"HTTP\",",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "    \"status\": \"聊天消息\",",
+            "delay": 0.05
+          },
+          {
+            "type": "clickable",
+            "text": "    \"message\": \"<color=red>$Username，下次别再忘记了</color>\"",
+            "delay": 0.05,
+            "gain": {
+              "BwiiterUsername": "$Username"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "  }",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "]</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════════════",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[成功] 流量分析完成</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 提取凭据: 1",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 拦截敏感数据: 3 项",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 连接保持活跃 (继续监控中)",
+            "delay": 0.1
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "default",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[CONNECTION ATTEMPT]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Target: $TargetIP",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[ERROR] Connection failed: No VPN backdoor found at target IP</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[ERROR] Unable to establish VPN tunnel</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[HINT] Make sure you have deployed a backdoor to this IP first</color>",
+            "delay": 0.1
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "default",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[连接尝试]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 目标: $TargetIP",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[错误] 连接失败：目标IP未发现VPN后门</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[错误] 无法建立VPN隧道</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[提示] 确保你已先向此IP部署后门</color>",
+            "delay": 0.1
+          }
+        ]
+      }
+    ]
+  }
+}

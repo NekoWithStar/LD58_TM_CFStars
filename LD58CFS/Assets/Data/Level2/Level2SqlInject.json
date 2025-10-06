@@ -409,10 +409,10 @@
           },
           {
             "type": "clickable",
-            "text": "  \"subject\": \"<color=cyan>URGENT: Password Reset Required</color>\",",
+            "text": "  \"subject\": \"<color=cyan>ResetThePassword</color>\",",
             "delay": 0.05,
             "gain": {
-              "PhishingSubject": "URGENT: Password Reset Required"
+              "PhishingSubject": "ResetThePassword"
             }
           },
           {
@@ -688,7 +688,7 @@
           },
           {
             "type": "clickable",
-            "text": "  \"subject\": \"<color=cyan>紧急：需要重置密码</color>\",",
+            "text": "  \"subject\": \"<color=cyan>ResetThePassword</color>\",",
             "delay": 0.05,
             "gain": {
               "PhishingSubject": "ResetThePassword"
