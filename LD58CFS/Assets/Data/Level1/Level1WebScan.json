@@ -42,7 +42,7 @@
         "ErrorType": "DNS_RESOLUTION_FAILED",
         "ErrorCode": "0x00000404",
         "Suggestion": "This domain appears to be the phishing target, not the attack source. Consider scanning the infrastructure you control (e.g., email servers, databases).",
-        "CSuggestionChinese": "此域名似乎是钓鱼目标，而非攻击源。建议扫描你控制的基础设施（如邮件服务器、数据库）。"
+        "CSuggestionchinese": "此域名似乎是钓鱼目标，而非攻击源。建议扫描你控制的基础设施（如邮件服务器、数据库）。"
       }
     }
   ],
@@ -238,6 +238,11 @@
             "gain": {
               "BmailAdminPath": "$AvailablePath"
             }
+          },
+          {
+            "type": "normal",
+            "text": "<color=cyan>[Tip: Click the link to collect information]</color>",
+            "delay": 0.1
           },
           {
             "type": "normal",
@@ -441,6 +446,11 @@
             "gain": {
               "BmailAdminPath": "$AvailablePath"
             }
+          },
+          {
+            "type": "normal",
+            "text": "<color=cyan>[提示：点击可收集信息到白板]</color>",
+            "delay": 0.1
           },
           {
             "type": "normal",
@@ -677,7 +687,7 @@
           },
           {
             "type": "normal",
-            "text": "<color=yellow>[提示] $CSuggestionChinese</color>",
+            "text": "<color=yellow>[提示] $CSuggestionchinese</color>",
             "delay": 0.2
           },
           {
