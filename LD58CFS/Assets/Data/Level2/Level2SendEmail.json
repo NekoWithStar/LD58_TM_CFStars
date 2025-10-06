@@ -3,7 +3,7 @@
   "parameters": [
     { "name": "EmailSubject", "type": "string", "accept": ["ResetThePassword"] },
     { "name": "OriginalLink", "type": "string", "accept": ["http://bwiiter/reset", "youtube.com/watch?v=catnap101"] },
-    { "name": "TargetEmail", "type": "string", "accept": ["bwiiter_admin@bwiiter.com"] },
+    { "name": "TargetEmail", "type": "string", "accept": ["bwiiter_admin@Bmail.com"] },
     { "name": "SenderDomain", "type": "string", "accept": ["it_support@bmail.com", "bmail.com"] }
   ],
   "cases": [
@@ -12,7 +12,7 @@
       "parameterValues": {
         "EmailSubject": ["ResetThePassword"],
         "OriginalLink": ["http://bwiiter/reset"],
-        "TargetEmail": ["bwiiter_admin@bwiiter.com"],
+        "TargetEmail": ["bwiiter_admin@Bmail.com"],
         "SenderDomain": ["it_support@bmail.com"]
       },
       "variables": {
@@ -30,7 +30,7 @@
       "parameterValues": {
         "EmailSubject": ["ResetThePassword"],
         "OriginalLink": ["youtube.com/watch?v=catnap101"],
-        "TargetEmail": ["bwiiter_admin@bwiiter.com"],
+        "TargetEmail": ["bwiiter_admin@Bmail.com"],
         "SenderDomain": ["bmail.com"]
       },
       "variables": {
@@ -40,7 +40,7 @@
         "Subject": "URGENT: Password Reset Required",
         "CSubjectChinese": "紧急：需要重置密码",
         "ContentTemplate": "password_notification",
-        "ReplyFrom": "bwiiter_admin@bwiiter.com",
+        "ReplyFrom": "bwiiter_admin@Bmail.com",
         "ReplySubject": "什么意思？",
         "ReplySubjectEnglish": "What",
         "ReplyContent": "你们系统故障了？这可不是重置密码的通道...",
