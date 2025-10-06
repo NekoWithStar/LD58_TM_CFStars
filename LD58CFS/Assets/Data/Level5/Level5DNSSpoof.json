@@ -1,0 +1,478 @@
+{
+  "commandName": "DNS-Spoof",
+  "parameters": [
+    {
+      "name": "TargetDomain",
+      "type": "string",
+      "accept": ["base-internal.mil", "nuke-control.mil"]
+    },
+    {
+      "name": "FakeIP",
+      "type": "string",
+      "accept": ["114.514.191.810", "10.0.0.100"]
+    }
+  ],
+  "cases": [
+    {
+      "name": "dns_poison_success",
+      "parameterValues": {
+        "TargetDomain": ["base-internal.mil"],
+        "FakeIP": ["114.514.191.810"]
+      },
+      "variables": {
+        "TargetDomain": "base-internal.mil",
+        "FakeIP": "114.514.191.810",
+        "RealIP": "10.0.0.100",
+        "DNSServer": "10.0.0.53",
+        "CacheTime": "3600",
+        "VPNGatewayPath": "/vpn/gateway/config",
+        "TopologyPath": "/ops/network-topology.pdf"
+      }
+    }
+  ],
+  "output": {
+    "languageBlocks": [
+      {
+        "language": null,
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "BuBugBomb DNS Spoofing Tool v6.1.2",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "Session ID: DNS-$random6-SPOOF | Domain: $TargetDomain",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════",
+            "delay": 0.3
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "dns_poison_success",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[DNS POISONING ATTACK]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Target Domain: $TargetDomain",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> DNS Server: $DNSServer",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Original IP: $RealIP",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Spoofed IP: $FakeIP",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[INJECTING FAKE DNS RECORDS]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.5,25,\"  ├── Intercepting DNS queries...\",\"  ├── Cache poisoned successfully\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[DNS CACHE POISONED]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Record Type: A (IPv4 Address)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── TTL: $CacheTime seconds",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Priority: High",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Status: Active",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[TRAFFIC REDIRECTION ACTIVE]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> All requests to $TargetDomain now route to $FakeIP",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Fake server ready to intercept communications",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[INTERCEPTED RESOURCES]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Monitoring traffic to fake server...",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "clickable",
+            "text": "  ├── <color=cyan>$VPNGatewayPath</color>",
+            "delay": 0.1,
+            "gain": {
+              "VPNGatewayConfig": "/vpn/gateway/config"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "      └── VPN Gateway Configuration File",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.15
+          },
+          {
+            "type": "clickable",
+            "text": "  ├── <color=cyan>$TopologyPath</color>",
+            "delay": 0.1,
+            "gain": {
+              "NetworkTopology": "/ops/network-topology.pdf"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "      └── Military Base Network Topology (RESTRICTED)",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[ALERT] Network topology reveals VPN gateway architecture</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[SUCCESS] DNS poisoning active - Traffic redirected to attacker-controlled server</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "dns_poison_success",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[DNS投毒攻击]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 目标域名: $TargetDomain",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> DNS服务器: $DNSServer",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 原始IP: $RealIP",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 伪造IP: $FakeIP",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[注入伪造DNS记录]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.5,25,\"  ├── 拦截DNS查询中...\",\"  ├── 缓存投毒成功\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[DNS缓存已投毒]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 记录类型: A (IPv4地址)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── TTL: $CacheTime 秒",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 优先级: 高",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 状态: 活跃",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[流量重定向已激活]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 所有对 $TargetDomain 的请求现在路由到 $FakeIP",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 伪造服务器准备拦截通信",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[拦截的资源]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 监控伪造服务器流量中...",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "clickable",
+            "text": "  ├── <color=cyan>$VPNGatewayPath</color>",
+            "delay": 0.1,
+            "gain": {
+              "VPNGatewayConfig": "/vpn/gateway/config"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "      └── VPN网关配置文件",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.15
+          },
+          {
+            "type": "clickable",
+            "text": "  ├── <color=cyan>$TopologyPath</color>",
+            "delay": 0.1,
+            "gain": {
+              "NetworkTopology": "/ops/network-topology.pdf"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "      └── 军事基地网络拓扑图 (限制级)",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[警告] 网络拓扑图揭示了VPN网关架构</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[成功] DNS投毒已激活 - 流量已重定向到攻击者控制的服务器</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "default",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[DNS POISONING ATTACK]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Target Domain: $TargetDomain",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[ERROR] Invalid target domain or fake IP address</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[FAILED] DNS poisoning aborted</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "default",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[DNS投毒攻击]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 目标域名: $TargetDomain",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[错误] 无效的目标域名或伪造IP地址</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[失败] DNS投毒已中止</color>",
+            "delay": 0
+          }
+        ]
+      }
+    ]
+  }
+}

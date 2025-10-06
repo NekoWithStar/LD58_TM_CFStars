@@ -1,0 +1,721 @@
+{
+  "commandName": "Nuke-Control",
+  "parameters": [
+    {
+      "name": "CommandAddr",
+      "type": "string",
+      "accept": ["0x114514", "0x401000"]
+    }
+  ],
+  "cases": [
+    {
+      "name": "egg_launch_success",
+      "parameterValues": {
+        "CommandAddr": ["0x114514"]
+      },
+      "variables": {
+        "CommandAddr": "0x114514",
+        "SystemName": "NUKE-CTRL-MAIN",
+        "LaunchCode": "BROWN-EGG-100",
+        "EggCount": "100",
+        "TargetLocation": "Employee Cafeteria",
+        "CountdownTime": "10"
+      }
+    }
+  ],
+  "output": {
+    "languageBlocks": [
+      {
+        "language": null,
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "NUCLEAR CONTROL TERMINAL v1.0",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "CLASSIFIED - TOP SECRET - EYES ONLY",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════",
+            "delay": 0.3
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "egg_launch_success",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[SYSTEM ACCESS]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Executing command at address: $CommandAddr",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> System: $SystemName",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.0,15,\"  ├── Loading kernel module...\",\"  ├── Command interface ready\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.5
+          },
+          {
+            "type": "normal",
+            "text": "[AUTHENTICATION BYPASS]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Biometric Scan: <color=green>BYPASSED</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Two-Factor Auth: <color=green>BYPASSED</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Launch Keys: <color=green>BYPASSED</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Command Authorization: <color=green>BYPASSED</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.5
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[!] ALL SAFETY PROTOCOLS DISABLED [!]</color>",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[INTERPRETING COMMAND]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Analyzing command parameters...",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Launch Code: $LaunchCode",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Payload Type: <color=yellow>BROWN EGGS</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Quantity: $EggCount units",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Target: $TargetLocation",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Delivery Method: Precision Air Drop",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.5
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[ALERT] This is NOT a nuclear warhead!</color>",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[ALERT] System has been repurposed for egg delivery!</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.5
+          },
+          {
+            "type": "normal",
+            "text": "[INITIATING LAUNCH SEQUENCE]",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>COUNTDOWN INITIATED: T-$CountdownTime seconds</color>",
+            "delay": 0.5
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>T-10...</color>",
+            "delay": 1.0
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>T-9...</color>",
+            "delay": 1.0
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>T-8...</color>",
+            "delay": 1.0
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>T-7...</color>",
+            "delay": 1.0
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>T-6...</color>",
+            "delay": 1.0
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>T-5...</color>",
+            "delay": 1.0
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>T-4...</color>",
+            "delay": 1.0
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>T-3...</color>",
+            "delay": 1.0
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>T-2...</color>",
+            "delay": 1.0
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>T-1...</color>",
+            "delay": 1.0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.5
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>🥚 LAUNCH! 🥚</color>",
+            "delay": 0.5
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.5
+          },
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>🎉 BROWN EGG LAUNCH SUCCESSFUL! 🎉</color>",
+            "delay": 0.5
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=cyan>A total of 100 brown eggs have been successfully</color>",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=cyan>delivered to the employee cafeteria!</color>",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.5
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>Mission Status: COMPLETE</color>",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>Eggs Delivered: $EggCount / $EggCount</color>",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>Target Satisfaction: 100%</color>",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.5
+          },
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[GAME COMPLETE - REDIRECTING TO FINALE...]",
+            "delay": 1.0,
+            "sceneName": "$$scene(Part5)"
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "egg_launch_success",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[系统访问]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 在地址执行命令: $CommandAddr",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 系统: $SystemName",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.0,15,\"  ├── 加载内核模块中...\",\"  ├── 命令接口就绪\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.5
+          },
+          {
+            "type": "normal",
+            "text": "[认证绕过]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 生物识别扫描: <color=green>已绕过</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 双因素认证: <color=green>已绕过</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 发射钥匙: <color=green>已绕过</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 命令授权: <color=green>已绕过</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.5
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[!] 所有安全协议已禁用 [!]</color>",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[解析命令]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 分析命令参数中...",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 发射代码: $LaunchCode",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 载荷类型: <color=yellow>褐色鸡蛋</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 数量: $EggCount 个单位",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 目标: 员工食堂",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 投送方式: 精确空投",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.5
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[警告] 这不是核弹头!</color>",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[警告] 系统已被重新用于鸡蛋投送!</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.5
+          },
+          {
+            "type": "normal",
+            "text": "[启动发射序列]",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>倒计时已启动: T-$CountdownTime 秒</color>",
+            "delay": 0.5
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>T-10...</color>",
+            "delay": 1.0
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>T-9...</color>",
+            "delay": 1.0
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>T-8...</color>",
+            "delay": 1.0
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>T-7...</color>",
+            "delay": 1.0
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>T-6...</color>",
+            "delay": 1.0
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>T-5...</color>",
+            "delay": 1.0
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>T-4...</color>",
+            "delay": 1.0
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>T-3...</color>",
+            "delay": 1.0
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>T-2...</color>",
+            "delay": 1.0
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>T-1...</color>",
+            "delay": 1.0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.5
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>🥚 发射! 🥚</color>",
+            "delay": 0.5
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.5
+          },
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>🎉 褐蛋发射成功! 🎉</color>",
+            "delay": 0.5
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=cyan>一共发射了100个褐色的鸡蛋</color>",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=cyan>给员工食用!</color>",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.5
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>任务状态: 完成</color>",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>已投送鸡蛋: $EggCount / $EggCount</color>",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>目标满意度: 100%</color>",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.5
+          },
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[游戏完成 - 跳转到结局中...]",
+            "delay": 1.0,
+            "sceneName": "$$scene(Part5)"
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "default",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[SYSTEM ACCESS]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Attempting to execute command at: $CommandAddr",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[ERROR] Invalid command address</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[HINT] Use the Execute_Command address from Zero-Day exploit</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[FAILED] Command execution aborted</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "default",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[系统访问]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 尝试在以下地址执行命令: $CommandAddr",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[错误] 无效的命令地址</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[提示] 使用从Zero-Day漏洞利用获得的Execute_Command地址</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[失败] 命令执行已中止</color>",
+            "delay": 0
+          }
+        ]
+      }
+    ]
+  }
+}

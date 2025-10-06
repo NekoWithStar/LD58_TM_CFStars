@@ -57,7 +57,10 @@ namespace LD58.Util
         public class JsonLanguageBlock
         {
             public string language;
+            
+            [JsonProperty("case")]
             public string @case; // 可选，指定此语言块只在特定case下显示（支持 "default" 表示默认情况）
+            
             public List<JsonLineBlock> lineBlocks;
         }
 
@@ -78,7 +81,17 @@ namespace LD58.Util
             try
             {
                 var jsonText = File.ReadAllText(filePath);
-                var jsonDef = JsonConvert.DeserializeObject<JsonCommandDefinition>(jsonText);
+                
+                // 配置JSON反序列化设置，忽略大小写
+                var settings = new JsonSerializerSettings
+                {
+                    ContractResolver = new Newtonsoft.Json.Serialization.DefaultContractResolver
+                    {
+                        NamingStrategy = new Newtonsoft.Json.Serialization.CamelCaseNamingStrategy()
+                    }
+                };
+                
+                var jsonDef = JsonConvert.DeserializeObject<JsonCommandDefinition>(jsonText, settings);
 
                 if (jsonDef == null)
                 {
@@ -204,6 +217,8 @@ namespace LD58.Util
             {
                 foreach (var jsonLangBlock in jsonDef.output.languageBlocks)
                 {
+                    Debug.Log($"[JSON Parser] Parsing language block: language='{jsonLangBlock.language}', case='{jsonLangBlock.@case}'");
+                    
                     var langBlock = new LanguageBlock
                     {
                         Language = jsonLangBlock.language,
