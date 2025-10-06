@@ -2495,7 +2495,7 @@ GameObject:
   - component: {fileID: 499234720}
   - component: {fileID: 499234721}
   m_Layer: 5
-  m_Name: BK
+  m_Name: Desktop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3016,6 +3016,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &727529094 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4840797774511684933, guid: f471ffde24e36a6419d20bc531572370, type: 3}
+  m_PrefabInstance: {fileID: 618649240462077251}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70e01ff29a8f470aa55bad35035d9ba7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &814350964
 GameObject:
   m_ObjectHideFlags: 0
@@ -4950,6 +4961,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1626709490 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3818726639291589777, guid: f471ffde24e36a6419d20bc531572370, type: 3}
+  m_PrefabInstance: {fileID: 618649240462077251}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70e01ff29a8f470aa55bad35035d9ba7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1655986210
 GameObject:
   m_ObjectHideFlags: 0
@@ -5500,6 +5522,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
   m_VerticalFit: 2
+--- !u!1 &1886694067
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1886694068}
+  - component: {fileID: 1886694069}
+  m_Layer: 0
+  m_Name: SceneIniter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1886694068
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1886694067}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1886694069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1886694067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d944dcef9004edd81001c222529e562, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _levelDatas: {fileID: 11400000, guid: daff0bc80290c5a49ba45f2a4f75f580, type: 2}
+  LevelName: Level1
 --- !u!1 &1899721330
 GameObject:
   m_ObjectHideFlags: 0
@@ -5751,7 +5819,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _blackBoardItemPrefab: {fileID: 1401011961160465640, guid: 0bec223abbcfc2f4ca5a4c51a5d99a9e, type: 3}
   _content: {fileID: 1858524674}
-  _debug: 1
+  _debug: 0
 --- !u!1 &1935485520
 GameObject:
   m_ObjectHideFlags: 0
@@ -6661,45 +6729,53 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3818726639291589777, guid: f471ffde24e36a6419d20bc531572370, type: 3}
+      propertyPath: _passwordMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4043896749521612887, guid: f471ffde24e36a6419d20bc531572370, type: 3}
       propertyPath: m_Name
       value: Browser
       objectReference: {fileID: 0}
-    - target: {fileID: 4043896749521612887, guid: f471ffde24e36a6419d20bc531572370, type: 3}
-      propertyPath: m_IsActive
+    - target: {fileID: 6249705739417561369, guid: f471ffde24e36a6419d20bc531572370, type: 3}
+      propertyPath: _psdText
+      value: 
+      objectReference: {fileID: 1626709490}
+    - target: {fileID: 6249705739417561369, guid: f471ffde24e36a6419d20bc531572370, type: 3}
+      propertyPath: _accountText
+      value: 
+      objectReference: {fileID: 727529094}
+    - target: {fileID: 6316522113576899580, guid: f471ffde24e36a6419d20bc531572370, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6316522113576899580, guid: f471ffde24e36a6419d20bc531572370, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6316522113576899580, guid: f471ffde24e36a6419d20bc531572370, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6316522113576899580, guid: f471ffde24e36a6419d20bc531572370, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 42.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6316522113576899580, guid: f471ffde24e36a6419d20bc531572370, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -12.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7533145768641753303, guid: f471ffde24e36a6419d20bc531572370, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7533145768641753303, guid: f471ffde24e36a6419d20bc531572370, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7533145768641753303, guid: f471ffde24e36a6419d20bc531572370, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 12.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7533145768641753303, guid: f471ffde24e36a6419d20bc531572370, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -12.5
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7763,3 +7839,4 @@ SceneRoots:
   - {fileID: 705507995}
   - {fileID: 1173043160}
   - {fileID: 167369886}
+  - {fileID: 1886694068}

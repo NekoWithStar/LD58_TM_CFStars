@@ -20,6 +20,16 @@ namespace LD58.UI.CommandBoard
     {
         public List<CommandDefinition> Commands = new();
 #if UNITY_EDITOR
+        [InlineButton("读取所有文件")]
+        public List<TextAsset> TextAssets = new();
+
+        private void 读取所有文件()
+        {
+            foreach (var textAsset in TextAssets)
+            {
+                ReadFromFile(textAsset);
+            }
+        }
         [Button]
         public void ReadFromFile(TextAsset textAsset)
         {

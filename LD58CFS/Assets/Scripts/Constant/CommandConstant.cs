@@ -10,6 +10,6 @@ namespace LD58.Constant
     public static class CommandConstant
     {
         public const string WEB_SCAN = "Web-Scan";
-        public const string SEND_EMAIL = "Send-Email";
+        public const string SEND_MAIL = "Send-Mail";
     }
 }

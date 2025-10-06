@@ -114,6 +114,7 @@ namespace LD58.UI
 
         public void StartListeningForCommand(CommandDefinition command)
         {
+            Switch(true);
             if (ListenForCommand)
             {
                 Recall();

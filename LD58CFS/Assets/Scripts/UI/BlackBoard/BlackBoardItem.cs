@@ -5,6 +5,7 @@
 
 #endregion
 
+using DG.Tweening;
 using QFramework;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -22,11 +23,22 @@ namespace LD58.UI
         
         private Vector2 _offset;
         private Vector2 _startPos;
-        private Canvas  _canvas;
 
+        private Canvas _canvas
+        {
+            get
+            {
+                if (!_canvasInst)
+                {
+                    _canvasInst = FindFirstObjectByType<Canvas>();
+                }
+
+                return _canvasInst;
+            }
+        }
+        private Canvas _canvasInst;
         private void Awake()
         {
-            _canvas           = FindFirstObjectByType<Canvas>();
             _dragText.enabled = false;
         }
         
@@ -34,6 +46,8 @@ namespace LD58.UI
         {
             _text.text     = text;
             _dragText.text = text;
+            _text.transform.DOShakeScale(0.2f, new Vector3(0.2f,     0.2f));
+            _dragText.transform.DOShakeScale(0.2f, new Vector3(0.2f, 0.2f));
         }
 
         void IBeginDragHandler.OnBeginDrag(PointerEventData eventData)

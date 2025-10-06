@@ -8,6 +8,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using DG.Tweening;
 using EggFramework.Util;
 using LD58.UI.CommandBoard;
 using LD58.Util;
@@ -29,9 +30,9 @@ namespace LD58.UI
         public                   string     Text          => _text.text;
         [ShowInInspector] public bool       DisplayCursor { get; set; } = false;
 
-        public bool             DisplayLeft  { get; set; } = false;
+        public bool      DisplayLeft  { get; set; } = false;
         public Parameter Parameter    { get; set; }
-        public bool             PendingInput { get; set; } = false;
+        public bool      PendingInput { get; set; } = false;
 
         public string Key   => Parameter.Name;
         public string Value => Parameter.GetValue();
@@ -39,6 +40,8 @@ namespace LD58.UI
         public readonly Dictionary<string, string> BlackBoardItems = new();
 
         public List<string> AcceptedBlackBoardKey => Parameter.Accept;
+
+        private bool _showReject;
 
         private void Awake()
         {
@@ -79,7 +82,8 @@ namespace LD58.UI
 
             if (PendingInput)
             {
-                _text.SetAlpha(Time.time % 1);
+                if (!_showReject)
+                    _text.SetAlpha(Time.time % 1);
             }
         }
 
@@ -95,13 +99,25 @@ namespace LD58.UI
                     if (PendingInput && Selection.SelectedBlackBoardItem)
                     {
                         if (AcceptedBlackBoardKey.Count == 0 ||
-                            AcceptedBlackBoardKey.Contains(Selection.SelectedBlackBoardItem.Key))
+                            AcceptedBlackBoardKey.Contains(Selection.SelectedBlackBoardItem.Value))
                         {
                             PendingInput    = false;
                             Parameter.Value = Selection.SelectedBlackBoardItem.Value;
                             _text.color     = Color.white;
                             _text.text = _text.text.Replace("_____",
                                 $"{Parameter.GetValue()} `");
+                        }
+                        else
+                        {
+                            _showReject = true;
+                            var originalColor = _text.color;
+                            _text.DOColor(Color.red, 0.05f)
+                                .SetLoops(3 * 2, LoopType.Yoyo) // Yoyo: 红↔原色交替
+                                .OnComplete(() =>
+                                {
+                                    _text.color = originalColor; // 确保最终颜色正确（防浮点误差）
+                                    _showReject = false;
+                                });
                         }
                     }
                 });

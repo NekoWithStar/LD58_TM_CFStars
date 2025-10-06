@@ -31,9 +31,24 @@ namespace LD58.UI.CommandBoard
             if (_debug)
             {
                 AddCommand(CommandConstant.WEB_SCAN);
-                AddCommand(CommandConstant.SEND_EMAIL);
+                AddCommand(CommandConstant.SEND_MAIL);
             }
 #endif
+        }
+
+        public void SetCommandData(CommandData commandData)
+        {
+            Clear();
+            _commandData = commandData;
+            foreach (var cmd in commandData.Commands)
+            {
+                AddCommand(cmd.CommandName);
+            }
+        }
+
+        public void Clear()
+        {
+            _content.DestroyChild();
         }
 
         [Button]
