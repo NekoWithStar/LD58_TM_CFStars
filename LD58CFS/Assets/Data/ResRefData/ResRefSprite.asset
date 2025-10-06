@@ -1,0 +1,263 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cc718a00db0dba49b01189d33c94ddc, type: 3}
+  m_Name: ResRefSprite
+  m_EditorClassIdentifier: 
+  ResRefs:
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/v2/Capsule.png
+    Data: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconinviteusers.png
+    Data: {fileID: 21300000, guid: 3094096a150921c409ef35579f2ada0f, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconbranchpendingchanges.png
+    Data: {fileID: 21300000, guid: 306d91ec6eccbf649802fb755f877c6b, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconinviteusers.png
+    Data: {fileID: 21300000, guid: 40e23f4f2fddc724db517c63f4d8990d, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconretainedoverlay@2x.png
+    Data: {fileID: 21300000, guid: a01087ce1455c7e4c8f2410c26afcfd2, type: 3}
+  - Name: Assets/Arts/Manga/P3B3.png
+    Data: {fileID: -1811750680, guid: c098c133e24cdd743a9748028b3bdda1, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconplasticnotifypendingchanges@2x.png
+    Data: {fileID: 21300000, guid: f0c047e73e3b41341822a9e31da81877, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/v2/Square.png
+    Data: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  - Name: Assets/Arts/UI/photos/photo_WorkpaperCN.png
+    Data: {fileID: 21300000, guid: 41030fbee73e1604284dc481a0badbc4, type: 3}
+  - Name: Assets/Arts/UI/Button/Button_StateBar.png
+    Data: {fileID: 21300000, guid: 511d02e6dafc54c43b0f278bbc3e3ea2, type: 3}
+  - Name: Assets/Arts/Manga/P2C.png
+    Data: {fileID: 396649599, guid: 511f8c7bd20f9a542ae9978d3f1e3a21, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/9-Sliced.png
+    Data: {fileID: -5177388603050735206, guid: 71ebafeef3c03457483266a33ab2b270, type: 3}
+  - Name: Assets/Arts/UI/Button/Button_ScrollBar.png
+    Data: {fileID: 21300000, guid: a1ec5b494c660fc418d870e1d8b477fc, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconshelve.png
+    Data: {fileID: 21300000, guid: b1b37c2733b68854ba004ff712ef849f, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconbranch.png
+    Data: {fileID: 21300000, guid: c1516142c0a669b42aecce30a3459017, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconclipboard@2x.png
+    Data: {fileID: 21300000, guid: c115023c6a2060d4da6a7684bd40c5c0, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconlabel.png
+    Data: {fileID: 21300000, guid: e1e64e28e7631534d8408668bcb82502, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconclouddriveview.png
+    Data: {fileID: 21300000, guid: 229870d327005574fb840c2dd8050ec6, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconlabel.png
+    Data: {fileID: 21300000, guid: 42540fa3b3cef1340bebdf077d0e2030, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconbranch@2x.png
+    Data: {fileID: 21300000, guid: 425970578f3342a43b40545d1ac8a25d, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconbranchincomingchanges@2x.png
+    Data: {fileID: 21300000, guid: 520b85b72549e7546b2984ee24dbfb74, type: 3}
+  - Name: Assets/Arts/UI/THE Internet CollectorBG.png
+    Data: {fileID: 21300000, guid: 62db39027aee4bc43a428ef3ee05e264, type: 3}
+  - Name: Assets/Arts/Manga/1-C.png
+    Data: {fileID: 21300000, guid: 72cfb6197e2a8a04eac0b8f80068f750, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconshelve@2x.png
+    Data: {fileID: 21300000, guid: 9264df9de832d7f4bb90a1d0c31d8343, type: 3}
+  - Name: Assets/Arts/UI/photos/Photo_MyGoodCat.png
+    Data: {fileID: 21300000, guid: 0394cded5354a7e439396983761088bf, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconbranchpendingchanges@2x.png
+    Data: {fileID: 21300000, guid: 23f46651bbbc1834da4968f99466dfbe, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconinfobellnotification@2x.png
+    Data: {fileID: 21300000, guid: 830164d71b9d60c40b606822b957d10b, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconretainedoverlay@2x.png
+    Data: {fileID: 21300000, guid: c34cd61ed96ff9a40a54e159467c5155, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconcurrentbranch.png
+    Data: {fileID: 21300000, guid: d30af1e364af1fc48be2ff2dcb0d4724, type: 3}
+  - Name: Assets/Arts/UI/Button/Button12_Only32_1px.png
+    Data: {fileID: -1134550029, guid: f380516ff0f5edc4dac35889d8cc6856, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconplasticnotifypendingchanges.png
+    Data: {fileID: 21300000, guid: f3e2797165e71b443bae6264899b89d6, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconinfobellnotification.png
+    Data: {fileID: 21300000, guid: f38e832edef3ab648bcc2ab5dfa2906d, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/IsometricDiamond.png
+    Data: {fileID: 3625043607559282579, guid: 045b15ec09bba42448d89db77fa6f20a, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/CapsuleWithBorder.png
+    Data: {fileID: -9095717837082945937, guid: 34587324d412940a79d530020c957dc0, type: 3}
+  - Name: Assets/Arts/Manga/1-A.png
+    Data: {fileID: 21300000, guid: 749b911f0ef74f04b973b487dd3f7eb0, type: 3}
+  - Name: Assets/Arts/Manga/P3B1.png
+    Data: {fileID: 1416825647, guid: 94fc75281ad6a3243b2e857da8268e00, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconinviteusers@2x.png
+    Data: {fileID: 21300000, guid: b43651fb085b38445ade3f9de3ab0636, type: 3}
+  - Name: Assets/Arts/UI/Button/Button_Load1.png
+    Data: {fileID: -368680721, guid: c4f80c8d0a440c241acc7ed7d2094337, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconcurrentbranch@2x.png
+    Data: {fileID: 21300000, guid: c48b8bcda45b63442a7a7c7244c84635, type: 3}
+  - Name: Assets/Arts/UI/win_frame_Unselect.png
+    Data: {fileID: 21300000, guid: d4d894fe61700bd4ab5d1efd0b84868a, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconbrex.png
+    Data: {fileID: 21300000, guid: d44f9c7a4044e1845b5b3627ba32fb10, type: 3}
+  - Name: Assets/Arts/UI/Button/IconPart3.png
+    Data: {fileID: -356253933, guid: e4d06ca3318b4e84ab6cc8818195c799, type: 3}
+  - Name: Assets/Arts/UI/photos/photo_WorkpaperEN.png
+    Data: {fileID: 21300000, guid: f4cba39b3c0e70d40890dbb82cb289d8, type: 3}
+  - Name: Assets/Arts/UI/THE Internet Collector.png
+    Data: {fileID: 21300000, guid: 157e2b7af21607648a9ee100583f08cb, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconclouddriveview@2x.png
+    Data: {fileID: 21300000, guid: 259fe6e49c74eb143a9fc88f6bd3f050, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconlock@2x.png
+    Data: {fileID: 21300000, guid: 55747841a2e3b47dab36dc8d5e0dc4df, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/v2/Triangle.png
+    Data: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  - Name: Assets/Arts/Manga/P5B2.png
+    Data: {fileID: -1585610706, guid: b5a069cb43c3dc0468ebfe613cb55b8d, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconbranchincomingchanges.png
+    Data: {fileID: 21300000, guid: 167037179f5c4024194048d372412a7b, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/HexagonFlatTop.png
+    Data: {fileID: 2747690628134850419, guid: 16037dbd798344f57a526d53d48f5ead, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconbranch@2x.png
+    Data: {fileID: 21300000, guid: 267a89f787a621e4290fbff7a5442750, type: 3}
+  - Name: Assets/Arts/Manga/1-B.png
+    Data: {fileID: 21300000, guid: 46ddcea6a7434b5468c27de38df6f6e7, type: 3}
+  - Name: Assets/Arts/Manga/1-D.png
+    Data: {fileID: 21300000, guid: 8683c6d0b02b7af4db253206d9dcc6b5, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/v2/HexagonFlatTop.png
+    Data: {fileID: -712631045867808456, guid: b670ab75dde984907b8570040daa08c5, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconplasticnotifypendingchanges.png
+    Data: {fileID: 21300000, guid: e64bde76852ee8247b40b50ef8880632, type: 3}
+  - Name: Assets/Arts/Manga/P2reB1.png
+    Data: {fileID: 1588783850, guid: f671a324350df8e4fa2ff7f09637f4b5, type: 3}
+  - Name: Assets/Arts/Manga/P4A.png
+    Data: {fileID: 21300000, guid: f6697054a15c0154aa2c70ae924f8083, type: 3}
+  - Name: Assets/Arts/Manga/P3A1.png
+    Data: {fileID: -702356803, guid: 171146cbd901d344cbc97c0884481314, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconbranchpendingchanges@2x.png
+    Data: {fileID: 21300000, guid: 579057474a3c9544e819619b633c9b23, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconpackageupdateavailable@2x.png
+    Data: {fileID: 21300000, guid: 67e680da36c60e245ab0176daa656da5, type: 3}
+  - Name: Assets/Arts/UI/photos/BackGroundPure1.png
+    Data: {fileID: -1503343158, guid: 77dae59a7d9eb074fb990f869ce9de15, type: 3}
+  - Name: Assets/Arts/UI/szr2.jpg
+    Data: {fileID: 926787750, guid: 8751003fe3f486844871881eb414c6bb, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconbrex.png
+    Data: {fileID: 21300000, guid: 87480bc179519ff4da25283c61c2573b, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/CircleMask.png
+    Data: {fileID: 8177471321811730583, guid: 87aaca0a643d54397ba969dab4fc8875, type: 3}
+  - Name: Assets/Arts/UI/photos/BackGround1.png
+    Data: {fileID: 21300000, guid: c7942975a2c50b34faadcf29f52f6dfb, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconlock.png
+    Data: {fileID: 21300000, guid: f7adc828ed70a485db62c459bdf09525, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/Square.png
+    Data: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/v2/9Sliced.png
+    Data: {fileID: -5177388603050735206, guid: 8884154dfe85442a3a3578be807dbcdf, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconbranchpendingchanges.png
+    Data: {fileID: 21300000, guid: 9884e4b094556b844b543b5e169bf7b7, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconbranch.png
+    Data: {fileID: 21300000, guid: 981b1c6358520f245a69c070270eca96, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/v2/Circle.png
+    Data: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconlabel@2x.png
+    Data: {fileID: 21300000, guid: c8396bd7e257d6b4b8d1d72fdb7a2684, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconpackageupdateavailable@2x.png
+    Data: {fileID: 21300000, guid: 19b06b801c204604290761788cf6e125, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/v2/IsometricDiamond.png
+    Data: {fileID: 3625043607559282579, guid: 19fb86013d8c24d6cb8410c0aadf30fa, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconshelve.png
+    Data: {fileID: 21300000, guid: 292bae633fda01e41b8847fad37495c2, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconclouddriveview@2x.png
+    Data: {fileID: 21300000, guid: 59eedc7f076ac5749993ec0e94b87af3, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconshelve@2x.png
+    Data: {fileID: 21300000, guid: 695fbddd7238dc94c8f102d9191c2886, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/HexagonFlatTopWithBorder.png
+    Data: {fileID: 2747690628134850419, guid: a9716c16a44a94eed9b5c90fbf4d9bdd, type: 3}
+  - Name: Assets/Arts/Manga/P2A.png
+    Data: {fileID: 197083691, guid: c9b81a3945c668c4c86d649cc475ec62, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconpackageupdateavailable.png
+    Data: {fileID: 21300000, guid: e9cc02852345307449379a9a877679da, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconcurrentbranch.png
+    Data: {fileID: 21300000, guid: 0a02e43184c7e9c4c9c59b601100b705, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/hideversioncontrol.png
+    Data: {fileID: 21300000, guid: 0a08fa9ec51507e488400cee024073a7, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/CircleWithBorder.png
+    Data: {fileID: -2413806693520163455, guid: 4adeaf2d2b1c7417e89f026626d8264f, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/v2/HexagonPointTop.png
+    Data: {fileID: -2135585597343286014, guid: 5aa8b770bc43046bc8d993d0d5b7f4a5, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconlock@2x.png
+    Data: {fileID: 21300000, guid: ba96945b6a1b743579931a87e98041fe, type: 3}
+  - Name: Assets/Arts/Manga/P3B2.png
+    Data: {fileID: 1981306058, guid: ba4a801c0cdedbc48ae8a30fab76589c, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconinfobellnotification.png
+    Data: {fileID: 21300000, guid: ca9343b72095cb846be99d76d069dfc0, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconcurrentbranch@2x.png
+    Data: {fileID: 21300000, guid: ead32eef98d0a664fb5b025c4bf013d4, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconinviteusers@2x.png
+    Data: {fileID: 21300000, guid: 2b9bf8ec5d54fe249ac9e20979ccd42c, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/HexagonPointTopWithBorder.png
+    Data: {fileID: -2135585597343286014, guid: 4b2a04fdbe0ef4d8da8f90eaca817cd1, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconbranchincomingchanges.png
+    Data: {fileID: 21300000, guid: 6be6516e46f7d0c4d913a11238973b79, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconclouddriveview.png
+    Data: {fileID: 21300000, guid: 8b32b34c806b4de4cb7f04b3344b6966, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconbrex@2x.png
+    Data: {fileID: 21300000, guid: 9b76c79563c3a274aa48b0dbdf009693, type: 3}
+  - Name: Assets/Arts/UI/Button/Button_SearchBar.png
+    Data: {fileID: 21300000, guid: ab2051c7305a8f243908d481c709d42c, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconbrex@2x.png
+    Data: {fileID: 21300000, guid: ab97695f01bc84c4b93e8440531417e7, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/SquareWithBorder.png
+    Data: {fileID: 7482667652216324306, guid: db750325989564987a34393247d883b4, type: 3}
+  - Name: Assets/Arts/UI/win_frame_Selected.png
+    Data: {fileID: 21300000, guid: db66f9f4cb9ac834bbb5b369a9c189a2, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/Circle.png
+    Data: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconplasticnotifypendingchanges@2x.png
+    Data: {fileID: 21300000, guid: eb1c900f0d4a3ee42a9a49630bf88a12, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/hideversioncontrol@2x.png
+    Data: {fileID: 21300000, guid: fbfdd7d489e0bd54f946ebc8e19db8bd, type: 3}
+  - Name: Assets/Arts/Manga/P5A.png
+    Data: {fileID: 21300000, guid: 2cf65e6d2a3ca2641aa4714b94bdc3ed, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconinfobellnotification@2x.png
+    Data: {fileID: 21300000, guid: 3cf8ae89579fd29479f4269d09600e16, type: 3}
+  - Name: Assets/Arts/Manga/P5B1.png
+    Data: {fileID: -39041244, guid: ac1c331079a90b34ba7948ec4cb6fdda, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/9-SlicedWithBorder.png
+    Data: {fileID: -5177388603050735206, guid: cc35afd292fc349128b36a291fb3a165, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_hideversioncontrol.png
+    Data: {fileID: 21300000, guid: ec597fbbebec64e4f8725c31ce52fdb7, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/IsometricDiamondWithBorder.png
+    Data: {fileID: 3625043607559282579, guid: 0d267bc78a0864eb48358689b29ed20a, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconpackageupdateavailable.png
+    Data: {fileID: 21300000, guid: 1dc16508006061742a802767b556accc, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_hideversioncontrol@2x.png
+    Data: {fileID: 21300000, guid: 5de67bf0a3c601f4bab93b4fd3314ab1, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconlock.png
+    Data: {fileID: 21300000, guid: 6d3f95684dd634b18aa9ab45b3e06cfd, type: 3}
+  - Name: Assets/Arts/Manga/P2reB2.png
+    Data: {fileID: 1584250033, guid: 7dd176dad877f3c449d8904345cb1ac9, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconclipboard.png
+    Data: {fileID: 21300000, guid: 8d91317e8f7610f41a30fcb9c0d99196, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/Capsule.png
+    Data: {fileID: -9095717837082945937, guid: bd3cb4af8406d4436a2ae8c2aafe1f8d, type: 3}
+  - Name: Assets/Arts/Manga/P3B4.png
+    Data: {fileID: 518906957, guid: fdb6f1065b21a184f94f1938bfb660ab, type: 3}
+  - Name: Assets/Arts/UI/photos/95w1Big.png
+    Data: {fileID: 21300000, guid: 6ef75dccabcca8b4ea1bc125a7590c4d, type: 3}
+  - Name: Assets/Arts/UI/bugCat.png
+    Data: {fileID: 21300000, guid: ce104d734b9364c449779e7c98fa54e4, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconlabel@2x.png
+    Data: {fileID: 21300000, guid: ce435fe40bff4da41aadc577ebfb27d7, type: 3}
+  - Name: Assets/Plugins/EggFramework/3rd/NuGet/Resources/defaultIcon.png
+    Data: {fileID: 21300000, guid: eec19781926cd2248b7c9abfde8db555, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/HexagonPointTop.png
+    Data: {fileID: -2135585597343286014, guid: eed45a33cd08446c8b88325cf82fc52f, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/buttonssosigninunity@2x.png
+    Data: {fileID: 21300000, guid: ee8ce5cd9c0883f4182b5cfd43cfd7fe, type: 3}
+  - Name: Assets/Arts/UI/Button/Pics_Collects1.png
+    Data: {fileID: 323531797, guid: fef10ff7c3d6e7945820ae2311fea328, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconclipboard@2x.png
+    Data: {fileID: 21300000, guid: 0ff35d4ec6d381941bdbe1fb4b6dbceb, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconclipboard.png
+    Data: {fileID: 21300000, guid: 3f65802f2a170a145bd30ab3801b8d80, type: 3}
+  - Name: Assets/Arts/Manga/P3A2.png
+    Data: {fileID: 1813130597, guid: 9f7960bbf4a63b44092caff45794434f, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconbranchincomingchanges@2x.png
+    Data: {fileID: 21300000, guid: efe23ffa29c83fb428c67acf61827b58, type: 3}

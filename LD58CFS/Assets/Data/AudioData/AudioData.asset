@@ -13,19 +13,26 @@ MonoBehaviour:
   m_Name: AudioData
   m_EditorClassIdentifier: 
   BGMAudios:
+  - {fileID: 8300000, guid: 5196910024978a24c8a4fc95c9007242, type: 3}
   - {fileID: 8300000, guid: 9205b43ce4745b44abdb04a9c0709205, type: 3}
   - {fileID: 8300000, guid: 33c4ec45b41dce3448583716f3abdd58, type: 3}
+  - {fileID: 8300000, guid: f688f7310b2782445a1ea164d099e1e6, type: 3}
   - {fileID: 8300000, guid: d7f88b3fc3716cf41b1937f020cd8360, type: 3}
+  - {fileID: 8300000, guid: 2bba8032ec08c374db657a596d8ab803, type: 3}
   - {fileID: 8300000, guid: 0ff1a4581bf5c1f4da960620b05069d4, type: 3}
+  - {fileID: 8300000, guid: 2f13c4acea1301b47a47efd4647825fa, type: 3}
   SFXAudios:
   - {fileID: 8300000, guid: 52f83d65bdaa85b408bb6dfd621ac31f, type: 3}
   - {fileID: 8300000, guid: 72a696488c130e3448c33cca668a4e55, type: 3}
   - {fileID: 8300000, guid: 135caf99b3efb854b80953f43edf9791, type: 3}
   - {fileID: 8300000, guid: 338780a1dc9f7b640aa84fefe1d6f9c2, type: 3}
   - {fileID: 8300000, guid: 43a2f7387c9f92e4db2ce9fc907e9f2b, type: 3}
+  - {fileID: 8300000, guid: 83f6e620c8344ec448248529e36dfe3d, type: 3}
+  - {fileID: 8300000, guid: 14892f588394f114f957fcf27b6905e9, type: 3}
   - {fileID: 8300000, guid: 15890b75e18ee4046a41362a5ff9f663, type: 3}
   - {fileID: 8300000, guid: 85d0a617874598a469cd434567e560e6, type: 3}
   - {fileID: 8300000, guid: 0618231cf5192d245a3e2a512a328ac6, type: 3}
+  - {fileID: 8300000, guid: 560a6fb181560d14094fe7ff86e84fbe, type: 3}
   - {fileID: 8300000, guid: 6621661a1b2f22146b4cce85300ae10b, type: 3}
   - {fileID: 8300000, guid: f61e01e591b2aab4e841f15428fc5282, type: 3}
   - {fileID: 8300000, guid: 175d0976709b5624a892cb7344e29a73, type: 3}

@@ -1180,6 +1180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _levelDatas: {fileID: 11400000, guid: daff0bc80290c5a49ba45f2a4f75f580, type: 2}
   LevelName: Level3
+  InitBGM: game
 --- !u!1 &1988845492
 GameObject:
   m_ObjectHideFlags: 0

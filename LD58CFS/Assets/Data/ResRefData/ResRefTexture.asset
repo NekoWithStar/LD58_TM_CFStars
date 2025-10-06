@@ -1,0 +1,1083 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 269eca79f8c441b391d887cd56efc090, type: 3}
+  m_Name: ResRefTexture
+  m_EditorClassIdentifier: 
+  ResRefs:
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/step2@2x.png
+    Data: {fileID: 2800000, guid: 0029170d14ce6c04c9f45c22cdae5559, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconlockedremoteoverlay.png
+    Data: {fileID: 2800000, guid: 1046ed65e6aaffb4391378f6d08d6c14, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/v2/Capsule.png
+    Data: {fileID: 2800000, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconplastic.png
+    Data: {fileID: 2800000, guid: 3042b019b052942a1baf7aa49d7ca6bb, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconinviteusers.png
+    Data: {fileID: 2800000, guid: 3094096a150921c409ef35579f2ada0f, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_buttonssosigninemail.png
+    Data: {fileID: 2800000, guid: 3086d66a563317b40a20a20da2c64ac0, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconconflictresolvedoverlay@2x.png
+    Data: {fileID: 2800000, guid: 309b1d5a294fd6c43ae9cf77656c1852, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconbranchpendingchanges.png
+    Data: {fileID: 2800000, guid: 306d91ec6eccbf649802fb755f877c6b, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconinviteusers.png
+    Data: {fileID: 2800000, guid: 40e23f4f2fddc724db517c63f4d8990d, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TimelineCollapseMarkerButtonDisabled.png
+    Data: {fileID: 2800000, guid: 40947ddc2dd4f0d499a92d0f3675c4e8, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconprivateoverlay@2x.png
+    Data: {fileID: 2800000, guid: 40685941c1361aa4a957b61174bce3f6, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineStartPlayback.png
+    Data: {fileID: 2800000, guid: 5060c9f9eb2f7ee4695b638a21d8fe01, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackRecordButtonDisabled@2x.png
+    Data: {fileID: 2800000, guid: 6091f9516d23100479c03bca26138bc8, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_refresh@2x.png
+    Data: {fileID: 2800000, guid: 602b72d4617c3694aa94419fc1b68e04, type: 3}
+  - Name: Assets/Plugins/EggFramework/3rd/Demigiant/DOTween/Editor/Imgs/Footer.png
+    Data: {fileID: 2800000, guid: 7051dba417b3d53409f2918f1ea4938d, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/Assets/SpriteEditor@2x.png
+    Data: {fileID: 2800000, guid: 7013f35dfb10340ecbb956ca7e17de0d, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelinePlayRange.png
+    Data: {fileID: 2800000, guid: 70e3f118652b9094885689730ad3a47b, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/icondeletedremote@2x.png
+    Data: {fileID: 2800000, guid: 70e3ce8ad01f39248a3ea97a35bcf238, type: 3}
+  - Name: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/Button_RightPanel_DarkTheme@2x.png
+    Data: {fileID: 2800000, guid: 804b883d1ff6a3941b67819909b10b73, type: 3}
+  - Name: Packages/com.unity.visualscripting/Editor/VisualScripting.Core/IconMap/AnimatorMessageListener@32x.png
+    Data: {fileID: 2800000, guid: 9059e055aa673b3469a5c2896c0b8fb5, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconretainedoverlay@2x.png
+    Data: {fileID: 2800000, guid: a01087ce1455c7e4c8f2410c26afcfd2, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Shared/TimelineConnector.png
+    Data: {fileID: 2800000, guid: a04f1625bf500f64e97445265dfbcc93, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelineHold.png
+    Data: {fileID: 2800000, guid: a09fd8b5d9396c24a96a6de50cddc3b9, type: 3}
+  - Name: Assets/Arts/Manga/P3B3.png
+    Data: {fileID: 2800000, guid: c098c133e24cdd743a9748028b3bdda1, type: 3}
+  - Name: Packages/com.unity.ugui/Editor Resources/Textures/btn_AlignRight_Light.psd
+    Data: {fileID: 2800000, guid: e05ace3bd15740cda0bad60d89092a5b, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconplasticnotifypendingchanges@2x.png
+    Data: {fileID: 2800000, guid: f0c047e73e3b41341822a9e31da81877, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackCurvesButtonDisabled.png
+    Data: {fileID: 2800000, guid: f0f8ff8921b22a74a8c79d955ace248d, type: 3}
+  - Name: Packages/com.unity.visualscripting/Editor/VisualScripting.Core/IconMap/State@32x.png
+    Data: {fileID: 2800000, guid: f02ed452c3e0d1e448429a89e1773fd7, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/buttonssosigningoogle.png
+    Data: {fileID: 2800000, guid: f09eae8c0ea04254b90c5386a034a225, type: 3}
+  - Name: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/FileNoIcon@2x.png
+    Data: {fileID: 2800000, guid: 0127c38a607d9474c820c7f5044c18b4, type: 3}
+  - Name: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformStadiaIcon@2x.png
+    Data: {fileID: 2800000, guid: 21df0a1c085254641905e0eb1dca9806, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconplasticview@2x.png
+    Data: {fileID: 2800000, guid: 3168140d6f409d0448447f18568d9482, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/v2/Square.png
+    Data: {fileID: 2800000, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelineIconClipIn.png
+    Data: {fileID: 2800000, guid: 4171b549947246b4f9579419d5698a7e, type: 3}
+  - Name: Assets/Arts/UI/photos/photo_WorkpaperCN.png
+    Data: {fileID: 2800000, guid: 41030fbee73e1604284dc481a0badbc4, type: 3}
+  - Name: Packages/com.unity.ugui/Editor Resources/Textures/btn_AlignMiddle.psd
+    Data: {fileID: 2800000, guid: 41b96614b2e6494ba995ddcd252d11ae, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TimelineEditModeRippleOFF.png
+    Data: {fileID: 2800000, guid: 411e6f19c19fa0546af83aeb59c2ed4b, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineDisabledBackground.png
+    Data: {fileID: 2800000, guid: 412f73153f3a3c549b67b2a847741145, type: 3}
+  - Name: Assets/Plugins/EggFramework/3rd/Demigiant/DOTween/Editor/Imgs/Footer_dark.png
+    Data: {fileID: 2800000, guid: 519694efe2bb2914788b151fbd8c01f4, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconplasticnotifyconflict.png
+    Data: {fileID: 2800000, guid: 51582ae5ea51fa14996791a550f89473, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackMuteButtonEnabled@2x.png
+    Data: {fileID: 2800000, guid: 512aaee9b220348408a2e518f98d6e14, type: 3}
+  - Name: Assets/Arts/UI/Button/Button_StateBar.png
+    Data: {fileID: 2800000, guid: 511d02e6dafc54c43b0f278bbc3e3ea2, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconplasticview.png
+    Data: {fileID: 2800000, guid: 519d97e745e55f041b609f3666cbc037, type: 3}
+  - Name: Assets/Arts/Manga/P2C.png
+    Data: {fileID: 2800000, guid: 511f8c7bd20f9a542ae9978d3f1e3a21, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackAvatarButtonEnabled@2x.png
+    Data: {fileID: 2800000, guid: 51bf5f55a8a01e546bf6092b54fdae20, type: 3}
+  - Name: Assets/Plugins/EggFramework/3rd/Demigiant/DOTween/Editor/Imgs/DOTweenMiniIcon.png
+    Data: {fileID: 2800000, guid: 61521df2e071645488ba3d05e49289ae, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackMarkerButtonEnabled@2x.png
+    Data: {fileID: 2800000, guid: 6192986415256ca47a97a97507406f5e, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelineContinue.png
+    Data: {fileID: 2800000, guid: 61c21f74972ba8246b3ea400a9231841, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconbranches.png
+    Data: {fileID: 2800000, guid: 612c5e166a121e3449dad067fbdc37a4, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconlockedlocaloverlay.png
+    Data: {fileID: 2800000, guid: 71c45f80bffdb9145ad2c456254c862e, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/9-Sliced.png
+    Data: {fileID: 2800000, guid: 71ebafeef3c03457483266a33ab2b270, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackMuteButtonEnabled.png
+    Data: {fileID: 2800000, guid: 81e8b4a4bcbf7a14898e2658fd827642, type: 3}
+  - Name: Packages/com.unity.ugui/Editor Resources/Textures/btn_AlignCenter.psd
+    Data: {fileID: 2800000, guid: 81ed8c76d2bc4a4c95d092c98af4e58f, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackAvatarButtonDisabled.png
+    Data: {fileID: 2800000, guid: 91746a504b59769439bb2749c314d231, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconemptygravatar.png
+    Data: {fileID: 2800000, guid: 91976e8b9ce0f0341838727acd55621c, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TimelineEditModeReplaceOFF.png
+    Data: {fileID: 2800000, guid: 912fd71cbf4cbe140b4f240bedbc1f3e, type: 3}
+  - Name: Assets/Plugins/BouncyCastle.Cryptography.2.4.0/packageIcon.png
+    Data: {fileID: 2800000, guid: a1651a4043dd44440906f5e88b47a4b1, type: 3}
+  - Name: Assets/Arts/UI/Button/Button_ScrollBar.png
+    Data: {fileID: 2800000, guid: a1ec5b494c660fc418d870e1d8b477fc, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TimelineDigIn.png
+    Data: {fileID: 2800000, guid: b1d064d6d80829f4eb370f679384ea1f, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconshelve.png
+    Data: {fileID: 2800000, guid: b1b37c2733b68854ba004ff712ef849f, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconbranch.png
+    Data: {fileID: 2800000, guid: c1516142c0a669b42aecce30a3459017, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineMarkerItem.png
+    Data: {fileID: 2800000, guid: c133595e3c100774496e03e66fa69259, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconclipboard@2x.png
+    Data: {fileID: 2800000, guid: c115023c6a2060d4da6a7684bd40c5c0, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackMarkerButtonEnabled.png
+    Data: {fileID: 2800000, guid: d18286874382ef042bbbdab5f71329c1, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconconflicted.png
+    Data: {fileID: 2800000, guid: d1c88f142eee55b4eb2b2cfd7b3624ce, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackMarkerButtonEnabled.png
+    Data: {fileID: 2800000, guid: d1eccbb425fdacc4ba53ce4223f4ea30, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconlabel.png
+    Data: {fileID: 2800000, guid: e1e64e28e7631534d8408668bcb82502, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineAutokey_active.png
+    Data: {fileID: 2800000, guid: e17ee60887efdd04389991a15ee0c578, type: 3}
+  - Name: Packages/com.unity.visualscripting/Editor/VisualScripting.Core/IconMap/StateMachine@32x.png
+    Data: {fileID: 2800000, guid: f144232ea2c6046438f6cda6c1bad1af, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineMarkerItemCollapsed.png
+    Data: {fileID: 2800000, guid: f179d9a3cccffb04ba2e27f681e9b147, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconaddedlocal@2x.png
+    Data: {fileID: 2800000, guid: 02800fb9cff14da47a04572790384d8b, type: 3}
+  - Name: Assets/Plugins/System.Security.Cryptography.Xml.8.0.2/Icon.png
+    Data: {fileID: 2800000, guid: 025e3e69d28c64c4598704513bb7d63b, type: 3}
+  - Name: Packages/com.unity.ugui/Editor Resources/Textures/btn_AlignLeft_Light.psd
+    Data: {fileID: 2800000, guid: 12736c98af174f91827a26b66d2b01b9, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconmergelink.png
+    Data: {fileID: 2800000, guid: 120bf54dff785a0429b068b814e9c12a, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TimelineDigIn.png
+    Data: {fileID: 2800000, guid: 22c3c381bd3cd4a40a8541103023e1ef, type: 3}
+  - Name: Assets/Plugins/EggFramework/3rd/xNode-1.8.0/Scripts/Editor/Resources/xnode_node_workfile.psd
+    Data: {fileID: 2800000, guid: 2267efa6e1e349348ae0b28fb659a6e2, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconclouddriveview.png
+    Data: {fileID: 2800000, guid: 229870d327005574fb840c2dd8050ec6, type: 3}
+  - Name: Assets/Plugins/ZString.2.6.0/Icon.png
+    Data: {fileID: 2800000, guid: 322319b6abbe575468a5206a59999aa6, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineIconClipOut.png
+    Data: {fileID: 2800000, guid: 32f7e3598d6414c489127629e29af3f6, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/ok.png
+    Data: {fileID: 2800000, guid: 3238dca1e9ea9fb4aa64b28298ba6dbd, type: 3}
+  - Name: Packages/com.unity.testtools.codecoverage/Editor/Icons/d_FolderOpened@2x.png
+    Data: {fileID: 2800000, guid: 327ac160fa4588b4ab06124fe53fdbd1, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconlabel.png
+    Data: {fileID: 2800000, guid: 42540fa3b3cef1340bebdf077d0e2030, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconbranch@2x.png
+    Data: {fileID: 2800000, guid: 425970578f3342a43b40545d1ac8a25d, type: 3}
+  - Name: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/d_History.Forward.png
+    Data: {fileID: 2800000, guid: 5252304aa623387469db31285ab55959, type: 3}
+  - Name: Packages/com.unity.visualscripting/Editor/VisualScripting.Shared/EditorAssetResources/SplitButtonArrow.png
+    Data: {fileID: 2800000, guid: 52236e1d9300f4f718999db6c872a5d8, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackMuteButtonDisabled.png
+    Data: {fileID: 2800000, guid: 5216b1b48296ef345ad2d2ec43105bf0, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconbranchincomingchanges@2x.png
+    Data: {fileID: 2800000, guid: 520b85b72549e7546b2984ee24dbfb74, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackLockButtonDisabled.png
+    Data: {fileID: 2800000, guid: 52ee3ba2abc3da14a95cdf64d32ae0ae, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_icondeletedremote@2x.png
+    Data: {fileID: 2800000, guid: 626b9cddb29049e4cac50cd87b419945, type: 3}
+  - Name: Assets/Arts/UI/THE Internet CollectorBG.png
+    Data: {fileID: 2800000, guid: 62db39027aee4bc43a428ef3ee05e264, type: 3}
+  - Name: Assets/Arts/Manga/1-C.png
+    Data: {fileID: 2800000, guid: 72cfb6197e2a8a04eac0b8f80068f750, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Shared/TimelineOutline.png
+    Data: {fileID: 2800000, guid: 829511f8e35bf3a40be037a1050f801c, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelineStartPlayback.png
+    Data: {fileID: 2800000, guid: 824c4beb0ca6c934bbc7a26919302236, type: 3}
+  - Name: Packages/com.unity.ugui/Editor Resources/Textures/btn_AlignJustified.psd
+    Data: {fileID: 2800000, guid: 92027f7f8cfc4feaa477da0dc38d3d46, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_icondeletedlocaloverlay@2x.png
+    Data: {fileID: 2800000, guid: 92b204cca46037444ab18ba6701f86f7, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconshelve@2x.png
+    Data: {fileID: 2800000, guid: 9264df9de832d7f4bb90a1d0c31d8343, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineAutokey.png
+    Data: {fileID: 2800000, guid: 92b5e4310629b264dad0fb2cc196d818, type: 3}
+  - Name: Packages/com.unity.ugui/Editor Resources/Textures/btn_AlignLeft.psd
+    Data: {fileID: 2800000, guid: 9288066c33474b94b6ee5465f4df1cc0, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_refresh.png
+    Data: {fileID: 2800000, guid: 92b8c447daf4d4b41a0ec148d1091261, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/notondisk.png
+    Data: {fileID: 2800000, guid: b205f4b28f59dda49af458b35d8a3ff3, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineEndPlayback.png
+    Data: {fileID: 2800000, guid: c285802d9d414814fad592b90b223f15, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackAvatarButtonEnabled.png
+    Data: {fileID: 2800000, guid: c207dcd389fb689489f5266468cd4609, type: 3}
+  - Name: Packages/com.unity.ugui/Editor Resources/Textures/btn_AlignMidLine.psd
+    Data: {fileID: 2800000, guid: c2f7f6a88b4c4f20a53deb72f3d9144c, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/buttonssosigninemail.png
+    Data: {fileID: 2800000, guid: d24e7e0b75e1a244bb9687d6fd4315ef, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelineDisabledBackground.png
+    Data: {fileID: 2800000, guid: 0304baf8d224f3e47b22d872c8dcd412, type: 3}
+  - Name: Assets/Arts/UI/photos/Photo_MyGoodCat.png
+    Data: {fileID: 2800000, guid: 0394cded5354a7e439396983761088bf, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TimelineCollapseMarkerButtonEnabled.png
+    Data: {fileID: 2800000, guid: 0367ce1ebbbb18940b79eed63a0315d5, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Shared/TimelineDisplay.png
+    Data: {fileID: 2800000, guid: 03ae22b9de3989144a9bebf8972b4fad, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/secondarytabclose.png
+    Data: {fileID: 2800000, guid: 03cefa94d5aa9d74993fb2138af9d607, type: 3}
+  - Name: Packages/com.unity.visualscripting/Editor/VisualScripting.Core/IconMap/SceneVariables.png
+    Data: {fileID: 2800000, guid: 1322acb2dac5e7f4cbae25e022caf9d2, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconclosebutton.png
+    Data: {fileID: 2800000, guid: 13527793884104b46b7446fd7464c3ed, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconplasticnotifyconflict@2x.png
+    Data: {fileID: 2800000, guid: 23743f0c0ed1e6546808a5d645c2a6a5, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconbranchpendingchanges@2x.png
+    Data: {fileID: 2800000, guid: 23f46651bbbc1834da4968f99466dfbe, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_icondeletedremote.png
+    Data: {fileID: 2800000, guid: 23e66f7264c74424889342127f229577, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TimelineClipFG.png
+    Data: {fileID: 2800000, guid: 33b1871a2d09cfa459a93f4e8feb5c41, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackMarkerButtonDisabled.png
+    Data: {fileID: 2800000, guid: 33a52b41b4de5874ca7da1da32067e39, type: 3}
+  - Name: Assets/Plugins/EggFramework/3rd/xNode-1.8.0/Scripts/Editor/Resources/xnode_dot_outer.png
+    Data: {fileID: 2800000, guid: 434ca8b4bdfa5574abb0002bbc9b65ad, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackCurvesButtonEnabled@2x.png
+    Data: {fileID: 2800000, guid: 43ed4593c5ddda0439fcc1bdaf8309fe, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelinePlayRange.png
+    Data: {fileID: 2800000, guid: 43eeff8a446b32242a4fb1a5c1bd7b8e, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconoutofsync.png
+    Data: {fileID: 2800000, guid: 636d03a8834e3ed4cac3a1cb4b82deaf, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconaddedoverlay.png
+    Data: {fileID: 2800000, guid: 73d124bf77e463c45942d14136745d9f, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TimelineSelector.png
+    Data: {fileID: 2800000, guid: 73f5ebb64da7b2a40ab6bffac80f1a61, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconinfobellnotification@2x.png
+    Data: {fileID: 2800000, guid: 830164d71b9d60c40b606822b957d10b, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackCurvesButtonDisabled@2x.png
+    Data: {fileID: 2800000, guid: a383d8b1327c9254896ad76d6efaf357, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/icondeletedlocaloverlay@2x.png
+    Data: {fileID: 2800000, guid: a3e491f99ea3ad74f8731ca93e84c497, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconconflictedoverlay@2x.png
+    Data: {fileID: 2800000, guid: a3ced8f7044b9de4787602a9e9b20ea7, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackMarkerButtonDisabled.png
+    Data: {fileID: 2800000, guid: b3644a971cca0bd4eb357cb9aca4dde1, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackMarkerButtonEnabled@2x.png
+    Data: {fileID: 2800000, guid: c35a22ede3f5feb488bf69587ddc36ed, type: 3}
+  - Name: Packages/com.unity.addressables/Editor/Icons/AddressableAssetsIconY1756Basic.png
+    Data: {fileID: 2800000, guid: c33b04c403c19614395e83e691d3170a, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconretainedoverlay@2x.png
+    Data: {fileID: 2800000, guid: c34cd61ed96ff9a40a54e159467c5155, type: 3}
+  - Name: Assets/Plugins/System.Security.Cryptography.Pkcs.8.0.1/Icon.png
+    Data: {fileID: 2800000, guid: c3bd3125b5555a74ca2f81b5725867b9, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelinePingPong.png
+    Data: {fileID: 2800000, guid: d3b5c4f7d6b94f64085b3713bffa680e, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconcurrentbranch.png
+    Data: {fileID: 2800000, guid: d30af1e364af1fc48be2ff2dcb0d4724, type: 3}
+  - Name: Packages/com.unity.ugui/Editor Resources/Textures/SectionHeader_Light.psd
+    Data: {fileID: 2800000, guid: e3b0f810fdea84e40ab4ba20f256f7e8, type: 3}
+  - Name: Assets/Arts/UI/Button/Button12_Only32_1px.png
+    Data: {fileID: 2800000, guid: f380516ff0f5edc4dac35889d8cc6856, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconplasticnotifypendingchanges.png
+    Data: {fileID: 2800000, guid: f3e2797165e71b443bae6264899b89d6, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconplasticnotifyincoming.png
+    Data: {fileID: 2800000, guid: f31d2c855644aad4cb2030bce12859f6, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconinfobellnotification.png
+    Data: {fileID: 2800000, guid: f38e832edef3ab648bcc2ab5dfa2906d, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/IsometricDiamond.png
+    Data: {fileID: 2800000, guid: 045b15ec09bba42448d89db77fa6f20a, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_buttonssosigninemail@2x.png
+    Data: {fileID: 2800000, guid: 144aa74618b85974a9a50f612c2fa8fd, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TimelineCollapseMarkerButtonEnabled.png
+    Data: {fileID: 2800000, guid: 2446ee609b613cd4e9142ccc55cb7c43, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelineMarkerItem.png
+    Data: {fileID: 2800000, guid: 24b97c67b63a23b48bea4036d28a5818, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_stepok@2x.png
+    Data: {fileID: 2800000, guid: 3494dc956dfd7174abc07060940a2848, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/CapsuleWithBorder.png
+    Data: {fileID: 2800000, guid: 34587324d412940a79d530020c957dc0, type: 3}
+  - Name: Packages/com.unity.ugui/Editor Resources/Textures/btn_AlignRight.psd
+    Data: {fileID: 2800000, guid: 342a0f8aca7f4f0691338912faec0494, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackAvatarButtonDisabled.png
+    Data: {fileID: 2800000, guid: 54623075676bd504d93243fb18745161, type: 3}
+  - Name: Packages/com.unity.ugui/Editor Resources/Textures/btn_AlignFlush_Light.psd
+    Data: {fileID: 2800000, guid: 64b9fad609434c489c32b1cdf2004a1c, type: 3}
+  - Name: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformAndroidIcon@2x.png
+    Data: {fileID: 2800000, guid: 7421e9434772c1542ac5a39c1a9accc5, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/Assets/d_SpriteEditor@2x.png
+    Data: {fileID: 2800000, guid: 74d9036aa1bb14ccfafb89d639870288, type: 3}
+  - Name: Assets/Arts/Manga/1-A.png
+    Data: {fileID: 2800000, guid: 749b911f0ef74f04b973b487dd3f7eb0, type: 3}
+  - Name: Packages/com.unity.visualscripting/Graphics/Icons_16x_72dpi.psd
+    Data: {fileID: 2800000, guid: 749d1db079e2d5e4ea440488ee312b04, type: 3}
+  - Name: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/d_History.Forward@2x.png
+    Data: {fileID: 2800000, guid: 741fd6a7eb857a74b939184269d01239, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconaddedoverlay@2x.png
+    Data: {fileID: 2800000, guid: 74ef721fef79c44489d4e3edb0ab0c01, type: 3}
+  - Name: Assets/Plugins/System.ComponentModel.Annotations.5.0.0/Icon.png
+    Data: {fileID: 2800000, guid: 8470823270066614f8d1d6a895404cff, type: 3}
+  - Name: Packages/com.unity.visualscripting/Editor/VisualScripting.Core/IconMap/UnityMessageListener@32x.png
+    Data: {fileID: 2800000, guid: 9494e5b136d34c74f96fb0df4a7b9a77, type: 3}
+  - Name: Assets/Arts/Manga/P3B1.png
+    Data: {fileID: 2800000, guid: 94fc75281ad6a3243b2e857da8268e00, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconpressedclosebutton.png
+    Data: {fileID: 2800000, guid: 94fe868620119564f9474f40cd6145aa, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/Timeline-Marker-Warning-Overlay.png
+    Data: {fileID: 2800000, guid: 945f4ecec6df62244b9ebcc363833642, type: 3}
+  - Name: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformWSAPlayerIcon@2x.png
+    Data: {fileID: 2800000, guid: a4691412a8ea49a4796116d3d5f289cc, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconinviteusers@2x.png
+    Data: {fileID: 2800000, guid: b43651fb085b38445ade3f9de3ab0636, type: 3}
+  - Name: Assets/Arts/UI/Button/Button_Load1.png
+    Data: {fileID: 2800000, guid: c4f80c8d0a440c241acc7ed7d2094337, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconcurrentbranch@2x.png
+    Data: {fileID: 2800000, guid: c48b8bcda45b63442a7a7c7244c84635, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/stepok.png
+    Data: {fileID: 2800000, guid: d4780dc1205c7c7478c970d8c61d24e8, type: 3}
+  - Name: Assets/Arts/UI/win_frame_Unselect.png
+    Data: {fileID: 2800000, guid: d4d894fe61700bd4ab5d1efd0b84868a, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TimelineClipBG.png
+    Data: {fileID: 2800000, guid: d44fc8b11425e0043aa7c20a301ce707, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconbrex.png
+    Data: {fileID: 2800000, guid: d44f9c7a4044e1845b5b3627ba32fb10, type: 3}
+  - Name: Assets/Arts/UI/Button/IconPart3.png
+    Data: {fileID: 2800000, guid: e4d06ca3318b4e84ab6cc8818195c799, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconbranches@2x.png
+    Data: {fileID: 2800000, guid: e45389a8a97044d4caf408f252370632, type: 3}
+  - Name: Assets/Arts/UI/photos/photo_WorkpaperEN.png
+    Data: {fileID: 2800000, guid: f4cba39b3c0e70d40890dbb82cb289d8, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconclosebutton@2x.png
+    Data: {fileID: 2800000, guid: 0525793900d728a42936791a8a6de63b, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconconflictresolvedoverlay.png
+    Data: {fileID: 2800000, guid: 056ee72c467a4e24d87541d42839ca72, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconprivateoverlay.png
+    Data: {fileID: 2800000, guid: 059fb5367594a3343814dc25ace454b3, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TimelineSignal.png
+    Data: {fileID: 2800000, guid: 15845fb26c2846947b4dedb9fb348cc1, type: 3}
+  - Name: Assets/Arts/UI/THE Internet Collector.png
+    Data: {fileID: 2800000, guid: 157e2b7af21607648a9ee100583f08cb, type: 3}
+  - Name: Assets/Arts/fusion-pixel.ttf
+    Data: {fileID: 2800000, guid: 251219dcc121e334baa921ccf2a14559, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconclouddriveview@2x.png
+    Data: {fileID: 2800000, guid: 259fe6e49c74eb143a9fc88f6bd3f050, type: 3}
+  - Name: Packages/com.unity.visualscripting/Graphics/Icons_32x_72dpi.psd
+    Data: {fileID: 2800000, guid: 35a21b8c004950548af9fc81919e1aa9, type: 3}
+  - Name: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformPS4Icon.png
+    Data: {fileID: 2800000, guid: 351af98fa765ba1498bcad1e9100d610, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineActivation.png
+    Data: {fileID: 2800000, guid: 359cf58d5969d1a4aad29b095c7fc338, type: 3}
+  - Name: Packages/com.unity.ugui/Editor Resources/Textures/btn_AlignCenterGeo_Light.psd
+    Data: {fileID: 2800000, guid: 35ff0937876540d3bd4b6a941df62a92, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconlock@2x.png
+    Data: {fileID: 2800000, guid: 55747841a2e3b47dab36dc8d5e0dc4df, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/xlink.png
+    Data: {fileID: 2800000, guid: 556a2f3b046024d4c9621c1b4be5f0c1, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconconflicted@2x.png
+    Data: {fileID: 2800000, guid: 65f0e363b74cf5845ab8c3fbc14f39ac, type: 3}
+  - Name: Assets/Plugins/EggFramework/3rd/xNode-1.8.0/Scripts/Editor/Resources/xnode_dot.png
+    Data: {fileID: 2800000, guid: 75a1fe0b102226a418486ed823c9a7fb, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Shared/Timeline-Marker-Multi-Overlay.png
+    Data: {fileID: 2800000, guid: 75f26f1c549568c4e9950a368bd08cb8, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/v2/Triangle.png
+    Data: {fileID: 2800000, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackCurvesButtonEnabled.png
+    Data: {fileID: 2800000, guid: 9589d5d9eb09dec43b2ad51af4e78b1e, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineSignalSelected.png
+    Data: {fileID: 2800000, guid: a5e21f4e466690645980dd0cf0b664bc, type: 3}
+  - Name: Assets/Arts/Manga/P5B2.png
+    Data: {fileID: 2800000, guid: b5a069cb43c3dc0468ebfe613cb55b8d, type: 3}
+  - Name: Assets/Plugins/SharpZipLib.1.4.2/images/sharpziplib-nuget-256x256.png
+    Data: {fileID: 2800000, guid: b585d595177af30419c96f1695f16c54, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconlockedlocaloverlay@2x.png
+    Data: {fileID: 2800000, guid: b528c1b33a65cf94ea74f830b54c9acb, type: 3}
+  - Name: Assets/Plugins/System.Security.AccessControl.6.0.0/Icon.png
+    Data: {fileID: 2800000, guid: b58dc080f745c994080497ee7ff003e9, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TimelineEditModeRippleON.png
+    Data: {fileID: 2800000, guid: c5c1f094d9a9b3f4c9cc6c3a87af871c, type: 3}
+  - Name: Packages/com.unity.visualscripting/Editor/VisualScripting.Core/IconMap/GlobalMessageListener@32x.png
+    Data: {fileID: 2800000, guid: c588f7acb736b6940bac7b559c8f59dd, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconplasticnotifyincoming@2x.png
+    Data: {fileID: 2800000, guid: c5fc116b3271b5947808130b2212cd60, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/icondeletedremoteoverlay@2x.png
+    Data: {fileID: 2800000, guid: d5c3277b1dbad9448b46c2ec87a2cef8, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackCurvesButtonDisabled.png
+    Data: {fileID: 2800000, guid: d55a54a15106e3f418a43134888f2211, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_loading.png
+    Data: {fileID: 2800000, guid: d58e94bfb1bac774dbb8ca9c2597ef2e, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Shared/TimelineSwatch.png
+    Data: {fileID: 2800000, guid: e50018fd67fc156459e4014bdad3f5f6, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackMuteButtonEnabled@2x.png
+    Data: {fileID: 2800000, guid: e54e20c7a9730fe4c822d63228527ae4, type: 3}
+  - Name: Assets/Plugins/NPOI.2.7.4/logo/32_32.jpg
+    Data: {fileID: 2800000, guid: 064175b2fe7f69149901a2d741514963, type: 3}
+  - Name: Packages/com.unity.ugui/Editor Resources/Textures/btn_AlignMiddle_Light.psd
+    Data: {fileID: 2800000, guid: 066619c9c9c84f89acb1b48c11a7efe2, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TimelineSelector.png
+    Data: {fileID: 2800000, guid: 06bf6150656339941aa98e175a995445, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconbranchincomingchanges.png
+    Data: {fileID: 2800000, guid: 167037179f5c4024194048d372412a7b, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/HexagonFlatTop.png
+    Data: {fileID: 2800000, guid: 16037dbd798344f57a526d53d48f5ead, type: 3}
+  - Name: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/Button_RightPanel_DarkTheme.png
+    Data: {fileID: 2800000, guid: 1605c3ecde3c79740a38a7d320a3f234, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconbranch@2x.png
+    Data: {fileID: 2800000, guid: 267a89f787a621e4290fbff7a5442750, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/step3@2x.png
+    Data: {fileID: 2800000, guid: 36e6970b84831434a9eac79abd03700b, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineLoop.png
+    Data: {fileID: 2800000, guid: 360dded8761e81d4d98c10f469d55492, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_step3.png
+    Data: {fileID: 2800000, guid: 46930b20180b59e46b73494adf53abbb, type: 3}
+  - Name: Assets/Arts/Manga/1-B.png
+    Data: {fileID: 2800000, guid: 46ddcea6a7434b5468c27de38df6f6e7, type: 3}
+  - Name: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformLuminIcon@2x.png
+    Data: {fileID: 2800000, guid: 566514eeee40fbb4095bb20d9ca5ef1b, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconconflictedoverlay@2x.png
+    Data: {fileID: 2800000, guid: 5679a74364f6b4440ab7e7aed55cd95e, type: 3}
+  - Name: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformStandaloneWindowsIcon@2x.png
+    Data: {fileID: 2800000, guid: 561dd5984fde32741a712b4a968324fd, type: 3}
+  - Name: Packages/com.unity.visualscripting/Editor/VisualScripting.Core/IconMap/VariablesAsset@32.png
+    Data: {fileID: 2800000, guid: 562f2dd7647d95e499d958215476bbde, type: 3}
+  - Name: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/FileNoIcon@3x.png
+    Data: {fileID: 2800000, guid: 66c2b738157840b43a4f923dc575193b, type: 3}
+  - Name: Assets/Plugins/System.Runtime.CompilerServices.Unsafe.6.0.0/Icon.png
+    Data: {fileID: 2800000, guid: 6664e82ab7d6fe14d8aedfc46ae560d5, type: 3}
+  - Name: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformStandaloneWindowsIcon.png
+    Data: {fileID: 2800000, guid: 66e8376ba5f093047bc9ab5d3d61430b, type: 3}
+  - Name: Packages/com.unity.testtools.codecoverage/Editor/Icons/d_FolderOpened.png
+    Data: {fileID: 2800000, guid: 663a080499383ea4e9297061febf5ef7, type: 3}
+  - Name: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformWebGLIcon@2x.png
+    Data: {fileID: 2800000, guid: 764d4b52473c57c43a471351bb59abe1, type: 3}
+  - Name: Assets/Arts/Manga/1-D.png
+    Data: {fileID: 2800000, guid: 8683c6d0b02b7af4db253206d9dcc6b5, type: 3}
+  - Name: Packages/com.unity.testtools.codecoverage/Editor/Icons/d_CodeCoverage@2x.png
+    Data: {fileID: 2800000, guid: 8616c9d86a8504a4b8b5c65bb6a5644f, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconbranches.png
+    Data: {fileID: 2800000, guid: a6219d44b6fc910449f7c3fee45db5c5, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconaddedlocal@2x.png
+    Data: {fileID: 2800000, guid: a67b58d6cddcd4345b1e001340de5a76, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconaddedoverlay@2x.png
+    Data: {fileID: 2800000, guid: a6fbd5a181bc51e42a61a73fe8d727c8, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/v2/HexagonFlatTop.png
+    Data: {fileID: 2800000, guid: b670ab75dde984907b8570040daa08c5, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelineMarkerItemSelected.png
+    Data: {fileID: 2800000, guid: b6e9dc9aad5843748a0124b8925c3743, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackRecordButtonEnabled.png
+    Data: {fileID: 2800000, guid: c6a0c6226c05f954fa6cd03aebb4d255, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/loading.png
+    Data: {fileID: 2800000, guid: c6b1bcaa3f4767141acd747384dbb276, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconplasticnotifypendingchanges.png
+    Data: {fileID: 2800000, guid: e64bde76852ee8247b40b50ef8880632, type: 3}
+  - Name: Assets/Arts/Manga/P2reB1.png
+    Data: {fileID: 2800000, guid: f671a324350df8e4fa2ff7f09637f4b5, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelineAutokey_active@2x.png
+    Data: {fileID: 2800000, guid: f6717d61970edba4686c297677881a77, type: 3}
+  - Name: Assets/Arts/Manga/P4A.png
+    Data: {fileID: 2800000, guid: f6697054a15c0154aa2c70ae924f8083, type: 3}
+  - Name: Assets/Arts/Manga/P3A1.png
+    Data: {fileID: 2800000, guid: 171146cbd901d344cbc97c0884481314, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Shared/TimelineWarning.png
+    Data: {fileID: 2800000, guid: 1732e542f535d374bbfa7565fc78414e, type: 3}
+  - Name: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/Button_RightPanel_LightTheme.png
+    Data: {fileID: 2800000, guid: 37555d4cd39377746932ee0827a11c15, type: 3}
+  - Name: Packages/com.unity.testtools.codecoverage/Editor/Icons/CodeCoverage@2x.png
+    Data: {fileID: 2800000, guid: 37164f8d49df70f448b593fa86e488f5, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconoutofsyncoverlay@2x.png
+    Data: {fileID: 2800000, guid: 3728580c149181a44b359e89f6edacae, type: 3}
+  - Name: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformStandaloneLinux64Icon.png
+    Data: {fileID: 2800000, guid: 377dcfe91a2b68742aedc28e60d58544, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/Assets/SpriteEditorOn.png
+    Data: {fileID: 2800000, guid: 476369828d55a4032beead7444495b69, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconbranchpendingchanges@2x.png
+    Data: {fileID: 2800000, guid: 579057474a3c9544e819619b633c9b23, type: 3}
+  - Name: Assets/Plugins/MathNet.Numerics.Signed.5.0.0/icon.png
+    Data: {fileID: 2800000, guid: 57cf446e0d8fde4439e47f8e3bbac79e, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconpackageupdateavailable@2x.png
+    Data: {fileID: 2800000, guid: 67e680da36c60e245ab0176daa656da5, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TimelineEditModeRippleON.png
+    Data: {fileID: 2800000, guid: 67a774c4384aa6c488128e2851b18ced, type: 3}
+  - Name: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformXboxOneIcon@2x.png
+    Data: {fileID: 2800000, guid: 770340dbd8f200e45b2bb9e820baa15e, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/icondeleted.png
+    Data: {fileID: 2800000, guid: 77a39e873655d3c4b93d0b7696397b83, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackMarkerButtonDisabled@2x.png
+    Data: {fileID: 2800000, guid: 77d926c9a4ddcc940b8c000b45cbfb35, type: 3}
+  - Name: Assets/Arts/UI/photos/BackGroundPure1.png
+    Data: {fileID: 2800000, guid: 77dae59a7d9eb074fb990f869ce9de15, type: 3}
+  - Name: Assets/Arts/UI/szr2.jpg
+    Data: {fileID: 2800000, guid: 8751003fe3f486844871881eb414c6bb, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconbrex.png
+    Data: {fileID: 2800000, guid: 87480bc179519ff4da25283c61c2573b, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/CircleMask.png
+    Data: {fileID: 2800000, guid: 87aaca0a643d54397ba969dab4fc8875, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconbranches@2x.png
+    Data: {fileID: 2800000, guid: 874d8401331ede14087e8d8d486ddda6, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconplasticview@2x.png
+    Data: {fileID: 2800000, guid: 97a4e2b6ae08b1140a5ba9e22953e029, type: 3}
+  - Name: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformAndroidIcon.png
+    Data: {fileID: 2800000, guid: 970a95875c9b7474ba926b947e8cc477, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelineIconClipOut.png
+    Data: {fileID: 2800000, guid: a7a968b204ed77c4ba90be3ef3ee8551, type: 3}
+  - Name: Packages/com.unity.ugui/Editor Resources/Gizmos/TMP - Dropdown Icon.psd
+    Data: {fileID: 2800000, guid: a7ec9e7ad8b847b7ae4510af83c5d868, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/Assets/d_SpriteEditor.png
+    Data: {fileID: 2800000, guid: b7784190913354d4fb9b7f77888f915f, type: 3}
+  - Name: Assets/Arts/UI/photos/BackGround1.png
+    Data: {fileID: 2800000, guid: c7942975a2c50b34faadcf29f52f6dfb, type: 3}
+  - Name: Packages/com.unity.ugui/Editor Resources/Textures/btn_AlignCenterGeo.psd
+    Data: {fileID: 2800000, guid: c76700ea0062413d9f69409b4e9e151b, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelineLoop.png
+    Data: {fileID: 2800000, guid: c7df1e797b21c774f9b859d17f674737, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconoutofsync@2x.png
+    Data: {fileID: 2800000, guid: d7094718bdac022428dd29244922d06b, type: 3}
+  - Name: Packages/com.unity.visualscripting/Editor/VisualScripting.Core/IconMap/FlowMachine@32x.png
+    Data: {fileID: 2800000, guid: f723b77167d184d4a8ab528db8b55744, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineContinue.png
+    Data: {fileID: 2800000, guid: f747f9cdf03f2ff418fe728a77e8cbef, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconlockedremoteoverlay@2x.png
+    Data: {fileID: 2800000, guid: f73a7d8758d7be04588b15637d94b5a8, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconlock.png
+    Data: {fileID: 2800000, guid: f7adc828ed70a485db62c459bdf09525, type: 3}
+  - Name: Packages/com.unity.ugui/Editor Resources/Textures/btn_AlignBaseLine_Light.psd
+    Data: {fileID: 2800000, guid: 18775b51e3bd42299fd30bd036ea982f, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineAutokey_active@2x.png
+    Data: {fileID: 2800000, guid: 183f7b7549219ab47becb461a16df882, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelineActivation.png
+    Data: {fileID: 2800000, guid: 2887294cc7f1fe840bff6e349409648d, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_step1.png
+    Data: {fileID: 2800000, guid: 38236a82ff44aaa4b972248479d5f970, type: 3}
+  - Name: Packages/com.unity.ugui/Editor Resources/Textures/btn_AlignTop.psd
+    Data: {fileID: 2800000, guid: 48d034c499ee4697af9dd6e327110249, type: 3}
+  - Name: Packages/com.unity.testtools.codecoverage/Editor/Icons/d_CodeCoverage.png
+    Data: {fileID: 2800000, guid: 48e45b7f100ee4b48a02e05135e6cece, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/Square.png
+    Data: {fileID: 2800000, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+  - Name: Packages/com.unity.ugui/Editor Resources/Textures/btn_AlignBottom_Light.psd
+    Data: {fileID: 2800000, guid: 585b70cb75dd43efbfead809c30a1731, type: 3}
+  - Name: Assets/Plugins/Newtonsoft.Json.13.0.3/packageIcon.png
+    Data: {fileID: 2800000, guid: 68d6ec399c4865a46ad33463ba8acb2f, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_ignoredoverlay@2x.png
+    Data: {fileID: 2800000, guid: 68fafd0a2acc3774988418f657bf7b68, type: 3}
+  - Name: Assets/Plugins/EggFramework/3rd/Demigiant/DOTween/Editor/Imgs/Header.jpg
+    Data: {fileID: 2800000, guid: 78a59ca99f8987941adb61f9e14a06a7, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/v2/9Sliced.png
+    Data: {fileID: 2800000, guid: 8884154dfe85442a3a3578be807dbcdf, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelinePingPong.png
+    Data: {fileID: 2800000, guid: 88d697f38121de443ba144702e5122d9, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconconflicted.png
+    Data: {fileID: 2800000, guid: 881798b77426a8f47b533dcc4767e9e5, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconbranchpendingchanges.png
+    Data: {fileID: 2800000, guid: 9884e4b094556b844b543b5e169bf7b7, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconundo.png
+    Data: {fileID: 2800000, guid: 98773313eabe35543bfdbf542ccea271, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconbranch.png
+    Data: {fileID: 2800000, guid: 981b1c6358520f245a69c070270eca96, type: 3}
+  - Name: Packages/com.unity.addressables/Editor/Icons/AddressableAssetsIconY1756Scene.png
+    Data: {fileID: 2800000, guid: 988ed84773d02644cbc268043bbd8864, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconconflictedoverlay.png
+    Data: {fileID: 2800000, guid: a892bcc7ae1871447926b3c44d158763, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/v2/Circle.png
+    Data: {fileID: 2800000, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TimelineEditModeMixON.png
+    Data: {fileID: 2800000, guid: a82846d41464fcf4b962ebdc815963f5, type: 3}
+  - Name: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformStandaloneOSXIcon.png
+    Data: {fileID: 2800000, guid: a8a8a51840bce43499129ca737ca10a7, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelineSignalCollapsed.png
+    Data: {fileID: 2800000, guid: a88fa20ed164bbe4da6bf533f94a3113, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackLockButtonEnabled@2x.png
+    Data: {fileID: 2800000, guid: b8c531b4e51e4994a81837c4e9b0d649, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/icondeletedremote.png
+    Data: {fileID: 2800000, guid: b85a4b2ec6433d04895612d791edc260, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TimelineCollapseMarkerButtonDisabled.png
+    Data: {fileID: 2800000, guid: b80d5b6acdfbc114b9efab6295fd96c1, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_step1@2x.png
+    Data: {fileID: 2800000, guid: c8a69ecdf54ac8e4b873466605de27ff, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconlabel@2x.png
+    Data: {fileID: 2800000, guid: c8396bd7e257d6b4b8d1d72fdb7a2684, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackLockButtonEnabled.png
+    Data: {fileID: 2800000, guid: e8aa120f1b4731e43a2dd31eb70bbbe2, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconoutofsync@2x.png
+    Data: {fileID: 2800000, guid: f82dfc5fc3c5a8f4080a3550427019c8, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TimelineEditModeReplaceOFF.png
+    Data: {fileID: 2800000, guid: 09ae14686a02d484ab41e76fd1efba14, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconpackageupdateavailable@2x.png
+    Data: {fileID: 2800000, guid: 19b06b801c204604290761788cf6e125, type: 3}
+  - Name: Packages/com.unity.testtools.codecoverage/Editor/Icons/FolderOpened.png
+    Data: {fileID: 2800000, guid: 1935829ae7024da448814ef05b31e6c4, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/v2/IsometricDiamond.png
+    Data: {fileID: 2800000, guid: 19fb86013d8c24d6cb8410c0aadf30fa, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackMarkerButtonDisabled@2x.png
+    Data: {fileID: 2800000, guid: 193dae938a3136440b693b45a2494737, type: 3}
+  - Name: Assets/Arts/Cubic_11.ttf
+    Data: {fileID: 2800000, guid: 297546ef92f06124e81280c2c8ddc810, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconshelve.png
+    Data: {fileID: 2800000, guid: 292bae633fda01e41b8847fad37495c2, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconcheckedoutlocaloverlay@2x.png
+    Data: {fileID: 2800000, guid: 3999034958d54364da380a8839a11050, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TimelineEditModeMixOFF.png
+    Data: {fileID: 2800000, guid: 39d9575ed0465354cb02b69ea18526de, type: 3}
+  - Name: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformWebGLIcon.png
+    Data: {fileID: 2800000, guid: 49850dfe65879f949bd15bb7738b7bdf, type: 3}
+  - Name: Packages/com.unity.ugui/Editor Resources/Textures/btn_AlignCapLine_Light.psd
+    Data: {fileID: 2800000, guid: 49679f302ac6408697f6b9314a38985c, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackRecordButtonDisabled.png
+    Data: {fileID: 2800000, guid: 495998c718a094540bbe57ae5ab07647, type: 3}
+  - Name: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformiOSIcon@2x.png
+    Data: {fileID: 2800000, guid: 59549f72de25b4c46b48c01b3e64ec90, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/refresh@2x.png
+    Data: {fileID: 2800000, guid: 59571f82a0dc1a14da606dc0df6f8ea7, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/ignored.png
+    Data: {fileID: 2800000, guid: 595bc97bc8e1e0b46bd4c2148ba3723a, type: 3}
+  - Name: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformXboxOneIcon.png
+    Data: {fileID: 2800000, guid: 596c9ec38e3138046aff034674a6887c, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconclouddriveview@2x.png
+    Data: {fileID: 2800000, guid: 59eedc7f076ac5749993ec0e94b87af3, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelineEndPlayback.png
+    Data: {fileID: 2800000, guid: 6952cd3b0f88917449a8fa4d19fc5009, type: 3}
+  - Name: Packages/com.unity.ugui/Editor Resources/Textures/btn_AlignFlush.psd
+    Data: {fileID: 2800000, guid: 691475c57a824010be0c6f474caeb7e1, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_secondarytabclose.png
+    Data: {fileID: 2800000, guid: 6975ee4c1f40caf4da8dd733ee2cfeaf, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/step3.png
+    Data: {fileID: 2800000, guid: 69899ed144c8eea4baea48b858b37746, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconundo.png
+    Data: {fileID: 2800000, guid: 691dc543ff5b9ca44bf846657ba04161, type: 3}
+  - Name: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformPS4Icon@2x.png
+    Data: {fileID: 2800000, guid: 69eef738ab4fa5d4c82e3f424ea1a5cd, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconshelve@2x.png
+    Data: {fileID: 2800000, guid: 695fbddd7238dc94c8f102d9191c2886, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelineInfiniteTrackNoShadow.png
+    Data: {fileID: 2800000, guid: 69ff79f863a32ad44a9497d4896d9d1c, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_step2.png
+    Data: {fileID: 2800000, guid: 897c3a3f5c4038345a7143573bbb4a40, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/ignoredoverlay@2x.png
+    Data: {fileID: 2800000, guid: 999d04c0ea94ccc41b3d80788160695b, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/HexagonFlatTopWithBorder.png
+    Data: {fileID: 2800000, guid: a9716c16a44a94eed9b5c90fbf4d9bdd, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconplasticnotifyconflict.png
+    Data: {fileID: 2800000, guid: a916ed6819efd014588f58e3cfc48196, type: 3}
+  - Name: Assets/Arts/Manga/P2A.png
+    Data: {fileID: 2800000, guid: c9b81a3945c668c4c86d649cc475ec62, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_step3@2x.png
+    Data: {fileID: 2800000, guid: c9ed6d6ea2f9657409bfa068d4846139, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineSignalCollapsed.png
+    Data: {fileID: 2800000, guid: d91793cd853a258448e4d5545bb38e45, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconpackageupdateavailable.png
+    Data: {fileID: 2800000, guid: e9cc02852345307449379a9a877679da, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/buttonssosigninunity.png
+    Data: {fileID: 2800000, guid: f9161c6c9e06dc445ada3ee16d991f90, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelineKeyframe.png
+    Data: {fileID: 2800000, guid: f9fd2f335364cda41937eab39bf20049, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconconflicted@2x.png
+    Data: {fileID: 2800000, guid: f95f697d66d238446b1ab717def09945, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconcurrentbranch.png
+    Data: {fileID: 2800000, guid: 0a02e43184c7e9c4c9c59b601100b705, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconemptygravatar@2x.png
+    Data: {fileID: 2800000, guid: 0ac55f9f886d827408c102bdf33c5ff7, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/hideversioncontrol.png
+    Data: {fileID: 2800000, guid: 0a08fa9ec51507e488400cee024073a7, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelineAutokey_active.png
+    Data: {fileID: 2800000, guid: 0a5e3e063c4e1ab45999cf6e40c13c07, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelineSignalSelected.png
+    Data: {fileID: 2800000, guid: 1a7852b1b33b816498b6af1e739f5995, type: 3}
+  - Name: Assets/Plugins/EggFramework/3rd/Sirenix/Odin Inspector/Assets/Editor/SdfIconAtlas.png
+    Data: {fileID: 2800000, guid: 2a0112a98875dfd488b5d10bdb8a4903, type: 3}
+  - Name: Assets/Plugins/EggFramework/3rd/xNode-1.8.0/Scripts/Editor/Resources/xnode_node_highlight.png
+    Data: {fileID: 2800000, guid: 2ab2b92d7e1771b47bba0a46a6f0f6d5, type: 3}
+  - Name: Packages/com.unity.addressables/Editor/Icons/white_help@2x.png
+    Data: {fileID: 2800000, guid: 2a1c92f384e631d4c95ab63b4d466677, type: 3}
+  - Name: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/Button_LeftPanel_DarkTheme.png
+    Data: {fileID: 2800000, guid: 3a0ce64154675d64ba2a3fdcb3e92949, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconconflictresolvedoverlay@2x.png
+    Data: {fileID: 2800000, guid: 4a231ba0e81e63849a8f985c228e8acd, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/CircleWithBorder.png
+    Data: {fileID: 2800000, guid: 4adeaf2d2b1c7417e89f026626d8264f, type: 3}
+  - Name: Assets/Plugins/System.Formats.Asn1.8.0.1/Icon.png
+    Data: {fileID: 2800000, guid: 5af31b2b70354ab4d8fe5da067ef7675, type: 3}
+  - Name: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformSwitchIcon.png
+    Data: {fileID: 2800000, guid: 5a5529cb00c9319488699e8367ff0f96, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/v2/HexagonPointTop.png
+    Data: {fileID: 2800000, guid: 5aa8b770bc43046bc8d993d0d5b7f4a5, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackMuteButtonDisabled.png
+    Data: {fileID: 2800000, guid: 6ab002208ec290544b44bc263dc58a95, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_secondarytabclosehover.png
+    Data: {fileID: 2800000, guid: 6a9d211bea1bc4a429d86cbb2d0b0a3e, type: 3}
+  - Name: Packages/com.unity.ugui/Editor Resources/Textures/btn_AlignCenter_Light.psd
+    Data: {fileID: 2800000, guid: 6ace62d30f494c948b71d5594afce11d, type: 3}
+  - Name: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformiOSIcon.png
+    Data: {fileID: 2800000, guid: 8a5c9b2d5cfd7b94caca42edabdf243f, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconmoved.png
+    Data: {fileID: 2800000, guid: 8a6cca56e2b63344eb4769cd92d93ffb, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_secondarytabclosehover@2x.png
+    Data: {fileID: 2800000, guid: 9aa4348290784b2468144a97eb15d8d7, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconaddedlocal.png
+    Data: {fileID: 2800000, guid: 9a1ab8af8c446204e989a90f18305caf, type: 3}
+  - Name: Packages/com.unity.visualscripting/Graphics/GraphGroup.psd
+    Data: {fileID: 2800000, guid: 9aebf5eaf632b8a4898b295d2cb20c0d, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconemptygravatar.png
+    Data: {fileID: 2800000, guid: 9aebd705574f9e642aef1e5f59b3e4d8, type: 3}
+  - Name: Assets/Plugins/NPOI.2.7.4/logo/60_60.jpg
+    Data: {fileID: 2800000, guid: 9aee9d6d740485a47a5ec9bca8d81614, type: 3}
+  - Name: Packages/com.unity.visualscripting/Editor/VisualScripting.Core/IconMap/Variables@32x.png
+    Data: {fileID: 2800000, guid: ba736aa67df8cee43b1b679c961d74f4, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconlock@2x.png
+    Data: {fileID: 2800000, guid: ba96945b6a1b743579931a87e98041fe, type: 3}
+  - Name: Assets/Arts/Manga/P3B2.png
+    Data: {fileID: 2800000, guid: ba4a801c0cdedbc48ae8a30fab76589c, type: 3}
+  - Name: Packages/com.unity.ugui/Editor Resources/Textures/btn_AlignBottom.psd
+    Data: {fileID: 2800000, guid: ca51b19024094d1b87f3e07edb0a75fb, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconinfobellnotification.png
+    Data: {fileID: 2800000, guid: ca9343b72095cb846be99d76d069dfc0, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconemptygravatar@2x.png
+    Data: {fileID: 2800000, guid: da545229eea36164d8b8cba2f75a1143, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconcurrentbranch@2x.png
+    Data: {fileID: 2800000, guid: ead32eef98d0a664fb5b025c4bf013d4, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineInfiniteTrackNoShadow.png
+    Data: {fileID: 2800000, guid: eae63adb172f1164db61a7f4bdfc3637, type: 3}
+  - Name: Packages/com.unity.ugui/Editor Resources/Textures/btn_AlignJustified_Light.psd
+    Data: {fileID: 2800000, guid: fa6bd40a216346b783a4cce741d277a5, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconlockedremoteoverlay@2x.png
+    Data: {fileID: 2800000, guid: 2bb4e96f5d0b02c468932d665a015c54, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconinviteusers@2x.png
+    Data: {fileID: 2800000, guid: 2b9bf8ec5d54fe249ac9e20979ccd42c, type: 3}
+  - Name: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/FileNoIcon.png
+    Data: {fileID: 2800000, guid: 3b40c3dceab2ff14cb0e00e989fd8b27, type: 3}
+  - Name: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformSwitchIcon@2x.png
+    Data: {fileID: 2800000, guid: 3beb0fb679dee7f4ca526692b1702fc4, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineTimeCursor.png
+    Data: {fileID: 2800000, guid: 3b9e9b3d9ade166499e7a17109ca73bf, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackAvatarButtonEnabled.png
+    Data: {fileID: 2800000, guid: 4bf6507f1346b2746a35384f6a5fd5f9, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/HexagonPointTopWithBorder.png
+    Data: {fileID: 2800000, guid: 4b2a04fdbe0ef4d8da8f90eaca817cd1, type: 3}
+  - Name: Assets/Plugins/SixLabors.Fonts.1.0.1/sixlabors.fonts.128.png
+    Data: {fileID: 2800000, guid: 4bed58bea65733744b96cd9bfcda02bd, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconbranchincomingchanges.png
+    Data: {fileID: 2800000, guid: 6be6516e46f7d0c4d913a11238973b79, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TimelineEditModeReplaceON.png
+    Data: {fileID: 2800000, guid: 7b4b3cedf598c954cb2f38d6e2e34c0d, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconclouddriveview.png
+    Data: {fileID: 2800000, guid: 8b32b34c806b4de4cb7f04b3344b6966, type: 3}
+  - Name: Packages/com.unity.ugui/Editor Resources/Textures/btn_AlignBaseLine.psd
+    Data: {fileID: 2800000, guid: 8bc445bb79654bf496c92d0407840a92, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/Assets/SpriteEditor.png
+    Data: {fileID: 2800000, guid: 9b243bd8491a24b2cbe5231468a93813, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconbrex@2x.png
+    Data: {fileID: 2800000, guid: 9b76c79563c3a274aa48b0dbdf009693, type: 3}
+  - Name: Assets/Plugins/System.Security.Principal.Windows.5.0.0/Icon.png
+    Data: {fileID: 2800000, guid: 9b18f989743db98438d235055e4e5c42, type: 3}
+  - Name: Assets/Arts/UI/Button/Button_SearchBar.png
+    Data: {fileID: 2800000, guid: ab2051c7305a8f243908d481c709d42c, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconbrex@2x.png
+    Data: {fileID: 2800000, guid: ab97695f01bc84c4b93e8440531417e7, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineIconClipIn.png
+    Data: {fileID: 2800000, guid: ab1e2f0dfb0df5e40bb95359b3d8ed3a, type: 3}
+  - Name: Packages/com.unity.ugui/Editor Resources/Textures/btn_AlignMidline_Light.psd
+    Data: {fileID: 2800000, guid: bb42b2d967d6427983c901a4ffc8ecd9, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconcheckedoutlocaloverlay.png
+    Data: {fileID: 2800000, guid: bb1928aff4fd4cf44af1f629dc14ef9b, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackMuteButtonDisabled@2x.png
+    Data: {fileID: 2800000, guid: db31466324572e740a431e4e0e03a016, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackRecordButtonDisabled@2x.png
+    Data: {fileID: 2800000, guid: db15c78579dee4a4db85f392634c8ecc, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/SquareWithBorder.png
+    Data: {fileID: 2800000, guid: db750325989564987a34393247d883b4, type: 3}
+  - Name: Assets/Arts/UI/win_frame_Selected.png
+    Data: {fileID: 2800000, guid: db66f9f4cb9ac834bbb5b369a9c189a2, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Shared/TimelineBottomShadow.png
+    Data: {fileID: 2800000, guid: db66ea47c76423f4a881937d34495801, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/Circle.png
+    Data: {fileID: 2800000, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconplasticnotifypendingchanges@2x.png
+    Data: {fileID: 2800000, guid: eb1c900f0d4a3ee42a9a49630bf88a12, type: 3}
+  - Name: Packages/com.unity.ugui/Editor Resources/Textures/SectionHeader_Dark.psd
+    Data: {fileID: 2800000, guid: fb5730e24283d0c489e5c7d0bee023d9, type: 3}
+  - Name: Packages/com.unity.visualscripting/Graphics/FlowPorts_24x.psd
+    Data: {fileID: 2800000, guid: fb8aec2313da2234687b591ff0c0e622, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackCurvesButtonEnabled.png
+    Data: {fileID: 2800000, guid: fbcdeb07ee516a64daa01ce462874280, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/hideversioncontrol@2x.png
+    Data: {fileID: 2800000, guid: fbfdd7d489e0bd54f946ebc8e19db8bd, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconaddedlocal.png
+    Data: {fileID: 2800000, guid: 0c6a2a64ca9f9c946a7dbbd1674cf5bd, type: 3}
+  - Name: Packages/com.unity.visualscripting/Editor/VisualScripting.Core/IconMap/FlowGraph@32x.png
+    Data: {fileID: 2800000, guid: 0ccb256674ae837499e788d1cca73948, type: 3}
+  - Name: Assets/Plugins/System.Security.Cryptography.Cng.5.0.0/Icon.png
+    Data: {fileID: 2800000, guid: 0c9defef64b626d43b934c0e1bf61b1e, type: 3}
+  - Name: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformLuminIcon.png
+    Data: {fileID: 2800000, guid: 1ca1e1e405efb114fa23798a8d0c4c56, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackLockButtonEnabled@2x.png
+    Data: {fileID: 2800000, guid: 2c85066ea99cfbe4f90294bf295ce543, type: 3}
+  - Name: Assets/Arts/Manga/P5A.png
+    Data: {fileID: 2800000, guid: 2cf65e6d2a3ca2641aa4714b94bdc3ed, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_icondeletedremoteoverlay@2x.png
+    Data: {fileID: 2800000, guid: 2cfbf6619eb047545a425e8a31732c83, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconinfobellnotification@2x.png
+    Data: {fileID: 2800000, guid: 3cf8ae89579fd29479f4269d09600e16, type: 3}
+  - Name: Assets/Plugins/NPOI.2.7.4/logo/240_240.png
+    Data: {fileID: 2800000, guid: 5cf6c8fb72b9cba49bd377f5a6f46fbf, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Shared/TimelineGroupBackground.png
+    Data: {fileID: 2800000, guid: 6ca5daa3415451940921fa7e2c3db9e8, type: 3}
+  - Name: Assets/Plugins/SixLabors.ImageSharp.2.1.10/sixlabors.imagesharp.128.png
+    Data: {fileID: 2800000, guid: 7c92123b8dea1dd4cbc301e2d532a64e, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackAvatarButtonDisabled@2x.png
+    Data: {fileID: 2800000, guid: 7c05578092876a0458b8b480269aef86, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TimelineEditModeMixON.png
+    Data: {fileID: 2800000, guid: 7c681ffb5a436684fa3e98a9b66775c0, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackMuteButtonDisabled@2x.png
+    Data: {fileID: 2800000, guid: 9c706019afb28944eb19b500ea0da38c, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/step1.png
+    Data: {fileID: 2800000, guid: 9ce84ff0fdeb13d4a83f077d075dd9a5, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackRecordButtonDisabled.png
+    Data: {fileID: 2800000, guid: 9c6daec86666cbb4b9e558b839a103db, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconclosebutton.png
+    Data: {fileID: 2800000, guid: 9cadde7a0d5f9024ab3f2cd5f6a740d6, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackMuteButtonEnabled.png
+    Data: {fileID: 2800000, guid: ac5017dfbeee42347b3b45ecc572674e, type: 3}
+  - Name: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/Button_LeftPanel_LightTheme@2x.png
+    Data: {fileID: 2800000, guid: acf11b360a699d34383fb6a9d78eed8f, type: 3}
+  - Name: Assets/Arts/Manga/P5B1.png
+    Data: {fileID: 2800000, guid: ac1c331079a90b34ba7948ec4cb6fdda, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/9-SlicedWithBorder.png
+    Data: {fileID: 2800000, guid: cc35afd292fc349128b36a291fb3a165, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconplasticview.png
+    Data: {fileID: 2800000, guid: dcb2ee37925b97e438ae244996d81a55, type: 3}
+  - Name: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/Button_RightPanel_LightTheme@2x.png
+    Data: {fileID: 2800000, guid: dc63b9e976cf2234597ec4cef20023b4, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconoutofsyncoverlay.png
+    Data: {fileID: 2800000, guid: dc633de6e6e7415448c7568418239a9d, type: 3}
+  - Name: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformWSAPlayerIcon.png
+    Data: {fileID: 2800000, guid: ece4fc36f044b2544aa5ce4f5cd12422, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_hideversioncontrol.png
+    Data: {fileID: 2800000, guid: ec597fbbebec64e4f8725c31ce52fdb7, type: 3}
+  - Name: Packages/com.unity.ugui/Editor Resources/Gizmos/TMP - Sprite Asset Icon.psd
+    Data: {fileID: 2800000, guid: ec7c645d93308c04d8840982af12101e, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/IsometricDiamondWithBorder.png
+    Data: {fileID: 2800000, guid: 0d267bc78a0864eb48358689b29ed20a, type: 3}
+  - Name: Packages/com.unity.ugui/Editor Resources/Textures/btn_AlignCapLine.psd
+    Data: {fileID: 2800000, guid: 0d9a36012a224080966c7b55896aa0f9, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconundo@2x.png
+    Data: {fileID: 2800000, guid: 0dfbb2b6ddcdd254da80e3418498b3a6, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconpackageupdateavailable.png
+    Data: {fileID: 2800000, guid: 1dc16508006061742a802767b556accc, type: 3}
+  - Name: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/Button_LeftPanel_LightTheme.png
+    Data: {fileID: 2800000, guid: 1d77c469320df374f98081de5d7673be, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineMarkerItemSelected.png
+    Data: {fileID: 2800000, guid: 3dd65256ca8837544b3e738c0d3ee0e2, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_icondeletedremoteoverlay.png
+    Data: {fileID: 2800000, guid: 3de8a0634e55df8499c88204001cb0dd, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_icondeletedlocaloverlay.png
+    Data: {fileID: 2800000, guid: 4da274d970a82a943ae3979e7833f3dd, type: 3}
+  - Name: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformStandaloneOSXIcon@2x.png
+    Data: {fileID: 2800000, guid: 4d343c92fcbf4c34eae9cee8dc8107b7, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconoutofsyncoverlay@2x.png
+    Data: {fileID: 2800000, guid: 4d7e6e570e9d65a4c9a994783a0652e2, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_hideversioncontrol@2x.png
+    Data: {fileID: 2800000, guid: 5de67bf0a3c601f4bab93b4fd3314ab1, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/loading@2x.png
+    Data: {fileID: 2800000, guid: 5dbc069eb79bd4d43840847264d6d956, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Shared/TimelineSeqEnd.png
+    Data: {fileID: 2800000, guid: 5dfe66e61e0d270468ae75349ff3a3eb, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconundo@2x.png
+    Data: {fileID: 2800000, guid: 6d6088174bb906b49ad8428526ee337b, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TimelineEditModeReplaceON.png
+    Data: {fileID: 2800000, guid: 6d41c3e8796a4fd4e80840354039e4ac, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconlock.png
+    Data: {fileID: 2800000, guid: 6d3f95684dd634b18aa9ab45b3e06cfd, type: 3}
+  - Name: Assets/Arts/Manga/P2reB2.png
+    Data: {fileID: 2800000, guid: 7dd176dad877f3c449d8904345cb1ac9, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelineMarkerItemCollapsed.png
+    Data: {fileID: 2800000, guid: 7d4691eba7565c34ab785c00fbc27ff8, type: 3}
+  - Name: Assets/Plugins/EggFramework/3rd/Demigiant/DOTween/Editor/Imgs/DOTweenIcon.png
+    Data: {fileID: 2800000, guid: 8da095e39e9b4df488dfd436f81116d6, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconclipboard.png
+    Data: {fileID: 2800000, guid: 8d91317e8f7610f41a30fcb9c0d99196, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconcheckedoutlocaloverlay@2x.png
+    Data: {fileID: 2800000, guid: 8d98ab6168c3e91439339f1908b8fe97, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TimelineSignal.png
+    Data: {fileID: 2800000, guid: ad2e3e92b00839c4e991ca602ef19822, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TimelineEditModeRippleOFF.png
+    Data: {fileID: 2800000, guid: bd7b7cac6eb0c3f469781d9a729a1c94, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/Capsule.png
+    Data: {fileID: 2800000, guid: bd3cb4af8406d4436a2ae8c2aafe1f8d, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_step2@2x.png
+    Data: {fileID: 2800000, guid: cdb88fdb0cf46b244a667edaff21c7df, type: 3}
+  - Name: Packages/com.unity.visualscripting/Graphics/FlowPorts_12x.psd
+    Data: {fileID: 2800000, guid: cdd996c0455369d40a3c5c465015834f, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/step2.png
+    Data: {fileID: 2800000, guid: cd0b17b71a5c498428ee91dee8a78a88, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/buttonssosigninemail@2x.png
+    Data: {fileID: 2800000, guid: ddf2e76e8a1f88f46ae1e42277850b48, type: 3}
+  - Name: Packages/com.unity.testtools.codecoverage/Editor/Icons/FolderOpened@2x.png
+    Data: {fileID: 2800000, guid: dd4bd79e2c603964e8cbf04d0851a210, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineHold.png
+    Data: {fileID: 2800000, guid: ddbd45249a133a846b2f20e39b537565, type: 3}
+  - Name: Packages/com.unity.ugui/Editor Resources/Textures/btn_AlignTop_Light.psd
+    Data: {fileID: 2800000, guid: ed041e68439749a69d0efa0e3d896c2e, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconrepository.png
+    Data: {fileID: 2800000, guid: ed64f3a17f2ede646be21ed6edc9161a, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelineTimeCursor.png
+    Data: {fileID: 2800000, guid: ed665472b4fee2043a5c1cc802beaa8e, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackAvatarButtonEnabled@2x.png
+    Data: {fileID: 2800000, guid: fd12dbe3b63ae464f824b4a74c0e1766, type: 3}
+  - Name: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/d_icon dropdown@2x.png
+    Data: {fileID: 2800000, guid: fd53d86c6d81efc45bd1caf873084af4, type: 3}
+  - Name: Assets/Arts/Manga/P3B4.png
+    Data: {fileID: 2800000, guid: fdb6f1065b21a184f94f1938bfb660ab, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackAvatarButtonDisabled@2x.png
+    Data: {fileID: 2800000, guid: fd194f75fe3d7ca4488fa775ae832fd8, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconoutofsync.png
+    Data: {fileID: 2800000, guid: 0e80bd0b4a8196f46acf73711b9505ec, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackRecordButtonEnabled.png
+    Data: {fileID: 2800000, guid: 0e5ba0f04df278944a8f5a62f64f5aa6, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconplasticnotifyincoming.png
+    Data: {fileID: 2800000, guid: 1e6c9635b80f973488d8335a081c905f, type: 3}
+  - Name: Packages/com.unity.ugui/Editor Resources/Gizmos/TMP - Input Field Icon.psd
+    Data: {fileID: 2800000, guid: 3ee40aa79cd242a5b53b0b0ca4f13f0f, type: 3}
+  - Name: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/Button_LeftPanel_DarkTheme@2x.png
+    Data: {fileID: 2800000, guid: 3e28d3bd17b418141b01b3d1f7cfd2c2, type: 3}
+  - Name: Packages/com.unity.testtools.codecoverage/Editor/Icons/CodeCoverage.png
+    Data: {fileID: 2800000, guid: 5e4d1277a09266944b3431a0a44d0862, type: 3}
+  - Name: Assets/Arts/UI/photos/95w1Big.png
+    Data: {fileID: 2800000, guid: 6ef75dccabcca8b4ea1bc125a7590c4d, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconplasticnotifyconflict@2x.png
+    Data: {fileID: 2800000, guid: 6e0a54826ffc3ee46b0aa3e1c1575a69, type: 3}
+  - Name: Assets/Plugins/System.Text.Encoding.CodePages.5.0.0/Icon.png
+    Data: {fileID: 2800000, guid: 7ef0990c8f0457a44b98a3f0b87c4a9e, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_loading@2x.png
+    Data: {fileID: 2800000, guid: 7ee48c5fba4919649a8a6094cbead669, type: 3}
+  - Name: Packages/com.unity.visualscripting/Editor/VisualScripting.Core/IconMap/VariablesSaver@32x.png
+    Data: {fileID: 2800000, guid: 8ef7c0fbb1fbcd64e954e5eafe1652ad, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineKeyframe.png
+    Data: {fileID: 2800000, guid: 8eba099eb091faf419fecdcd5cdabfd7, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackCurvesButtonEnabled@2x.png
+    Data: {fileID: 2800000, guid: 9e541b6dcfb77d34481f69b3d62d0343, type: 3}
+  - Name: Packages/com.unity.settings-manager/Content/Options.png
+    Data: {fileID: 2800000, guid: 9eff477e4332346818c96745043dae9e, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconlockedlocaloverlay@2x.png
+    Data: {fileID: 2800000, guid: ae53a7884da90e94eb5dfeab594b746c, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconplasticnotifyincoming@2x.png
+    Data: {fileID: 2800000, guid: ae869fe6797f4454cbbf417d87ff637c, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_stepok.png
+    Data: {fileID: 2800000, guid: be423a54b981d38428de82ad12534629, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/stepok@2x.png
+    Data: {fileID: 2800000, guid: be340a165cb9c8d4cb50f1deeb51d4ea, type: 3}
+  - Name: Assets/Arts/UI/bugCat.png
+    Data: {fileID: 2800000, guid: ce104d734b9364c449779e7c98fa54e4, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconlabel@2x.png
+    Data: {fileID: 2800000, guid: ce435fe40bff4da41aadc577ebfb27d7, type: 3}
+  - Name: Assets/Plugins/EggFramework/3rd/NuGet/Resources/defaultIcon.png
+    Data: {fileID: 2800000, guid: eec19781926cd2248b7c9abfde8db555, type: 3}
+  - Name: Packages/com.unity.ugui/Editor Resources/Gizmos/TMP - Font Asset Icon.psd
+    Data: {fileID: 2800000, guid: ee148e281f3c41c5b4ff5f8a5afe5a6c, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/HexagonPointTop.png
+    Data: {fileID: 2800000, guid: eed45a33cd08446c8b88325cf82fc52f, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/buttonssosigninunity@2x.png
+    Data: {fileID: 2800000, guid: ee8ce5cd9c0883f4182b5cfd43cfd7fe, type: 3}
+  - Name: Assets/Arts/UI/Button/Pics_Collects1.png
+    Data: {fileID: 2800000, guid: fef10ff7c3d6e7945820ae2311fea328, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackLockButtonDisabled.png
+    Data: {fileID: 2800000, guid: fef7487d8b06bba408f70354e2463ce4, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/iconclipboard@2x.png
+    Data: {fileID: 2800000, guid: 0ff35d4ec6d381941bdbe1fb4b6dbceb, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_ignoredoverlay.png
+    Data: {fileID: 2800000, guid: 0f5597de928ba6547895c4cdb9fa4185, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackRecordButtonEnabled@2x.png
+    Data: {fileID: 2800000, guid: 0f1c9a12872a30f45bab34f536332bb3, type: 3}
+  - Name: Packages/com.unity.2d.sprite/Editor/Assets/SpriteEditorOn@2x.png
+    Data: {fileID: 2800000, guid: 1fb0e05a5ca5a42ba8ffafe439520b8e, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackCurvesButtonDisabled@2x.png
+    Data: {fileID: 2800000, guid: 1f3ea4caa6e0ec74388e4d7d16690e68, type: 3}
+  - Name: Packages/com.unity.ugui/Editor Resources/Gizmos/TMP - Text Component Icon.psd
+    Data: {fileID: 2800000, guid: 2fd6421f253b4ef1a19526541f9ffc0c, type: 3}
+  - Name: Assets/Plugins/EggFramework/3rd/xNode-1.8.0/Scripts/Editor/Resources/xnode_node.png
+    Data: {fileID: 2800000, guid: 2fea1dcb24935ef4ca514d534eb6aa3d, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconclipboard.png
+    Data: {fileID: 2800000, guid: 3f65802f2a170a145bd30ab3801b8d80, type: 3}
+  - Name: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformtvOSIcon.png
+    Data: {fileID: 2800000, guid: 3fd787210f08d364186b9df36062df04, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TimelineHeaderMarkerIcon.png
+    Data: {fileID: 2800000, guid: 4f8d98ef7dbbe3d469e14c04722cbeed, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackLockButtonDisabled@2x.png
+    Data: {fileID: 2800000, guid: 6fb5cabb85ba3794682b16eba19440cb, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/refresh.png
+    Data: {fileID: 2800000, guid: 6f6a4c6bd7cdc654d9d91f7de72afcb6, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackLockButtonDisabled@2x.png
+    Data: {fileID: 2800000, guid: 6f0b77e050cdb12478ed9514b3a0e40e, type: 3}
+  - Name: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformStandaloneLinux64Icon@2x.png
+    Data: {fileID: 2800000, guid: 7f70c9363a9fe92448d66c32c55352e9, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconprivateoverlay@2x.png
+    Data: {fileID: 2800000, guid: 7f854f490da24e54f9e8383e446b5d81, type: 3}
+  - Name: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformtvOSIcon@2x.png
+    Data: {fileID: 2800000, guid: 7f9793fab7c5a2d49a99acdc614bf45d, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TimelineEditModeMixOFF.png
+    Data: {fileID: 2800000, guid: 8fca5ed160cdc5440a4c7561db4082b2, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackRecordButtonEnabled@2x.png
+    Data: {fileID: 2800000, guid: 8fdae4ac756ed6047b01021ff0cc3ebb, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/secondarytabclosehover.png
+    Data: {fileID: 2800000, guid: 8fac55fff4ce5fa40a7b2efefc0e617a, type: 3}
+  - Name: Assets/Arts/Manga/P3A2.png
+    Data: {fileID: 2800000, guid: 9f7960bbf4a63b44092caff45794434f, type: 3}
+  - Name: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformStadiaIcon.png
+    Data: {fileID: 2800000, guid: af91525c769cf6847bb9b9e32c74db73, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineAutokey@2x.png
+    Data: {fileID: 2800000, guid: af24c542434a025448222d576f61a956, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelineAutokey.png
+    Data: {fileID: 2800000, guid: af3aec622aef40c45813b39e405966a3, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/step1@2x.png
+    Data: {fileID: 2800000, guid: affeade9874cf2347abb155e8d0db4d8, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TimelineHeaderMarkerIcon.png
+    Data: {fileID: 2800000, guid: bf1debab21103154b99778ba6e074175, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackLockButtonEnabled.png
+    Data: {fileID: 2800000, guid: cf575301f1e76c4478de0e77db15eba0, type: 3}
+  - Name: Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelineAutokey@2x.png
+    Data: {fileID: 2800000, guid: cf3fbf98d5c3f1941bd9c0256918a4c8, type: 3}
+  - Name: Assets/Plugins/NPOI.2.7.4/logo/120_120.jpg
+    Data: {fileID: 2800000, guid: df38828da47c74f489e77cd1f71821f7, type: 3}
+  - Name: Packages/com.unity.collab-proxy/Editor/Assets/Images/d_iconbranchincomingchanges@2x.png
+    Data: {fileID: 2800000, guid: efe23ffa29c83fb428c67acf61827b58, type: 3}
