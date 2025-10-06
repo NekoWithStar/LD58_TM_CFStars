@@ -6,7 +6,15 @@ namespace EggFramework.SimpleAudioSystem.Constant
 	{
 		public static class BGM
 		{
+			public const string OTHER = "other";
+			public const string THEME_ORIGINAL = "theme_original";
+			public const string THEME = "theme";
+			public const string P_IPEBOMB = "PIPEBOMB";
 			public static List<string> BGMIds = new(){
+			      OTHER,
+			      THEME_ORIGINAL,
+			      THEME,
+			      P_IPEBOMB,
 			};
 		}
 		public static class SFX
@@ -25,12 +33,15 @@ namespace EggFramework.SimpleAudioSystem.Constant
 			public const string N_OTIFY = "NOTIFY";
 			public const string DISCONNECTED = "disconnected";
 			public const string BALLOON = "balloon";
+			public const string LOCKIN = "lockin";
 			public const string MESSAGE = "message";
 			public const string HARDWAREERROR_DEAD = "hardwareerror_dead";
 			public const string D_ING = "DING";
+			public const string BUBBLEDIE = "bubbledie";
 			public const string R_ECYCLE = "RECYCLE";
 			public const string CHIMES = "chimes";
 			public const string HARDWAREERROR_LOOP4 = "hardwareerror_loop4";
+			public const string RECALL_CLEAR = "recall_clear";
 			public static List<string> SFXIds = new(){
 			      C_HORD,
 			      EXCLAMATION,
@@ -46,12 +57,15 @@ namespace EggFramework.SimpleAudioSystem.Constant
 			      N_OTIFY,
 			      DISCONNECTED,
 			      BALLOON,
+			      LOCKIN,
 			      MESSAGE,
 			      HARDWAREERROR_DEAD,
 			      D_ING,
+			      BUBBLEDIE,
 			      R_ECYCLE,
 			      CHIMES,
 			      HARDWAREERROR_LOOP4,
+			      RECALL_CLEAR,
 			};
 		}
 		public static class Group

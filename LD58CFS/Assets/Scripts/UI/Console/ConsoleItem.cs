@@ -9,6 +9,8 @@ using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using DG.Tweening;
+using EggFramework;
+using EggFramework.SimpleAudioSystem.Constant;
 using EggFramework.Util;
 using LD58.UI.CommandBoard;
 using LD58.Util;
@@ -101,6 +103,7 @@ namespace LD58.UI
                         if (AcceptedBlackBoardKey.Count == 0 ||
                             AcceptedBlackBoardKey.Contains(Selection.SelectedBlackBoardItem.Value))
                         {
+                            this.PlaySFX(AudioConstant.SFX.LOCKIN);
                             PendingInput    = false;
                             Parameter.Value = Selection.SelectedBlackBoardItem.Value;
                             _text.color     = Color.white;

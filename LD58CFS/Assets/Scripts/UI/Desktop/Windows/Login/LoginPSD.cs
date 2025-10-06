@@ -6,6 +6,8 @@
 #endregion
 
 using System.Collections.Generic;
+using EggFramework;
+using EggFramework.SimpleAudioSystem.Constant;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -25,6 +27,7 @@ namespace LD58.UI.Login
         }
         protected override void Accept(BlackBoardItem blackBoardItem)
         {
+            this.PlaySFX(AudioConstant.SFX.BALLOON);
             var console = FindFirstObjectByType<ConsoleController>();
             console.Switch(false);
             console.AddItemWithoutNewLine($"document.getElementById(\"{_desc}\").value = \"{blackBoardItem.Value}\"");
