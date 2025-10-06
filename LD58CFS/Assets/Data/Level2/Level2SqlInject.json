@@ -159,36 +159,28 @@
             "delay": 0.2
           },
           {
-            "type": "clickable",
-            "text": "<color=green>{\"username\": \"Kesi@Bmail.com\", \"password\": \"qwertyuiop1234567890\"},</color>",
-            "delay": 0.1,
-            "gain": {
-              "KesiCredentials": "Kesi@Bmail.com:qwertyuiop1234567890"
-            }
+            "type": "normal",
+            "text": "{\"username\": \"Kesi@Bmail.com\", \"password\": \"qwertyuiop1234567890\"},",
+            "delay": 0.1
           },
           {
             "type": "clickable",
             "text": "<color=green>{\"username\": \"bwiiter_admin@Bmail.com\", \"password\": \"Bwiiter2025!\"},</color>",
             "delay": 0.1,
             "gain": {
-              "BwiiterAdminCredentials": "bwiiter_admin@Bmail.com:Bwiiter2025!"
+              "BwiiterAdminUsername": "bwiiter_admin@Bmail.com",
+              "BwiiterAdminPassword": "Bwiiter2025!"
             }
           },
           {
-            "type": "clickable",
-            "text": "<color=green>{\"username\": \"it_support\", \"password\": \"support123456\"},</color>",
-            "delay": 0.1,
-            "gain": {
-              "ITSupportCredentials": "it_support:support123456"
-            }
+            "type": "normal",
+            "text": "{\"username\": \"it_support\", \"password\": \"support123456\"},",
+            "delay": 0.1
           },
           {
-            "type": "clickable",
-            "text": "<color=green>{\"username\": \"i_am_hack@Bmail.com\", \"password\": \"@!(*Djd1s0+++2__231d1\"}</color>",
-            "delay": 0.1,
-            "gain": {
-              "HackerCredentials": "i_am_hack@Bmail.com:@!(*Djd1s0+++2__231d1"
-            }
+            "type": "normal",
+            "text": "{\"username\": \"i_am_hack@Bmail.com\", \"password\": \"@!(*Djd1s0+++2__231d1\"}",
+            "delay": 0.1
           },
           {
             "type": "normal",
@@ -242,12 +234,9 @@
             "delay": 0.2
           },
           {
-            "type": "clickable",
-            "text": "<color=green>{\"username\": \"Kesi@Bmail.com\", \"password\": \"qwertyuiop1234567890\"},</color>",
-            "delay": 0.1,
-            "gain": {
-              "KesiCredentials": "Kesi@Bmail.com:qwertyuiop1234567890"
-            }
+            "type": "normal",
+            "text": "{\"username\": \"Kesi@Bmail.com\", \"password\": \"qwertyuiop1234567890\"},",
+            "delay": 0.1
           },
           {
             "type": "clickable",
@@ -258,20 +247,14 @@
             }
           },
           {
-            "type": "clickable",
-            "text": "<color=green>{\"username\": \"it_support\", \"password\": \"support123456\"},</color>",
-            "delay": 0.1,
-            "gain": {
-              "ITSupportCredentials": "it_support:support123456"
-            }
+            "type": "normal",
+            "text": "{\"username\": \"it_support\", \"password\": \"support123456\"},",
+            "delay": 0.1
           },
           {
-            "type": "clickable",
-            "text": "<color=green>{\"username\": \"i_am_hack@Bmail.com\", \"password\": \"@!(*Djd1s0+++2__231d1\"}</color>",
-            "delay": 0.1,
-            "gain": {
-              "HackerCredentials": "i_am_hack@Bmail.com:@!(*Djd1s0+++2__231d1"
-            }
+            "type": "normal",
+            "text": "{\"username\": \"i_am_hack@Bmail.com\", \"password\": \"@!(*Djd1s0+++2__231d1\"}",
+            "delay": 0.1
           },
           {
             "type": "normal",
@@ -408,14 +391,20 @@
             "delay": 0.05
           },
           {
-            "type": "normal",
-            "text": "  \"from\": \"it_support@bmail.com\",",
-            "delay": 0.05
+            "type": "clickable",
+            "text": "  \"from\": \"<color=cyan>it_support@bmail.com</color>\",",
+            "delay": 0.05,
+            "gain": {
+              "PhishingSender": "it_support@bmail.com"
+            }
           },
           {
-            "type": "normal",
-            "text": "  \"to\": \"bwiiter_admin@bwiiter.com\",",
-            "delay": 0.05
+            "type": "clickable",
+            "text": "  \"to\": \"<color=cyan>bwiiter_admin@bwiiter.com</color>\",",
+            "delay": 0.05,
+            "gain": {
+              "PhishingTarget": "bwiiter_admin@bwiiter.com"
+            }
           },
           {
             "type": "normal",
@@ -423,9 +412,12 @@
             "delay": 0.05
           },
           {
-            "type": "normal",
-            "text": "  \"body\": \"Dear Bwiiter Admin, please reset your password by clicking the link below: http://bwiiter/reset\"",
-            "delay": 0.05
+            "type": "clickable",
+            "text": "  \"body\": \"Dear Bwiiter Admin, please reset your password by clicking the link below: <color=cyan>http://bwiiter/reset</color>\"",
+            "delay": 0.05,
+            "gain": {
+              "PhishingLink": "http://bwiiter/reset"
+            }
           },
           {
             "type": "normal",
@@ -458,9 +450,12 @@
             "delay": 0.05
           },
           {
-            "type": "normal",
-            "text": "  \"body\": \"Check out this video: youtube.com/watch?v=catnap101\"",
-            "delay": 0.05
+            "type": "clickable",
+            "text": "  \"body\": \"Check out this video: <color=cyan>youtube.com/watch?v=catnap101</color>\"",
+            "delay": 0.05,
+            "gain": {
+              "CatVideo": "youtube.com/watch?v=catnap101"
+            }
           },
           {
             "type": "normal",
@@ -672,14 +667,20 @@
             "delay": 0.05
           },
           {
-            "type": "normal",
-            "text": "  \"from\": \"it_support@bmail.com\",",
-            "delay": 0.05
+            "type": "clickable",
+            "text": "  \"from\": \"<color=cyan>it_support@bmail.com</color>\",",
+            "delay": 0.05,
+            "gain": {
+              "PhishingSender": "it_support@bmail.com"
+            }
           },
           {
-            "type": "normal",
-            "text": "  \"to\": \"bwiiter_admin@bwiiter.com\",",
-            "delay": 0.05
+            "type": "clickable",
+            "text": "  \"to\": \"<color=cyan>bwiiter_admin@bwiiter.com</color>\",",
+            "delay": 0.05,
+            "gain": {
+              "PhishingTarget": "bwiiter_admin@bwiiter.com"
+            }
           },
           {
             "type": "normal",
@@ -687,9 +688,12 @@
             "delay": 0.05
           },
           {
-            "type": "normal",
-            "text": "  \"body\": \"尊敬的bwiiter管理员，请点击以下链接重置密码：http://bwiiter/reset\"",
-            "delay": 0.05
+            "type": "clickable",
+            "text": "  \"body\": \"尊敬的bwiiter管理员，点击重置密码：<color=cyan>http://bwiiter/reset</color>\"",
+            "delay": 0.05,
+            "gain": {
+              "PhishingLink": "http://bwiiter/reset"
+            }
           },
           {
             "type": "normal",
@@ -722,9 +726,12 @@
             "delay": 0.05
           },
           {
-            "type": "normal",
-            "text": "  \"body\": \"看看这个视频：youtube.com/watch?v=catnap101\"",
-            "delay": 0.05
+            "type": "clickable",
+            "text": "  \"body\": \"看看这个视频：<color=cyan>youtube.com/watch?v=catnap101</color>\"",
+            "delay": 0.05,
+            "gain": {
+              "CatVideo": "youtube.com/watch?v=catnap101"
+            }
           },
           {
             "type": "normal",
@@ -853,12 +860,9 @@
             "delay": 0.2
           },
           {
-            "type": "clickable",
-            "text": "<color=cyan>{\"key\": \"smtp_server\", \"value\": \"smtp.bmail.com:587\"},</color>",
-            "delay": 0.1,
-            "gain": {
-              "SMTPServer": "smtp.bmail.com:587"
-            }
+            "type": "normal",
+            "text": "{\"key\": \"smtp_server\", \"value\": \"smtp.bmail.com:587\"},",
+            "delay": 0.1
           },
           {
             "type": "normal",
@@ -871,16 +875,13 @@
             "delay": 0.1
           },
           {
-            "type": "clickable",
-            "text": "<color=cyan>{\"key\": \"admin_panel_url\", \"value\": \"https://bmail.com/admin\"},</color>",
-            "delay": 0.1,
-            "gain": {
-              "AdminPanelURL": "https://bmail.com/admin"
-            }
+            "type": "normal",
+            "text": "{\"key\": \"cat_picture_auto_download\", \"value\": \"enabled\"},",
+            "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "{\"key\": \"allow_password_reset\", \"value\": \"true\"}",
+            "text": "{\"key\": \"enable_spell_check\", \"value\": \"false_because_we_cant_spell\"}",
             "delay": 0.1
           },
           {
@@ -890,7 +891,7 @@
           },
           {
             "type": "normal",
-            "text": "[SUCCESS] SQL injection completed - Found admin panel URL",
+            "text": "[SUCCESS] SQL injection completed - Just some boring config",
             "delay": 0
           }
         ]
@@ -935,12 +936,9 @@
             "delay": 0.2
           },
           {
-            "type": "clickable",
-            "text": "<color=cyan>{\"key\": \"smtp_server\", \"value\": \"smtp.bmail.com:587\"},</color>",
-            "delay": 0.1,
-            "gain": {
-              "SMTPServer": "smtp.bmail.com:587"
-            }
+            "type": "normal",
+            "text": "{\"key\": \"smtp_server\", \"value\": \"smtp.bmail.com:587\"},",
+            "delay": 0.1
           },
           {
             "type": "normal",
@@ -953,16 +951,13 @@
             "delay": 0.1
           },
           {
-            "type": "clickable",
-            "text": "<color=cyan>{\"key\": \"admin_panel_url\", \"value\": \"https://bmail.com/admin\"},</color>",
-            "delay": 0.1,
-            "gain": {
-              "AdminPanelURL": "https://bmail.com/admin"
-            }
+            "type": "normal",
+            "text": "{\"key\": \"cat_picture_auto_download\", \"value\": \"enabled\"},",
+            "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "{\"key\": \"allow_password_reset\", \"value\": \"true\"}",
+            "text": "{\"key\": \"enable_spell_check\", \"value\": \"false_because_we_cant_spell\"}",
             "delay": 0.1
           },
           {
@@ -972,7 +967,7 @@
           },
           {
             "type": "normal",
-            "text": "<color=green>[成功] SQL注入完成 - 发现管理面板URL</color>",
+            "text": "<color=green>[成功] SQL注入完成 - 只是一些无聊的配置</color>",
             "delay": 0
           }
         ]
@@ -1187,7 +1182,7 @@
       },
       {
         "language": "english",
-        "case": "invalid",
+        "case": "default",
         "lineBlocks": [
           {
             "type": "normal",
@@ -1211,14 +1206,14 @@
           },
           {
             "type": "normal",
-            "text": "<color=red>[ERROR] HTTP $ErrorCode - $ErrorMessage</color>",
+            "text": "<color=red>[ERROR] HTTP 403 - Access Denied</color>",
             "delay": 0
           }
         ]
       },
       {
         "language": "chinese",
-        "case": "invalid",
+        "case": "default",
         "lineBlocks": [
           {
             "type": "normal",
@@ -1242,7 +1237,7 @@
           },
           {
             "type": "normal",
-            "text": "<color=red>[错误] HTTP $ErrorCode - $ErrorMessage</color>",
+            "text": "<color=red>[错误] HTTP 403 - 拒绝访问</color>",
             "delay": 0
           }
         ]

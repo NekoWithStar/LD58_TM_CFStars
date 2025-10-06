@@ -708,6 +708,68 @@
             "delay": 0
           }
         ]
+      },
+      {
+        "language": "english",
+        "case": "default",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[INITIALIZING CAMPAIGN]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Parameters validation...",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[ERROR] 0x0000000B: INVALID PARAMETER VALUE</color>",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[ERROR] One or more parameters do not match expected values.</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "default",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[初始化活动]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 验证参数中...",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[错误] 0x0000000B: 无效参数值</color>",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[错误] 一个或多个参数不匹配预期值。</color>",
+            "delay": 0
+          }
+        ]
       }
     ]
   }
