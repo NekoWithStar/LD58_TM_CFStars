@@ -1,5 +1,6 @@
 using Cysharp.Threading.Tasks;
 using EggFramework.UIUtil;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,6 +13,7 @@ public class SceneLoadIn : MonoBehaviour
     public bool isExitButton = false;
 
     // UI��ť���ʱ���ô˷���
+    [Button]
     public async void OnButtonClick()
     {
         if (isExitButton)
