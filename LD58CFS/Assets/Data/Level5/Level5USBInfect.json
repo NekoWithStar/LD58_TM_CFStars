@@ -2021,9 +2021,12 @@
             "delay": 0.2
           },
           {
-            "type": "normal",
-            "text": "  ├── 主要: $NukeControlIP ($NukeControlName)",
-            "delay": 0.1
+            "type": "clickable",
+            "text": "  ├── 主要: <color=cyan>$NukeControlIP</color> ($NukeControlName)",
+            "delay": 0.1,
+            "gain": {
+              "NukeControlIP": "$NukeControlIP"
+            }
           },
           {
             "type": "normal",
