@@ -691,7 +691,7 @@
             "text": "  \"subject\": \"<color=cyan>紧急：需要重置密码</color>\",",
             "delay": 0.05,
             "gain": {
-              "PhishingSubject": "紧急：需要重置密码"
+              "PhishingSubject": "ResetThePassword"
             }
           },
           {

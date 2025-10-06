@@ -4,7 +4,7 @@
     {
       "name": "TargetDomain",
       "type": "string",
-      "accept": ["www.bmail.com"]
+      "accept": ["www.bmail.com", "www.meow-awards.com"]
     }
   ],
   "cases": [
@@ -30,6 +30,19 @@
         "FileSize": "13.1",
         "ResponseTime": "245ms",
         "Server": "Apache/2.4.41 (Ubuntu)"
+      }
+    },
+    {
+      "name": "case2",
+      "parameterValues": {
+        "TargetDomain": ["www.meow-awards.com"]
+      },
+      "variables": {
+        "ScanCount": "15",
+        "ErrorType": "DNS_RESOLUTION_FAILED",
+        "ErrorCode": "0x00000404",
+        "Suggestion": "This domain appears to be the phishing target, not the attack source. Consider scanning the infrastructure you control (e.g., email servers, databases).",
+        "CSuggestionChinese": "此域名似乎是钓鱼目标，而非攻击源。建议扫描你控制的基础设施（如邮件服务器、数据库）。"
       }
     }
   ],
@@ -498,6 +511,188 @@
           {
             "type": "normal",
             "text": "<color=red>[ERROR] Unable to reach target domain.</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "case2",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[SCAN INITIATED]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Target: $TargetDomain",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Protocol: HTTPS/1.1",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Resolving DNS...",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[ERROR] $ErrorCode: $ErrorType</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>  └── Unable to resolve domain: $TargetDomain</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[ANALYSIS]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Domain registration: Not found in public DNS",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── WHOIS lookup: No records available",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Scan attempts: $ScanCount/15 failed",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[NOTE] $Suggestion</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[FAILED] Scan aborted - target unreachable</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "case2",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[扫描开始]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 目标: $TargetDomain",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 协议: HTTPS/1.1",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 正在解析DNS...",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[错误] $ErrorCode: DNS解析失败</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>  └── 无法解析域名: $TargetDomain</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[分析结果]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 域名注册: 在公共DNS中未找到",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── WHOIS查询: 无可用记录",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 扫描尝试: $ScanCount/15 失败",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[提示] $CSuggestionChinese</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[失败] 扫描中止 - 目标无法访问</color>",
             "delay": 0
           }
         ]

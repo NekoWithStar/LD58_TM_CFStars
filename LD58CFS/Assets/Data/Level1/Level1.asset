@@ -13,10 +13,654 @@ MonoBehaviour:
   m_Name: Level1
   m_EditorClassIdentifier: 
   Commands:
+  - CommandName: Send-Email
+    Parameters:
+    - Parameter:
+        rid: 5843204053959180397
+    - Parameter:
+        rid: 5843204053959180398
+    - Parameter:
+        rid: 5843204053959180399
+    - Parameter:
+        rid: 5843204053959180400
+    Cases:
+    - Name: case1
+      ParameterValues:
+      - Name: EmailSubject
+        Accept:
+        - CatBeautyContest
+      - Name: OriginalLink
+        Accept:
+        - www.meow-awards.com/login
+      - Name: TargetEmail
+        Accept:
+        - Kesi@Bmail.com
+      - Name: SenderDomain
+        Accept:
+        - MeowPlanetClub@Bmail.com
+      VariablesList:
+      - Key: PhishingLink
+        Value: https://me0w-awards.xyz/login
+      - Key: AssetCount
+        Value: 37
+      - Key: SenderName
+        Value: Bmail
+      - Key: Subject
+        Value: 'Urgent: Claim Your Feline Excellence Award'
+      - Key: CSubjectChinese
+        Value: "\u7D27\u6025\uFF1A\u6765\u83B7\u53D6\u4F60\u7684\u53EF\u7231\u732B\u54AA\u5353\u8D8A\u5956\uFF01"
+      - Key: ContentTemplate
+        Value: awards_notification
+      - Key: DisplayDomain
+        Value: www.bmail.com
+      - Key: Username
+        Value: Kesi
+      - Key: Password
+        Value: qwertyuiop1234567890
+      - Key: OutputType
+        Value: B1
+    - Name: case2
+      ParameterValues:
+      - Name: EmailSubject
+        Accept:
+        - mooncake
+      - Name: OriginalLink
+        Accept:
+        - www.meow-awards.com/login
+        - www.bmail.com
+      - Name: TargetEmail
+        Accept:
+        - Kesi@Bmail.com
+      - Name: SenderDomain
+        Accept:
+        - MeowPlanetClub@Bmail.com
+      VariablesList:
+      - Key: PhishingLink
+        Value: https://me0w-awards.xyz/login
+      - Key: AssetCount
+        Value: 37
+      - Key: SenderName
+        Value: Awards Committee
+      - Key: CSenderNameChinese
+        Value: "\u83B7\u5956\u534F\u4F1A"
+      - Key: Subject
+        Value: 'Urgent: You Got A MoonCake'
+      - Key: CSubjectChinese
+        Value: "\u7D27\u6025\uFF1A\u4F60\u83B7\u5F97\u4E86\u4E00\u4E2A\u6708\u997C"
+      - Key: ContentTemplate
+        Value: awards_notification
+      - Key: DisplayDomain
+        Value: www.bmail.com
+      - Key: ReplyFrom
+        Value: Kesi@Bmail.com
+      - Key: ReplySubject
+        Value: "\u4E0D\u9700\u8981"
+      - Key: ReplyContent
+        Value: "\u8C22\u8C22\u4F60\u4EEC\u7684\u6708\u997C\uFF0C\u4F46\u6211\u4E0D\u559C\u6B22\u5403"
+      - Key: OutputType
+        Value: B2
+    - Name: case3
+      ParameterValues:
+      - Name: EmailSubject
+        Accept:
+        - CatBeautyContest
+      - Name: OriginalLink
+        Accept:
+        - www.meow-awards.com/login
+      - Name: TargetEmail
+        Accept:
+        - Kesi@Bmail.com
+      - Name: SenderDomain
+        Accept:
+        - www.bmail.com
+      VariablesList:
+      - Key: PhishingLink
+        Value: https://me0w-awards.xyz/login
+      - Key: AssetCount
+        Value: 37
+      - Key: SenderName
+        Value: Bmail
+      - Key: Subject
+        Value: 'Urgent: Claim Your Feline Excellence Award'
+      - Key: CSubjectChinese
+        Value: "\u7D27\u6025\uFF1A\u6765\u83B7\u53D6\u4F60\u7684\u53EF\u7231\u732B\u54AA\u5353\u8D8A\u5956\uFF01"
+      - Key: ContentTemplate
+        Value: awards_notification
+      - Key: DisplayDomain
+        Value: www.bmail.com
+      - Key: ReplyFrom
+        Value: Kesi@Bmail.com
+      - Key: ReplySubject
+        Value: "Bmail\u4F60\u4EEC\u5728\u5077\u7AA5??"
+      - Key: ReplyContent
+        Value: "\u4E3A\u4EC0\u4E48\u4F60\u4EEC\u4F1A\u77E5\u9053\u6211\u559C\u6B22\u732B\u54AA?\u505C\u6B62\u4F60\u4EEC\u7684\u5077\u7AA5\u884C\u4E3A!"
+      - Key: OutputType
+        Value: B2
+    - Name: case4
+      ParameterValues:
+      - Name: EmailSubject
+        Accept:
+        - mooncake
+      - Name: OriginalLink
+        Accept:
+        - www.meow-awards.com/login
+      - Name: TargetEmail
+        Accept:
+        - Kesi@Bmail.com
+      - Name: SenderDomain
+        Accept:
+        - www.bmail.com
+      VariablesList:
+      - Key: PhishingLink
+        Value: https://me0w-awards.xyz/login
+      - Key: AssetCount
+        Value: 37
+      - Key: SenderName
+        Value: Bmail Customer Service
+      - Key: CSenderNameChinese
+        Value: "Bmail\u5BA2\u6237\u670D\u52A1"
+      - Key: Subject
+        Value: 'Special Gift: Traditional Mooncake for You'
+      - Key: CSubjectChinese
+        Value: "\u7279\u522B\u793C\u7269\uFF1A\u4E3A\u60A8\u51C6\u5907\u7684\u4F20\u7EDF\u6708\u997C"
+      - Key: ContentTemplate
+        Value: gift_notification
+      - Key: DisplayDomain
+        Value: www.bmail.com
+      - Key: ReplyFrom
+        Value: Kesi@Bmail.com
+      - Key: ReplySubject
+        Value: "\u8FD9\u662F\u771F\u7684\u5417?"
+      - Key: ReplyContent
+        Value: "Bmail\u4ECE\u6765\u4E0D\u4F1A\u53D1\u9001\u8FD9\u79CD\u793C\u7269\u90AE\u4EF6\uFF0C\u8FD9\u770B\u8D77\u6765\u5F88\u53EF\u7591\u3002\u4F60\u4EEC\u662F\u9A97\u5B50\u5417?"
+      - Key: OutputType
+        Value: B2
+    - Name: case5
+      ParameterValues:
+      - Name: EmailSubject
+        Accept:
+        - CatBeautyContest
+      - Name: OriginalLink
+        Accept:
+        - www.bmail.com
+      - Name: TargetEmail
+        Accept:
+        - Kesi@Bmail.com
+      - Name: SenderDomain
+        Accept:
+        - www.bmail.com
+      VariablesList:
+      - Key: PhishingLink
+        Value: https://me0w-awards.xyz/login
+      - Key: AssetCount
+        Value: 0
+      - Key: SenderName
+        Value: Bmail
+      - Key: Subject
+        Value: 'Urgent: Claim Your Feline Excellence Award'
+      - Key: CSubjectChinese
+        Value: "\u7D27\u6025\uFF1A\u6765\u83B7\u53D6\u4F60\u7684\u53EF\u7231\u732B\u54AA\u5353\u8D8A\u5956\uFF01"
+      - Key: ContentTemplate
+        Value: awards_notification
+      - Key: DisplayDomain
+        Value: www.bmail.com
+      - Key: ErrorCode
+        Value: 0x00000403
+      - Key: ErrorMessage
+        Value: 'Circular reference detected: clone source and sender domain match'
+      - Key: ErrorMessageChinese
+        Value: "\u68C0\u6D4B\u5230\u5FAA\u73AF\u5F15\u7528\uFF1A\u514B\u9686\u6E90\u4E0E\u53D1\u4EF6\u4EBA\u57DF\u540D\u5339\u914D"
+      - Key: OutputType
+        Value: ERROR
+    - Name: case6
+      ParameterValues:
+      - Name: EmailSubject
+        Accept:
+        - mooncake
+      - Name: OriginalLink
+        Accept:
+        - www.bmail.com
+      - Name: TargetEmail
+        Accept:
+        - Kesi@Bmail.com
+      - Name: SenderDomain
+        Accept:
+        - MeowPlanetClub@Bmail.com
+      VariablesList:
+      - Key: PhishingLink
+        Value: https://me0w-awards.xyz/login
+      - Key: AssetCount
+        Value: 0
+      - Key: SenderName
+        Value: MeowPlanetClub
+      - Key: CSenderNameChinese
+        Value: "\u55B5\u661F\u7403\u4FF1\u4E50\u90E8"
+      - Key: Subject
+        Value: 'Special Gift: Traditional Mooncake for You'
+      - Key: CSubjectChinese
+        Value: "\u7279\u522B\u793C\u7269\uFF1A\u4E3A\u60A8\u51C6\u5907\u7684\u4F20\u7EDF\u6708\u997C"
+      - Key: ContentTemplate
+        Value: gift_notification
+      - Key: DisplayDomain
+        Value: www.bmail.com
+      - Key: WarningMessage
+        Value: 'Content mismatch: clone source (www.bmail.com) does not align with
+          subject context'
+      - Key: WarningMessageChinese
+        Value: "\u5185\u5BB9\u4E0D\u5339\u914D\uFF1A\u514B\u9686\u6E90(www.bmail.com)\u4E0E\u4E3B\u9898\u4E0A\u4E0B\u6587\u4E0D\u7B26"
+      - Key: OutputType
+        Value: WARNING
+    Output:
+      LanguageBlocks:
+      - Language: 
+        Case: 
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204053959180401
+        - LineBlock:
+            rid: 5843204053959180402
+        - LineBlock:
+            rid: 5843204053959180403
+        - LineBlock:
+            rid: 5843204053959180404
+      - Language: english
+        Case: 
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204053959180405
+        - LineBlock:
+            rid: 5843204053959180406
+        - LineBlock:
+            rid: 5843204053959180407
+        - LineBlock:
+            rid: 5843204053959180408
+        - LineBlock:
+            rid: 5843204053959180409
+        - LineBlock:
+            rid: 5843204053959180410
+        - LineBlock:
+            rid: 5843204053959180411
+        - LineBlock:
+            rid: 5843204053959180412
+        - LineBlock:
+            rid: 5843204053959180413
+        - LineBlock:
+            rid: 5843204053959180414
+        - LineBlock:
+            rid: 5843204053959180415
+        - LineBlock:
+            rid: 5843204053959180416
+        - LineBlock:
+            rid: 5843204053959180417
+        - LineBlock:
+            rid: 5843204053959180418
+        - LineBlock:
+            rid: 5843204053959180419
+        - LineBlock:
+            rid: 5843204053959180420
+        - LineBlock:
+            rid: 5843204053959180421
+        - LineBlock:
+            rid: 5843204053959180422
+        - LineBlock:
+            rid: 5843204053959180423
+        - LineBlock:
+            rid: 5843204053959180424
+        - LineBlock:
+            rid: 5843204053959180425
+        - LineBlock:
+            rid: 5843204053959180426
+        - LineBlock:
+            rid: 5843204053959180427
+        - LineBlock:
+            rid: 5843204053959180428
+        - LineBlock:
+            rid: 5843204053959180429
+        - LineBlock:
+            rid: 5843204053959180430
+        - LineBlock:
+            rid: 5843204053959180431
+        - LineBlock:
+            rid: 5843204053959180432
+        - LineBlock:
+            rid: 5843204053959180433
+        - LineBlock:
+            rid: 5843204053959180434
+        - LineBlock:
+            rid: 5843204053959180435
+        - LineBlock:
+            rid: 5843204053959180436
+        - LineBlock:
+            rid: 5843204053959180437
+        - LineBlock:
+            rid: 5843204053959180438
+        - LineBlock:
+            rid: 5843204053959180439
+        - LineBlock:
+            rid: 5843204053959180440
+        - LineBlock:
+            rid: 5843204053959180441
+      - Language: chinese
+        Case: 
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204053959180442
+        - LineBlock:
+            rid: 5843204053959180443
+        - LineBlock:
+            rid: 5843204053959180444
+        - LineBlock:
+            rid: 5843204053959180445
+        - LineBlock:
+            rid: 5843204053959180446
+        - LineBlock:
+            rid: 5843204053959180447
+        - LineBlock:
+            rid: 5843204053959180448
+        - LineBlock:
+            rid: 5843204053959180449
+        - LineBlock:
+            rid: 5843204053959180450
+        - LineBlock:
+            rid: 5843204053959180451
+        - LineBlock:
+            rid: 5843204053959180452
+        - LineBlock:
+            rid: 5843204053959180453
+        - LineBlock:
+            rid: 5843204053959180454
+        - LineBlock:
+            rid: 5843204053959180455
+        - LineBlock:
+            rid: 5843204053959180456
+        - LineBlock:
+            rid: 5843204053959180457
+        - LineBlock:
+            rid: 5843204053959180458
+        - LineBlock:
+            rid: 5843204053959180459
+        - LineBlock:
+            rid: 5843204053959180460
+        - LineBlock:
+            rid: 5843204053959180461
+        - LineBlock:
+            rid: 5843204053959180462
+        - LineBlock:
+            rid: 5843204053959180463
+        - LineBlock:
+            rid: 5843204053959180464
+        - LineBlock:
+            rid: 5843204053959180465
+        - LineBlock:
+            rid: 5843204053959180466
+        - LineBlock:
+            rid: 5843204053959180467
+        - LineBlock:
+            rid: 5843204053959180468
+        - LineBlock:
+            rid: 5843204053959180469
+        - LineBlock:
+            rid: 5843204053959180470
+        - LineBlock:
+            rid: 5843204053959180471
+        - LineBlock:
+            rid: 5843204053959180472
+        - LineBlock:
+            rid: 5843204053959180473
+        - LineBlock:
+            rid: 5843204053959180474
+        - LineBlock:
+            rid: 5843204053959180475
+        - LineBlock:
+            rid: 5843204053959180476
+        - LineBlock:
+            rid: 5843204053959180477
+        - LineBlock:
+            rid: 5843204053959180478
+      - Language: english
+        Case: case1
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204053959180479
+        - LineBlock:
+            rid: 5843204053959180480
+        - LineBlock:
+            rid: 5843204053959180481
+        - LineBlock:
+            rid: 5843204053959180482
+        - LineBlock:
+            rid: 5843204053959180483
+      - Language: chinese
+        Case: case1
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204053959180484
+        - LineBlock:
+            rid: 5843204053959180485
+        - LineBlock:
+            rid: 5843204053959180486
+        - LineBlock:
+            rid: 5843204053959180487
+        - LineBlock:
+            rid: 5843204053959180488
+      - Language: english
+        Case: case2
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204053959180489
+        - LineBlock:
+            rid: 5843204053959180490
+        - LineBlock:
+            rid: 5843204053959180491
+        - LineBlock:
+            rid: 5843204053959180492
+        - LineBlock:
+            rid: 5843204053959180493
+        - LineBlock:
+            rid: 5843204053959180494
+      - Language: chinese
+        Case: case2
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204053959180495
+        - LineBlock:
+            rid: 5843204053959180496
+        - LineBlock:
+            rid: 5843204053959180497
+        - LineBlock:
+            rid: 5843204053959180498
+        - LineBlock:
+            rid: 5843204053959180499
+        - LineBlock:
+            rid: 5843204053959180500
+      - Language: english
+        Case: case3
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204053959180501
+        - LineBlock:
+            rid: 5843204053959180502
+        - LineBlock:
+            rid: 5843204053959180503
+        - LineBlock:
+            rid: 5843204053959180504
+        - LineBlock:
+            rid: 5843204053959180505
+        - LineBlock:
+            rid: 5843204053959180506
+      - Language: chinese
+        Case: case3
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204053959180507
+        - LineBlock:
+            rid: 5843204053959180508
+        - LineBlock:
+            rid: 5843204053959180509
+        - LineBlock:
+            rid: 5843204053959180510
+        - LineBlock:
+            rid: 5843204053959180511
+        - LineBlock:
+            rid: 5843204053959180512
+      - Language: english
+        Case: case4
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204053959180513
+        - LineBlock:
+            rid: 5843204053959180514
+        - LineBlock:
+            rid: 5843204053959180515
+        - LineBlock:
+            rid: 5843204053959180516
+        - LineBlock:
+            rid: 5843204053959180517
+        - LineBlock:
+            rid: 5843204053959180518
+        - LineBlock:
+            rid: 5843204053959180519
+        - LineBlock:
+            rid: 5843204053959180520
+        - LineBlock:
+            rid: 5843204053959180521
+      - Language: chinese
+        Case: case4
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204053959180522
+        - LineBlock:
+            rid: 5843204053959180523
+        - LineBlock:
+            rid: 5843204053959180524
+        - LineBlock:
+            rid: 5843204053959180525
+        - LineBlock:
+            rid: 5843204053959180526
+        - LineBlock:
+            rid: 5843204053959180527
+        - LineBlock:
+            rid: 5843204053959180528
+        - LineBlock:
+            rid: 5843204053959180529
+        - LineBlock:
+            rid: 5843204053959180530
+      - Language: english
+        Case: case5
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204053959180531
+        - LineBlock:
+            rid: 5843204053959180532
+        - LineBlock:
+            rid: 5843204053959180533
+        - LineBlock:
+            rid: 5843204053959180534
+        - LineBlock:
+            rid: 5843204053959180535
+        - LineBlock:
+            rid: 5843204053959180536
+        - LineBlock:
+            rid: 5843204053959180537
+        - LineBlock:
+            rid: 5843204053959180538
+        - LineBlock:
+            rid: 5843204053959180539
+      - Language: chinese
+        Case: case5
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204053959180540
+        - LineBlock:
+            rid: 5843204053959180541
+        - LineBlock:
+            rid: 5843204053959180542
+        - LineBlock:
+            rid: 5843204053959180543
+        - LineBlock:
+            rid: 5843204053959180544
+        - LineBlock:
+            rid: 5843204053959180545
+        - LineBlock:
+            rid: 5843204053959180546
+        - LineBlock:
+            rid: 5843204053959180547
+        - LineBlock:
+            rid: 5843204053959180548
+      - Language: english
+        Case: case6
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204053959180549
+        - LineBlock:
+            rid: 5843204053959180550
+        - LineBlock:
+            rid: 5843204053959180551
+        - LineBlock:
+            rid: 5843204053959180552
+        - LineBlock:
+            rid: 5843204053959180553
+        - LineBlock:
+            rid: 5843204053959180554
+        - LineBlock:
+            rid: 5843204053959180555
+        - LineBlock:
+            rid: 5843204053959180556
+        - LineBlock:
+            rid: 5843204053959180557
+      - Language: chinese
+        Case: case6
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204053959180558
+        - LineBlock:
+            rid: 5843204053959180559
+        - LineBlock:
+            rid: 5843204053959180560
+        - LineBlock:
+            rid: 5843204053959180561
+        - LineBlock:
+            rid: 5843204053959180562
+        - LineBlock:
+            rid: 5843204053959180563
+        - LineBlock:
+            rid: 5843204053959180564
+        - LineBlock:
+            rid: 5843204053959180565
+        - LineBlock:
+            rid: 5843204053959180566
+      - Language: english
+        Case: default
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204053959180567
+        - LineBlock:
+            rid: 5843204053959180568
+        - LineBlock:
+            rid: 5843204053959180569
+        - LineBlock:
+            rid: 5843204053959180570
+        - LineBlock:
+            rid: 5843204053959180571
+      - Language: chinese
+        Case: default
+        LineBlocks:
+        - LineBlock:
+            rid: 5843204053959180572
+        - LineBlock:
+            rid: 5843204053959180573
+        - LineBlock:
+            rid: 5843204053959180574
+        - LineBlock:
+            rid: 5843204053959180575
+        - LineBlock:
+            rid: 5843204053959180576
+    Stages: []
+    VariableMappingsList: []
   - CommandName: Web-Scan
     Parameters:
     - Parameter:
-        rid: 5843204042119971062
+        rid: 5843204053959180577
     Cases:
     - Name: case1
       ParameterValues:
@@ -56,1107 +700,316 @@ MonoBehaviour:
         Value: 245ms
       - Key: Server
         Value: Apache/2.4.41 (Ubuntu)
-    Output:
-      LanguageBlocks:
-      - Language: 
-        Case: 
-        LineBlocks:
-        - LineBlock:
-            rid: 5843204042119971063
-        - LineBlock:
-            rid: 5843204042119971064
-        - LineBlock:
-            rid: 5843204042119971065
-        - LineBlock:
-            rid: 5843204042119971066
-        - LineBlock:
-            rid: 5843204042119971067
-      - Language: english
-        Case: 
-        LineBlocks:
-        - LineBlock:
-            rid: 5843204042119971068
-        - LineBlock:
-            rid: 5843204042119971069
-        - LineBlock:
-            rid: 5843204042119971070
-        - LineBlock:
-            rid: 5843204042119971071
-        - LineBlock:
-            rid: 5843204042119971072
-        - LineBlock:
-            rid: 5843204042119971073
-        - LineBlock:
-            rid: 5843204042119971074
-        - LineBlock:
-            rid: 5843204042119971075
-        - LineBlock:
-            rid: 5843204042119971076
-        - LineBlock:
-            rid: 5843204042119971077
-        - LineBlock:
-            rid: 5843204042119971078
-        - LineBlock:
-            rid: 5843204042119971079
-        - LineBlock:
-            rid: 5843204042119971080
-        - LineBlock:
-            rid: 5843204042119971081
-        - LineBlock:
-            rid: 5843204042119971082
-        - LineBlock:
-            rid: 5843204042119971083
-        - LineBlock:
-            rid: 5843204042119971084
-        - LineBlock:
-            rid: 5843204042119971085
-        - LineBlock:
-            rid: 5843204042119971086
-        - LineBlock:
-            rid: 5843204042119971087
-        - LineBlock:
-            rid: 5843204042119971088
-        - LineBlock:
-            rid: 5843204042119971089
-        - LineBlock:
-            rid: 5843204042119971090
-        - LineBlock:
-            rid: 5843204042119971091
-        - LineBlock:
-            rid: 5843204042119971092
-        - LineBlock:
-            rid: 5843204042119971093
-        - LineBlock:
-            rid: 5843204042119971094
-        - LineBlock:
-            rid: 5843204042119971095
-        - LineBlock:
-            rid: 5843204042119971096
-        - LineBlock:
-            rid: 5843204042119971097
-        - LineBlock:
-            rid: 5843204042119971098
-        - LineBlock:
-            rid: 5843204042119971099
-        - LineBlock:
-            rid: 5843204042119971100
-        - LineBlock:
-            rid: 5843204042119971101
-        - LineBlock:
-            rid: 5843204042119971102
-        - LineBlock:
-            rid: 5843204042119971103
-        - LineBlock:
-            rid: 5843204042119971104
-        - LineBlock:
-            rid: 5843204042119971105
-        - LineBlock:
-            rid: 5843204042119971106
-      - Language: chinese
-        Case: 
-        LineBlocks:
-        - LineBlock:
-            rid: 5843204042119971107
-        - LineBlock:
-            rid: 5843204042119971108
-        - LineBlock:
-            rid: 5843204042119971109
-        - LineBlock:
-            rid: 5843204042119971110
-        - LineBlock:
-            rid: 5843204042119971111
-        - LineBlock:
-            rid: 5843204042119971112
-        - LineBlock:
-            rid: 5843204042119971113
-        - LineBlock:
-            rid: 5843204042119971114
-        - LineBlock:
-            rid: 5843204042119971115
-        - LineBlock:
-            rid: 5843204042119971116
-        - LineBlock:
-            rid: 5843204042119971117
-        - LineBlock:
-            rid: 5843204042119971118
-        - LineBlock:
-            rid: 5843204042119971119
-        - LineBlock:
-            rid: 5843204042119971120
-        - LineBlock:
-            rid: 5843204042119971121
-        - LineBlock:
-            rid: 5843204042119971122
-        - LineBlock:
-            rid: 5843204042119971123
-        - LineBlock:
-            rid: 5843204042119971124
-        - LineBlock:
-            rid: 5843204042119971125
-        - LineBlock:
-            rid: 5843204042119971126
-        - LineBlock:
-            rid: 5843204042119971127
-        - LineBlock:
-            rid: 5843204042119971128
-        - LineBlock:
-            rid: 5843204042119971129
-        - LineBlock:
-            rid: 5843204042119971130
-        - LineBlock:
-            rid: 5843204042119971131
-        - LineBlock:
-            rid: 5843204042119971132
-        - LineBlock:
-            rid: 5843204042119971133
-        - LineBlock:
-            rid: 5843204042119971134
-        - LineBlock:
-            rid: 5843204042119971135
-        - LineBlock:
-            rid: 5843204042119971136
-        - LineBlock:
-            rid: 5843204042119971137
-        - LineBlock:
-            rid: 5843204042119971138
-        - LineBlock:
-            rid: 5843204042119971139
-        - LineBlock:
-            rid: 5843204042119971140
-        - LineBlock:
-            rid: 5843204042119971141
-        - LineBlock:
-            rid: 5843204042119971142
-        - LineBlock:
-            rid: 5843204042119971143
-        - LineBlock:
-            rid: 5843204042119971144
-        - LineBlock:
-            rid: 5843204042119971145
-    Stages: []
-    VariableMappingsList: []
-  - CommandName: Send-Email
-    Parameters:
-    - Parameter:
-        rid: 5843204042119971146
-    - Parameter:
-        rid: 5843204042119971147
-    - Parameter:
-        rid: 5843204042119971148
-    - Parameter:
-        rid: 5843204042119971149
-    Cases:
-    - Name: case1
-      ParameterValues:
-      - Name: EmailSubject
-        Accept:
-        - "\u732B\u54AA\u9009\u7F8E"
-      - Name: OriginalLink
-        Accept:
-        - www.meow-awards.com/login
-      - Name: TargetEmail
-        Accept:
-        - Kesi@Bmail.com
-      - Name: SenderDomain
-        Accept:
-        - MeowPlanetClub@Bmail.com
-      VariablesList:
-      - Key: PhishingLink
-        Value: https://me0w-awards.xyz/login
-      - Key: AssetCount
-        Value: 37
-      - Key: SenderName
-        Value: Bmail
-      - Key: Subject
-        Value: 'Urgent: Claim Your Feline Excellence Award'
-      - Key: SubjectChinese
-        Value: "\u7D27\u6025\uFF1A\u6765\u83B7\u53D6\u4F60\u7684\u53EF\u7231\u732B\u54AA\u5353\u8D8A\u5956\uFF01"
-      - Key: ContentTemplate
-        Value: awards_notification
-      - Key: DisplayDomain
-        Value: www.bmail.com
-      - Key: Username
-        Value: Kesi
-      - Key: Password
-        Value: qwertyuiop1234567890
-      - Key: OutputType
-        Value: B1
     - Name: case2
       ParameterValues:
-      - Name: EmailSubject
+      - Name: TargetDomain
         Accept:
-        - "\u6708\u997C"
-      - Name: OriginalLink
-        Accept:
-        - www.meow-awards.com/login
-        - www.bmail.com
-      - Name: TargetEmail
-        Accept:
-        - Kesi@Bmail.com
-      - Name: SenderDomain
-        Accept:
-        - MeowPlanetClub@Bmail.com
+        - www.meow-awards.com
       VariablesList:
-      - Key: PhishingLink
-        Value: https://me0w-awards.xyz/login
-      - Key: AssetCount
-        Value: 37
-      - Key: SenderName
-        Value: Awards Committee
-      - Key: SenderNameChinese
-        Value: "\u83B7\u5956\u534F\u4F1A"
-      - Key: Subject
-        Value: 'Urgent: You Got A MoonCake'
-      - Key: SubjectChinese
-        Value: "\u7D27\u6025\uFF1A\u4F60\u83B7\u5F97\u4E86\u4E00\u4E2A\u6708\u997C"
-      - Key: ContentTemplate
-        Value: awards_notification
-      - Key: DisplayDomain
-        Value: www.bmail.com
-      - Key: ReplyFrom
-        Value: Kesi@Bmail.com
-      - Key: ReplySubject
-        Value: "\u4E0D\u9700\u8981"
-      - Key: ReplyContent
-        Value: "\u8C22\u8C22\u4F60\u4EEC\u7684\u6708\u997C\uFF0C\u4F46\u6211\u4E0D\u559C\u6B22\u5403"
-      - Key: OutputType
-        Value: B2
-    - Name: case3
-      ParameterValues:
-      - Name: EmailSubject
-        Accept:
-        - "\u732B\u54AA\u9009\u7F8E"
-      - Name: OriginalLink
-        Accept:
-        - www.meow-awards.com/login
-      - Name: TargetEmail
-        Accept:
-        - Kesi@Bmail.com
-      - Name: SenderDomain
-        Accept:
-        - www.bmail.com
-      VariablesList:
-      - Key: PhishingLink
-        Value: https://me0w-awards.xyz/login
-      - Key: AssetCount
-        Value: 37
-      - Key: SenderName
-        Value: Bmail
-      - Key: Subject
-        Value: 'Urgent: Claim Your Feline Excellence Award'
-      - Key: SubjectChinese
-        Value: "\u7D27\u6025\uFF1A\u6765\u83B7\u53D6\u4F60\u7684\u53EF\u7231\u732B\u54AA\u5353\u8D8A\u5956\uFF01"
-      - Key: ContentTemplate
-        Value: awards_notification
-      - Key: DisplayDomain
-        Value: www.bmail.com
-      - Key: ReplyFrom
-        Value: Kesi@Bmail.com
-      - Key: ReplySubject
-        Value: "Bmail\u4F60\u4EEC\u5728\u5077\u7AA5??"
-      - Key: ReplyContent
-        Value: "\u4E3A\u4EC0\u4E48\u4F60\u4EEC\u4F1A\u77E5\u9053\u6211\u559C\u6B22\u732B\u54AA?\u505C\u6B62\u4F60\u4EEC\u7684\u5077\u7AA5\u884C\u4E3A!"
-      - Key: OutputType
-        Value: B2
+      - Key: ScanCount
+        Value: 15
+      - Key: ErrorType
+        Value: DNS_RESOLUTION_FAILED
+      - Key: ErrorCode
+        Value: 0x00000404
+      - Key: Suggestion
+        Value: This domain appears to be the phishing target, not the attack source.
+          Consider scanning the infrastructure you control (e.g., email servers,
+          databases).
+      - Key: CSuggestionChinese
+        Value: "\u6B64\u57DF\u540D\u4F3C\u4E4E\u662F\u9493\u9C7C\u76EE\u6807\uFF0C\u800C\u975E\u653B\u51FB\u6E90\u3002\u5EFA\u8BAE\u626B\u63CF\u4F60\u63A7\u5236\u7684\u57FA\u7840\u8BBE\u65BD\uFF08\u5982\u90AE\u4EF6\u670D\u52A1\u5668\u3001\u6570\u636E\u5E93\uFF09\u3002"
     Output:
       LanguageBlocks:
       - Language: 
         Case: 
         LineBlocks:
         - LineBlock:
-            rid: 5843204042119971150
+            rid: 5843204053959180578
         - LineBlock:
-            rid: 5843204042119971151
+            rid: 5843204053959180579
         - LineBlock:
-            rid: 5843204042119971152
+            rid: 5843204053959180580
         - LineBlock:
-            rid: 5843204042119971153
+            rid: 5843204053959180581
+        - LineBlock:
+            rid: 5843204053959180582
       - Language: english
         Case: 
         LineBlocks:
         - LineBlock:
-            rid: 5843204042119971154
+            rid: 5843204053959180583
         - LineBlock:
-            rid: 5843204042119971155
+            rid: 5843204053959180584
         - LineBlock:
-            rid: 5843204042119971156
+            rid: 5843204053959180585
         - LineBlock:
-            rid: 5843204042119971157
+            rid: 5843204053959180586
         - LineBlock:
-            rid: 5843204042119971158
+            rid: 5843204053959180587
         - LineBlock:
-            rid: 5843204042119971159
+            rid: 5843204053959180588
         - LineBlock:
-            rid: 5843204042119971160
+            rid: 5843204053959180589
         - LineBlock:
-            rid: 5843204042119971161
+            rid: 5843204053959180590
         - LineBlock:
-            rid: 5843204042119971162
+            rid: 5843204053959180591
         - LineBlock:
-            rid: 5843204042119971163
+            rid: 5843204053959180592
         - LineBlock:
-            rid: 5843204042119971164
+            rid: 5843204053959180593
         - LineBlock:
-            rid: 5843204042119971165
+            rid: 5843204053959180594
         - LineBlock:
-            rid: 5843204042119971166
+            rid: 5843204053959180595
         - LineBlock:
-            rid: 5843204042119971167
+            rid: 5843204053959180596
         - LineBlock:
-            rid: 5843204042119971168
+            rid: 5843204053959180597
         - LineBlock:
-            rid: 5843204042119971169
+            rid: 5843204053959180598
         - LineBlock:
-            rid: 5843204042119971170
+            rid: 5843204053959180599
         - LineBlock:
-            rid: 5843204042119971171
+            rid: 5843204053959180600
         - LineBlock:
-            rid: 5843204042119971172
+            rid: 5843204053959180601
         - LineBlock:
-            rid: 5843204042119971173
+            rid: 5843204053959180602
         - LineBlock:
-            rid: 5843204042119971174
+            rid: 5843204053959180603
         - LineBlock:
-            rid: 5843204042119971175
+            rid: 5843204053959180604
         - LineBlock:
-            rid: 5843204042119971176
+            rid: 5843204053959180605
         - LineBlock:
-            rid: 5843204042119971177
+            rid: 5843204053959180606
         - LineBlock:
-            rid: 5843204042119971178
+            rid: 5843204053959180607
         - LineBlock:
-            rid: 5843204042119971179
+            rid: 5843204053959180608
         - LineBlock:
-            rid: 5843204042119971180
+            rid: 5843204053959180609
         - LineBlock:
-            rid: 5843204042119971181
+            rid: 5843204053959180610
         - LineBlock:
-            rid: 5843204042119971182
+            rid: 5843204053959180611
         - LineBlock:
-            rid: 5843204042119971183
+            rid: 5843204053959180612
         - LineBlock:
-            rid: 5843204042119971184
+            rid: 5843204053959180613
         - LineBlock:
-            rid: 5843204042119971185
+            rid: 5843204053959180614
         - LineBlock:
-            rid: 5843204042119971186
+            rid: 5843204053959180615
         - LineBlock:
-            rid: 5843204042119971187
+            rid: 5843204053959180616
         - LineBlock:
-            rid: 5843204042119971188
+            rid: 5843204053959180617
         - LineBlock:
-            rid: 5843204042119971189
+            rid: 5843204053959180618
         - LineBlock:
-            rid: 5843204042119971190
+            rid: 5843204053959180619
+        - LineBlock:
+            rid: 5843204053959180620
+        - LineBlock:
+            rid: 5843204053959180621
       - Language: chinese
         Case: 
         LineBlocks:
         - LineBlock:
-            rid: 5843204042119971191
+            rid: 5843204053959180622
         - LineBlock:
-            rid: 5843204042119971192
+            rid: 5843204053959180623
         - LineBlock:
-            rid: 5843204042119971193
+            rid: 5843204053959180624
         - LineBlock:
-            rid: 5843204042119971194
+            rid: 5843204053959180625
         - LineBlock:
-            rid: 5843204042119971195
+            rid: 5843204053959180626
         - LineBlock:
-            rid: 5843204042119971196
+            rid: 5843204053959180627
         - LineBlock:
-            rid: 5843204042119971197
+            rid: 5843204053959180628
         - LineBlock:
-            rid: 5843204042119971198
+            rid: 5843204053959180629
         - LineBlock:
-            rid: 5843204042119971199
+            rid: 5843204053959180630
         - LineBlock:
-            rid: 5843204042119971200
+            rid: 5843204053959180631
         - LineBlock:
-            rid: 5843204042119971201
+            rid: 5843204053959180632
         - LineBlock:
-            rid: 5843204042119971202
+            rid: 5843204053959180633
         - LineBlock:
-            rid: 5843204042119971203
+            rid: 5843204053959180634
         - LineBlock:
-            rid: 5843204042119971204
+            rid: 5843204053959180635
         - LineBlock:
-            rid: 5843204042119971205
+            rid: 5843204053959180636
         - LineBlock:
-            rid: 5843204042119971206
+            rid: 5843204053959180637
         - LineBlock:
-            rid: 5843204042119971207
+            rid: 5843204053959180638
         - LineBlock:
-            rid: 5843204042119971208
+            rid: 5843204053959180639
         - LineBlock:
-            rid: 5843204042119971209
+            rid: 5843204053959180640
         - LineBlock:
-            rid: 5843204042119971210
+            rid: 5843204053959180641
         - LineBlock:
-            rid: 5843204042119971211
+            rid: 5843204053959180642
         - LineBlock:
-            rid: 5843204042119971212
+            rid: 5843204053959180643
         - LineBlock:
-            rid: 5843204042119971213
+            rid: 5843204053959180644
         - LineBlock:
-            rid: 5843204042119971214
+            rid: 5843204053959180645
         - LineBlock:
-            rid: 5843204042119971215
+            rid: 5843204053959180646
         - LineBlock:
-            rid: 5843204042119971216
+            rid: 5843204053959180647
         - LineBlock:
-            rid: 5843204042119971217
+            rid: 5843204053959180648
         - LineBlock:
-            rid: 5843204042119971218
+            rid: 5843204053959180649
         - LineBlock:
-            rid: 5843204042119971219
+            rid: 5843204053959180650
         - LineBlock:
-            rid: 5843204042119971220
+            rid: 5843204053959180651
         - LineBlock:
-            rid: 5843204042119971221
+            rid: 5843204053959180652
         - LineBlock:
-            rid: 5843204042119971222
+            rid: 5843204053959180653
         - LineBlock:
-            rid: 5843204042119971223
+            rid: 5843204053959180654
         - LineBlock:
-            rid: 5843204042119971224
+            rid: 5843204053959180655
         - LineBlock:
-            rid: 5843204042119971225
+            rid: 5843204053959180656
         - LineBlock:
-            rid: 5843204042119971226
+            rid: 5843204053959180657
         - LineBlock:
-            rid: 5843204042119971227
+            rid: 5843204053959180658
+        - LineBlock:
+            rid: 5843204053959180659
+        - LineBlock:
+            rid: 5843204053959180660
       - Language: english
-        Case: case1
+        Case: default
         LineBlocks:
         - LineBlock:
-            rid: 5843204042119971228
+            rid: 5843204053959180661
         - LineBlock:
-            rid: 5843204042119971229
+            rid: 5843204053959180662
         - LineBlock:
-            rid: 5843204042119971230
+            rid: 5843204053959180663
         - LineBlock:
-            rid: 5843204042119971231
+            rid: 5843204053959180664
         - LineBlock:
-            rid: 5843204042119971232
-      - Language: chinese
-        Case: case1
-        LineBlocks:
-        - LineBlock:
-            rid: 5843204042119971233
-        - LineBlock:
-            rid: 5843204042119971234
-        - LineBlock:
-            rid: 5843204042119971235
-        - LineBlock:
-            rid: 5843204042119971236
-        - LineBlock:
-            rid: 5843204042119971237
+            rid: 5843204053959180665
       - Language: english
         Case: case2
         LineBlocks:
         - LineBlock:
-            rid: 5843204042119971238
+            rid: 5843204053959180666
         - LineBlock:
-            rid: 5843204042119971239
+            rid: 5843204053959180667
         - LineBlock:
-            rid: 5843204042119971240
+            rid: 5843204053959180668
         - LineBlock:
-            rid: 5843204042119971241
+            rid: 5843204053959180669
         - LineBlock:
-            rid: 5843204042119971242
+            rid: 5843204053959180670
         - LineBlock:
-            rid: 5843204042119971243
+            rid: 5843204053959180671
+        - LineBlock:
+            rid: 5843204053959180672
+        - LineBlock:
+            rid: 5843204053959180673
+        - LineBlock:
+            rid: 5843204053959180674
+        - LineBlock:
+            rid: 5843204053959180675
+        - LineBlock:
+            rid: 5843204053959180676
+        - LineBlock:
+            rid: 5843204053959180677
+        - LineBlock:
+            rid: 5843204053959180678
+        - LineBlock:
+            rid: 5843204053959180679
+        - LineBlock:
+            rid: 5843204053959180680
+        - LineBlock:
+            rid: 5843204053959180681
+        - LineBlock:
+            rid: 5843204053959180682
       - Language: chinese
         Case: case2
         LineBlocks:
         - LineBlock:
-            rid: 5843204042119971244
+            rid: 5843204053959180683
         - LineBlock:
-            rid: 5843204042119971245
+            rid: 5843204053959180684
         - LineBlock:
-            rid: 5843204042119971246
+            rid: 5843204053959180685
         - LineBlock:
-            rid: 5843204042119971247
+            rid: 5843204053959180686
         - LineBlock:
-            rid: 5843204042119971248
+            rid: 5843204053959180687
         - LineBlock:
-            rid: 5843204042119971249
-      - Language: english
-        Case: case3
-        LineBlocks:
+            rid: 5843204053959180688
         - LineBlock:
-            rid: 5843204042119971250
+            rid: 5843204053959180689
         - LineBlock:
-            rid: 5843204042119971251
+            rid: 5843204053959180690
         - LineBlock:
-            rid: 5843204042119971252
+            rid: 5843204053959180691
         - LineBlock:
-            rid: 5843204042119971253
+            rid: 5843204053959180692
         - LineBlock:
-            rid: 5843204042119971254
+            rid: 5843204053959180693
         - LineBlock:
-            rid: 5843204042119971255
+            rid: 5843204053959180694
+        - LineBlock:
+            rid: 5843204053959180695
+        - LineBlock:
+            rid: 5843204053959180696
+        - LineBlock:
+            rid: 5843204053959180697
+        - LineBlock:
+            rid: 5843204053959180698
+        - LineBlock:
+            rid: 5843204053959180699
       - Language: chinese
-        Case: case3
+        Case: default
         LineBlocks:
         - LineBlock:
-            rid: 5843204042119971256
+            rid: 5843204053959180700
         - LineBlock:
-            rid: 5843204042119971257
+            rid: 5843204053959180701
         - LineBlock:
-            rid: 5843204042119971258
+            rid: 5843204053959180702
         - LineBlock:
-            rid: 5843204042119971259
+            rid: 5843204053959180703
         - LineBlock:
-            rid: 5843204042119971260
-        - LineBlock:
-            rid: 5843204042119971261
+            rid: 5843204053959180704
     Stages: []
     VariableMappingsList: []
+  TextAssets: []
   references:
     version: 2
     RefIds:
-    - rid: 5843204042119971062
-      type: {class: Parameter, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Name: TargetDomain
-        Type: string
-        Accept:
-        - www.bmail.com
-    - rid: 5843204042119971063
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550"
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971064
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: 'BuBugBomb WebScan v2.3.5 - Target: $TargetDomain'
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971065
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: 'Scan ID: BSID-$random6-$random3 | Initiated: $time UTC'
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971066
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550"
-        Type: normal
-        Delay: 0.3
-    - rid: 5843204042119971067
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: 
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971068
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: '[SCAN INITIATED]'
-        Type: normal
-        Delay: 0.2
-    - rid: 5843204042119971069
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: '> Target: $TargetDomain'
-        Type: normal
-        Delay: 0.1
-    - rid: 5843204042119971070
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: '> Protocol: HTTPS/1.1'
-        Type: normal
-        Delay: 0.1
-    - rid: 5843204042119971071
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: '> Methods: GET, HEAD, OPTIONS'
-        Type: normal
-        Delay: 0.1
-    - rid: 5843204042119971072
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: '> User-Agent: BuBugBomb WebScan v2.3.5'
-        Type: normal
-        Delay: 0.1
-    - rid: 5843204042119971073
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: '> Wordlist: common-web-paths.txt (2048 entries)'
-        Type: normal
-        Delay: 0.1
-    - rid: 5843204042119971074
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: '> Scanned paths: 20 | Time elapsed: 12.7s'
-        Type: normal
-        Delay: 0.3
-    - rid: 5843204042119971075
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: 
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971076
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: '[PATH ENUMERATION]'
-        Type: normal
-        Delay: 0.2
-    - rid: 5843204042119971077
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "$$progress(1.2,10,\" $Path1\",\" $Path1          \xBB 404 Not Found\",\"White\",\"Red\")"
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971078
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "$$progress(0.4,10,\" $Path2\",\" $Path2          \xBB 404 Not Found\",\"White\",\"Red\")"
-        Type: normal
-        Delay: 1
-    - rid: 5843204042119971079
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "$$progress(0.4,10,\" https://www.bmail.com/supersecret\",\" https://www.bmail.com/supersecret           
-          \xBB 403 Forbidden\",\"White\",\"Yellow\")"
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971080
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "$$progress(0.4,10,\" $Path3\",\" $Path3         \xBB 200 OK\",\"White\",\"Green\")"
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971081
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "$$progress(0.4,10,\" https://www.bmail.com/test\",\" https://www.bmail.com/test   
-          \xBB 401 Unauthorized\",\"White\",\"Yellow\")"
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971082
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "$$progress(0.4,10,\" https://www.bmail.com/database/backup\",\" https://www.bmail.com/database/backup        
-          \xBB 403 Forbidden\",\"White\",\"Yellow\")"
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971083
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "$$progress(0.4,10,\" $Path4\",\" $Path4        \xBB 404 Not Found\",\"White\",\"Red\")"
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971084
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "$$progress(0.4,10,\" $Path5\",\" $Path5       \xBB 200 OK (robots.txt)\",\"White\",\"Green\")"
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971085
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "$$progress(0.4,10,\" $Path6\",\" $Path6      \xBB 404 Not Found\",\"White\",\"Red\")"
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971086
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "$$progress(0.4,10,\" $Path7\",\" $Path7       \xBB 302 Found (redirect
-          to login)\",\"White\",\"Yellow\")"
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971087
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "$$progress(0.4,10,\" $Path8\",\" $Path8        \xBB 403 Forbidden\",\"White\",\"Yellow\")"
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971088
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "$$progress(0.4,10,\" $Path9\",\" $Path9       \xBB 403 Forbidden\",\"White\",\"Yellow\")"
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971089
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "$$progress(0.4,10,\" $Path10\",\" $Path10      \xBB 500 Internal Server
-          Error\",\"White\",\"Red\")"
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971090
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "$$progress(0.4,10,\" $Path11\",\" $Path11     \xBB 401 Unauthorized\",\"White\",\"Yellow\")"
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971091
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "$$progress(0.4,10,\" $Path12\",\" $Path12     \xBB 200 OK (directory
-          listing)\",\"White\",\"Green\")"
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971092
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "$$progress(0.4,10,\" https://www.bmail.com/.git/HEAD\",\" https://www.bmail.com/.git/HEAD
-          \xBB 200 OK\",\"White\",\"Green\")"
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971093
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "$$progress(0.4,10,\" https://www.bmail.com/phpinfo.php\",\" https://www.bmail.com/phpinfo.php
-          \xBB 200 OK\",\"White\",\"Green\")"
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971094
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "$$progress(0.4,10,\" https://www.bmail.com/wp-admin\",\" https://www.bmail.com/wp-admin
-          \xBB 404 Not Found\",\"White\",\"Red\")"
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971095
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "$$progress(0.4,10,\" https://www.bmail.com/admin/login\",\" https://www.bmail.com/admin/login
-          \xBB 200 OK\",\"White\",\"Green\")"
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971096
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: 
-        Type: normal
-        Delay: 0.3
-    - rid: 5843204042119971097
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: '[INTERESTING PATHS FOUND]'
-        Type: normal
-        Delay: 0.2
-    - rid: 5843204042119971098
-      type: {class: ClickableLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: <color=red>1. $AvailablePath</color>
-        Type: clickable
-        Delay: 0.2
-        Gain:
-        - Key: BmailAdminPath
-          Value: $AvailablePath
-    - rid: 5843204042119971099
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "   \u251C\u2500\u2500 HTTP: 200 OK"
-        Type: normal
-        Delay: 0.1
-    - rid: 5843204042119971100
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "   \u251C\u2500\u2500 Content-Type: application/sql"
-        Type: normal
-        Delay: 0.1
-    - rid: 5843204042119971101
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "   \u251C\u2500\u2500 Size: $FileSize KB"
-        Type: normal
-        Delay: 0.1
-    - rid: 5843204042119971102
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "   \u251C\u2500\u2500 Response Time: $ResponseTime"
-        Type: normal
-        Delay: 0.1
-    - rid: 5843204042119971103
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "   \u2514\u2500\u2500 Server: $Server"
-        Type: normal
-        Delay: 0.1
-    - rid: 5843204042119971104
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: 
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971105
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550"
-        Type: normal
-        Delay: 0.3
-    - rid: 5843204042119971106
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: '[SUCCESS] Scan completed - 1 interesting path found'
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971107
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "[\u626B\u63CF\u5F00\u59CB]"
-        Type: normal
-        Delay: 0.2
-    - rid: 5843204042119971108
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "> \u76EE\u6807: $TargetDomain"
-        Type: normal
-        Delay: 0.1
-    - rid: 5843204042119971109
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "> \u534F\u8BAE: HTTPS/1.1"
-        Type: normal
-        Delay: 0.1
-    - rid: 5843204042119971110
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "> \u65B9\u6CD5: GET, HEAD, OPTIONS"
-        Type: normal
-        Delay: 0.1
-    - rid: 5843204042119971111
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "> \u7528\u6237\u4EE3\u7406: BuBugBomb WebScan v2.3.5"
-        Type: normal
-        Delay: 0.1
-    - rid: 5843204042119971112
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "> \u8BCD\u8868: common-web-paths.txt (2048 \u6761\u76EE)"
-        Type: normal
-        Delay: 0.1
-    - rid: 5843204042119971113
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "> \u626B\u63CF\u8DEF\u5F84: 20 | \u8017\u65F6: 12.7s"
-        Type: normal
-        Delay: 0.3
-    - rid: 5843204042119971114
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: 
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971115
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "[\u8DEF\u5F84\u679A\u4E3E]"
-        Type: normal
-        Delay: 0.2
-    - rid: 5843204042119971116
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "$$progress(0.4,10,\" $Path1\",\" $Path1          \xBB 404 \u672A\u627E\u5230\",\"White\",\"Red\")"
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971117
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "$$progress(0.4,10,\" $Path2\",\" $Path2          \xBB 404 \u672A\u627E\u5230\",\"White\",\"Red\")"
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971118
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "$$progress(0.4,10,\" https://www.bmail.com/supersecret\",\" https://www.bmail.com/supersecret           
-          \xBB 403 \u7981\u6B62\u8BBF\u95EE\",\"White\",\"Yellow\")"
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971119
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "$$progress(0.4,10,\" $Path3\",\" $Path3         \xBB 200 \u6B63\u5E38\",\"White\",\"Green\")"
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971120
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "$$progress(0.4,10,\" https://www.bmail.com/test\",\" https://www.bmail.com/test   
-          \xBB 401 \u672A\u6388\u6743\",\"White\",\"Yellow\")"
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971121
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "$$progress(0.4,10,\" https://www.bmail.com/database/backup\",\" https://www.bmail.com/database/backup        
-          \xBB 403 \u7981\u6B62\u8BBF\u95EE\",\"White\",\"Yellow\")"
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971122
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "$$progress(0.4,10,\" $Path4\",\" $Path4        \xBB 404 \u672A\u627E\u5230\",\"White\",\"Red\")"
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971123
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "$$progress(0.4,10,\" $Path5\",\" $Path5       \xBB 200 \u6B63\u5E38
-          (robots.txt)\",\"White\",\"Green\")"
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971124
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "$$progress(0.4,10,\" $Path6\",\" $Path6      \xBB 404 \u672A\u627E\u5230\",\"White\",\"Red\")"
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971125
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "$$progress(0.4,10,\" $Path7\",\" $Path7       \xBB 302 \u627E\u5230
-          (\u91CD\u5B9A\u5411\u5230\u767B\u5F55)\",\"White\",\"Yellow\")"
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971126
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "$$progress(0.4,10,\" $Path8\",\" $Path8        \xBB 403 \u7981\u6B62\u8BBF\u95EE\",\"White\",\"Yellow\")"
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971127
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "$$progress(0.4,10,\" $Path9\",\" $Path9       \xBB 403 \u7981\u6B62\u8BBF\u95EE\",\"White\",\"Yellow\")"
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971128
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "$$progress(0.4,10,\" $Path10\",\" $Path10      \xBB 500 \u5185\u90E8\u670D\u52A1\u5668\u9519\u8BEF\",\"White\",\"Red\")"
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971129
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "$$progress(0.4,10,\" $Path11\",\" $Path11     \xBB 401 \u672A\u6388\u6743\",\"White\",\"Yellow\")"
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971130
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "$$progress(0.4,10,\" $Path12\",\" $Path12     \xBB 200 \u6B63\u5E38
-          (\u76EE\u5F55\u5217\u8868)\",\"White\",\"Green\")"
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971131
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "$$progress(0.4,10,\" https://www.bmail.com/.git/HEAD\",\" https://www.bmail.com/.git/HEAD
-          \xBB 200 \u6B63\u5E38\",\"White\",\"Green\")"
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971132
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "$$progress(0.4,10,\" https://www.bmail.com/phpinfo.php\",\" https://www.bmail.com/phpinfo.php
-          \xBB 200 \u6B63\u5E38\",\"White\",\"Green\")"
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971133
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "$$progress(0.4,10,\" https://www.bmail.com/wp-admin\",\" https://www.bmail.com/wp-admin
-          \xBB 404 \u672A\u627E\u5230\",\"White\",\"Red\")"
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971134
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "$$progress(0.4,10,\" https://www.bmail.com/admin/login\",\" https://www.bmail.com/admin/login
-          \xBB 200 \u6B63\u5E38\",\"White\",\"Green\")"
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971135
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: 
-        Type: normal
-        Delay: 0.3
-    - rid: 5843204042119971136
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "[\u53D1\u73B0\u6709\u8DA3\u8DEF\u5F84]"
-        Type: normal
-        Delay: 0.2
-    - rid: 5843204042119971137
-      type: {class: ClickableLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: <color=red>1. $AvailablePath</color>
-        Type: clickable
-        Delay: 0.2
-        Gain:
-        - Key: BmailAdminPath
-          Value: $AvailablePath
-    - rid: 5843204042119971138
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "   \u251C\u2500\u2500 HTTP: 200 \u6B63\u5E38"
-        Type: normal
-        Delay: 0.1
-    - rid: 5843204042119971139
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "   \u251C\u2500\u2500 \u5185\u5BB9\u7C7B\u578B: application/sql"
-        Type: normal
-        Delay: 0.1
-    - rid: 5843204042119971140
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "   \u251C\u2500\u2500 \u5927\u5C0F: $FileSize KB"
-        Type: normal
-        Delay: 0.1
-    - rid: 5843204042119971141
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "   \u251C\u2500\u2500 \u54CD\u5E94\u65F6\u95F4: $ResponseTime"
-        Type: normal
-        Delay: 0.1
-    - rid: 5843204042119971142
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "   \u2514\u2500\u2500 \u670D\u52A1\u5668: $Server"
-        Type: normal
-        Delay: 0.1
-    - rid: 5843204042119971143
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: 
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971144
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550"
-        Type: normal
-        Delay: 0.3
-    - rid: 5843204042119971145
-      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
-      data:
-        Text: "<color=green>[\u6210\u529F] \u626B\u63CF\u5B8C\u6210 - \u53D1\u73B0
-          1 \u4E2A\u6709\u8DA3\u8DEF\u5F84</color>"
-        Type: normal
-        Delay: 0
-    - rid: 5843204042119971146
+    - rid: 5843204053959180397
       type: {class: Parameter, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Name: EmailSubject
         Type: string
         Accept:
-        - "\u732B\u54AA\u9009\u7F8E"
-        - "\u6708\u997C"
-    - rid: 5843204042119971147
+        - CatBeautyContest
+        - mooncake
+    - rid: 5843204053959180398
       type: {class: Parameter, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Name: OriginalLink
@@ -1164,14 +1017,14 @@ MonoBehaviour:
         Accept:
         - www.meow-awards.com/login
         - www.bmail.com
-    - rid: 5843204042119971148
+    - rid: 5843204053959180399
       type: {class: Parameter, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Name: TargetEmail
         Type: string
         Accept:
         - Kesi@Bmail.com
-    - rid: 5843204042119971149
+    - rid: 5843204053959180400
       type: {class: Parameter, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Name: SenderDomain
@@ -1179,510 +1032,509 @@ MonoBehaviour:
         Accept:
         - MeowPlanetClub@Bmail.com
         - www.bmail.com
-    - rid: 5843204042119971150
+    - rid: 5843204053959180401
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550"
         Type: normal
         Delay: 0
-    - rid: 5843204042119971151
+    - rid: 5843204053959180402
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: BuBugBomb Phishing Suite v3.1.4
         Type: normal
         Delay: 0
-    - rid: 5843204042119971152
+    - rid: 5843204053959180403
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: 'Session ID: PHISH-$random6-KESI | Target: $TargetEmail'
         Type: normal
         Delay: 0
-    - rid: 5843204042119971153
+    - rid: 5843204053959180404
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550"
         Type: normal
         Delay: 0.3
-    - rid: 5843204042119971154
+    - rid: 5843204053959180405
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: '[INITIALIZING PHISHING CAMPAIGN]'
         Type: normal
         Delay: 0.2
-    - rid: 5843204042119971155
+    - rid: 5843204053959180406
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: '> Target validation: Checking $TargetEmail...'
         Type: normal
         Delay: 0.1
-    - rid: 5843204042119971156
+    - rid: 5843204053959180407
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "  \u251C\u2500\u2500 Domain: bmail.com - Valid MX records found"
         Type: normal
         Delay: 0.2
-    - rid: 5843204042119971157
+    - rid: 5843204053959180408
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "  \u251C\u2500\u2500 SPF/DKIM: Verified for spoofing"
         Type: normal
         Delay: 0.2
-    - rid: 5843204042119971158
+    - rid: 5843204053959180409
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "  \u2514\u2500\u2500 Disposable check: Clean"
         Type: normal
         Delay: 0.2
-    - rid: 5843204042119971159
+    - rid: 5843204053959180410
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: 
         Type: normal
         Delay: 0
-    - rid: 5843204042119971160
+    - rid: 5843204053959180411
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: '[CLONING TARGET PAGE]'
         Type: normal
         Delay: 0.2
-    - rid: 5843204042119971161
+    - rid: 5843204053959180412
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: '> clone --source $OriginalLink'
         Type: normal
         Delay: 0
-    - rid: 5843204042119971162
+    - rid: 5843204053959180413
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: '        --destination $PhishingLink'
         Type: normal
         Delay: 0.2
-    - rid: 5843204042119971163
+    - rid: 5843204053959180414
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "$$progress(0.4,10,\"  \u251C\u2500\u2500 Fetching source HTML...\",\" 
           \u251C\u2500\u2500 Fetching source HTML... Complete\",\"White\",\"Green\")"
         Type: normal
         Delay: 0
-    - rid: 5843204042119971164
+    - rid: 5843204053959180415
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "  \u251C\u2500\u2500 Mirroring $AssetCount assets (CSS/JS/images)"
         Type: normal
         Delay: 0.3
-    - rid: 5843204042119971165
+    - rid: 5843204053959180416
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "  \u251C\u2500\u2500 Injecting credential capture script (POST to
           /capture)"
         Type: normal
         Delay: 0.3
-    - rid: 5843204042119971166
+    - rid: 5843204053959180417
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "  \u251C\u2500\u2500 Adding tracking pixel (1x1.gif)"
         Type: normal
         Delay: 0.3
-    - rid: 5843204042119971167
+    - rid: 5843204053959180418
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "  \u251C\u2500\u2500 Generating SSL certificate (Let's Encrypt)"
         Type: normal
         Delay: 0.3
-    - rid: 5843204042119971168
+    - rid: 5843204053959180419
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "  \u2514\u2500\u2500 Deployed at: $PhishingLink (HTTPS enforced)"
         Type: normal
         Delay: 0.5
-    - rid: 5843204042119971169
+    - rid: 5843204053959180420
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: 
         Type: normal
         Delay: 0
-    - rid: 5843204042119971170
+    - rid: 5843204053959180421
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: '[CONFIGURING EMAIL PAYLOAD]'
         Type: normal
         Delay: 0.2
-    - rid: 5843204042119971171
+    - rid: 5843204053959180422
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: '> set sender "$SenderName" --domain $DisplayDomain'
         Type: normal
         Delay: 0.1
-    - rid: 5843204042119971172
+    - rid: 5843204053959180423
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: '> set recipient $TargetEmail'
         Type: normal
         Delay: 0.1
-    - rid: 5843204042119971173
+    - rid: 5843204053959180424
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: '> set subject "$Subject"'
         Type: normal
         Delay: 0.1
-    - rid: 5843204042119971174
+    - rid: 5843204053959180425
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: '> set body --template "$ContentTemplate"'
         Type: normal
         Delay: 0.1
-    - rid: 5843204042119971175
+    - rid: 5843204053959180426
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: '> set link --display "Claim Your Award" --url $PhishingLink'
         Type: normal
         Delay: 0.3
-    - rid: 5843204042119971176
+    - rid: 5843204053959180427
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: '> add attachment --type pdf --name "Award_Certificate.pdf" (optional)'
         Type: normal
         Delay: 0.2
-    - rid: 5843204042119971177
+    - rid: 5843204053959180428
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: 
         Type: normal
         Delay: 0
-    - rid: 5843204042119971178
+    - rid: 5843204053959180429
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: '[SENDING PHISHING EMAIL]'
         Type: normal
         Delay: 0.2
-    - rid: 5843204042119971179
+    - rid: 5843204053959180430
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: '> send --threads 3 --encryption tls1.3'
         Type: normal
         Delay: 0.2
-    - rid: 5843204042119971180
+    - rid: 5843204053959180431
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "  \u251C\u2500\u2500 Connecting to SMTP relay: smtp.gateway.provider"
         Type: normal
         Delay: 0.3
-    - rid: 5843204042119971181
+    - rid: 5843204053959180432
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "  \u251C\u2500\u2500 Establishing secure channel... [ECDHE-RSA-AES256-GCM-SHA384]"
         Type: normal
         Delay: 0.4
-    - rid: 5843204042119971182
+    - rid: 5843204053959180433
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "$$progress(0.4,10,\"  \u251C\u2500\u2500 Authenticating sender...\",\" 
           \u251C\u2500\u2500 Authenticating sender... Success\",\"White\",\"Green\")"
         Type: normal
         Delay: 0
-    - rid: 5843204042119971183
+    - rid: 5843204053959180434
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "$$progress(0.6,10,\"  \u251C\u2500\u2500 Transmitting payload...\",\" 
           \u251C\u2500\u2500 Transmitting payload... Complete\",\"White\",\"Green\")"
         Type: normal
         Delay: 0
-    - rid: 5843204042119971184
+    - rid: 5843204053959180435
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "  \u2514\u2500\u2500 Delivery confirmation: 250 2.0.0 OK $random10
           $random12.12"
         Type: normal
         Delay: 0.3
-    - rid: 5843204042119971185
+    - rid: 5843204053959180436
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: 
         Type: normal
         Delay: 0
-    - rid: 5843204042119971186
+    - rid: 5843204053959180437
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: '[CAMPAIGN MONITORING ENABLED]'
         Type: normal
         Delay: 0.2
-    - rid: 5843204042119971187
+    - rid: 5843204053959180438
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: '> Listening for credential submissions...'
         Type: normal
         Delay: 0.1
-    - rid: 5843204042119971188
+    - rid: 5843204053959180439
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: '> Email open tracking active'
         Type: normal
         Delay: 0.1
-    - rid: 5843204042119971189
+    - rid: 5843204053959180440
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: '> Link click monitoring active'
         Type: normal
         Delay: 0.1
-    - rid: 5843204042119971190
+    - rid: 5843204053959180441
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550"
         Type: normal
         Delay: 0.5
-    - rid: 5843204042119971191
+    - rid: 5843204053959180442
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "[\u521D\u59CB\u5316\u9493\u9C7C\u653B\u51FB]"
         Type: normal
         Delay: 0.2
-    - rid: 5843204042119971192
+    - rid: 5843204053959180443
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "> \u76EE\u6807\u9A8C\u8BC1: \u68C0\u67E5\u4E2D $TargetEmail..."
         Type: normal
         Delay: 0.1
-    - rid: 5843204042119971193
+    - rid: 5843204053959180444
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "  \u251C\u2500\u2500 \u57DF\u540D: bmail.com - \u53D1\u73B0\u6709\u6548\u7684MX\u8BB0\u5F55"
         Type: normal
         Delay: 0.2
-    - rid: 5843204042119971194
+    - rid: 5843204053959180445
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "  \u251C\u2500\u2500 SPF/DKIM: \u5DF2\u9A8C\u8BC1\u53EF\u4F2A\u9020"
         Type: normal
         Delay: 0.2
-    - rid: 5843204042119971195
+    - rid: 5843204053959180446
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "  \u2514\u2500\u2500 \u4E00\u6B21\u6027\u90AE\u7BB1\u68C0\u67E5: \u901A\u8FC7"
         Type: normal
         Delay: 0.2
-    - rid: 5843204042119971196
+    - rid: 5843204053959180447
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: 
         Type: normal
         Delay: 0
-    - rid: 5843204042119971197
+    - rid: 5843204053959180448
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "[\u514B\u9686\u76EE\u6807\u9875\u9762]"
         Type: normal
         Delay: 0.2
-    - rid: 5843204042119971198
+    - rid: 5843204053959180449
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: '> clone --source $OriginalLink'
         Type: normal
         Delay: 0
-    - rid: 5843204042119971199
+    - rid: 5843204053959180450
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: '        --destination $PhishingLink'
         Type: normal
         Delay: 0.2
-    - rid: 5843204042119971200
+    - rid: 5843204053959180451
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "$$progress(0.4,10,\"  \u251C\u2500\u2500 \u83B7\u53D6\u6E90HTML\u4E2D...\",\" 
           \u251C\u2500\u2500 \u83B7\u53D6\u6E90HTML... \u5B8C\u6210\",\"White\",\"Green\")"
         Type: normal
         Delay: 0
-    - rid: 5843204042119971201
+    - rid: 5843204053959180452
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "  \u251C\u2500\u2500 \u955C\u50CF $AssetCount \u4E2A\u8D44\u6E90 (CSS/JS/\u56FE\u7247)"
         Type: normal
         Delay: 0.3
-    - rid: 5843204042119971202
+    - rid: 5843204053959180453
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "  \u251C\u2500\u2500 \u6CE8\u5165\u51ED\u636E\u6355\u83B7\u811A\u672C
           (POST\u5230 /capture)"
         Type: normal
         Delay: 0.3
-    - rid: 5843204042119971203
+    - rid: 5843204053959180454
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "  \u251C\u2500\u2500 \u6DFB\u52A0\u8DDF\u8E2A\u50CF\u7D20 (1x1.gif)"
         Type: normal
         Delay: 0.3
-    - rid: 5843204042119971204
+    - rid: 5843204053959180455
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "  \u251C\u2500\u2500 \u751F\u6210SSL\u8BC1\u4E66 (Let's Encrypt)"
         Type: normal
         Delay: 0.3
-    - rid: 5843204042119971205
+    - rid: 5843204053959180456
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "  \u2514\u2500\u2500 \u90E8\u7F72\u4E8E: $PhishingLink (\u5F3A\u5236HTTPS)"
         Type: normal
         Delay: 0.5
-    - rid: 5843204042119971206
+    - rid: 5843204053959180457
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: 
         Type: normal
         Delay: 0
-    - rid: 5843204042119971207
+    - rid: 5843204053959180458
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "[\u914D\u7F6E\u90AE\u4EF6\u8F7D\u8377]"
         Type: normal
         Delay: 0.2
-    - rid: 5843204042119971208
+    - rid: 5843204053959180459
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: '> set sender "$SenderName" --domain $DisplayDomain'
         Type: normal
         Delay: 0.1
-    - rid: 5843204042119971209
+    - rid: 5843204053959180460
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: '> set recipient $TargetEmail'
         Type: normal
         Delay: 0.1
-    - rid: 5843204042119971210
+    - rid: 5843204053959180461
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
-        Text: '> set subject "$SubjectChinese"'
+        Text: '> set subject "$CSubjectChinese"'
         Type: normal
         Delay: 0.1
-    - rid: 5843204042119971211
+    - rid: 5843204053959180462
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: '> set body --template "$ContentTemplate"'
         Type: normal
         Delay: 0.1
-    - rid: 5843204042119971212
+    - rid: 5843204053959180463
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "> set link --display \"\u9886\u53D6\u5956\u52B1\" --url $PhishingLink"
         Type: normal
         Delay: 0.3
-    - rid: 5843204042119971213
+    - rid: 5843204053959180464
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
-        Text: "> add attachment --type pdf --name \"\u83B7\u5956\u8BC1\u4E66.pdf\"
-          (\u53EF\u9009)"
+        Text: "> add attachment --type pdf --name \"\u83B7\u5956\u8BC1\u4E66.pdf\""
         Type: normal
         Delay: 0.2
-    - rid: 5843204042119971214
+    - rid: 5843204053959180465
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: 
         Type: normal
         Delay: 0
-    - rid: 5843204042119971215
+    - rid: 5843204053959180466
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "[\u53D1\u9001\u9493\u9C7C\u90AE\u4EF6]"
         Type: normal
         Delay: 0.2
-    - rid: 5843204042119971216
+    - rid: 5843204053959180467
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: '> send --threads 3 --encryption tls1.3'
         Type: normal
         Delay: 0.2
-    - rid: 5843204042119971217
+    - rid: 5843204053959180468
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "  \u251C\u2500\u2500 \u8FDE\u63A5\u5230SMTP\u4E2D\u7EE7: smtp.gateway.provider"
         Type: normal
         Delay: 0.3
-    - rid: 5843204042119971218
+    - rid: 5843204053959180469
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "  \u251C\u2500\u2500 \u5EFA\u7ACB\u5B89\u5168\u901A\u9053... [ECDHE-RSA-AES256-GCM-SHA384]"
         Type: normal
         Delay: 0.4
-    - rid: 5843204042119971219
+    - rid: 5843204053959180470
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "$$progress(0.4,10,\"  \u251C\u2500\u2500 \u9A8C\u8BC1\u53D1\u4EF6\u4EBA...\",\" 
           \u251C\u2500\u2500 \u9A8C\u8BC1\u53D1\u4EF6\u4EBA... \u6210\u529F\",\"White\",\"Green\")"
         Type: normal
         Delay: 0
-    - rid: 5843204042119971220
+    - rid: 5843204053959180471
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "$$progress(0.6,10,\"  \u251C\u2500\u2500 \u4F20\u8F93\u8F7D\u8377...\",\" 
           \u251C\u2500\u2500 \u4F20\u8F93\u8F7D\u8377... \u5B8C\u6210\",\"White\",\"Green\")"
         Type: normal
         Delay: 0
-    - rid: 5843204042119971221
+    - rid: 5843204053959180472
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "  \u2514\u2500\u2500 \u6295\u9012\u786E\u8BA4: 250 2.0.0 OK $random10
           $random12.12"
         Type: normal
         Delay: 0.3
-    - rid: 5843204042119971222
+    - rid: 5843204053959180473
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: 
         Type: normal
         Delay: 0
-    - rid: 5843204042119971223
+    - rid: 5843204053959180474
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "[\u653B\u51FB\u76D1\u63A7\u5DF2\u542F\u7528]"
         Type: normal
         Delay: 0.2
-    - rid: 5843204042119971224
+    - rid: 5843204053959180475
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "> \u76D1\u542C\u51ED\u636E\u63D0\u4EA4\u4E2D..."
         Type: normal
         Delay: 0.1
-    - rid: 5843204042119971225
+    - rid: 5843204053959180476
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "> \u90AE\u4EF6\u6253\u5F00\u8DDF\u8E2A\u5DF2\u6FC0\u6D3B"
         Type: normal
         Delay: 0.1
-    - rid: 5843204042119971226
+    - rid: 5843204053959180477
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "> \u94FE\u63A5\u70B9\u51FB\u76D1\u63A7\u5DF2\u6FC0\u6D3B"
         Type: normal
         Delay: 0.1
-    - rid: 5843204042119971227
+    - rid: 5843204053959180478
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550"
         Type: normal
         Delay: 0.5
-    - rid: 5843204042119971228
+    - rid: 5843204053959180479
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: '[SUCCESS] Phishing email delivered to $TargetEmail'
         Type: normal
         Delay: 1
-    - rid: 5843204042119971229
+    - rid: 5843204053959180480
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: 
         Type: normal
         Delay: 0
-    - rid: 5843204042119971230
+    - rid: 5843204053959180481
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: '[$time] CREDENTIAL CAPTURED'
         Type: normal
         Delay: 0.2
-    - rid: 5843204042119971231
+    - rid: 5843204053959180482
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "  \u251C\u2500\u2500 Username: $Username"
         Type: normal
         Delay: 0.1
-    - rid: 5843204042119971232
+    - rid: 5843204053959180483
       type: {class: ClickableLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "  <color=red>\u2514\u2500\u2500 Password: $Password</color>"
@@ -1691,31 +1543,31 @@ MonoBehaviour:
         Gain:
         - Key: KesiPassword
           Value: $Password
-    - rid: 5843204042119971233
+    - rid: 5843204053959180484
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "[\u6210\u529F] \u9493\u9C7C\u90AE\u4EF6\u5DF2\u53D1\u9001\u81F3 $TargetEmail"
         Type: normal
         Delay: 1
-    - rid: 5843204042119971234
+    - rid: 5843204053959180485
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: 
         Type: normal
         Delay: 0
-    - rid: 5843204042119971235
+    - rid: 5843204053959180486
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "[$time] \u51ED\u636E\u5DF2\u6355\u83B7"
         Type: normal
         Delay: 0.2
-    - rid: 5843204042119971236
+    - rid: 5843204053959180487
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "  \u251C\u2500\u2500 \u7528\u6237\u540D: $Username"
         Type: normal
         Delay: 0.1
-    - rid: 5843204042119971237
+    - rid: 5843204053959180488
       type: {class: ClickableLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "  <color=red>\u2514\u2500\u2500 \u5BC6\u7801: $Password</color>"
@@ -1724,147 +1576,1342 @@ MonoBehaviour:
         Gain:
         - Key: KesiPassword
           Value: $Password
-    - rid: 5843204042119971238
+    - rid: 5843204053959180489
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: '[SUCCESS] Phishing email delivered to $TargetEmail'
         Type: normal
         Delay: 1
-    - rid: 5843204042119971239
+    - rid: 5843204053959180490
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: 
         Type: normal
         Delay: 0
-    - rid: 5843204042119971240
+    - rid: 5843204053959180491
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: '[$time] EMAIL REPLY RECEIVED'
         Type: normal
         Delay: 0.2
-    - rid: 5843204042119971241
+    - rid: 5843204053959180492
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "  \u251C\u2500\u2500 From: $ReplyFrom"
         Type: normal
         Delay: 0.1
-    - rid: 5843204042119971242
+    - rid: 5843204053959180493
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "  \u251C\u2500\u2500 Subject: Re: $ReplySubject"
         Type: normal
         Delay: 0.1
-    - rid: 5843204042119971243
+    - rid: 5843204053959180494
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "  \u2514\u2500\u2500 Content: \"$ReplyContent\""
         Type: normal
         Delay: 0
-    - rid: 5843204042119971244
+    - rid: 5843204053959180495
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "[\u6210\u529F] \u9493\u9C7C\u90AE\u4EF6\u5DF2\u53D1\u9001\u81F3 $TargetEmail"
         Type: normal
         Delay: 1
-    - rid: 5843204042119971245
+    - rid: 5843204053959180496
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: 
         Type: normal
         Delay: 0
-    - rid: 5843204042119971246
+    - rid: 5843204053959180497
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "[$time] \u6536\u5230\u90AE\u4EF6\u56DE\u590D"
         Type: normal
         Delay: 0.2
-    - rid: 5843204042119971247
+    - rid: 5843204053959180498
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "  \u251C\u2500\u2500 \u53D1\u4EF6\u4EBA: $ReplyFrom"
         Type: normal
         Delay: 0.1
-    - rid: 5843204042119971248
+    - rid: 5843204053959180499
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "  \u251C\u2500\u2500 \u4E3B\u9898: Re: $ReplySubject"
         Type: normal
         Delay: 0.1
-    - rid: 5843204042119971249
+    - rid: 5843204053959180500
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "  \u2514\u2500\u2500 \u5185\u5BB9: \"$ReplyContent\""
         Type: normal
         Delay: 0
-    - rid: 5843204042119971250
+    - rid: 5843204053959180501
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: '[SUCCESS] Phishing email delivered to $TargetEmail'
         Type: normal
         Delay: 1
-    - rid: 5843204042119971251
+    - rid: 5843204053959180502
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: 
         Type: normal
         Delay: 0
-    - rid: 5843204042119971252
+    - rid: 5843204053959180503
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: '[$time] EMAIL REPLY RECEIVED'
         Type: normal
         Delay: 0.2
-    - rid: 5843204042119971253
+    - rid: 5843204053959180504
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "  \u251C\u2500\u2500 From: $ReplyFrom"
         Type: normal
         Delay: 0.1
-    - rid: 5843204042119971254
+    - rid: 5843204053959180505
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "  \u251C\u2500\u2500 Subject: Re: $ReplySubject"
         Type: normal
         Delay: 0.1
-    - rid: 5843204042119971255
+    - rid: 5843204053959180506
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "  \u2514\u2500\u2500 Content: \"$ReplyContent\""
         Type: normal
         Delay: 0
-    - rid: 5843204042119971256
+    - rid: 5843204053959180507
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "[\u6210\u529F] \u9493\u9C7C\u90AE\u4EF6\u5DF2\u53D1\u9001\u81F3 $TargetEmail"
         Type: normal
         Delay: 1
-    - rid: 5843204042119971257
+    - rid: 5843204053959180508
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: 
         Type: normal
         Delay: 0
-    - rid: 5843204042119971258
+    - rid: 5843204053959180509
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "[$time] \u6536\u5230\u90AE\u4EF6\u56DE\u590D"
         Type: normal
         Delay: 0.2
-    - rid: 5843204042119971259
+    - rid: 5843204053959180510
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "  \u251C\u2500\u2500 \u53D1\u4EF6\u4EBA: $ReplyFrom"
         Type: normal
         Delay: 0.1
-    - rid: 5843204042119971260
+    - rid: 5843204053959180511
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "  \u251C\u2500\u2500 \u4E3B\u9898: Re: $ReplySubject"
         Type: normal
         Delay: 0.1
-    - rid: 5843204042119971261
+    - rid: 5843204053959180512
       type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
       data:
         Text: "  \u2514\u2500\u2500 \u5185\u5BB9: \"$ReplyContent\""
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180513
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '[SUCCESS] Phishing email delivered to $TargetEmail'
+        Type: normal
+        Delay: 1
+    - rid: 5843204053959180514
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180515
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '[$time] EMAIL REPLY RECEIVED'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204053959180516
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "  \u251C\u2500\u2500 From: $ReplyFrom"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180517
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "  \u251C\u2500\u2500 Subject: Re: $ReplySubject"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180518
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "  \u2514\u2500\u2500 Content: \"$ReplyContent\""
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180519
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204053959180520
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: <color=yellow>[WARNING] Target shows high suspicion level</color>
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204053959180521
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=yellow>  \u2514\u2500\u2500 Social engineering effectiveness:
+          LOW</color>"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180522
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[\u6210\u529F] \u9493\u9C7C\u90AE\u4EF6\u5DF2\u53D1\u9001\u81F3 $TargetEmail"
+        Type: normal
+        Delay: 1
+    - rid: 5843204053959180523
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180524
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[$time] \u6536\u5230\u90AE\u4EF6\u56DE\u590D"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204053959180525
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "  \u251C\u2500\u2500 \u53D1\u4EF6\u4EBA: $ReplyFrom"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180526
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "  \u251C\u2500\u2500 \u4E3B\u9898: Re: $ReplySubject"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180527
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "  \u2514\u2500\u2500 \u5185\u5BB9: \"$ReplyContent\""
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180528
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204053959180529
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=yellow>[\u8B66\u544A] \u76EE\u6807\u663E\u793A\u9AD8\u5EA6\u6000\u7591</color>"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204053959180530
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=yellow>  \u2514\u2500\u2500 \u793E\u4F1A\u5DE5\u7A0B\u5B66\u6709\u6548\u6027:
+          \u4F4E</color>"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180531
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '[INITIALIZING CAMPAIGN]'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204053959180532
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Parameters validation...'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180533
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Clone source analysis...'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204053959180534
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204053959180535
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '<color=red>[ERROR] $ErrorCode: OPERATION ABORTED</color>'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204053959180536
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=red>  \u251C\u2500\u2500 $ErrorMessage</color>"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180537
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=red>  \u2514\u2500\u2500 Cannot clone sender's own domain -
+          this would expose the attack</color>"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180538
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204053959180539
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: <color=yellow>[RECOMMENDATION] Use a different clone source that doesn't
+          match sender domain</color>
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180540
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[\u521D\u59CB\u5316\u6D3B\u52A8]"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204053959180541
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u9A8C\u8BC1\u53C2\u6570\u4E2D..."
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180542
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u5206\u6790\u514B\u9686\u6E90..."
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204053959180543
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204053959180544
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=red>[\u9519\u8BEF] $ErrorCode: \u64CD\u4F5C\u5DF2\u4E2D\u6B62</color>"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204053959180545
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=red>  \u251C\u2500\u2500 $ErrorMessageChinese</color>"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180546
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=red>  \u2514\u2500\u2500 \u4E0D\u80FD\u514B\u9686\u53D1\u4EF6\u4EBA\u81EA\u5DF1\u7684\u57DF\u540D
+          - \u8FD9\u4F1A\u66B4\u9732\u653B\u51FB</color>"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180547
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204053959180548
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=yellow>[\u5EFA\u8BAE] \u4F7F\u7528\u4E0E\u53D1\u4EF6\u4EBA\u57DF\u540D\u4E0D\u540C\u7684\u514B\u9686\u6E90</color>"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180549
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '[SUCCESS] Phishing email delivered to $TargetEmail'
+        Type: normal
+        Delay: 1
+    - rid: 5843204053959180550
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204053959180551
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: <color=yellow>[WARNING] $WarningMessage</color>
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204053959180552
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=yellow>  \u251C\u2500\u2500 Subject: '$Subject' (mooncake/gift
+          theme)</color>"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180553
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=yellow>  \u251C\u2500\u2500 Clone source: $OriginalLink (general
+          email platform)</color>"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180554
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=yellow>  \u2514\u2500\u2500 Recipient may notice inconsistency
+          - attack effectiveness reduced</color>"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180555
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204053959180556
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '[$time] NO RESPONSE'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204053959180557
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "  \u2514\u2500\u2500 Email likely filtered or ignored due to suspicious
+          content pairing"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180558
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[\u6210\u529F] \u9493\u9C7C\u90AE\u4EF6\u5DF2\u53D1\u9001\u81F3 $TargetEmail"
+        Type: normal
+        Delay: 1
+    - rid: 5843204053959180559
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204053959180560
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=yellow>[\u8B66\u544A] $WarningMessageChinese</color>"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204053959180561
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=yellow>  \u251C\u2500\u2500 \u4E3B\u9898: '$CSubjectChinese'
+          (\u6708\u997C/\u793C\u7269\u4E3B\u9898)</color>"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180562
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=yellow>  \u251C\u2500\u2500 \u514B\u9686\u6E90: $OriginalLink
+          (\u901A\u7528\u90AE\u4EF6\u5E73\u53F0)</color>"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180563
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=yellow>  \u2514\u2500\u2500 \u6536\u4EF6\u4EBA\u53EF\u80FD\u6CE8\u610F\u5230\u4E0D\u4E00\u81F4
+          - \u653B\u51FB\u6709\u6548\u6027\u964D\u4F4E</color>"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180564
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204053959180565
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[$time] \u65E0\u54CD\u5E94"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204053959180566
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "  \u2514\u2500\u2500 \u90AE\u4EF6\u53EF\u80FD\u56E0\u53EF\u7591\u7684\u5185\u5BB9\u914D\u5BF9\u800C\u88AB\u8FC7\u6EE4\u6216\u5FFD\u7565"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180567
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '[INITIALIZING CAMPAIGN]'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204053959180568
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Parameters validation...'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180569
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204053959180570
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '<color=red>[ERROR] 0x0000000B: INVALID PARAMETER VALUE</color>'
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180571
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: <color=red>[ERROR] One or more parameters do not match expected values.</color>
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180572
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[\u521D\u59CB\u5316\u6D3B\u52A8]"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204053959180573
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u9A8C\u8BC1\u53C2\u6570\u4E2D..."
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180574
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204053959180575
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=red>[\u9519\u8BEF] 0x0000000B: \u65E0\u6548\u53C2\u6570\u503C</color>"
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180576
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=red>[\u9519\u8BEF] \u4E00\u4E2A\u6216\u591A\u4E2A\u53C2\u6570\u4E0D\u5339\u914D\u9884\u671F\u503C\u3002</color>"
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180577
+      type: {class: Parameter, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Name: TargetDomain
+        Type: string
+        Accept:
+        - www.bmail.com
+        - www.meow-awards.com
+    - rid: 5843204053959180578
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550"
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180579
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 'BuBugBomb WebScan v2.3.5 - Target: $TargetDomain'
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180580
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 'Scan ID: BSID-$random6-$random3 | Initiated: $time UTC'
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180581
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550"
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204053959180582
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180583
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '[SCAN INITIATED]'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204053959180584
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Target: $TargetDomain'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180585
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Protocol: HTTPS/1.1'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180586
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Methods: GET, HEAD, OPTIONS'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180587
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> User-Agent: BuBugBomb WebScan v2.3.5'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180588
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Wordlist: common-web-paths.txt (2048 entries)'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180589
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Available paths: 20'
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204053959180590
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180591
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '[PATH ENUMERATION]'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204053959180592
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(1.2,10,\" $Path1\",\" $Path1          \xBB 404 Not Found\",\"White\",\"Red\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180593
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(0.4,10,\" $Path2\",\" $Path2          \xBB 404 Not Found\",\"White\",\"Red\")"
+        Type: normal
+        Delay: 1
+    - rid: 5843204053959180594
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(0.4,10,\" https://www.bmail.com/supersecret\",\" https://www.bmail.com/supersecret           
+          \xBB 403 Forbidden\",\"White\",\"Yellow\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180595
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(0.4,10,\" $Path3\",\" $Path3         \xBB 200 OK\",\"White\",\"Green\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180596
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(0.4,10,\" https://www.bmail.com/test\",\" https://www.bmail.com/test   
+          \xBB 401 Unauthorized\",\"White\",\"Yellow\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180597
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(0.4,10,\" https://www.bmail.com/database/backup\",\" https://www.bmail.com/database/backup        
+          \xBB 403 Forbidden\",\"White\",\"Yellow\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180598
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(0.4,10,\" $Path4\",\" $Path4        \xBB 404 Not Found\",\"White\",\"Red\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180599
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(0.4,10,\" $Path5\",\" $Path5       \xBB 200 OK (robots.txt)\",\"White\",\"Green\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180600
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(0.4,10,\" $Path6\",\" $Path6      \xBB 404 Not Found\",\"White\",\"Red\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180601
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(0.4,10,\" $Path7\",\" $Path7       \xBB 302 Found (redirect
+          to login)\",\"White\",\"Yellow\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180602
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(0.4,10,\" $Path8\",\" $Path8        \xBB 403 Forbidden\",\"White\",\"Yellow\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180603
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(0.4,10,\" $Path9\",\" $Path9       \xBB 403 Forbidden\",\"White\",\"Yellow\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180604
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(0.4,10,\" $Path10\",\" $Path10      \xBB 500 Internal Server
+          Error\",\"White\",\"Red\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180605
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(0.4,10,\" $Path11\",\" $Path11     \xBB 401 Unauthorized\",\"White\",\"Yellow\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180606
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(0.4,10,\" $Path12\",\" $Path12     \xBB 200 OK (directory
+          listing)\",\"White\",\"Green\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180607
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(0.4,10,\" https://www.bmail.com/.git/HEAD\",\" https://www.bmail.com/.git/HEAD
+          \xBB 200 OK\",\"White\",\"Green\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180608
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(0.4,10,\" https://www.bmail.com/phpinfo.php\",\" https://www.bmail.com/phpinfo.php
+          \xBB 200 OK\",\"White\",\"Green\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180609
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(0.4,10,\" https://www.bmail.com/wp-admin\",\" https://www.bmail.com/wp-admin
+          \xBB 404 Not Found\",\"White\",\"Red\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180610
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(0.4,10,\" https://www.bmail.com/admin/login\",\" https://www.bmail.com/admin/login
+          \xBB 200 OK\",\"White\",\"Green\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180611
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204053959180612
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '[INTERESTING PATHS FOUND]'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204053959180613
+      type: {class: ClickableLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: <color=red>1. $AvailablePath</color>
+        Type: clickable
+        Delay: 0.2
+        Gain:
+        - Key: BmailAdminPath
+          Value: $AvailablePath
+    - rid: 5843204053959180614
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "   \u251C\u2500\u2500 HTTP: 200 OK"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180615
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "   \u251C\u2500\u2500 Content-Type: application/sql"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180616
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "   \u251C\u2500\u2500 Size: $FileSize KB"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180617
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "   \u251C\u2500\u2500 Response Time: $ResponseTime"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180618
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "   \u2514\u2500\u2500 Server: $Server"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180619
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180620
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550"
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204053959180621
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '[SUCCESS] Scan completed - 1 interesting path found'
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180622
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[\u626B\u63CF\u5F00\u59CB]"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204053959180623
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u76EE\u6807: $TargetDomain"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180624
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u534F\u8BAE: HTTPS/1.1"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180625
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u65B9\u6CD5: GET, HEAD, OPTIONS"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180626
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u7528\u6237\u4EE3\u7406: BuBugBomb WebScan v2.3.5"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180627
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u8BCD\u8868: common-web-paths.txt (2048 \u6761\u76EE)"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180628
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u53EF\u7528\u8DEF\u5F84: 20"
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204053959180629
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180630
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[\u8DEF\u5F84\u679A\u4E3E]"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204053959180631
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(0.4,10,\" $Path1\",\" $Path1          \xBB 404 \u672A\u627E\u5230\",\"White\",\"Red\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180632
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(0.4,10,\" $Path2\",\" $Path2          \xBB 404 \u672A\u627E\u5230\",\"White\",\"Red\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180633
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(0.4,10,\" https://www.bmail.com/supersecret\",\" https://www.bmail.com/supersecret           
+          \xBB 403 \u7981\u6B62\u8BBF\u95EE\",\"White\",\"Yellow\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180634
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(0.4,10,\" $Path3\",\" $Path3         \xBB 200 \u6B63\u5E38\",\"White\",\"Green\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180635
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(0.4,10,\" https://www.bmail.com/test\",\" https://www.bmail.com/test   
+          \xBB 401 \u672A\u6388\u6743\",\"White\",\"Yellow\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180636
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(0.4,10,\" https://www.bmail.com/database/backup\",\" https://www.bmail.com/database/backup        
+          \xBB 403 \u7981\u6B62\u8BBF\u95EE\",\"White\",\"Yellow\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180637
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(0.4,10,\" $Path4\",\" $Path4        \xBB 404 \u672A\u627E\u5230\",\"White\",\"Red\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180638
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(0.4,10,\" $Path5\",\" $Path5       \xBB 200 \u6B63\u5E38
+          (robots.txt)\",\"White\",\"Green\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180639
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(0.4,10,\" $Path6\",\" $Path6      \xBB 404 \u672A\u627E\u5230\",\"White\",\"Red\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180640
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(0.4,10,\" $Path7\",\" $Path7       \xBB 302 \u627E\u5230
+          (\u91CD\u5B9A\u5411\u5230\u767B\u5F55)\",\"White\",\"Yellow\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180641
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(0.4,10,\" $Path8\",\" $Path8        \xBB 403 \u7981\u6B62\u8BBF\u95EE\",\"White\",\"Yellow\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180642
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(0.4,10,\" $Path9\",\" $Path9       \xBB 403 \u7981\u6B62\u8BBF\u95EE\",\"White\",\"Yellow\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180643
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(0.4,10,\" $Path10\",\" $Path10      \xBB 500 \u5185\u90E8\u670D\u52A1\u5668\u9519\u8BEF\",\"White\",\"Red\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180644
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(0.4,10,\" $Path11\",\" $Path11     \xBB 401 \u672A\u6388\u6743\",\"White\",\"Yellow\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180645
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(0.4,10,\" $Path12\",\" $Path12     \xBB 200 \u6B63\u5E38
+          (\u76EE\u5F55\u5217\u8868)\",\"White\",\"Green\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180646
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(0.4,10,\" https://www.bmail.com/.git/HEAD\",\" https://www.bmail.com/.git/HEAD
+          \xBB 200 \u6B63\u5E38\",\"White\",\"Green\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180647
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(0.4,10,\" https://www.bmail.com/phpinfo.php\",\" https://www.bmail.com/phpinfo.php
+          \xBB 200 \u6B63\u5E38\",\"White\",\"Green\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180648
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(0.4,10,\" https://www.bmail.com/wp-admin\",\" https://www.bmail.com/wp-admin
+          \xBB 404 \u672A\u627E\u5230\",\"White\",\"Red\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180649
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "$$progress(0.4,10,\" https://www.bmail.com/admin/login\",\" https://www.bmail.com/admin/login
+          \xBB 200 \u6B63\u5E38\",\"White\",\"Green\")"
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180650
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204053959180651
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[\u53D1\u73B0\u6709\u8DA3\u8DEF\u5F84]"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204053959180652
+      type: {class: ClickableLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: <color=red>1. $AvailablePath</color>
+        Type: clickable
+        Delay: 0.2
+        Gain:
+        - Key: BmailAdminPath
+          Value: $AvailablePath
+    - rid: 5843204053959180653
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "   \u251C\u2500\u2500 HTTP: 200 \u6B63\u5E38"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180654
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "   \u251C\u2500\u2500 \u5185\u5BB9\u7C7B\u578B: application/sql"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180655
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "   \u251C\u2500\u2500 \u5927\u5C0F: $FileSize KB"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180656
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "   \u251C\u2500\u2500 \u54CD\u5E94\u65F6\u95F4: $ResponseTime"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180657
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "   \u2514\u2500\u2500 \u670D\u52A1\u5668: $Server"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180658
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180659
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550"
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204053959180660
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=green>[\u6210\u529F] \u626B\u63CF\u5B8C\u6210 - \u53D1\u73B0
+          1 \u4E2A\u6709\u8DA3\u8DEF\u5F84</color>"
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180661
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '[SCAN INITIATED]'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204053959180662
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Target: $TargetDomain'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180663
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204053959180664
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '<color=red>[ERROR] Access failed: the path is invalid or permission
+          is denied.</color>'
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180665
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: <color=red>[ERROR] Unable to reach target domain.</color>
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180666
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '[SCAN INITIATED]'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204053959180667
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Target: $TargetDomain'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180668
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Protocol: HTTPS/1.1'
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180669
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '> Resolving DNS...'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204053959180670
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204053959180671
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '<color=red>[ERROR] $ErrorCode: $ErrorType</color>'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204053959180672
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=red>  \u2514\u2500\u2500 Unable to resolve domain: $TargetDomain</color>"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180673
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204053959180674
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: '[ANALYSIS]'
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204053959180675
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "  \u251C\u2500\u2500 Domain registration: Not found in public DNS"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180676
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "  \u251C\u2500\u2500 WHOIS lookup: No records available"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180677
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "  \u2514\u2500\u2500 Scan attempts: $ScanCount/15 failed"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180678
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204053959180679
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: <color=yellow>[NOTE] $Suggestion</color>
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204053959180680
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204053959180681
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550"
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204053959180682
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: <color=red>[FAILED] Scan aborted - target unreachable</color>
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180683
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[\u626B\u63CF\u5F00\u59CB]"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204053959180684
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u76EE\u6807: $TargetDomain"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180685
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u534F\u8BAE: HTTPS/1.1"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180686
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u6B63\u5728\u89E3\u6790DNS..."
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204053959180687
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204053959180688
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=red>[\u9519\u8BEF] $ErrorCode: DNS\u89E3\u6790\u5931\u8D25</color>"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204053959180689
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=red>  \u2514\u2500\u2500 \u65E0\u6CD5\u89E3\u6790\u57DF\u540D:
+          $TargetDomain</color>"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180690
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204053959180691
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[\u5206\u6790\u7ED3\u679C]"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204053959180692
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "  \u251C\u2500\u2500 \u57DF\u540D\u6CE8\u518C: \u5728\u516C\u5171DNS\u4E2D\u672A\u627E\u5230"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180693
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "  \u251C\u2500\u2500 WHOIS\u67E5\u8BE2: \u65E0\u53EF\u7528\u8BB0\u5F55"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180694
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "  \u2514\u2500\u2500 \u626B\u63CF\u5C1D\u8BD5: $ScanCount/15 \u5931\u8D25"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180695
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204053959180696
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=yellow>[\u63D0\u793A] $CSuggestionChinese</color>"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204053959180697
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204053959180698
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550"
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204053959180699
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=red>[\u5931\u8D25] \u626B\u63CF\u4E2D\u6B62 - \u76EE\u6807\u65E0\u6CD5\u8BBF\u95EE</color>"
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180700
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "[\u5F00\u59CB\u626B\u63CF]"
+        Type: normal
+        Delay: 0.2
+    - rid: 5843204053959180701
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "> \u76EE\u6807: $TargetDomain"
+        Type: normal
+        Delay: 0.1
+    - rid: 5843204053959180702
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: 
+        Type: normal
+        Delay: 0.3
+    - rid: 5843204053959180703
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=red>[\u9519\u8BEF] \u8BBF\u95EE\u5931\u8D25\uFF0C\u8DEF\u5F84\u65E0\u6548\u6216\u6743\u9650\u4E0D\u8DB3\u3002</color>"
+        Type: normal
+        Delay: 0
+    - rid: 5843204053959180704
+      type: {class: NormalLineBlock, ns: LD58.Util, asm: Assembly-CSharp}
+      data:
+        Text: "<color=red>[\u9519\u8BEF] \u65E0\u6CD5\u8BBF\u95EE\u76EE\u6807\u57DF\u540D\u3002</color>"
         Type: normal
         Delay: 0

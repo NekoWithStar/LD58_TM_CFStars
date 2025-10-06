@@ -15,8 +15,7 @@ MonoBehaviour:
   Datas:
   - LevelName: Level1
     CommandData: {fileID: 11400000, guid: 9f39fb93e67a4f84f9255f018310f833, type: 2}
-    InitParams:
-    - www.bmain.com
+    InitParams: []
     SearchItems:
     - Desc: "2025\u5E74\u6700\u8F7B\u677E\u5DE5\u4F5C\u662F\u4EC0\u4E48"
       Gains: []
@@ -28,17 +27,17 @@ MonoBehaviour:
       - Bmail system
     - Desc: "\u55B5\u661F\u4EBA\u4FF1\u4E50\u90E8  \u7684 \u732B\u54AA\u9009\u7F8E\u7684\u65F6\u95F4\u662F\u4EC0\u4E48\u65F6\u5019?"
       Gains:
-      - Cat Beauty Contest
-      - Meow Planet Club
+      - CatBeautyContest
+      - MeowPlanetClub@Bmail.com
     LinkItems:
     - Desc: www.goodinternet.com
       CanNavigate: 1
-    - Desc: www.bmain.com
+    - Desc: www.bmail.com
       CanNavigate: 0
     - Desc: www.meow-awards.com/login
       CanNavigate: 0
     AcceptLinkValues:
-    - www.bmail.com/admin/login
+    - https://www.bmail.com/admin/login
   - LevelName: Level2
     CommandData: {fileID: 11400000, guid: 94c425ce232c4c54898592291dfb887d, type: 2}
     InitParams:

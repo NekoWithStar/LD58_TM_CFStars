@@ -4,7 +4,7 @@
     {
       "name": "EmailSubject",
       "type": "string",
-      "accept": ["猫咪选美", "月饼"]
+      "accept": ["CatBeautyContest", "mooncake"]
     },
     {
       "name": "OriginalLink",
@@ -26,7 +26,7 @@
     {
       "name": "case1",
       "parameterValues": {
-        "EmailSubject": ["猫咪选美"],
+        "EmailSubject": ["CatBeautyContest"],
         "OriginalLink": ["www.meow-awards.com/login"],
         "TargetEmail": ["Kesi@Bmail.com"],
         "SenderDomain": ["MeowPlanetClub@Bmail.com"]
@@ -47,7 +47,7 @@
     {
       "name": "case2",
       "parameterValues": {
-        "EmailSubject": ["月饼"],
+        "EmailSubject": ["mooncake"],
         "OriginalLink": ["www.meow-awards.com/login", "www.bmail.com"],
         "TargetEmail": ["Kesi@Bmail.com"],
         "SenderDomain": ["MeowPlanetClub@Bmail.com"]
@@ -56,7 +56,7 @@
         "PhishingLink": "https://me0w-awards.xyz/login",
         "AssetCount": "37",
         "SenderName": "Awards Committee",
-        "SenderNameChinese": "获奖协会",
+        "CSenderNameChinese": "获奖协会",
         "Subject": "Urgent: You Got A MoonCake",
         "CSubjectChinese": "紧急：你获得了一个月饼",
         "ContentTemplate": "awards_notification",
@@ -70,7 +70,7 @@
     {
       "name": "case3",
       "parameterValues": {
-        "EmailSubject": ["猫咪选美"],
+        "EmailSubject": ["CatBeautyContest"],
         "OriginalLink": ["www.meow-awards.com/login"],
         "TargetEmail": ["Kesi@Bmail.com"],
         "SenderDomain": ["www.bmail.com"]
@@ -87,6 +87,73 @@
         "ReplySubject": "Bmail你们在偷窥??",
         "ReplyContent": "为什么你们会知道我喜欢猫咪?停止你们的偷窥行为!",
         "OutputType": "B2"
+      }
+    },
+    {
+      "name": "case4",
+      "parameterValues": {
+        "EmailSubject": ["mooncake"],
+        "OriginalLink": ["www.meow-awards.com/login"],
+        "TargetEmail": ["Kesi@Bmail.com"],
+        "SenderDomain": ["www.bmail.com"]
+      },
+      "variables": {
+        "PhishingLink": "https://me0w-awards.xyz/login",
+        "AssetCount": "37",
+        "SenderName": "Bmail Customer Service",
+        "CSenderNameChinese": "Bmail客户服务",
+        "Subject": "Special Gift: Traditional Mooncake for You",
+        "CSubjectChinese": "特别礼物：为您准备的传统月饼",
+        "ContentTemplate": "gift_notification",
+        "DisplayDomain": "www.bmail.com",
+        "ReplyFrom": "Kesi@Bmail.com",
+        "ReplySubject": "这是真的吗?",
+        "ReplyContent": "Bmail从来不会发送这种礼物邮件，这看起来很可疑。你们是骗子吗?",
+        "OutputType": "B2"
+      }
+    },
+    {
+      "name": "case5",
+      "parameterValues": {
+        "EmailSubject": ["CatBeautyContest"],
+        "OriginalLink": ["www.bmail.com"],
+        "TargetEmail": ["Kesi@Bmail.com"],
+        "SenderDomain": ["www.bmail.com"]
+      },
+      "variables": {
+        "PhishingLink": "https://me0w-awards.xyz/login",
+        "AssetCount": "0",
+        "SenderName": "Bmail",
+        "Subject": "Urgent: Claim Your Feline Excellence Award",
+        "CSubjectChinese": "紧急：来获取你的可爱猫咪卓越奖！",
+        "ContentTemplate": "awards_notification",
+        "DisplayDomain": "www.bmail.com",
+        "ErrorCode": "0x00000403",
+        "ErrorMessage": "Circular reference detected: clone source and sender domain match",
+        "ErrorMessageChinese": "检测到循环引用：克隆源与发件人域名匹配",
+        "OutputType": "ERROR"
+      }
+    },
+    {
+      "name": "case6",
+      "parameterValues": {
+        "EmailSubject": ["mooncake"],
+        "OriginalLink": ["www.bmail.com"],
+        "TargetEmail": ["Kesi@Bmail.com"],
+        "SenderDomain": ["MeowPlanetClub@Bmail.com"]
+      },
+      "variables": {
+        "PhishingLink": "https://me0w-awards.xyz/login",
+        "AssetCount": "0",
+        "SenderName": "MeowPlanetClub",
+        "CSenderNameChinese": "喵星球俱乐部",
+        "Subject": "Special Gift: Traditional Mooncake for You",
+        "CSubjectChinese": "特别礼物：为您准备的传统月饼",
+        "ContentTemplate": "gift_notification",
+        "DisplayDomain": "www.bmail.com",
+        "WarningMessage": "Content mismatch: clone source (www.bmail.com) does not align with subject context",
+        "WarningMessageChinese": "内容不匹配：克隆源(www.bmail.com)与主题上下文不符",
+        "OutputType": "WARNING"
       }
     }
   ],
@@ -706,6 +773,312 @@
             "type": "normal",
             "text": "  └── 内容: \"$ReplyContent\"",
             "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "case4",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[SUCCESS] Phishing email delivered to $TargetEmail",
+            "delay": 1.0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "[$time] EMAIL REPLY RECEIVED",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── From: $ReplyFrom",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Subject: Re: $ReplySubject",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Content: \"$ReplyContent\"",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[WARNING] Target shows high suspicion level</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>  └── Social engineering effectiveness: LOW</color>",
+            "delay": 0.1
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "case4",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[成功] 钓鱼邮件已发送至 $TargetEmail",
+            "delay": 1.0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "[$time] 收到邮件回复",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 发件人: $ReplyFrom",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 主题: Re: $ReplySubject",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 内容: \"$ReplyContent\"",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[警告] 目标显示高度怀疑</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>  └── 社会工程学有效性: 低</color>",
+            "delay": 0.1
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "case5",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[INITIALIZING CAMPAIGN]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Parameters validation...",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Clone source analysis...",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[ERROR] $ErrorCode: OPERATION ABORTED</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>  ├── $ErrorMessage</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>  └── Cannot clone sender's own domain - this would expose the attack</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[RECOMMENDATION] Use a different clone source that doesn't match sender domain</color>",
+            "delay": 0.1
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "case5",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[初始化活动]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 验证参数中...",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 分析克隆源...",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[错误] $ErrorCode: 操作已中止</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>  ├── $ErrorMessageChinese</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>  └── 不能克隆发件人自己的域名 - 这会暴露攻击</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[建议] 使用与发件人域名不同的克隆源</color>",
+            "delay": 0.1
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "case6",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[SUCCESS] Phishing email delivered to $TargetEmail",
+            "delay": 1.0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[WARNING] $WarningMessage</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>  ├── Subject: '$Subject' (mooncake/gift theme)</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>  ├── Clone source: $OriginalLink (general email platform)</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>  └── Recipient may notice inconsistency - attack effectiveness reduced</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[$time] NO RESPONSE",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  └── Email likely filtered or ignored due to suspicious content pairing",
+            "delay": 0.1
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "case6",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[成功] 钓鱼邮件已发送至 $TargetEmail",
+            "delay": 1.0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[警告] $WarningMessageChinese</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>  ├── 主题: '$CSubjectChinese' (月饼/礼物主题)</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>  ├── 克隆源: $OriginalLink (通用邮件平台)</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>  └── 收件人可能注意到不一致 - 攻击有效性降低</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[$time] 无响应",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  └── 邮件可能因可疑的内容配对而被过滤或忽略",
+            "delay": 0.1
           }
         ]
       },
