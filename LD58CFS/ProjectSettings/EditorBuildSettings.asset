@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MangaUse/Part1_2.unity
     guid: 020371eab63f3b44d80c577c947f4b74
   - enabled: 1
+    path: Assets/Scenes/MangaUse/Part2_3.unity
+    guid: 04969287afba07e4d8f894aa4500d2c1
+  - enabled: 1
     path: Assets/Scenes/MangaUse/Part3_4.unity
     guid: 2c8ae9e009f0a6d4faed131884f07a6c
   m_configObjects:
