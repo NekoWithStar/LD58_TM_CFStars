@@ -155,6 +155,20 @@ namespace LD58.UI
                                                     ColorUtil.ParseColor(parts[5])));
                                         }
                                     }
+                                    else if (text.Contains("$$scene"))
+                                    {
+                                        // $$scene(Level3) - Load a new scene
+                                        var parts = text.Split(new[] { "$$scene", "(", ")" },
+                                            StringSplitOptions.RemoveEmptyEntries);
+                                        if (parts.Length == 1 && !string.IsNullOrEmpty(parts[0]))
+                                        {
+                                            var sceneName = parts[0].Trim();
+                                            Debug.Log($"Loading scene: {sceneName}");
+                                            UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
+                                        }
+
+                                        continue;
+                                    }
                                 }
                                 else
                                 {
