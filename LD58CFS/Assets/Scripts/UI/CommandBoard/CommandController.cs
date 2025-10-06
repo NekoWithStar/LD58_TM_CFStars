@@ -27,9 +27,9 @@ namespace LD58.UI.CommandBoard
         private void Awake()
         {
 #if UNITY_EDITOR
-            _content.DestroyChild();
             if (_debug)
             {
+                _content.DestroyChild();
                 AddCommand(CommandConstant.WEB_SCAN);
                 AddCommand(CommandConstant.SEND_MAIL);
             }
