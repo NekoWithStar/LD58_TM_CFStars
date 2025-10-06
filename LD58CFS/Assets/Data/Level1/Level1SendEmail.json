@@ -1,0 +1,714 @@
+{
+  "commandName": "Send-Email",
+  "parameters": [
+    {
+      "name": "EmailSubject",
+      "type": "string",
+      "accept": ["猫咪选美", "月饼"]
+    },
+    {
+      "name": "OriginalLink",
+      "type": "string",
+      "accept": ["www.meow-awards.com/login", "www.bmail.com"]
+    },
+    {
+      "name": "TargetEmail",
+      "type": "string",
+      "accept": ["Kesi@Bmail.com"]
+    },
+    {
+      "name": "SenderDomain",
+      "type": "string",
+      "accept": ["MeowPlanetClub@Bmail.com", "www.bmail.com"]
+    }
+  ],
+  "cases": [
+    {
+      "name": "case1",
+      "parameterValues": {
+        "EmailSubject": ["猫咪选美"],
+        "OriginalLink": ["www.meow-awards.com/login"],
+        "TargetEmail": ["Kesi@Bmail.com"],
+        "SenderDomain": ["MeowPlanetClub@Bmail.com"]
+      },
+      "variables": {
+        "PhishingLink": "https://me0w-awards.xyz/login",
+        "AssetCount": "37",
+        "SenderName": "Bmail",
+        "Subject": "Urgent: Claim Your Feline Excellence Award",
+        "CSubjectChinese": "紧急：来获取你的可爱猫咪卓越奖！",
+        "ContentTemplate": "awards_notification",
+        "DisplayDomain": "www.bmail.com",
+        "Username": "Kesi",
+        "Password": "qwertyuiop1234567890",
+        "OutputType": "B1"
+      }
+    },
+    {
+      "name": "case2",
+      "parameterValues": {
+        "EmailSubject": ["月饼"],
+        "OriginalLink": ["www.meow-awards.com/login", "www.bmail.com"],
+        "TargetEmail": ["Kesi@Bmail.com"],
+        "SenderDomain": ["MeowPlanetClub@Bmail.com"]
+      },
+      "variables": {
+        "PhishingLink": "https://me0w-awards.xyz/login",
+        "AssetCount": "37",
+        "SenderName": "Awards Committee",
+        "SenderNameChinese": "获奖协会",
+        "Subject": "Urgent: You Got A MoonCake",
+        "CSubjectChinese": "紧急：你获得了一个月饼",
+        "ContentTemplate": "awards_notification",
+        "DisplayDomain": "www.bmail.com",
+        "ReplyFrom": "Kesi@Bmail.com",
+        "ReplySubject": "不需要",
+        "ReplyContent": "谢谢你们的月饼，但我不喜欢吃",
+        "OutputType": "B2"
+      }
+    },
+    {
+      "name": "case3",
+      "parameterValues": {
+        "EmailSubject": ["猫咪选美"],
+        "OriginalLink": ["www.meow-awards.com/login"],
+        "TargetEmail": ["Kesi@Bmail.com"],
+        "SenderDomain": ["www.bmail.com"]
+      },
+      "variables": {
+        "PhishingLink": "https://me0w-awards.xyz/login",
+        "AssetCount": "37",
+        "SenderName": "Bmail",
+        "Subject": "Urgent: Claim Your Feline Excellence Award",
+        "CSubjectChinese": "紧急：来获取你的可爱猫咪卓越奖！",
+        "ContentTemplate": "awards_notification",
+        "DisplayDomain": "www.bmail.com",
+        "ReplyFrom": "Kesi@Bmail.com",
+        "ReplySubject": "Bmail你们在偷窥??",
+        "ReplyContent": "为什么你们会知道我喜欢猫咪?停止你们的偷窥行为!",
+        "OutputType": "B2"
+      }
+    }
+  ],
+  "output": {
+    "languageBlocks": [
+      {
+        "language": null,
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "BuBugBomb Phishing Suite v3.1.4",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "Session ID: PHISH-$random6-KESI | Target: $TargetEmail",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════",
+            "delay": 0.3
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[INITIALIZING PHISHING CAMPAIGN]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Target validation: Checking $TargetEmail...",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Domain: bmail.com - Valid MX records found",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── SPF/DKIM: Verified for spoofing",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  └── Disposable check: Clean",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "[CLONING TARGET PAGE]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> clone --source $OriginalLink",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "        --destination $PhishingLink",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.4,10,\"  ├── Fetching source HTML...\",\"  ├── Fetching source HTML... Complete\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Mirroring $AssetCount assets (CSS/JS/images)",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Injecting credential capture script (POST to /capture)",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Adding tracking pixel (1x1.gif)",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Generating SSL certificate (Let's Encrypt)",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "  └── Deployed at: $PhishingLink (HTTPS enforced)",
+            "delay": 0.5
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "[CONFIGURING EMAIL PAYLOAD]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> set sender \"$SenderName\" --domain $DisplayDomain",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> set recipient $TargetEmail",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> set subject \"$Subject\"",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> set body --template \"$ContentTemplate\"",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> set link --display \"Claim Your Award\" --url $PhishingLink",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "> add attachment --type pdf --name \"Award_Certificate.pdf\" (optional)",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "[SENDING PHISHING EMAIL]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> send --threads 3 --encryption tls1.3",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Connecting to SMTP relay: smtp.gateway.provider",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Establishing secure channel... [ECDHE-RSA-AES256-GCM-SHA384]",
+            "delay": 0.4
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.4,10,\"  ├── Authenticating sender...\",\"  ├── Authenticating sender... Success\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.6,10,\"  ├── Transmitting payload...\",\"  ├── Transmitting payload... Complete\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  └── Delivery confirmation: 250 2.0.0 OK $random10 $random12.12",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "[CAMPAIGN MONITORING ENABLED]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Listening for credential submissions...",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Email open tracking active",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Link click monitoring active",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════",
+            "delay": 0.5
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[初始化钓鱼攻击]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 目标验证: 检查中 $TargetEmail...",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 域名: bmail.com - 发现有效的MX记录",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── SPF/DKIM: 已验证可伪造",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  └── 一次性邮箱检查: 通过",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "[克隆目标页面]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> clone --source $OriginalLink",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "        --destination $PhishingLink",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.4,10,\"  ├── 获取源HTML中...\",\"  ├── 获取源HTML... 完成\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 镜像 $AssetCount 个资源 (CSS/JS/图片)",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 注入凭据捕获脚本 (POST到 /capture)",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 添加跟踪像素 (1x1.gif)",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 生成SSL证书 (Let's Encrypt)",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "  └── 部署于: $PhishingLink (强制HTTPS)",
+            "delay": 0.5
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "[配置邮件载荷]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> set sender \"$SenderName\" --domain $DisplayDomain",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> set recipient $TargetEmail",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> set subject \"$CSubjectChinese\"",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> set body --template \"$ContentTemplate\"",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> set link --display \"领取奖励\" --url $PhishingLink",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "> add attachment --type pdf --name \"获奖证书.pdf\"",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "[发送钓鱼邮件]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> send --threads 3 --encryption tls1.3",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 连接到SMTP中继: smtp.gateway.provider",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 建立安全通道... [ECDHE-RSA-AES256-GCM-SHA384]",
+            "delay": 0.4
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.4,10,\"  ├── 验证发件人...\",\"  ├── 验证发件人... 成功\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.6,10,\"  ├── 传输载荷...\",\"  ├── 传输载荷... 完成\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "  └── 投递确认: 250 2.0.0 OK $random10 $random12.12",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "[攻击监控已启用]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 监听凭据提交中...",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 邮件打开跟踪已激活",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 链接点击监控已激活",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "══════════════════════════════════════════",
+            "delay": 0.5
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "case1",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[SUCCESS] Phishing email delivered to $TargetEmail",
+            "delay": 1.0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "[$time] CREDENTIAL CAPTURED",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Username: $Username",
+            "delay": 0.1
+          },
+          {
+            "type": "clickable",
+            "text": "  <color=red>└── Password: $Password</color>",
+            "delay": 0,
+            "gain": {
+              "KesiPassword": "$Password"
+            }
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "case1",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[成功] 钓鱼邮件已发送至 $TargetEmail",
+            "delay": 1.0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "[$time] 凭据已捕获",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 用户名: $Username",
+            "delay": 0.1
+          },
+          {
+            "type": "clickable",
+            "text": "  <color=red>└── 密码: $Password</color>",
+            "delay": 0,
+            "gain": {
+              "KesiPassword": "$Password"
+            }
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "case2",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[SUCCESS] Phishing email delivered to $TargetEmail",
+            "delay": 1.0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "[$time] EMAIL REPLY RECEIVED",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── From: $ReplyFrom",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Subject: Re: $ReplySubject",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Content: \"$ReplyContent\"",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "case2",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[成功] 钓鱼邮件已发送至 $TargetEmail",
+            "delay": 1.0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "[$time] 收到邮件回复",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 发件人: $ReplyFrom",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 主题: Re: $ReplySubject",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 内容: \"$ReplyContent\"",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "case3",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[SUCCESS] Phishing email delivered to $TargetEmail",
+            "delay": 1.0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "[$time] EMAIL REPLY RECEIVED",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── From: $ReplyFrom",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Subject: Re: $ReplySubject",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Content: \"$ReplyContent\"",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "case3",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[成功] 钓鱼邮件已发送至 $TargetEmail",
+            "delay": 1.0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "[$time] 收到邮件回复",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 发件人: $ReplyFrom",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 主题: Re: $ReplySubject",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 内容: \"$ReplyContent\"",
+            "delay": 0
+          }
+        ]
+      }
+    ]
+  }
+}
