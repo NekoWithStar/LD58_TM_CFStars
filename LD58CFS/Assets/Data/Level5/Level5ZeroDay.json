@@ -5,19 +5,13 @@
       "name": "TargetIP",
       "type": "string",
       "accept": ["10.0.3.100", "10.0.3.101"]
-    },
-    {
-      "name": "ExploitType",
-      "type": "string",
-      "accept": ["buffer-overflow", "heap-spray", "rop-chain"]
     }
   ],
   "cases": [
     {
       "name": "nuke_control_exploit",
       "parameterValues": {
-        "TargetIP": ["10.0.3.100"],
-        "ExploitType": ["buffer-overflow"]
+        "TargetIP": ["10.0.3.100"]
       },
       "variables": {
         "TargetIP": "10.0.3.100",

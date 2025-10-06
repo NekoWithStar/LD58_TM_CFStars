@@ -5,9 +5,35 @@
       "name": "ConfigPath",
       "type": "string",
       "accept": ["/vpn/gateway/config", "/network/vpn.conf"]
+    },
+    {
+      "name": "TopologyFile",
+      "type": "string",
+      "accept": ["/ops/network-topology.pdf", ""]
     }
   ],
   "cases": [
+    {
+      "name": "vpn_forge_with_topology",
+      "parameterValues": {
+        "ConfigPath": ["/vpn/gateway/config"],
+        "TopologyFile": ["/ops/network-topology.pdf"]
+      },
+      "variables": {
+        "ConfigPath": "/vpn/gateway/config",
+        "TopologyFile": "/ops/network-topology.pdf",
+        "GatewayIP": "10.0.1.1",
+        "VPNProtocol": "OpenVPN 2.5.8",
+        "Encryption": "AES-256-GCM",
+        "CertAuthority": "MilBase-CA",
+        "FakeGatewayIP": "10.0.1.254",
+        "PrintServerIP": "10.0.2.50",
+        "PrintServerName": "PRINT-SRV-01",
+        "NetworkSegments": "5",
+        "TotalHosts": "47",
+        "CriticalNodes": "12"
+      }
+    },
     {
       "name": "vpn_forge_success",
       "parameterValues": {
@@ -512,6 +538,1000 @@
           {
             "type": "normal",
             "text": "<color=green>[成功] 假VPN网关已激活 - 外围网络已沦陷</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "vpn_forge_with_topology",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[LOADING VPN CONFIGURATION]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Reading config from: $ConfigPath",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Loading topology map: $TopologyFile",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.2,20,\"  ├── Parsing VPN settings...\",\"  ├── Configuration loaded\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[ANALYZING NETWORK TOPOLOGY]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Extracting network topology from PDF...",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.5,25,\"  ├── OCR processing diagram...\",\"  ├── Topology extracted\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[NETWORK ARCHITECTURE DISCOVERED]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "┌─────────────────────────────────────────┐",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "│  MILITARY BASE NETWORK TOPOLOGY         │",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "├─────────────────────────────────────────┤",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "│  Network Segments: $NetworkSegments                    │",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "│  Total Hosts: $TotalHosts                          │",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "│  Critical Nodes: $CriticalNodes                       │",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "└─────────────────────────────────────────┘",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[NETWORK SEGMENTATION]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── DMZ Zone (10.0.0.0/24)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  │   └── External facing services",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Peripheral Zone (10.0.1.0/24)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  │   └── VPN Gateway: $GatewayIP",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Infrastructure Zone (10.0.2.0/24)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  │   ├── Print Server: $PrintServerIP",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  │   ├── File Server: 10.0.2.51",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  │   └── Mail Gateway: 10.0.2.52",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Secure Zone (10.0.3.0/24)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  │   └── Nuclear Control Systems",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  └── Air-Gapped Zone (Isolated)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "      └── Nuclear Launch Control",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[LEGITIMATE VPN GATEWAY]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Gateway IP: $GatewayIP",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Protocol: $VPNProtocol",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Encryption: $Encryption",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Certificate Authority: $CertAuthority",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Authentication: Certificate + LDAP",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[TOPOLOGY-ASSISTED GATEWAY ANALYSIS]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Cross-referencing topology with config...",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.0,20,\"  ├── Mapping network paths...\",\"  ├── Attack surface identified\",\"White\",\"Cyan\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[CRITICAL INFRASTRUCTURE IDENTIFIED]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── <color=yellow>Print Server ($PrintServerIP)</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  │   ├── Function: Document printing & USB transfer",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  │   ├── Access: Peripheral → Infrastructure zones",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  │   ├── Security: Medium (Print Spooler vulnerable)",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  │   └── <color=cyan>DATA BRIDGE TO AIR-GAPPED SYSTEMS</color>",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  │",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Nuclear Control Systems (10.0.3.100)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  │   ├── Isolation: Air-gapped from network",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  │   ├── Data Transfer: USB drives only",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  │   └── Maintenance: Weekly via authorized personnel",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  │",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  └── <color=magenta>ATTACK PATH DISCOVERED:</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "      VPN → Print Server → USB Drive → Nuclear Control",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[FORGING FAKE VPN GATEWAY]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Cloning configuration with topology intelligence...",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.5,28,\"  ├── Generating fake certificates...\",\"  ├── Fake gateway configured\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[FAKE GATEWAY DEPLOYED]",
+            "delay": 0.2
+          },
+          {
+            "type": "clickable",
+            "text": "  ├── Fake Gateway IP: <color=cyan>$FakeGatewayIP</color>",
+            "delay": 0.1,
+            "gain": {
+              "FakeVPNGateway": "10.0.1.254"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Certificate: Valid (Forged CA)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Status: Active and Listening",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Routing: Optimized via topology map",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── Access: Peripheral + Infrastructure Zones",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[ENHANCED NETWORK INFILTRATION]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Topology-guided access established",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Full infrastructure visibility achieved",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[PRIMARY TARGET CONFIRMED]",
+            "delay": 0.2
+          },
+          {
+            "type": "clickable",
+            "text": "  ├── Print Server: <color=cyan>$PrintServerIP</color> ($PrintServerName)",
+            "delay": 0.1,
+            "gain": {
+              "PrintServerIP": "10.0.2.50"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "      ├── OS: Windows Server 2019",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "      ├── Service: Print Spooler (Active)",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "      ├── USB Ports: 4 (Accessible)",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "      ├── Vulnerability: CVE-2021-34527 (PrintNightmare)",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "      └── <color=yellow>BRIDGE TO AIR-GAPPED NUCLEAR SYSTEMS</color>",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[ADDITIONAL INFRASTRUCTURE]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── File Server: 10.0.2.51 (FILE-SRV-01)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Email Gateway: 10.0.2.52 (MAIL-GW-01)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── Backup Server: 10.0.2.53 (BACKUP-01)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── DNS Server: 10.0.0.53 (Already compromised)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[INTELLIGENCE] Topology reveals weekly USB-based data transfer routine</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[INTELLIGENCE] Print server is authorized to access air-gapped zone via USB</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[ALERT] Nuclear control systems isolated - USB infection required</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=cyan>[NEXT STEP] Use USB-Infect targeting $PrintServerIP to weaponize USB drives</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[SUCCESS] Enhanced VPN infiltration with full topology intelligence</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "vpn_forge_with_topology",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[加载VPN配置]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 从以下位置读取配置: $ConfigPath",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 加载拓扑图: $TopologyFile",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.2,20,\"  ├── 解析VPN设置中...\",\"  ├── 配置已加载\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[分析网络拓扑]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 从PDF提取网络拓扑中...",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.5,25,\"  ├── OCR处理图表中...\",\"  ├── 拓扑已提取\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[网络架构已发现]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "┌─────────────────────────────────────────┐",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "│  军事基地网络拓扑                       │",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "├─────────────────────────────────────────┤",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "│  网络段数: $NetworkSegments                           │",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "│  总主机数: $TotalHosts                             │",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "│  关键节点: $CriticalNodes                             │",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "└─────────────────────────────────────────┘",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[网络分段]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── DMZ区域 (10.0.0.0/24)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  │   └── 外部服务",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 外围区域 (10.0.1.0/24)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  │   └── VPN网关: $GatewayIP",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 基础设施区域 (10.0.2.0/24)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  │   ├── 打印服务器: $PrintServerIP",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  │   ├── 文件服务器: 10.0.2.51",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  │   └── 邮件网关: 10.0.2.52",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 安全区域 (10.0.3.0/24)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  │   └── 核弹控制系统",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  └── 物理隔离区域 (隔离)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "      └── 核弹发射控制",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[合法VPN网关]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 网关IP: $GatewayIP",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 协议: $VPNProtocol",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 加密: $Encryption",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 证书颁发机构: $CertAuthority",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 认证方式: 证书 + LDAP",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[拓扑辅助网关分析]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 交叉引用拓扑与配置中...",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.0,20,\"  ├── 映射网络路径中...\",\"  ├── 攻击面已识别\",\"White\",\"Cyan\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[关键基础设施已识别]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── <color=yellow>打印服务器 ($PrintServerIP)</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  │   ├── 功能: 文档打印 & USB传输",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  │   ├── 访问: 外围 → 基础设施区域",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  │   ├── 安全性: 中等 (打印后台处理程序易受攻击)",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  │   └── <color=cyan>物理隔离系统的数据桥梁</color>",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  │",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 核弹控制系统 (10.0.3.100)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  │   ├── 隔离: 与网络物理隔离",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  │   ├── 数据传输: 仅通过USB驱动器",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  │   └── 维护: 每周由授权人员进行",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  │",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "  └── <color=magenta>攻击路径已发现:</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "      VPN → 打印服务器 → USB驱动器 → 核弹控制",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[伪造假VPN网关]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 使用拓扑情报克隆配置中...",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.5,28,\"  ├── 生成假证书中...\",\"  ├── 假网关已配置\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[假网关已部署]",
+            "delay": 0.2
+          },
+          {
+            "type": "clickable",
+            "text": "  ├── 假网关IP: <color=cyan>$FakeGatewayIP</color>",
+            "delay": 0.1,
+            "gain": {
+              "FakeVPNGateway": "10.0.1.254"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 证书: 有效 (伪造CA)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 状态: 活跃并监听",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 路由: 通过拓扑图优化",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── 访问: 外围 + 基础设施区域",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[增强型网络渗透]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 拓扑引导访问已建立",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 完整基础设施可见性已实现",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[主要目标已确认]",
+            "delay": 0.2
+          },
+          {
+            "type": "clickable",
+            "text": "  ├── 打印服务器: <color=cyan>$PrintServerIP</color> ($PrintServerName)",
+            "delay": 0.1,
+            "gain": {
+              "PrintServerIP": "10.0.2.50"
+            }
+          },
+          {
+            "type": "normal",
+            "text": "      ├── 操作系统: Windows Server 2019",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "      ├── 服务: 打印后台处理程序 (活跃)",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "      ├── USB端口: 4个 (可访问)",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "      ├── 漏洞: CVE-2021-34527 (PrintNightmare)",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "      └── <color=yellow>物理隔离核弹系统的桥梁</color>",
+            "delay": 0.05
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "[额外基础设施]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 文件服务器: 10.0.2.51 (FILE-SRV-01)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 邮件网关: 10.0.2.52 (MAIL-GW-01)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  ├── 备份服务器: 10.0.2.53 (BACKUP-01)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "  └── DNS服务器: 10.0.0.53 (已被入侵)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[情报] 拓扑揭示每周基于USB的数据传输例程</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[情报] 打印服务器被授权通过USB访问物理隔离区域</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[警告] 核弹控制系统已隔离 - 需要USB感染</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=cyan>[下一步] 使用 USB-Infect 目标为 $PrintServerIP 以武器化USB驱动器</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=green>[成功] 增强型VPN渗透，获得完整拓扑情报</color>",
             "delay": 0
           }
         ]
