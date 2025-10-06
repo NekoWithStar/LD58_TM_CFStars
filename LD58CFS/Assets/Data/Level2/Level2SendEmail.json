@@ -20,7 +20,7 @@
         "AssetCount": "114",
         "SenderName": "it_support@bmail.com",
         "Subject": "URGENT: Password Reset Required",
-        "CSubjectChinese": "紧急：需要重置密码",
+        "CSubjectchinese": "紧急：需要重置密码",
         "ContentTemplate": "password_notification",
         "OutputType": "A1B3"
       }
@@ -38,13 +38,13 @@
         "AssetCount": "114",
         "SenderName": "it_support@bmail.com",
         "Subject": "URGENT: Password Reset Required",
-        "CSubjectChinese": "紧急：需要重置密码",
+        "CSubjectchinese": "紧急：需要重置密码",
         "ContentTemplate": "password_notification",
         "ReplyFrom": "bwiiter_admin@Bmail.com",
         "ReplySubject": "什么意思？",
-        "ReplySubjectEnglish": "What",
+        "ReplySubjectenglish": "What",
         "ReplyContent": "你们系统故障了？这可不是重置密码的通道...",
-        "ReplyContentEnglish": "Is your system malfunctioning? This is not the channel for password reset ..",
+        "ReplyContentenglish": "Is your system malfunctioning? This is not the channel for password reset ..",
         "BackdoorIP": "199.16.156.6",
         "BackdoorOS": "Ubuntu 22.04",
         "OutputType": "A2B2B3"
@@ -144,8 +144,8 @@
           { "type": "normal", "text": "", "delay": 0.2 },
           { "type": "normal", "text": "[$time] EMAIL REPLY RECEIVED", "delay": 0.2 },
           { "type": "normal", "text": "  ├── From: $ReplyFrom", "delay": 0.1 },
-          { "type": "normal", "text": "  ├── Subject: Re: $ReplySubjectEnglish", "delay": 0.1 },
-          { "type": "normal", "text": "  └── Content: \"$ReplyContentEnglish\"", "delay": 0.1 },
+          { "type": "normal", "text": "  ├── Subject: Re: $ReplySubjectenglish", "delay": 0.1 },
+          { "type": "normal", "text": "  └── Content: \"$ReplyContentenglish\"", "delay": 0.1 },
           { "type": "normal", "text": "", "delay": 0.2 },
           { "type": "normal", "text": "[BACKDOOR INSTALLATION]", "delay": 0.2 },
           { "type": "normal", "text": "  ├── Initiating stealth install sequence...", "delay": 0.1 },
@@ -194,6 +194,50 @@
           { "type": "normal", "text": "  ├── 开放端口: 1194, 22", "delay": 0.1 },
           { "type": "normal", "text": "  ├── 指纹: SHA256:AB:CD:EF:12:34:56:78:90", "delay": 0.1 },
           { "type": "normal", "text": "  └── 状态: 活跃 (Session ID: VPN-$random6-$random3)", "delay": 0.1 }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "default",
+        "lineBlocks": [
+          { "type": "normal", "text": "[INITIALIZING PHISHING CAMPAIGN]", "delay": 0.2 },
+          { "type": "normal", "text": "> Target: $TargetEmail", "delay": 0.1 },
+          { "type": "normal", "text": "> Subject: $EmailSubject", "delay": 0.1 },
+          { "type": "normal", "text": "> Link: $OriginalLink", "delay": 0.1 },
+          { "type": "normal", "text": "> Sender: $SenderDomain", "delay": 0.1 },
+          { "type": "normal", "text": "", "delay": 0.3 },
+          { "type": "normal", "text": "<color=red>[ERROR] Campaign validation failed</color>", "delay": 0.2 },
+          { "type": "normal", "text": "<color=red>  └── Invalid parameter combination detected</color>", "delay": 0.1 },
+          { "type": "normal", "text": "", "delay": 0.2 },
+          { "type": "normal", "text": "[POSSIBLE ISSUES]", "delay": 0.2 },
+          { "type": "normal", "text": "> Incorrect email subject format", "delay": 0.1 },
+          { "type": "normal", "text": "> Target email not in whitelist", "delay": 0.1 },
+          { "type": "normal", "text": "> Sender domain mismatch", "delay": 0.1 },
+          { "type": "normal", "text": "> Phishing link template not found", "delay": 0.1 },
+          { "type": "normal", "text": "", "delay": 0.2 },
+          { "type": "normal", "text": "<color=yellow>[HINT] Review the target's email requirements and try again</color>", "delay": 0.1 }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "default",
+        "lineBlocks": [
+          { "type": "normal", "text": "[初始化钓鱼攻击]", "delay": 0.2 },
+          { "type": "normal", "text": "> 目标: $TargetEmail", "delay": 0.1 },
+          { "type": "normal", "text": "> 主题: $EmailSubject", "delay": 0.1 },
+          { "type": "normal", "text": "> 链接: $OriginalLink", "delay": 0.1 },
+          { "type": "normal", "text": "> 发件人: $SenderDomain", "delay": 0.1 },
+          { "type": "normal", "text": "", "delay": 0.3 },
+          { "type": "normal", "text": "<color=red>[错误] 钓鱼活动验证失败</color>", "delay": 0.2 },
+          { "type": "normal", "text": "<color=red>  └── 检测到无效的参数组合</color>", "delay": 0.1 },
+          { "type": "normal", "text": "", "delay": 0.2 },
+          { "type": "normal", "text": "[可能的问题]", "delay": 0.2 },
+          { "type": "normal", "text": "> 邮件主题格式不正确", "delay": 0.1 },
+          { "type": "normal", "text": "> 目标邮箱不在白名单中", "delay": 0.1 },
+          { "type": "normal", "text": "> 发件域名不匹配", "delay": 0.1 },
+          { "type": "normal", "text": "> 未找到钓鱼链接模板", "delay": 0.1 },
+          { "type": "normal", "text": "", "delay": 0.2 },
+          { "type": "normal", "text": "<color=yellow>[提示] 检查目标的邮件要求后重试</color>", "delay": 0.1 }
         ]
       }
     ]

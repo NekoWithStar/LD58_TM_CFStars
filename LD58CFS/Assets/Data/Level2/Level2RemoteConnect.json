@@ -4,17 +4,17 @@
     {
       "name": "TargetIP",
       "type": "string",
-      "accept": ["199.16.156.6"]
+      "accept": ["199.16.156.6", "192.168.1.1", "mail.bmail.com"]
     },
     {
       "name": "Username",
       "type": "string",
-      "accept": ["AdminBBBB123"]
+      "accept": ["AdminBBBB123", "admin", "root"]
     },
     {
       "name": "Password",
       "type": "string",
-      "accept": ["Bwiiter2025!"]
+      "accept": ["Bwiiter2025!", "password", "123456"]
     }
   ],
   "cases": [
@@ -33,6 +33,31 @@
         "SessionID": "0x9F4B7E1A",
         "ServerFingerprint": "SHA256:7B:3F:9A:2C:D1:8E:4F:6A:B9:C7:5D:2E:1A:8F:3B:6C",
         "TargetSceneName": "Level3"
+      }
+    },
+    {
+      "name": "wrong_credentials",
+      "parameterValues": {
+        "TargetIP": ["199.16.156.6"],
+        "Username": ["admin", "root", "AdminBBBB123"],
+        "Password": ["password", "123456"]
+      },
+      "variables": {
+        "Port": "22",
+        "Protocol": "SSH",
+        "ErrorCode": "0xC0000006A",
+        "FailureReason": "Authentication Failed",
+        "AttemptCount": "1",
+        "MaxAttempts": "3"
+      }
+    },
+    {
+      "name": "wrong_target",
+      "parameterValues": {
+        "TargetIP": ["192.168.1.1", "mail.bmail.com"]
+      },
+      "variables": {
+        "ErrorMsg": "This target is not accessible or backdoor not installed yet"
       }
     }
   ],
@@ -624,6 +649,320 @@
           {
             "type": "normal",
             "text": "$$scene($TargetSceneName)",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "wrong_credentials",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[INITIATING REMOTE CONNECTION]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Target IP: $TargetIP",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Port: $Port",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Protocol: $Protocol",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Username: $Username",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.0,20,\"  ├── Establishing connection...\",\"  ├── Connected\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.8,15,\"  ├── Authenticating...\",\"  ├── Authentication failed\",\"White\",\"Red\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[ERROR] $ErrorCode: $FailureReason</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[AUTHENTICATION DETAILS]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Username: $Username",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Password: ****** (INVALID)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> Attempt: $AttemptCount/$MaxAttempts",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[WARNING] Incorrect username or password</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=cyan>[HINT] Check credentials from SQL injection results</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[FAILED] Authentication rejected</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "wrong_credentials",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[初始化远程连接]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 目标 IP: $TargetIP",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 端口: $Port",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 协议: $Protocol",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 用户名: $Username",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(1.0,20,\"  ├── 建立连接中...\",\"  ├── 已连接\",\"White\",\"Green\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$$progress(0.8,15,\"  ├── 认证中...\",\"  ├── 认证失败\",\"White\",\"Red\")",
+            "delay": 0
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[错误] $ErrorCode: $FailureReason</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "[认证详情]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 用户名: $Username",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 密码: ****** (无效)",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "> 尝试次数: $AttemptCount/$MaxAttempts",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[警告] 用户名或密码不正确</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=cyan>[提示] 检查SQL注入结果中的凭证</color>",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[失败] 认证被拒绝</color>",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "wrong_target",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[ATTEMPTING REMOTE CONNECTION]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> Target: $TargetIP",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[INFO] Connection attempt initiated</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[ERROR] Target unreachable</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "$ErrorMsg",
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "wrong_target",
+        "lineBlocks": [
+          {
+            "type": "normal",
+            "text": "[尝试远程连接]",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "> 目标: $TargetIP",
+            "delay": 0.1
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.3
+          },
+          {
+            "type": "normal",
+            "text": "<color=yellow>[信息] 连接尝试已启动</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "<color=red>[错误] 目标无法访问</color>",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "",
+            "delay": 0.2
+          },
+          {
+            "type": "normal",
+            "text": "此目标不可访问或尚未安装后门",
             "delay": 0
           }
         ]
