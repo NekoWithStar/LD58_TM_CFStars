@@ -1008,7 +1008,7 @@
           },
           {
             "type": "clickable",
-            "text": "  ├── PRIMARY: $NukeControlIP ($NukeControlName)",
+            "text": "  ├── PRIMARY: <color=cyan>$NukeControlIP</color> ($NukeControlName)",
             "delay": 0.1,
             "gain": {
               "NukeControlIP": "$NukeControlIP"
