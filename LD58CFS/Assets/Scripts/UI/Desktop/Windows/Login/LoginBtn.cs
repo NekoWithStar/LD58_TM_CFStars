@@ -27,8 +27,8 @@ namespace LD58.UI.Login
             {
                 var console = FindFirstObjectByType<ConsoleController>();
                 console.AddItemWithoutNewLine("Log In");
-                console.AddItem($"- account = {account}");
-                console.AddItem($"- password = {password}");
+                console.AddItem($"- account = {_accountText.Value}");
+                console.AddItem($"- password = {_psdText.Value}");
                 if (_accountText.Value == account && _psdText.Value == password)
                 {
                     this.PlaySFX(AudioConstant.SFX.SIGN);
