@@ -16,6 +16,7 @@
       "variables": {
         "CommandAddr": "0x114514",
         "SystemName": "NUKE-CTRL-MAIN",
+        "TargetSceneName": "Part5F",
         "LaunchCode": "BROWN-EGG-100",
         "EggCount": "100",
         "TargetLocation": "Employee Cafeteria",
@@ -337,8 +338,13 @@
           {
             "type": "normal",
             "text": "[GAME COMPLETE - REDIRECTING TO FINALE...]",
-            "delay": 1.0,
-            "sceneName": "$$scene(Part5)"
+            "delay": 1.0
+          }
+          ,
+          {
+            "type": "normal",
+            "text": "$$scene(Part5F)",
+            "delay": 1.0
           }
         ]
       },
@@ -629,8 +635,12 @@
           {
             "type": "normal",
             "text": "[游戏完成 - 跳转到结局中...]",
-            "delay": 1.0,
-            "sceneName": "$$scene(Part5)"
+            "delay": 1.0
+          },
+          {
+            "type": "normal",
+            "text": "$$scene(Part5F)",
+            "delay": 1.0
           }
         ]
       },
