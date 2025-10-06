@@ -31,7 +31,7 @@ namespace LD58.UI
         [SerializeField] private Button _enterButton;
 
         [SerializeField] private ScrollRect _scrollRect;
-        
+
         private ISettingModel _settingModel;
 
         public bool IsPowerShell { get; private set; } = true;
@@ -95,14 +95,14 @@ namespace LD58.UI
             this.PlaySFX(AudioConstant.SFX.RECALL_CLEAR);
             if (!_isExecutingCommand)
             {
-                ListenForCommand               = false;
-                _isPendingInput                = false;
+                ListenForCommand = false;
+                _isPendingInput  = false;
                 if (_pendingInputItem)
                 {
                     _pendingInputItem.PendingInput = false;
                     _pendingInputItem.SetColor(Color.gray);
                 }
-              
+
                 AddItem("^C");
                 AddFinishLine();
             }
@@ -127,6 +127,7 @@ namespace LD58.UI
             {
                 Recall();
             }
+
             ListenForCommand = true;
             if (LastItem)
                 LastItem.DisplayCursor = false;
@@ -237,7 +238,8 @@ namespace LD58.UI
             async void DelayFixed2Bottom()
             {
                 await UniTask.DelayFrame(3);
-                _scrollRect.normalizedPosition = new Vector2(1, 0);
+                if (_scrollRect)
+                    _scrollRect.normalizedPosition = new Vector2(1, 0);
             }
         }
 
