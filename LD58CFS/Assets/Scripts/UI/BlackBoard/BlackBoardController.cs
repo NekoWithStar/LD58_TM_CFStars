@@ -25,11 +25,12 @@ namespace LD58.UI
 #if UNITY_EDITOR
             if (_debug)
             {
-                SetItem("猫咪选美", "GoodCatContest");
+                SetItem("qwertyuiop1234567890", "qwertyuiop1234567890");
                 SetItem("who u r", "Cat D");
                 SetItem("MOON_CAKE","MoonCake");
                 SetItem("ADDRESS","www.bmail.com");
                 SetItem("www.bmail.com/admin/login","www.bmail.com/admin/login");
+                SetItem("Kesi@Bmail.com","Kesi@Bmail.com");
             }
 #endif
         }
