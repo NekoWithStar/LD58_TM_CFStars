@@ -363,7 +363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3431187b85b553a419d74124cf7c1c77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetSceneName: SampleScene
+  targetSceneName: Level1
   isExitButton: 0
 --- !u!1 &298154387
 GameObject:
