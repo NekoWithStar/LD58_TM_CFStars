@@ -81,9 +81,9 @@ namespace LD58.UI
                 });
             }
 
+#endif
             _searchDropdown.onValueChanged.AddListener(OnSearch);
             _linkDropdown.onValueChanged.AddListener(OnLink);
-#endif
             foreach (var navigateConfig in _navigateConfigs)
             {
                 navigateConfig.Panel.SetActive(false);
