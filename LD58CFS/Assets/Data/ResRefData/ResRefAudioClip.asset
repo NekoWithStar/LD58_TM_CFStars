@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24822597c334cd3ab5ea4059fae3555, type: 3}
+  m_Name: ResRefAudioClip
+  m_EditorClassIdentifier: 
+  ResRefs:
+  - Name: Assets/sounds/music/game.ogg
+    Data: {fileID: 8300000, guid: 5196910024978a24c8a4fc95c9007242, type: 3}
+  - Name: Assets/sounds/sfx/CHORD.wav
+    Data: {fileID: 8300000, guid: 52f83d65bdaa85b408bb6dfd621ac31f, type: 3}
+  - Name: Assets/sounds/sfx/exclamation.wav
+    Data: {fileID: 8300000, guid: 72a696488c130e3448c33cca668a4e55, type: 3}
+  - Name: Assets/sounds/music/other.ogg
+    Data: {fileID: 8300000, guid: 9205b43ce4745b44abdb04a9c0709205, type: 3}
+  - Name: Assets/sounds/sfx/opensystem_95.wav
+    Data: {fileID: 8300000, guid: 135caf99b3efb854b80953f43edf9791, type: 3}
+  - Name: Assets/sounds/music/theme_original.wav
+    Data: {fileID: 8300000, guid: 33c4ec45b41dce3448583716f3abdd58, type: 3}
+  - Name: Assets/sounds/sfx/sign.wav
+    Data: {fileID: 8300000, guid: 338780a1dc9f7b640aa84fefe1d6f9c2, type: 3}
+  - Name: Assets/sounds/sfx/TADA.wav
+    Data: {fileID: 8300000, guid: 43a2f7387c9f92e4db2ce9fc907e9f2b, type: 3}
+  - Name: Assets/sounds/sfx/clickmouse.wav
+    Data: {fileID: 8300000, guid: 83f6e620c8344ec448248529e36dfe3d, type: 3}
+  - Name: Assets/sounds/sfx/BOOOM.mp3
+    Data: {fileID: 8300000, guid: 14892f588394f114f957fcf27b6905e9, type: 3}
+  - Name: Assets/sounds/sfx/message_fast.wav
+    Data: {fileID: 8300000, guid: 15890b75e18ee4046a41362a5ff9f663, type: 3}
+  - Name: Assets/sounds/sfx/opensystem_xp.wav
+    Data: {fileID: 8300000, guid: 85d0a617874598a469cd434567e560e6, type: 3}
+  - Name: Assets/sounds/sfx/shutdownsystem.wav
+    Data: {fileID: 8300000, guid: 0618231cf5192d245a3e2a512a328ac6, type: 3}
+  - Name: Assets/sounds/sfx/nuclear.wav
+    Data: {fileID: 8300000, guid: 560a6fb181560d14094fe7ff86e84fbe, type: 3}
+  - Name: Assets/sounds/sfx/hardwareerror.wav
+    Data: {fileID: 8300000, guid: 6621661a1b2f22146b4cce85300ae10b, type: 3}
+  - Name: Assets/sounds/music/GUGUGAGA and NUCLEAR.ogg
+    Data: {fileID: 8300000, guid: f688f7310b2782445a1ea164d099e1e6, type: 3}
+  - Name: Assets/sounds/sfx/systemerror.wav
+    Data: {fileID: 8300000, guid: f61e01e591b2aab4e841f15428fc5282, type: 3}
+  - Name: Assets/sounds/sfx/connected.wav
+    Data: {fileID: 8300000, guid: 175d0976709b5624a892cb7344e29a73, type: 3}
+  - Name: Assets/sounds/sfx/NOTIFY.wav
+    Data: {fileID: 8300000, guid: 47dca2009f08ac54f9ba9be34abfe6f6, type: 3}
+  - Name: Assets/sounds/music/theme.wav
+    Data: {fileID: 8300000, guid: d7f88b3fc3716cf41b1937f020cd8360, type: 3}
+  - Name: Assets/sounds/sfx/disconnected.wav
+    Data: {fileID: 8300000, guid: 980fc330adacc8940999040a15c1639e, type: 3}
+  - Name: Assets/sounds/sfx/balloon.wav
+    Data: {fileID: 8300000, guid: 792029b3b073c524f82ad731d1def4a0, type: 3}
+  - Name: Assets/sounds/sfx/lockin.wav
+    Data: {fileID: 8300000, guid: 1bafdbd90bdac5c46a8a6ebb0b0c3a6e, type: 3}
+  - Name: Assets/sounds/music/EGGTIME.ogg
+    Data: {fileID: 8300000, guid: 2bba8032ec08c374db657a596d8ab803, type: 3}
+  - Name: Assets/sounds/sfx/message.wav
+    Data: {fileID: 8300000, guid: 8b7732974c511274785a3c45e40044e4, type: 3}
+  - Name: Assets/sounds/sfx/hardwareerror_dead.wav
+    Data: {fileID: 8300000, guid: 0e82e915c8f46c149bb02545e30721db, type: 3}
+  - Name: Assets/sounds/sfx/DING.wav
+    Data: {fileID: 8300000, guid: 0e4dac176f8e61544b883d4b5399bdb7, type: 3}
+  - Name: Assets/sounds/sfx/bubbledie.wav
+    Data: {fileID: 8300000, guid: 2ec7ea2508ed01d45839c92b49d48124, type: 3}
+  - Name: Assets/sounds/sfx/RECYCLE.wav
+    Data: {fileID: 8300000, guid: 3ec3aac74d02d564f88630aa4e1088e9, type: 3}
+  - Name: Assets/sounds/sfx/chimes.wav
+    Data: {fileID: 8300000, guid: cea57c7cee7ed9b4b9bf9a4ac92ad539, type: 3}
+  - Name: Assets/sounds/music/PIPEBOMB.ogg
+    Data: {fileID: 8300000, guid: 0ff1a4581bf5c1f4da960620b05069d4, type: 3}
+  - Name: Assets/sounds/music/flute.ogg
+    Data: {fileID: 8300000, guid: 2f13c4acea1301b47a47efd4647825fa, type: 3}
+  - Name: Assets/sounds/sfx/hardwareerror_loop4.wav
+    Data: {fileID: 8300000, guid: 3f512b95f5e6ec1448ce0eca42c060c9, type: 3}
+  - Name: Assets/sounds/sfx/recall_clear.wav
+    Data: {fileID: 8300000, guid: efa5b6b0c8304a24fa05a81df1427833, type: 3}

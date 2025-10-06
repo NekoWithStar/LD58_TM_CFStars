@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b636a8996ddb604da1778099f662189, type: 3}
+  m_Name: ResRefShader
+  m_EditorClassIdentifier: 
+  ResRefs:
+  - Name: Packages/com.unity.performance.profile-analyzer/Editor/ProfileAnalyzerShader.shader
+    Data: {fileID: 4800000, guid: 493b79ea9c9be44ed8b702014d3ac49c, type: 3}
+  - Name: Packages/com.unity.ugui/Editor Resources/Shaders/TMP_SDF Internal Editor.shader
+    Data: {fileID: 4800000, guid: 9c442dc870b456e48b615cd8add0e9ef, type: 3}

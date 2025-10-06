@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: ResRefData
+  m_EditorClassIdentifier: 
+  m_GroupName: ResRefData
+  m_Data:
+    m_SerializedData: []
+  m_GUID: ce07e5e2b52756046b7b2a586242c63c
+  m_SerializeEntries:
+  - m_GUID: e490c7930fdb24c488f8abc1bf02d746
+    m_Address: ResRefAudioClip
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 44534d6fbfc0df149b3f14fefcadb9b0
+    m_Address: ResRefGameObject
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 931cb4c1fa02ebe40a3fffdb04ba8737
+    m_Address: ResRefMaterial
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7f16a342eb6bdca409eda23ee367cae0
+    m_Address: ResRefShader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 027b5e9f9e2eac84c9cd7f84eb5a353e
+    m_Address: ResRefSprite
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2ed5dcdee16742f4ba6620965c18c0be
+    m_Address: ResRefTexture
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: e6fbbaf4ac75ce24387052793a6d78bf, type: 2}
+  m_SchemaSet:
+    m_Schemas: []
