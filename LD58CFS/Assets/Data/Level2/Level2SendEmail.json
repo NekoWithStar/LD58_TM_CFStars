@@ -1,0 +1,201 @@
+{
+  "commandName": "Send-Email",
+  "parameters": [
+    { "name": "EmailSubject", "type": "string", "accept": ["重置密码"] },
+    { "name": "OriginalLink", "type": "string", "accept": ["http://bwiiter/reset", "youtube.com/watch?v=catnap101"] },
+    { "name": "TargetEmail", "type": "string", "accept": ["bwiiter_admin@bwiiter.com"] },
+    { "name": "SenderDomain", "type": "string", "accept": ["it_support@bmail.com", "bmail.com"] }
+  ],
+  "cases": [
+    {
+      "name": "case1",
+      "parameterValues": {
+        "EmailSubject": ["重置密码"],
+        "OriginalLink": ["http://bwiiter/reset"],
+        "TargetEmail": ["bwiiter_admin@bwiiter.com"],
+        "SenderDomain": ["it_support@bmail.com"]
+      },
+      "variables": {
+        "PhishingLink": "https://me0w-awards.xyz/login",
+        "AssetCount": "114",
+        "SenderName": "it_support@bmail.com",
+        "Subject": "URGENT: Password Reset Required",
+        "CSubjectChinese": "紧急：需要重置密码",
+        "ContentTemplate": "password_notification",
+        "OutputType": "A1B3"
+      }
+    },
+    {
+      "name": "case2",
+      "parameterValues": {
+        "EmailSubject": ["重置密码"],
+        "OriginalLink": ["youtube.com/watch?v=catnap101"],
+        "TargetEmail": ["bwiiter_admin@bwiiter.com"],
+        "SenderDomain": ["bmail.com"]
+      },
+      "variables": {
+        "PhishingLink": "https://me0w-awards.xyz/login",
+        "AssetCount": "114",
+        "SenderName": "it_support@bmail.com",
+        "Subject": "URGENT: Password Reset Required",
+        "CSubjectChinese": "紧急：需要重置密码",
+        "ContentTemplate": "password_notification",
+        "ReplyFrom": "bwiiter_admin@bwiiter.com",
+        "ReplySubject": "什么意思？",
+        "ReplySubjectEnglish": "What",
+        "ReplyContent": "你们系统故障了？这可不是重置密码的通道...",
+        "ReplyContentEnglish": "Is your system malfunctioning? This is not the channel for password reset ..",
+        "BackdoorIP": "199.16.156.6",
+        "BackdoorOS": "Ubuntu 22.04",
+        "OutputType": "A2B2B3"
+      }
+    }
+  ],
+  "output": {
+    "languageBlocks": [
+      {
+        "language": null,
+        "lineBlocks": [
+          { "type": "normal", "text": "══════════════════════════════════════════", "delay": 0 },
+          { "type": "normal", "text": "BuBugBomb Phishing Suite v3.1.4", "delay": 0 },
+          { "type": "normal", "text": "Session ID: PHISH-$random6-BWIIT | Target: $TargetEmail", "delay": 0 },
+          { "type": "normal", "text": "══════════════════════════════════════════", "delay": 0.3 }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "case1",
+        "lineBlocks": [
+          { "type": "normal", "text": "[INITIALIZING PHISHING CAMPAIGN]", "delay": 0.2 },
+          { "type": "normal", "text": "> Target validation: Checking $TargetEmail...", "delay": 0.1 },
+          { "type": "normal", "text": "", "delay": 0.2 },
+          { "type": "normal", "text": "[PHISHING PAYLOAD PREPARED]", "delay": 0.2 },
+          { "type": "normal", "text": "> Phishing link: $PhishingLink", "delay": 0.1 },
+          { "type": "normal", "text": "> Site assets: $AssetCount files", "delay": 0.1 },
+          { "type": "normal", "text": "> Sender: $SenderName", "delay": 0.1 },
+          { "type": "normal", "text": "> Subject: $Subject", "delay": 0.1 },
+          { "type": "normal", "text": "> Content template: $ContentTemplate", "delay": 0.1 },
+          { "type": "normal", "text": "", "delay": 0.2 },
+          { "type": "normal", "text": "[SENDING PHISHING EMAIL]", "delay": 0.2 },
+          { "type": "normal", "text": "> send --threads 2 --encryption tls1.3", "delay": 0.2 },
+          { "type": "normal", "text": "  └── Delivery confirmation: 250 2.0.0 OK $random10", "delay": 0.3 },
+          { "type": "normal", "text": "", "delay": 0.2 },
+          { "type": "normal", "text": "[BACKDOOR INSTALLATION]", "delay": 0.2 },
+          { "type": "normal", "text": "  ├── Initiating stealth install sequence...", "delay": 0.1 },
+          { "type": "normal", "text": "$$progress(0.7,12,\"  ├── Uploading payload...\",\"  ├── Upload complete\",\"White\",\"Yellow\")", "delay": 0 },
+          { "type": "normal", "text": "$$progress(0.6,10,\"  ├── Executing persistence routine...\",\"  ├── Persistence OK\",\"White\",\"Red\")", "delay": 0 },
+          { "type": "normal", "text": "[$time] BACKDOOR ONLINE", "delay": 0.2 },
+          { "type": "normal", "text": "  ├── Type: VPN Script (Use vpn-tool to check)", "delay": 0.1 },
+          { "type": "clickable", "text": "  ├── Host: <color=cyan>199.16.156.6</color>", "delay": 0.1, "gain": { "BackdoorHost": "199.16.156.6" } },
+          { "type": "normal", "text": "  ├── OS: Ubuntu 22.04", "delay": 0.1 },
+          { "type": "normal", "text": "  ├── Open Ports: 1194, 22", "delay": 0.1 },
+          { "type": "normal", "text": "  ├── Fingerprint: SHA256:AB:CD:EF:12:34:56:78:90", "delay": 0.1 },
+          { "type": "normal", "text": "  └── Status: Active (Session ID: VPN-$random6-$random3)", "delay": 0.1 }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "case1",
+        "lineBlocks": [
+          { "type": "normal", "text": "[初始化钓鱼攻击]", "delay": 0.2 },
+          { "type": "normal", "text": "> 目标验证: 检查中 $TargetEmail...", "delay": 0.1 },
+          { "type": "normal", "text": "", "delay": 0.2 },
+          { "type": "normal", "text": "[钓鱼载荷已准备]", "delay": 0.2 },
+          { "type": "normal", "text": "> 钓鱼链接: $PhishingLink", "delay": 0.1 },
+          { "type": "normal", "text": "> 网站资源: $AssetCount 个文件", "delay": 0.1 },
+          { "type": "normal", "text": "> 发件人: $SenderName", "delay": 0.1 },
+          { "type": "normal", "text": "> 发送主题: $Subject", "delay": 0.1 },
+          { "type": "normal", "text": "> 内容模板: $ContentTemplate", "delay": 0.1 },
+          { "type": "normal", "text": "", "delay": 0.2 },
+          { "type": "normal", "text": "[发送钓鱼邮件]", "delay": 0.2 },
+          { "type": "normal", "text": "> send --threads 2 --encryption tls1.3", "delay": 0.2 },
+          { "type": "normal", "text": "  └── 投递确认: 250 2.0.0 OK $random10", "delay": 0.3 },
+          { "type": "normal", "text": "", "delay": 0.2 },
+          { "type": "normal", "text": "[后门安装]", "delay": 0.2 },
+          { "type": "normal", "text": "  ├── 正在启动隐蔽安装序列...", "delay": 0.1 },
+          { "type": "normal", "text": "$$progress(0.7,12,\"  ├── 正在上传有效负载...\",\"  ├── 上传完成\",\"White\",\"Yellow\")", "delay": 0 },
+          { "type": "normal", "text": "$$progress(0.6,10,\"  ├── 执行持久化例程...\",\"  ├── 持久化成功\",\"White\",\"Red\")", "delay": 0 },
+          { "type": "normal", "text": "[$time] 后门在线", "delay": 0.2 },
+          { "type": "normal", "text": "  ├── 类型: VPN脚本 (使用 vpn-tool 检查)", "delay": 0.1 },
+          { "type": "clickable", "text": "  ├── 主机: <color=cyan>199.16.156.6</color>", "delay": 0.1, "gain": { "BackdoorHost": "199.16.156.6" } },
+          { "type": "normal", "text": "  ├── 系统: Ubuntu 22.04", "delay": 0.1 },
+          { "type": "normal", "text": "  ├── 开放端口: 1194, 22", "delay": 0.1 },
+          { "type": "normal", "text": "  ├── 指纹: SHA256:AB:CD:EF:12:34:56:78:90", "delay": 0.1 },
+          { "type": "normal", "text": "  └── 状态: 活跃 (Session ID: VPN-$random6-$random3)", "delay": 0.1 }
+        ]
+      },
+      {
+        "language": "english",
+        "case": "case2",
+        "lineBlocks": [
+          { "type": "normal", "text": "[INITIALIZING PHISHING CAMPAIGN]", "delay": 0.2 },
+          { "type": "normal", "text": "> Target validation: Checking $TargetEmail...", "delay": 0.1 },
+          { "type": "normal", "text": "", "delay": 0.2 },
+          { "type": "normal", "text": "[PHISHING PAYLOAD PREPARED]", "delay": 0.2 },
+          { "type": "normal", "text": "> Phishing link: $PhishingLink", "delay": 0.1 },
+          { "type": "normal", "text": "> Site assets: $AssetCount files", "delay": 0.1 },
+          { "type": "normal", "text": "> Sender: $SenderName", "delay": 0.1 },
+          { "type": "normal", "text": "> Subject: $Subject", "delay": 0.1 },
+          { "type": "normal", "text": "> Content template: $ContentTemplate", "delay": 0.1 },
+          { "type": "normal", "text": "", "delay": 0.2 },
+          { "type": "normal", "text": "[SENDING PHISHING EMAIL]", "delay": 0.2 },
+          { "type": "normal", "text": "> send --threads 2 --encryption tls1.3", "delay": 0.2 },
+          { "type": "normal", "text": "  └── Delivery confirmation: 250 2.0.0 OK $random10", "delay": 0.3 },
+          { "type": "normal", "text": "", "delay": 0.2 },
+          { "type": "normal", "text": "[$time] EMAIL REPLY RECEIVED", "delay": 0.2 },
+          { "type": "normal", "text": "  ├── From: $ReplyFrom", "delay": 0.1 },
+          { "type": "normal", "text": "  ├── Subject: Re: $ReplySubjectEnglish", "delay": 0.1 },
+          { "type": "normal", "text": "  └── Content: \"$ReplyContentEnglish\"", "delay": 0.1 },
+          { "type": "normal", "text": "", "delay": 0.2 },
+          { "type": "normal", "text": "[BACKDOOR INSTALLATION]", "delay": 0.2 },
+          { "type": "normal", "text": "  ├── Initiating stealth install sequence...", "delay": 0.1 },
+          { "type": "normal", "text": "$$progress(0.7,12,\"  ├── Uploading payload...\",\"  ├── Upload complete\",\"White\",\"Yellow\")", "delay": 0 },
+          { "type": "normal", "text": "$$progress(0.6,10,\"  ├── Executing persistence routine...\",\"  ├── Persistence OK\",\"White\",\"Red\")", "delay": 0 },
+          { "type": "normal", "text": "[$time] BACKDOOR ONLINE", "delay": 0.2 },
+          { "type": "normal", "text": "  ├── Type: VPN Script (Use vpn-tool to check)", "delay": 0.1 },
+          { "type": "clickable", "text": "  ├── Host: <color=cyan>$BackdoorIP</color>", "delay": 0.1, "gain": { "BackdoorHost": "$BackdoorIP" } },
+          { "type": "normal", "text": "  ├── OS: $BackdoorOS", "delay": 0.1 },
+          { "type": "normal", "text": "  ├── Open Ports: 1194, 22", "delay": 0.1 },
+          { "type": "normal", "text": "  ├── Fingerprint: SHA256:AB:CD:EF:12:34:56:78:90", "delay": 0.1 },
+          { "type": "normal", "text": "  └── Status: Active (Session ID: VPN-$random6-$random3)", "delay": 0.1 }
+        ]
+      },
+      {
+        "language": "chinese",
+        "case": "case2",
+        "lineBlocks": [
+          { "type": "normal", "text": "[初始化钓鱼攻击]", "delay": 0.2 },
+          { "type": "normal", "text": "> 目标验证: 检查中 $TargetEmail...", "delay": 0.1 },
+          { "type": "normal", "text": "", "delay": 0.2 },
+          { "type": "normal", "text": "[钓鱼载荷已准备]", "delay": 0.2 },
+          { "type": "normal", "text": "> 钓鱼链接: $PhishingLink", "delay": 0.1 },
+          { "type": "normal", "text": "> 网站资源: $AssetCount 个文件", "delay": 0.1 },
+          { "type": "normal", "text": "> 发件人: $SenderName", "delay": 0.1 },
+          { "type": "normal", "text": "> 发送主题: $Subject", "delay": 0.1 },
+          { "type": "normal", "text": "> 内容模板: $ContentTemplate", "delay": 0.1 },
+          { "type": "normal", "text": "", "delay": 0.2 },
+          { "type": "normal", "text": "[发送钓鱼邮件]", "delay": 0.2 },
+          { "type": "normal", "text": "> send --threads 2 --encryption tls1.3", "delay": 0.2 },
+          { "type": "normal", "text": "  └── 投递确认: 250 2.0.0 OK $random10", "delay": 0.3 },
+          { "type": "normal", "text": "", "delay": 0.2 },
+          { "type": "normal", "text": "[$time] 收到邮件回复", "delay": 0.2 },
+          { "type": "normal", "text": "  ├── 发件人: $ReplyFrom", "delay": 0.1 },
+          { "type": "normal", "text": "  ├── 主题: Re: $ReplySubject", "delay": 0.1 },
+          { "type": "normal", "text": "  └── 内容: \"$ReplyContent\"", "delay": 0.1 },
+          { "type": "normal", "text": "", "delay": 0.2 },
+          { "type": "normal", "text": "[后门安装]", "delay": 0.2 },
+          { "type": "normal", "text": "  ├── 正在启动隐蔽安装序列...", "delay": 0.1 },
+          { "type": "normal", "text": "$$progress(0.7,12,\"  ├── 正在上传有效负载...\",\"  ├── 上传完成\",\"White\",\"Yellow\")", "delay": 0 },
+          { "type": "normal", "text": "$$progress(0.6,10,\"  ├── 执行持久化例程...\",\"  ├── 持久化成功\",\"White\",\"Red\")", "delay": 0 },
+          { "type": "normal", "text": "[$time] 后门在线", "delay": 0.2 },
+          { "type": "normal", "text": "  ├── 类型: VPN脚本 (使用 vpn-tool 检查)", "delay": 0.1 },
+          { "type": "clickable", "text": "  ├── 主机: <color=cyan>$BackdoorIP</color>", "delay": 0.1, "gain": { "BackdoorHost": "$BackdoorIP" } },
+          { "type": "normal", "text": "  ├── 系统: $BackdoorOS", "delay": 0.1 },
+          { "type": "normal", "text": "  ├── 开放端口: 1194, 22", "delay": 0.1 },
+          { "type": "normal", "text": "  ├── 指纹: SHA256:AB:CD:EF:12:34:56:78:90", "delay": 0.1 },
+          { "type": "normal", "text": "  └── 状态: 活跃 (Session ID: VPN-$random6-$random3)", "delay": 0.1 }
+        ]
+      }
+    ]
+  }
+}

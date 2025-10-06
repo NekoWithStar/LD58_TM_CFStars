@@ -243,7 +243,8 @@
             "text": "<color=green>{\"username\": \"bwiiter_admin@Bmail.com\", \"password\": \"Bwiiter2025!\"},</color>",
             "delay": 0.1,
             "gain": {
-              "BwiiterAdminCredentials": "bwiiter_admin@Bmail.com:Bwiiter2025!"
+              "BwiiterAdminUsername": "bwiiter_admin@Bmail.com",
+              "BwiiterAdminPassword": "Bwiiter2025!"
             }
           },
           {
@@ -407,9 +408,12 @@
             }
           },
           {
-            "type": "normal",
-            "text": "  \"subject\": \"URGENT: Password Reset Required\",",
-            "delay": 0.05
+            "type": "clickable",
+            "text": "  \"subject\": \"<color=cyan>URGENT: Password Reset Required</color>\",",
+            "delay": 0.05,
+            "gain": {
+              "PhishingSubject": "URGENT: Password Reset Required"
+            }
           },
           {
             "type": "clickable",
@@ -683,9 +687,12 @@
             }
           },
           {
-            "type": "normal",
-            "text": "  \"subject\": \"紧急：需要重置密码\",",
-            "delay": 0.05
+            "type": "clickable",
+            "text": "  \"subject\": \"<color=cyan>紧急：需要重置密码</color>\",",
+            "delay": 0.05,
+            "gain": {
+              "PhishingSubject": "紧急：需要重置密码"
+            }
           },
           {
             "type": "clickable",
