@@ -23,6 +23,8 @@
         "TargetPort": "8080",
         "CatImageSize": "200KB",
         "PDFFileName": "2025年度猫咪大赛参赛名单.pdf",
+        "PDFFileNameenglish": "2025 Cat Contest Entrants List.pdf",
+        "PDFFileNamechinese": "2025年度猫咪大赛参赛名单.pdf",
         "Username": "AdminBBBB123"
       }
     }
@@ -339,7 +341,7 @@
           },
           {
             "type": "normal",
-            "text": "    \"message\": \"Uploaded a file named '$PDFFileName'\"",
+            "text": "    \"message\": \"Uploaded a file named '$PDFFileNameenglish'\"",
             "delay": 0.05
           },
           {
@@ -760,7 +762,7 @@
           },
           {
             "type": "normal",
-            "text": "    \"message\": \"上传了一个名为'$PDFFileName'的文件\"",
+            "text": "    \"message\": \"上传了一个名为'$PDFFileNamechinese'的文件\"",
             "delay": 0.05
           },
           {
