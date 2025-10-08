@@ -22,7 +22,6 @@
         "DestinationIP": "203.0.113.45",
         "TargetPort": "8080",
         "CatImageSize": "200KB",
-        "PDFFileName": "2025年度猫咪大赛参赛名单.pdf",
         "PDFFileNameenglish": "2025 Cat Contest Entrants List.pdf",
         "PDFFileNamechinese": "2025年度猫咪大赛参赛名单.pdf",
         "Username": "AdminBBBB123"
