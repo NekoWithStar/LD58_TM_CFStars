@@ -653,17 +653,17 @@
           },
           {
             "type": "normal",
-            "text": "  ├── From: $ReplyFrom",
+            "text": "  ├── From: Kesi@Bmail.com",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  ├── Subject: Re: $ReplySubject",
+            "text": "  ├── Subject: Re: No thanks",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  └── Content: \"$ReplyContent\"",
+            "text": "  └── Content: \"Thank you for the mooncake, but I don't like it.\"",
             "delay": 0
           }
         ]
@@ -689,17 +689,17 @@
           },
           {
             "type": "normal",
-            "text": "  ├── 发件人: $ReplyFrom",
+            "text": "  ├── 发件人: Kesi@Bmail.com",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  ├── 主题: Re: $ReplySubject",
+            "text": "  ├── 主题: Re: 不需要",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  └── 内容: \"$ReplyContent\"",
+            "text": "  └── 内容: \"谢谢你们的月饼，但我不喜欢吃\"",
             "delay": 0
           }
         ]
@@ -725,17 +725,17 @@
           },
           {
             "type": "normal",
-            "text": "  ├── From: $ReplyFrom",
+            "text": "  ├── From: Kesi@Bmail.com",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  ├── Subject: Re: $ReplySubject",
+            "text": "  ├── Subject: Re: Bmail, are you spying on me??",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  └── Content: \"$ReplyContent\"",
+            "text": "  └── Content: \"Why do you know I like cats? Stop your spying!\"",
             "delay": 0
           }
         ]
@@ -761,17 +761,17 @@
           },
           {
             "type": "normal",
-            "text": "  ├── 发件人: $ReplyFrom",
+            "text": "  ├── 发件人: Kesi@Bmail.com",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  ├── 主题: Re: $ReplySubject",
+            "text": "  ├── 主题: Re: Bmail你们在偷窥??",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  └── 内容: \"$ReplyContent\"",
+            "text": "  └── 内容: \"为什么你们会知道我喜欢猫咪?停止你们的偷窥行为!\"",
             "delay": 0
           }
         ]
@@ -797,17 +797,17 @@
           },
           {
             "type": "normal",
-            "text": "  ├── From: $ReplyFrom",
+            "text": "  ├── From: Kesi@Bmail.com",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  ├── Subject: Re: $ReplySubject",
+            "text": "  ├── Subject: Re: Is this real?",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  └── Content: \"$ReplyContent\"",
+            "text": "  └── Content: \"Bmail never sends such gift emails, this looks suspicious. Are you scammers?\"",
             "delay": 0
           },
           {
@@ -848,17 +848,17 @@
           },
           {
             "type": "normal",
-            "text": "  ├── 发件人: $ReplyFrom",
+            "text": "  ├── 发件人: Kesi@Bmail.com",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  ├── 主题: Re: $ReplySubject",
+            "text": "  ├── 主题: Re: 这是真的吗?",
             "delay": 0.1
           },
           {
             "type": "normal",
-            "text": "  └── 内容: \"$ReplyContent\"",
+            "text": "  └── 内容: \"Bmail从来不会发送这种礼物邮件，这看起来很可疑。你们是骗子吗?\"",
             "delay": 0
           },
           {
