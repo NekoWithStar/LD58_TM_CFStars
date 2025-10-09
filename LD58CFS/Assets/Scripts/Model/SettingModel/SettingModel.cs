@@ -18,7 +18,7 @@ namespace LD58.Model
         {
             BgmVolume.Value = StorageUtil.LoadByJson(nameof(BgmVolume), 1f);
             SfxVolume.Value = StorageUtil.LoadByJson(nameof(SfxVolume), 1f);
-            Language.Value  = StorageUtil.LoadByJson(nameof(Language),  SystemLanguage.ChineseSimplified);
+            Language.Value  = StorageUtil.LoadByJson(nameof(Language),  SystemLanguage.English);
 
             BgmVolume.Register(val => StorageUtil.SaveByJson(nameof(BgmVolume), val));
             SfxVolume.Register(val => StorageUtil.SaveByJson(nameof(SfxVolume), val));
