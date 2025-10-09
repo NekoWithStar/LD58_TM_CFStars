@@ -45,9 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationConfigTextAssets:
-  - {fileID: 4900000, guid: 3569d26a83964de48a920292003120af, type: 3}
   - {fileID: 4900000, guid: f493165bcfd656440908390cabe9ca22, type: 3}
+  - {fileID: 4900000, guid: 3569d26a83964de48a920292003120af, type: 3}
   Packages:
-  - Language: 40
   - Language: 10
+  - Language: 40
   Asset: {fileID: 0}
